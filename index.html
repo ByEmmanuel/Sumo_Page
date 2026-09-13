@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es" data-mode="public">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1012"><meta name="description" content="Laboratorio de desarrollo y versionado para un robot mini-sumo.">
+  <title>Mini Sumo Lab — Laboratorio de desarrollo</title>
+  <link rel="icon" href="./robot.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark">m<span> / </span>s</span><span>MINI SUMO<span class="brand-sub">ROBOTICS LAB</span></span></a>
+    <div class="workspace-label">ESPACIO DE TRABAJO <span>01</span></div>
+    <nav aria-label="Navegación principal">
+      <a href="#overview" data-page="overview"><span class="nav-icon">▦</span>Vista general</a>
+      <a href="#versions" data-page="versions"><span class="nav-icon">⑂</span>Versiones<span id="nav-count" class="nav-count">1</span></a>
+      <a href="#editor" data-page="editor"><span class="nav-icon">⌘</span>Algoritmos</a>
+      <a href="#simulation" data-page="simulation"><span class="nav-icon">◎</span>Simulación</a>
+      <a href="#iterations" data-page="iterations"><span class="nav-icon">↻</span>Bitácora</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="project-mini"><span class="project-avatar">MS</span><div>Mini-sumo 001<small>Fase de preparación</small></div><span class="status-dot"></span></div><div class="local-label"><span class="status-dot"></span>Historial público <span>Pages</span></div></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div><span class="muted">Workspace</span><span class="slash">/</span>Mini-sumo 001<span class="tag">PROYECTO</span></div><div class="top-right"><span class="status-dot"></span><span id="connection">Conectando…</span><span class="avatar">MS</span></div></header>
+    <main id="content" tabindex="-1"></main>
+    <footer><span>MINI SUMO LAB <span class="muted">/ De la idea al dohyo.</span></span><span>Diseñar. Simular. Aprender. Repetir.</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

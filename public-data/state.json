@@ -1,0 +1,278 @@
+{
+  "versions": [
+    {
+      "id": 3,
+      "created": "2026-09-13T02:18:18.398698+00:00",
+      "title": "Arbitraje: registrar contactos entre ambos robots",
+      "notes": "Corrige la medición de contacto comparando puntos físicos compartidos por ambos cuerpos y excluyendo el suelo. Conserva las estrategias de combate de v0002. Añade comprobación de desplazamiento, contacto y parada.",
+      "parent_hash": "79cf0b9ab81cc51462b9b840c1f3f66b9791a0b6decc7722185ecdf6e14a2d82",
+      "hash": "a0bf4ae5f53f2f8028b48df8dcea71bb0f26c87f9981dddc5202b71670108816"
+    },
+    {
+      "id": 2,
+      "created": "2026-09-13T02:17:09.576201+00:00",
+      "title": "Primer combate: MS-001 verde contra rival rojo",
+      "notes": "Búsqueda, ataque por sensores, evasión de borde y cambio de ángulo. Incluye ambas estrategias y arbitraje independiente; 3 s de cuenta atrás, 60 s de combate y parada al salir del dohyo.",
+      "parent_hash": "204adef4f4a497a8b4a6ab3cacce0237ed62b68b7bb5ee173c3b8be6e52199e4",
+      "hash": "79cf0b9ab81cc51462b9b840c1f3f66b9791a0b6decc7722185ecdf6e14a2d82"
+    },
+    {
+      "id": 1,
+      "created": "2026-09-13T02:02:06.512250+00:00",
+      "title": "Estructura inicial",
+      "notes": "Punto de partida sin algoritmos. El historial comienza aquí.",
+      "parent_hash": "",
+      "hash": "204adef4f4a497a8b4a6ab3cacce0237ed62b68b7bb5ee173c3b8be6e52199e4"
+    }
+  ],
+  "iterations": [
+    {
+      "id": 1,
+      "created": "2026-09-13T02:20:36.739279+00:00",
+      "version_id": 3,
+      "hypothesis": "Ambos robots deben buscar y atacar con sensores, evitar el borde y detenerse cuando el árbitro detecte una salida real del dohyo.",
+      "observation": "Prueba Webots 20260913T021819-a0ae3659: ganó el rival rojo por salida del dohyo a los 1.912 s de combate. Hubo 1.392 s de contacto entre robots. Desplazamientos máximos: verde 0.218 m, rojo 0.452 m. Parada confirmada: True. Comprobaciones aprobadas: True. MS-001 (verde) pertenece al usuario. Esta observación no demuestra superioridad general de ninguna estrategia."
+    }
+  ],
+  "validation": {
+    "created": "2026-09-13T02:21:36.445979+00:00",
+    "passed": true,
+    "summary": "Comprobación geométrica, física y de sensores. No se ejecutó ningún combate.",
+    "checks": [
+      {
+        "name": "Huella del modelo",
+        "passed": true,
+        "detail": "96.00 × 96.00 mm"
+      },
+      {
+        "name": "Masa de todos los cuerpos",
+        "passed": true,
+        "detail": "460.0 g en 3 cuerpos físicos"
+      },
+      {
+        "name": "Motores, encoders y sensores",
+        "passed": true,
+        "detail": "12 dispositivos disponibles"
+      },
+      {
+        "name": "Estabilidad durante 2 s",
+        "passed": true,
+        "detail": "z=0.0250 m · vertical=1.0000 · velocidad=0.00000 m/s"
+      },
+      {
+        "name": "Detección del rival pasivo",
+        "passed": true,
+        "detail": "Distancia frontal: 0.244 m"
+      },
+      {
+        "name": "Contraste del borde infrarrojo",
+        "passed": true,
+        "detail": "Negro: 0.0 · blanco: 538.4"
+      }
+    ],
+    "source_hashes": {
+      "simulation/worlds/mini_sumo.wbt": "1be78b08ef6fe8cc1469918668e0faf2cd5c15913dc466233cf74c8eee96dd1b",
+      "simulation/protos/MiniSumo.proto": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+      "simulation/controllers/validate_model/validate_model.py": "986eebc77249115099c82214d7577051d0d32bef66bd219134360bdeb0689b84"
+    },
+    "stale": false
+  },
+  "matches": [
+    {
+      "id": "20260913T022541-480c9d60",
+      "created": "2026-09-13T02:25:41.137814+00:00",
+      "version_id": 3,
+      "version_hash": "a0bf4ae5f53f2f8028b48df8dcea71bb0f26c87f9981dddc5202b71670108816",
+      "world_hash": "6781019ba15f08828e9807684894fdf52d9a8072adc8d292339bb96b52edc0c8",
+      "model_hash": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+      "player": "MS-001 · TU ROBOT · VERDE",
+      "opponent": "RIVAL · ROJO",
+      "mode": "live",
+      "rules": {
+        "countdown": 3,
+        "duration": 60,
+        "radius": 0.385,
+        "seed": 42
+      },
+      "winner": "opponent",
+      "reason": "salida del dohyo",
+      "elapsed": 1.912,
+      "contact_seconds": 1.392,
+      "max_travel": [
+        0.2184021799767565,
+        0.45208678020359677
+      ],
+      "positions": [
+        [
+          -0.37723250051821894,
+          0.018455204571372494,
+          0.012001601582104615
+        ],
+        [
+          -0.291872713825175,
+          0.013905448033373844,
+          0.024618096716620765
+        ]
+      ],
+      "stopped": true,
+      "checks_passed": true
+    },
+    {
+      "id": "20260913T022404-a9bad905",
+      "created": "2026-09-13T02:24:04.831865+00:00",
+      "version_id": 3,
+      "version_hash": "a0bf4ae5f53f2f8028b48df8dcea71bb0f26c87f9981dddc5202b71670108816",
+      "world_hash": "6781019ba15f08828e9807684894fdf52d9a8072adc8d292339bb96b52edc0c8",
+      "model_hash": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+      "player": "MS-001 · TU ROBOT · VERDE",
+      "opponent": "RIVAL · ROJO",
+      "mode": "live",
+      "rules": {
+        "countdown": 3,
+        "duration": 60,
+        "radius": 0.385,
+        "seed": 42
+      },
+      "winner": "opponent",
+      "reason": "salida del dohyo",
+      "elapsed": 1.912,
+      "contact_seconds": 1.392,
+      "max_travel": [
+        0.2184021799767565,
+        0.45208678020359677
+      ],
+      "positions": [
+        [
+          -0.37723250051821894,
+          0.018455204571372494,
+          0.012001601582104615
+        ],
+        [
+          -0.291872713825175,
+          0.013905448033373844,
+          0.024618096716620765
+        ]
+      ],
+      "stopped": true,
+      "checks_passed": true
+    },
+    {
+      "id": "20260913T022146-c4a3e791",
+      "created": "2026-09-13T02:21:46.211337+00:00",
+      "version_id": 3,
+      "version_hash": "a0bf4ae5f53f2f8028b48df8dcea71bb0f26c87f9981dddc5202b71670108816",
+      "world_hash": "6781019ba15f08828e9807684894fdf52d9a8072adc8d292339bb96b52edc0c8",
+      "model_hash": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+      "player": "MS-001 · TU ROBOT · VERDE",
+      "opponent": "RIVAL · ROJO",
+      "mode": "live",
+      "rules": {
+        "countdown": 3,
+        "duration": 60,
+        "radius": 0.385,
+        "seed": 42
+      },
+      "winner": "opponent",
+      "reason": "salida del dohyo",
+      "elapsed": 1.912,
+      "contact_seconds": 1.392,
+      "max_travel": [
+        0.2184021799767565,
+        0.45208678020359677
+      ],
+      "positions": [
+        [
+          -0.37723250051821894,
+          0.018455204571372494,
+          0.012001601582104615
+        ],
+        [
+          -0.291872713825175,
+          0.013905448033373844,
+          0.024618096716620765
+        ]
+      ],
+      "stopped": true,
+      "checks_passed": true
+    },
+    {
+      "id": "20260913T021819-a0ae3659",
+      "created": "2026-09-13T02:18:19.383382+00:00",
+      "version_id": 3,
+      "version_hash": "a0bf4ae5f53f2f8028b48df8dcea71bb0f26c87f9981dddc5202b71670108816",
+      "world_hash": "55eab79784de5739a6296561ec3bb8f25f9ed8a737690913efd60f14f8bc21a9",
+      "model_hash": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+      "player": "MS-001 · TU ROBOT · VERDE",
+      "opponent": "RIVAL · ROJO",
+      "mode": "test",
+      "rules": {
+        "countdown": 3,
+        "duration": 60,
+        "radius": 0.385,
+        "seed": 42
+      },
+      "winner": "opponent",
+      "reason": "salida del dohyo",
+      "elapsed": 1.912,
+      "contact_seconds": 1.392,
+      "max_travel": [
+        0.2184021799767565,
+        0.45208678020359677
+      ],
+      "positions": [
+        [
+          -0.37723250051821894,
+          0.018455204571372494,
+          0.012001601582104615
+        ],
+        [
+          -0.291872713825175,
+          0.013905448033373844,
+          0.024618096716620765
+        ]
+      ],
+      "stopped": true,
+      "checks_passed": true
+    },
+    {
+      "id": "20260913T021719-6dc47be4",
+      "created": "2026-09-13T02:17:19.756820+00:00",
+      "version_id": 2,
+      "version_hash": "79cf0b9ab81cc51462b9b840c1f3f66b9791a0b6decc7722185ecdf6e14a2d82",
+      "world_hash": "11d78c12b6a9802c92a0ca70e46e8b76c18510c42345ab888462594e5b2448d7",
+      "model_hash": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+      "player": "MS-001 · TU ROBOT · VERDE",
+      "opponent": "RIVAL · ROJO",
+      "mode": "test",
+      "rules": {
+        "countdown": 3,
+        "duration": 60,
+        "radius": 0.385,
+        "seed": 42
+      },
+      "winner": "opponent",
+      "reason": "salida del dohyo",
+      "elapsed": 1.912,
+      "contact_seconds": 0.0,
+      "max_travel": [
+        0.2184021799767565,
+        0.45208678020359677
+      ],
+      "positions": [
+        [
+          -0.37723250051821894,
+          0.018455204571372494,
+          0.012001601582104615
+        ],
+        [
+          -0.291872713825175,
+          0.013905448033373844,
+          0.024618096716620765
+        ]
+      ],
+      "stopped": true
+    }
+  ],
+  "combat_version": 3,
+  "published_at": "2026-09-13T02:43:39.200724+00:00"
+}
