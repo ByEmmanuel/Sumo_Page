@@ -1,0 +1,65 @@
+--- v0.2.0/algorithms/params.h
++++ v0.3.0/algorithms/params.h
+@@ -43,6 +43,8 @@
+   /* ---- seguimiento --------------------------------------------------- */
+   float track_kp;                 /* rad^-1, error de rumbo -> diferencial */
+   float track_max_diff;           /* tope del termino diferencial          */
++  float attack_kp_scale;          /* fraccion de track_kp usada en ATTACK  */
++  float attack_max_diff;          /* tope del diferencial empujando        */
+ 
+   /* ---- escape de borde (maxima prioridad) ----------------------------- */
+   uint16_t escape_back_ms;        /* retroceso tras ver linea frontal      */
+@@ -88,6 +90,8 @@
+ 
+   p.track_kp            = 1.10f;
+   p.track_max_diff      = 0.85f;
++  p.attack_kp_scale     = 0.70f;
++  p.attack_max_diff     = 0.60f;
+ 
+   p.escape_back_ms      = 300;
+   p.escape_turn_ms      = 360;
+
+--- v0.2.0/algorithms/strategy.c
++++ v0.3.0/algorithms/strategy.c
+@@ -1,10 +1,13 @@
+ /* ==========================================================================
+  *  strategy.c  --  Cerebro de Gelatina Nuclear
+  *  ------------------------------------------------------------------------
+- *  v0.2.0: la maquina de estados reactiva de la linea base v0.1.0 con una
+- *  sola idea nueva, EMPUJE COMPROMETIDO: si el rival esta pegado de frente,
+- *  el borde que ven los sensores de linea es suyo, no nuestro, y se sigue
+- *  empujando en vez de huir. Sin modelo del ring, sin aprendizaje.
++ *  Maquina de estados reactiva sobre la linea base v0.1.0, con dos ideas:
++ *    - v0.2.0 EMPUJE COMPROMETIDO: si el rival esta pegado de frente, el
++ *      borde que ven los sensores de linea es suyo, no nuestro, y se sigue
++ *      empujando en vez de huir.
++ *    - v0.3.0 EMPUJE ALINEADO: en ATTACK se corrige el rumbo con firmeza
++ *      para que el rival no se escurra del centro de la pala.
++ *  Sin modelo del ring, sin aprendizaje.
+  *
+  *  Prioridades, de mayor a menor:
+  *     1. No caerse del ring      -> ST_EDGE_ESCAPE
+@@ -21,7 +24,7 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#define STRATEGY_VERSION_STR "v0.2.0"
++#define STRATEGY_VERSION_STR "v0.3.0"
+ 
+ #ifndef M_PI
+ #define M_PI 3.14159265358979323846
+@@ -331,8 +334,12 @@
+     }
+     if (st->per.target_dist_mm > p->dist_track_mm) { enter(st, ST_TRACK); break; }
+ 
+-    /* en contacto se corrige poco: girar mucho es perder el empuje */
+-    const float turn = clampf(p->track_kp * bearing_rad * 0.35f, -0.30f, 0.30f);
++    /* En contacto hay que corregir con firmeza: si el rival se escurre del
++     * centro de la pala, la linea de empuje se tuerce y gana el que esta
++     * mejor alineado. Hasta v0.2.0 (0.35 y +-0.30, numeros magicos aqui) el
++     * charger, que gira hasta +-0.55, nos ganaba la alineacion. */
++    const float turn = clampf(p->track_kp * bearing_rad * p->attack_kp_scale,
++                              -p->attack_max_diff, p->attack_max_diff);
+     drive(st, p->v_attack, turn, a);
+     break;
+   }

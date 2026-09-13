@@ -1,0 +1,42 @@
+{
+  "created": "2026-09-13T02:21:36.445979+00:00",
+  "passed": true,
+  "summary": "Comprobación geométrica, física y de sensores. No se ejecutó ningún combate.",
+  "checks": [
+    {
+      "name": "Huella del modelo",
+      "passed": true,
+      "detail": "96.00 × 96.00 mm"
+    },
+    {
+      "name": "Masa de todos los cuerpos",
+      "passed": true,
+      "detail": "460.0 g en 3 cuerpos físicos"
+    },
+    {
+      "name": "Motores, encoders y sensores",
+      "passed": true,
+      "detail": "12 dispositivos disponibles"
+    },
+    {
+      "name": "Estabilidad durante 2 s",
+      "passed": true,
+      "detail": "z=0.0250 m · vertical=1.0000 · velocidad=0.00000 m/s"
+    },
+    {
+      "name": "Detección del rival pasivo",
+      "passed": true,
+      "detail": "Distancia frontal: 0.244 m"
+    },
+    {
+      "name": "Contraste del borde infrarrojo",
+      "passed": true,
+      "detail": "Negro: 0.0 · blanco: 538.4"
+    }
+  ],
+  "source_hashes": {
+    "simulation/worlds/mini_sumo.wbt": "1be78b08ef6fe8cc1469918668e0faf2cd5c15913dc466233cf74c8eee96dd1b",
+    "simulation/protos/MiniSumo.proto": "d784d703f3a281be545a9aa567c6792ad4b39d46afa8c34fa93a15ced1e71994",
+    "simulation/controllers/validate_model/validate_model.py": "986eebc77249115099c82214d7577051d0d32bef66bd219134360bdeb0689b84"
+  }
+}

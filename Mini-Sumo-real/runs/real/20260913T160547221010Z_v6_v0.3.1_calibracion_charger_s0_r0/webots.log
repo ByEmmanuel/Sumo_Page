@@ -1,0 +1,16 @@
+INFO: medido: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T160547221010Z_v6_v0.3.1_calibracion_charger_s0_r0/project/webots/controllers/medido/medido
+INFO: contrario: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T160547221010Z_v6_v0.3.1_calibracion_charger_s0_r0/project/webots/controllers/contrario/contrario
+INFO: calibracion: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T160547221010Z_v6_v0.3.1_calibracion_charger_s0_r0/project/webots/controllers/calibracion/calibracion ../../../../series.jsonl
+[gelatina] HAL Webots listo: paso 8 ms, umbral de linea 400
+[gelatina] estrategia v0.3.0 en linea
+[rival] HAL Webots listo: paso 8 ms, umbral de linea 400
+[rival] estrategia v0.3.0 en linea
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque -58.1036 exceeds 'maxTorque' = 0.25
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_der" > RotationalMotor "motor_der": The requested motor torque -57.3528 exceeds 'maxTorque' = 0.25
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque 24.0948 exceeds 'maxTorque' = 0.25
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_der" > RotationalMotor "motor_der": The requested motor torque 5.9061 exceeds 'maxTorque' = 0.25
+[gelatina] t=    0 ms  WAIT         rival=si d=  26 mm rumbo=+1494 cdeg  linea=0x3
+[rival] t=    0 ms  WAIT         rival=si d=  27 mm rumbo=+1495 cdeg  linea=0x0
+INFO: medido: Terminating.
+INFO: contrario: Terminating.
+INFO: calibracion: Terminating.

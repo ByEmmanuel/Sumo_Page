@@ -1,0 +1,35 @@
+{
+  "revision_id": 22,
+  "revision_hash": "5650b9b0bd2afc9b6922658164da4c9c453c2bea3d4efe5ca71d95623af44519",
+  "history_versions": 22,
+  "backend_tests": {
+    "passed": true,
+    "tests": 12
+  },
+  "browser_tests": {
+    "passed": true,
+    "temporary_database": true,
+    "includes_c_manifest_edit": true
+  },
+  "pages_tests": {
+    "passed": true,
+    "prefix": "/Sumo_Page/",
+    "remote_publication": false
+  },
+  "protected_algorithm_files": {
+    "checked": 25,
+    "differences": []
+  },
+  "physical_hardware_measured": false,
+  "notes": [
+    "Estas comprobaciones no certifican el modelo físico.",
+    "Calibraciones aleatorias con caída previa o línea activa inicial están censuradas.",
+    "La paridad neuronal cerrada sigue fallida; la local con historia común pasa."
+  ],
+  "webots_final_runs": {
+    "completed": 124,
+    "api_error_runs": 0,
+    "contact_warning_runs": 124,
+    "contact_warning_messages": 15007
+  }
+}

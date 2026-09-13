@@ -1,0 +1,132 @@
+--- v0.1.1/algorithms/params.h
++++ v0.2.0/algorithms/params.h
+@@ -49,6 +49,11 @@
+   uint16_t escape_turn_ms;        /* giro de reencuadre                    */
+   uint16_t escape_lockout_ms;     /* ventana ciega para no reentrar al borde*/
+ 
++  /* ---- empuje comprometido -------------------------------------------- */
++  uint16_t dist_contact_mm;       /* rival a esta distancia o menos: pegado */
++  uint16_t contact_cone_cdeg;     /* ... y dentro de este cono frontal (+-) */
++  uint16_t push_commit_ms;        /* max. empujando con el borde a la vista */
++
+   /* ---- busqueda ------------------------------------------------------- */
+   uint16_t search_spin_ms;        /* giro en el sitio                      */
+   uint16_t search_probe_ms;       /* avance corto entre giros              */
+@@ -88,6 +93,10 @@
+   p.escape_turn_ms      = 360;
+   p.escape_lockout_ms   = 140;
+ 
++  p.dist_contact_mm     = 60;
++  p.contact_cone_cdeg   = 2500;
++  p.push_commit_ms      = 600;
++
+   p.search_spin_ms      = 520;
+   p.search_probe_ms     = 300;
+   p.search_turn_ratio   = -0.85f;
+
+--- v0.1.1/algorithms/strategy.c
++++ v0.2.0/algorithms/strategy.c
+@@ -1,13 +1,14 @@
+ /* ==========================================================================
+  *  strategy.c  --  Cerebro de Gelatina Nuclear
+  *  ------------------------------------------------------------------------
+- *  LINEA BASE (v0.1.0): maquina de estados reactiva con prioridad absoluta
+- *  del borde. Sin memoria del rival, sin modelo del ring, sin aprendizaje.
+- *  Es deliberadamente simple: es el punto de partida contra el que se mediran
+- *  todas las iteraciones siguientes de la bitacora.
++ *  v0.2.0: la maquina de estados reactiva de la linea base v0.1.0 con una
++ *  sola idea nueva, EMPUJE COMPROMETIDO: si el rival esta pegado de frente,
++ *  el borde que ven los sensores de linea es suyo, no nuestro, y se sigue
++ *  empujando en vez de huir. Sin modelo del ring, sin aprendizaje.
+  *
+  *  Prioridades, de mayor a menor:
+  *     1. No caerse del ring      -> ST_EDGE_ESCAPE
++ *        ...salvo rival pegado de frente: empuje comprometido -> ST_ATTACK
+  *     2. Empujar si lo tengo     -> ST_ATTACK
+  *     3. Acercarme si lo veo     -> ST_TRACK
+  *     4. Encontrarlo             -> ST_SEARCH / ST_OPENING
+@@ -20,7 +21,7 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#define STRATEGY_VERSION_STR "v0.1.0"
++#define STRATEGY_VERSION_STR "v0.2.0"
+ 
+ #ifndef M_PI
+ #define M_PI 3.14159265358979323846
+@@ -109,6 +110,13 @@
+     per->target_dist_mm = SUMO_DIST_NONE;
+   }
+ 
++  /* Contacto frontal: solo con la lectura de ESTE ciclo, nunca con la memoria
++   * de histeresis. Creer que el rival sigue delante cuando ya se ha escurrido
++   * a un lado es justo lo que tiraria al robot fuera empujando al vacio. */
++  const int b = per->target_bearing_cdeg;
++  per->contact_front = (w_sum > 0u) && nearest <= p->dist_contact_mm &&
++                       (b < 0 ? -b : b) <= (int)p->contact_cone_cdeg;
++
+   per->line_mask = 0u;
+   for (int i = 0; i < SUMO_N_LINE; ++i)
+     if (s->line[i]) per->line_mask |= (uint8_t)(1u << i);
+@@ -202,12 +210,34 @@
+     st->t_state_ms = st->t_ms;
+   }
+ 
+-  /* --- 1. Prioridad absoluta: el borde ---------------------------------- */
++  const sumo_params_t *p = &st->p;
++
++  /* --- 1. Prioridad absoluta: el borde... salvo empuje comprometido ----- *
++   * Con el rival pegado de frente, la linea bajo los sensores frontales es  *
++   * la pala del rival metida debajo o el borde hacia el que lo empujamos:   *
++   * en ambos casos huir es regalarle el asalto. Si es la linea trasera, nos *
++   * esta empujando, y el escape (avanzar a v_escape y girar en el sitio)    *
++   * solo empuja menos. La ventana dura push_commit_ms desde que aparece la  *
++   * linea y se cierra al perder el contacto: sin rival delante, el borde    *
++   * vuelve a mandar en el mismo ciclo.                                      */
+   const bool lockout = (st->t_ms < st->t_edge_clear_ms);
+-  if (st->per.line_mask != 0u && !lockout && st->state != ST_EDGE_ESCAPE)
++  const bool linea   = (st->per.line_mask != 0u);
++  if (!linea) st->commit_active = false;
++
++  bool comprometido = false;
++  if (linea && st->per.contact_front) {
++    if (!st->commit_active) {
++      st->commit_active = true;
++      st->t_commit_ms = st->t_ms;
++      st->push_commits++;
++    }
++    comprometido = (st->t_ms - st->t_commit_ms) < p->push_commit_ms;
++  }
++
++  if (comprometido)
++    enter(st, ST_ATTACK);
++  else if (linea && !lockout && st->state != ST_EDGE_ESCAPE)
+     plan_escape(st);
+-
+-  const sumo_params_t *p = &st->p;
+   const float bearing_rad =
+       (float)st->per.target_bearing_cdeg / 100.0f * (float)(M_PI / 180.0);
+ 
+
+--- v0.1.1/algorithms/strategy.h
++++ v0.2.0/algorithms/strategy.h
+@@ -30,6 +30,7 @@
+   int16_t  target_bearing_cdeg;/* rumbo estimado en centigrados, + = babor */
+   uint8_t  line_mask;          /* bits segun enum sumo_line_idx      */
+   uint32_t last_seen_ms;       /* instante del ultimo contacto       */
++  bool     contact_front;      /* rival pegado y de frente, visto EN ESTE ciclo */
+ } sumo_percept_t;
+ 
+ typedef struct {
+@@ -54,6 +55,11 @@
+   float    prev_right;
+ 
+   uint32_t edge_events;      /* contador de bordes vistos, telemetria */
++
++  /* empuje comprometido: borde a la vista con el rival pegado de frente */
++  bool     commit_active;    /* ventana abierta                          */
++  uint32_t t_commit_ms;      /* instante en que se abrio                 */
++  uint32_t push_commits;     /* ventanas abiertas, telemetria            */
+ } sumo_strategy_t;
+ 
+ void        strategy_init(sumo_strategy_t *st, const sumo_params_t *p);

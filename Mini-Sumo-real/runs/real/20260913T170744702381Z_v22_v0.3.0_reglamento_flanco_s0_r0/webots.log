@@ -1,0 +1,625 @@
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+INFO: medido: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T170744702381Z_v22_v0.3.0_reglamento_flanco_s0_r0/project/webots/controllers/medido/medido
+INFO: oponente: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T170744702381Z_v22_v0.3.0_reglamento_flanco_s0_r0/project/webots/controllers/oponente/oponente flanco
+INFO: arbitro: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T170744702381Z_v22_v0.3.0_reglamento_flanco_s0_r0/project/webots/controllers/arbitro/arbitro --rounds 30 --rival flanco --version v0.3.0 --colocacion reglamento --out ../../../../result.json
+[planta] gelatina ciclo=1 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=1 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] HAL Webots listo: paso 8 ms, umbral de linea 400
+[gelatina] estrategia v0.3.0 en linea
+[planta] rival ciclo=1 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=1 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[rival] comportamiento: flanco
+
+[arbitro] 30 asaltos contra 'flanco', colocacion reglamento, limite 60 s por asalto
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[planta] asalto=0 mu=1.1 slip=0.0005 aleatorio=0
+[planta] gelatina ciclo=2 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=2 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 5312 ms
+[arranque] pulsador=312 permiso=5312 ms
+[planta] rival ciclo=2 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=2 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 5312 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=+1507 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  76 mm rumbo=+1507 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 287 contact points.
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_der" > RotationalMotor "motor_der": The requested motor torque 0.752383 exceeds 'maxTorque' = 0.25
+[gelatina] t=  800 ms  EDGE_ESCAPE  rival=si d=  45 mm rumbo=+3000 cdeg  linea=0x1
+[arbitro] asalto  1/30  frente   rival fuera     +1   0.82 s
+[planta] asalto=1 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[32.2138746,41.5688976],"current_a":[-0.567913556,-0.0750598226],"torque_nm":[-0.0347322797,-0.0108882757],"applied_pwm":[0,0.400000036],"over_1_2a_samples":2,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d= 741 mm rumbo=-6000 cdeg  linea=0x3
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-50.9141709,42.3975212],"current_a":[-0.0890767875,0.239220812],"torque_nm":[0.00294743293,0.00431645589],"applied_pwm":[-0.6,0.6],"over_1_2a_samples":22,"over_3_2a_samples":1}
+[arranque] pulsador=6440 permiso=11440 ms
+[planta] gelatina ciclo=3 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=3 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 11440 ms
+[planta] rival ciclo=3 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=3 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 11440 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  440 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x2
+[arbitro] asalto  2/30  lado     auto-salida     -1   0.53 s
+[planta] asalto=2 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-52.5100471,-38.7897932],"current_a":[-0.718720111,-0.467267669],"torque_nm":[-0.0275143795,-0.0153492428],"applied_pwm":[-1,-0.700000048],"over_1_2a_samples":8,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  41 mm rumbo=  -48 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-4.1130333,40.4620345],"current_a":[0.730288377,0.931120196],"torque_nm":[0.0425840054,0.0377901837],"applied_pwm":[0.4,1],"over_1_2a_samples":28,"over_3_2a_samples":1}
+[arranque] pulsador=12280 permiso=17280 ms
+[planta] gelatina ciclo=4 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=4 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 17280 ms
+[planta] rival ciclo=4 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=4 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 17280 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-1482 cdeg  linea=0x0
+[gelatina] t=  368 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-1482 cdeg  linea=0x1
+[arbitro] asalto  3/30  espalda  auto-salida     -1   0.45 s
+[planta] asalto=3 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-29.1356481,-40.5883131],"current_a":[-0.637465138,-0.928893971],"torque_nm":[-0.0235833066,-0.0376824801],"applied_pwm":[-0.700000048,-1],"over_1_2a_samples":11,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  50 mm rumbo=  +16 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[43.6969499,43.1675999],"current_a":[0.339645905,0.883422511],"torque_nm":[0.00917496902,0.0354825948],"applied_pwm":[0.675,1],"over_1_2a_samples":33,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 68 contact points.
+[planta] gelatina ciclo=5 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=5 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 23040 ms
+[arranque] pulsador=18040 permiso=23040 ms
+[planta] rival ciclo=5 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=5 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 23040 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  71 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  71 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  152 ms  EDGE_ESCAPE  rival=si d=  34 mm rumbo=  +18 cdeg  linea=0x4
+[gelatina] t=  816 ms  SEARCH       rival=si d= 223 mm rumbo= -775 cdeg  linea=0x8
+[gelatina] t=  824 ms  TRACK        rival=si d=  74 mm rumbo= -364 cdeg  linea=0x8
+[gelatina] t=  832 ms  ATTACK       rival=si d=  74 mm rumbo= -364 cdeg  linea=0x8
+[arbitro] asalto  4/30  frente   expulsado       -1   0.85 s
+[planta] asalto=4 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[61.7739415,-63.7812093],"current_a":[0.555402558,0.384428878],"torque_nm":[0.0196131622,0.0258553876],"applied_pwm":[1,-0.450000048],"over_1_2a_samples":18,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  79 mm rumbo=   +5 cdeg  linea=0xC
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[7.42981682,-16.2948141],"current_a":[-1.52876152,-1.11050883],"torque_nm":[-0.0812175928,-0.0464689114],"applied_pwm":[-0.85,-0.85],"over_1_2a_samples":65,"over_3_2a_samples":1}
+[planta] gelatina ciclo=6 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=6 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 29200 ms
+[arranque] pulsador=24200 permiso=29200 ms
+[planta] rival ciclo=6 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=6 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 29200 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +5 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=   +5 cdeg  linea=0x0
+[gelatina] t=  488 ms  TRACK        rival=si d= 691 mm rumbo=-1023 cdeg  linea=0x0
+[arbitro] asalto  5/30  lado     auto-salida     -1   0.50 s
+[planta] asalto=5 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-17.5594054,46.3761412],"current_a":[0.198562955,0.0434412247],"torque_nm":[0.0168632922,-0.00515525743],"applied_pwm":[-0.0675000399,0.523598135],"over_1_2a_samples":22,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d= 744 mm rumbo=-3000 cdeg  linea=0x4
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-7.55995695,32.6604829],"current_a":[-0.606721961,0.164212976],"torque_nm":[-0.0220959719,0.000687616292],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":72,"over_3_2a_samples":1}
+[planta] gelatina ciclo=7 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=7 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 35016 ms
+[arranque] pulsador=30016 permiso=35016 ms
+[planta] rival ciclo=7 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=7 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 35016 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0xC
+[arbitro] asalto  6/30  espalda  auto-salida     -1   0.42 s
+[planta] asalto=6 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[59.9666718,59.9175122],"current_a":[0.258374897,0.259241554],"torque_nm":[0.00524312045,0.00528504883],"applied_pwm":[0.800000012,0.800000012],"over_1_2a_samples":24,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[43.0770126,35.6453427],"current_a":[-0.10164715,1.01603592],"torque_nm":[-0.0121745566,0.0418983618],"applied_pwm":[0.4,1],"over_1_2a_samples":76,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+[planta] gelatina ciclo=8 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=8 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 40752 ms
+[planta] rival ciclo=8 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=8 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[arranque] pulsador=35752 permiso=40752 ms
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 40752 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 99 contact points.
+[arbitro] asalto  7/30  frente   rival fuera     +1   0.74 s
+[planta] asalto=7 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[63.7682868,51.7075062],"current_a":[0.520243306,0.732868483],"torque_nm":[0.0179121762,0.0281988703],"applied_pwm":[1,1],"over_1_2a_samples":36,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  28 mm rumbo=-6000 cdeg  linea=0x2
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-36.1775364,24.5777363],"current_a":[-0.102209184,0.30670752],"torque_nm":[0.00231209448,0.00758142729],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":90,"over_3_2a_samples":1}
+[planta] gelatina ciclo=9 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=9 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 46808 ms
+[planta] rival ciclo=9 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=9 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=41808 permiso=46808 ms
+[gelatina] permiso de arranque a los 46808 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  488 ms  TRACK        rival=si d= 472 mm rumbo=+3427 cdeg  linea=0x4
+[arbitro] asalto  8/30  lado     auto-salida     -1   0.50 s
+[planta] asalto=8 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[42.0481776,-16.7201269],"current_a":[-0.358953775,0.18376692],"torque_nm":[-0.0246229156,0.0161474678],"applied_pwm":[0.232500002,-0.0675000399],"over_1_2a_samples":42,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3427 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[28.4775621,58.2641126],"current_a":[0.155733434,0.617278983],"torque_nm":[0.000277380527,0.0226067111],"applied_pwm":[0.4,1],"over_1_2a_samples":97,"over_3_2a_samples":1}
+[planta] gelatina ciclo=10 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=10 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 52624 ms
+[planta] rival ciclo=10 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=10 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=47624 permiso=52624 ms
+[gelatina] permiso de arranque a los 52624 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+3427 cdeg  linea=0x0
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=+3427 cdeg  linea=0xC
+[arbitro] asalto  9/30  espalda  auto-salida     -1   0.42 s
+[planta] asalto=9 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[59.9688732,59.9841103],"current_a":[0.258336086,0.258067465],"torque_nm":[0.00524124281,0.00522824704],"applied_pwm":[0.800000012,0.800000012],"over_1_2a_samples":44,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3427 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[54.8221941,44.5878826],"current_a":[-1.70648626,-0.046060767],"torque_nm":[-0.0898158275,-0.00948531665],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":103,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+[planta] gelatina ciclo=11 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=11 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 58360 ms
+[planta] rival ciclo=11 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=11 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=53360 permiso=58360 ms
+[gelatina] permiso de arranque a los 58360 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+[arbitro] asalto 10/30  frente   rival fuera     +1   0.70 s
+[planta] asalto=10 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[60.1462897,60.6194609],"current_a":[0.584097198,0.57575544],"torque_nm":[0.0210013938,0.0205978239],"applied_pwm":[1,1],"over_1_2a_samples":66,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x1
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-38.9099561,20.0422401],"current_a":[-0.0540380725,0.386665918],"torque_nm":[0.00464258751,0.0114497724],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":110,"over_3_2a_samples":1}
+[planta] gelatina ciclo=12 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=12 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 64368 ms
+[planta] rival ciclo=12 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=12 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=59368 permiso=64368 ms
+[gelatina] permiso de arranque a los 64376 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t=  423 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  512 ms  TRACK        rival=si d= 194 mm rumbo=+2929 cdeg  linea=0x0
+[gelatina] t=  519 ms  ATTACK       rival=si d= 166 mm rumbo= +214 cdeg  linea=0x0
+[arbitro] asalto 11/30  lado     auto-salida     -1   0.52 s
+[planta] asalto=11 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[48.2166263,-24.23391],"current_a":[0.190077503,-0.341546824],"torque_nm":[0.00193892847,-0.00926693444],"applied_pwm":[0.632499993,-0.467500031],"over_1_2a_samples":71,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d= 166 mm rumbo= +214 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[0.441173074,38.9810405],"current_a":[0.65000013,0.957229335],"torque_nm":[0.028437826,0.0390533301],"applied_pwm":[0.4,1],"over_1_2a_samples":115,"over_3_2a_samples":1}
+[planta] gelatina ciclo=13 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=13 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 70208 ms
+[arranque] pulsador=65208 permiso=70208 ms
+[planta] rival ciclo=13 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=13 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 70208 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= +214 cdeg  linea=0x0
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo= +214 cdeg  linea=0xC
+[arbitro] asalto 12/30  espalda  auto-salida     -1   0.42 s
+[planta] asalto=12 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[59.9766134,59.9680574],"current_a":[0.258199631,0.258350468],"torque_nm":[0.00523464115,0.00524193859],"applied_pwm":[0.800000012,0.800000012],"over_1_2a_samples":74,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= +214 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[51.048244,23.1489907],"current_a":[-0.242175739,1.23633999],"torque_nm":[-0.0189732557,0.0525565567],"applied_pwm":[0.4,1],"over_1_2a_samples":119,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+[planta] gelatina ciclo=14 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=14 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 75944 ms
+[arranque] pulsador=70944 permiso=75944 ms
+[planta] rival ciclo=14 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=14 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 75944 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  72 mm rumbo=-1456 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=-1456 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+[gelatina] t=  416 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  560 ms  TRACK        rival=si d=  41 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  568 ms  ATTACK       rival=si d=  41 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+[gelatina] t= 4672 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 4744 ms  TRACK        rival=si d=  35 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 4752 ms  ATTACK       rival=si d=  35 mm rumbo=  +35 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+[gelatina] t= 5200 ms  SEARCH       rival=no d=9999 mm rumbo=  +47 cdeg  linea=0x0
+[gelatina] t= 5312 ms  TRACK        rival=si d=  42 mm rumbo=  +17 cdeg  linea=0x0
+[gelatina] t= 5320 ms  ATTACK       rival=si d=  42 mm rumbo=  +17 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 102 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+[gelatina] t=15336 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=15408 ms  TRACK        rival=si d=  35 mm rumbo=   +7 cdeg  linea=0x0
+[gelatina] t=15416 ms  ATTACK       rival=si d=  35 mm rumbo=   +7 cdeg  linea=0x0
+[gelatina] t=16128 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=16200 ms  TRACK        rival=si d=  89 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=16208 ms  ATTACK       rival=si d=  89 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+[gelatina] t=18040 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=18176 ms  TRACK        rival=si d=  34 mm rumbo=+1501 cdeg  linea=0x0
+[gelatina] t=18184 ms  ATTACK       rival=si d=  34 mm rumbo=+1501 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 101 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 102 contact points.
+[gelatina] t=19560 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=19664 ms  TRACK        rival=si d=  34 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=19672 ms  ATTACK       rival=si d=  34 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=20088 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=20192 ms  TRACK        rival=si d=  54 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=20200 ms  ATTACK       rival=si d=  54 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=20512 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=20552 ms  TRACK        rival=si d= 173 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=20560 ms  ATTACK       rival=si d= 173 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=21168 ms  EDGE_ESCAPE  rival=si d=  50 mm rumbo=-6000 cdeg  linea=0x8
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t=21832 ms  SEARCH       rival=si d=  37 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=21840 ms  TRACK        rival=si d=  37 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=21848 ms  ATTACK       rival=si d=  37 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=22392 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=22432 ms  TRACK        rival=si d=  28 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=22440 ms  ATTACK       rival=si d=  28 mm rumbo=-2986 cdeg  linea=0x0
+[arbitro] asalto 13/30  frente   rival fuera     +1  22.56 s
+[planta] asalto=13 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[44.2891014,20.3545712],"current_a":[0.863651033,0.298937423],"torque_nm":[0.0345260611,0.00720551409],"applied_pwm":[1,0.399999976],"over_1_2a_samples":296,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  64 mm rumbo=-4511 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-69.8562542,-67.8771272],"current_a":[-0.166248997,-0.201139958],"torque_nm":[-0.000786117896,-0.00247412424],"applied_pwm":[-0.85,-0.85],"over_1_2a_samples":1902,"over_3_2a_samples":1}
+[planta] gelatina ciclo=15 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=15 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 103816 ms
+[planta] rival ciclo=15 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=15 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=98816 permiso=103816 ms
+[gelatina] permiso de arranque a los 103816 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-4511 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-4511 cdeg  linea=0x0
+[gelatina] t=  488 ms  TRACK        rival=si d= 254 mm rumbo= +297 cdeg  linea=0x0
+[gelatina] t=  496 ms  ATTACK       rival=si d= 254 mm rumbo= +297 cdeg  linea=0x0
+[arbitro] asalto 14/30  lado     auto-salida     -1   0.52 s
+[planta] asalto=14 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[70.6957912,-0.835459574],"current_a":[0.16253176,0.232617538],"torque_nm":[0.000606279936,0.0162132695],"applied_pwm":[0.856739879,0.132499963],"over_1_2a_samples":300,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  80 mm rumbo= +167 cdeg  linea=0x8
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[25.586757,53.0477421],"current_a":[0.206696796,0.709240834],"torque_nm":[0.00274296115,0.027055777],"applied_pwm":[0.4,1],"over_1_2a_samples":1907,"over_3_2a_samples":1}
+[planta] gelatina ciclo=16 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=16 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 109648 ms
+[planta] rival ciclo=16 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=16 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=104648 permiso=109648 ms
+[gelatina] permiso de arranque a los 109648 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-1320 cdeg  linea=0x0
+[gelatina] t=  424 ms  TRACK        rival=si d= 690 mm rumbo=+1773 cdeg  linea=0xC
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[arbitro] asalto 15/30  espalda  auto-salida     -1   0.42 s
+[planta] asalto=15 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[60.3570915,59.7678203],"current_a":[0.251492003,0.261880543],"torque_nm":[0.00491012966,0.00541272174],"applied_pwm":[0.800000012,0.800000012],"over_1_2a_samples":303,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d= 690 mm rumbo=+1773 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[52.2729556,61.6568083],"current_a":[-0.263766758,0.557467553],"torque_nm":[-0.0200178178,0.0197130656],"applied_pwm":[0.4,1],"over_1_2a_samples":1912,"over_3_2a_samples":1}
+[planta] gelatina ciclo=17 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=17 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 115384 ms
+[arranque] pulsador=110384 permiso=115384 ms
+[planta] rival ciclo=17 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=17 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 115384 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  73 mm rumbo=-1463 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  73 mm rumbo=-1463 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 98 contact points.
+[arbitro] asalto 16/30  frente   rival fuera     +1   0.70 s
+[planta] asalto=16 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[61.1953588,60.483824],"current_a":[0.565602664,0.578146646],"torque_nm":[0.020106638,0.0207135092],"applied_pwm":[1,1],"over_1_2a_samples":308,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x3
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-23.9990286,40.8651358],"current_a":[-0.31690983,0.0195692897],"torque_nm":[-0.00807500968,-0.00631016907],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":1924,"over_3_2a_samples":1}
+[arranque] pulsador=116392 permiso=121392 ms
+[planta] gelatina ciclo=18 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=18 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 121392 ms
+[planta] rival ciclo=18 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=18 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 121392 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  520 ms  TRACK        rival=si d= 110 mm rumbo=+2915 cdeg  linea=0x0
+[arbitro] asalto 17/30  lado     auto-salida     -1   0.51 s
+[planta] asalto=17 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-25.031131,49.8238927],"current_a":[-0.327492239,0.161742247],"torque_nm":[-0.00858698107,0.000568083742],"applied_pwm":[-0.467500031,0.632499993],"over_1_2a_samples":313,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d= 110 mm rumbo=+2915 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[27.7950655,52.0292457],"current_a":[0.167765488,0.727196387],"torque_nm":[0.000859484934,0.0279244572],"applied_pwm":[0.4,1],"over_1_2a_samples":1928,"over_3_2a_samples":1}
+[arranque] pulsador=122216 permiso=127216 ms
+[planta] gelatina ciclo=19 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=19 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 127216 ms
+[planta] rival ciclo=19 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=19 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 127216 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1514 cdeg  linea=0x0
+[gelatina] t=  423 ms  SEARCH       rival=no d=9999 mm rumbo=+1514 cdeg  linea=0x4
+[arbitro] asalto 18/30  espalda  auto-salida     -1   0.43 s
+[planta] asalto=18 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[60.4855385,59.672985],"current_a":[-0.0796613179,-0.0118920358],"torque_nm":[-0.0111108936,-0.00783225143],"applied_pwm":[0.600000024,0.632499993],"over_1_2a_samples":313,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1514 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[58.7651098,39.7293022],"current_a":[0.0740022242,0.944037879],"torque_nm":[-0.00367673237,0.0384151344],"applied_pwm":[0.675,1],"over_1_2a_samples":1932,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+[planta] gelatina ciclo=20 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=20 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 132960 ms
+[planta] rival ciclo=20 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=20 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=127960 permiso=132960 ms
+[gelatina] permiso de arranque a los 132960 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  63 mm rumbo=-1468 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  63 mm rumbo=-1468 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 98 contact points.
+[gelatina] t=  416 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  488 ms  TRACK        rival=si d=  36 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  496 ms  ATTACK       rival=si d=  36 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 19/30  frente   expulsado       -1   0.95 s
+[planta] asalto=19 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[84.7929195,31.6025289],"current_a":[0.149590161,0.429530754],"torque_nm":[-1.98277771e-05,0.0135235506],"applied_pwm":[1,0.599999964],"over_1_2a_samples":336,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d=  53 mm rumbo= -801 cdeg  linea=0x9
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[19.2894382,57.5085543],"current_a":[0.769937416,0.630599077],"torque_nm":[0.0299922457,0.0232511302],"applied_pwm":[0.675,1],"over_1_2a_samples":1943,"over_3_2a_samples":1}
+[planta] gelatina ciclo=21 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=21 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 139224 ms
+[planta] rival ciclo=21 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=21 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=134224 permiso=139224 ms
+[gelatina] permiso de arranque a los 139224 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= -801 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo= -801 cdeg  linea=0x1
+[gelatina] t=  488 ms  TRACK        rival=si d= 383 mm rumbo=+1810 cdeg  linea=0xC
+[arbitro] asalto 20/30  lado     auto-salida     -1   0.49 s
+[planta] asalto=20 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[46.7214546,-16.5392022],"current_a":[0.216436588,-0.47720045],"torque_nm":[0.00321416712,-0.0158297854],"applied_pwm":[0.632499993,-0.467500031],"over_1_2a_samples":340,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=si d= 383 mm rumbo=+1810 cdeg  linea=0x8
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-13.2665871,-22.303123],"current_a":[-1.16389487,-1.00458553],"torque_nm":[-0.0490516999,-0.0413443976],"applied_pwm":[-0.85,-0.85],"over_1_2a_samples":1954,"over_3_2a_samples":1}
+[planta] gelatina ciclo=22 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=22 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 145024 ms
+[arranque] pulsador=140024 permiso=145024 ms
+[planta] rival ciclo=22 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=22 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 145024 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0xC
+[arbitro] asalto 21/30  espalda  auto-salida     -1   0.43 s
+[planta] asalto=21 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[60.1313502,60.1233265],"current_a":[-0.0199727721,-0.0732757126],"torque_nm":[-0.0082231932,-0.0108019614],"applied_pwm":[0.632499993,0.600000024],"over_1_2a_samples":342,"over_3_2a_samples":0}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[46.7793457,30.7996972],"current_a":[-0.166917323,1.10146209],"torque_nm":[-0.0153322932,0.0460312347],"applied_pwm":[0.4,1],"over_1_2a_samples":1959,"over_3_2a_samples":1}
+[planta] gelatina ciclo=23 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=23 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 150768 ms
+[planta] rival ciclo=23 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=23 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=145768 permiso=150768 ms
+[gelatina] permiso de arranque a los 150768 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  71 mm rumbo=+1501 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  71 mm rumbo=+1501 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 1008 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1088 ms  TRACK        rival=si d= 185 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1096 ms  ATTACK       rival=si d= 185 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque 0.292926 exceeds 'maxTorque' = 0.25
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[gelatina] t= 1672 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x8
+[arbitro] asalto 22/30  frente   expulsado       -1   1.80 s
+[planta] asalto=22 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[50.6950997,-34.461113],"current_a":[0.146383329,-0.161246649],"torque_nm":[-0.000174972643,-0.000544106971],"applied_pwm":[0.632499993,-0.467500031],"over_1_2a_samples":363,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-31.2854363,-30.2446735],"current_a":[-0.846232097,-0.864580195],"torque_nm":[-0.0336833422,-0.0345710135],"applied_pwm":[-0.85,-0.85],"over_1_2a_samples":2009,"over_3_2a_samples":1}
+[planta] gelatina ciclo=24 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=24 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 157880 ms
+[planta] rival ciclo=24 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=24 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=152880 permiso=157880 ms
+[gelatina] permiso de arranque a los 157880 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  488 ms  TRACK        rival=si d= 770 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  520 ms  ATTACK       rival=si d= 123 mm rumbo=+3004 cdeg  linea=0x0
+[arbitro] asalto 23/30  lado     auto-salida     -1   0.51 s
+[planta] asalto=23 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[54.1203649,-4.4567539],"current_a":[0.229886664,0.29645904],"torque_nm":[0.00386487475,0.0215975005],"applied_pwm":[0.720000029,0.132499963],"over_1_2a_samples":367,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=si d= 123 mm rumbo=+3004 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[2.96570521,34.9522466],"current_a":[-0.792283813,0.123810396],"torque_nm":[-0.0455487662,-0.00126703925],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":2017,"over_3_2a_samples":1}
+[planta] gelatina ciclo=25 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=25 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 163704 ms
+[planta] rival ciclo=25 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=25 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=158704 permiso=163704 ms
+[gelatina] permiso de arranque a los 163704 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1510 cdeg  linea=0x0
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=+1510 cdeg  linea=0xC
+[arbitro] asalto 24/30  espalda  auto-salida     -1   0.43 s
+[planta] asalto=24 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[60.2070434,60.2051631],"current_a":[-0.0747515973,-0.021274055],"torque_nm":[-0.0108733639,-0.00828614858],"applied_pwm":[0.600000024,0.632499993],"over_1_2a_samples":368,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1510 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[42.2778823,37.6404272],"current_a":[-0.0875589061,0.98086364],"torque_nm":[-0.0114929748,0.0401967453],"applied_pwm":[0.4,1],"over_1_2a_samples":2022,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 66 contact points.
+[planta] gelatina ciclo=26 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=26 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 169448 ms
+[planta] rival ciclo=26 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=26 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=164448 permiso=169448 ms
+[gelatina] permiso de arranque a los 169448 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=  384 ms  SEARCH       rival=no d=9999 mm rumbo=+1488 cdeg  linea=0x0
+[gelatina] t=  520 ms  TRACK        rival=si d=  35 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  528 ms  ATTACK       rival=si d=  35 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t= 1344 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1448 ms  TRACK        rival=si d=  25 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1456 ms  ATTACK       rival=si d=  25 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1736 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[arbitro] asalto 25/30  frente   tiempo agotado  +0  60.00 s
+[planta] asalto=25 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[0.00426759652,43.4400782],"current_a":[0.904369229,0.138618882],"torque_nm":[0.0437219376,-0.000550612499],"applied_pwm":[0.550000012,0.550000012],"over_1_2a_samples":381,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[0.00504539969,33.4655308],"current_a":[-0.740088948,0.150020408],"torque_nm":[-0.0358417273,9.87339112e-07],"applied_pwm":[-0.45,0.45],"over_1_2a_samples":2037,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[planta] gelatina ciclo=27 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=27 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 234760 ms
+[arranque] pulsador=229760 permiso=234760 ms
+[planta] rival ciclo=27 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=27 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 234760 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[arbitro] asalto 26/30  lado     auto-salida     -1   0.50 s
+[planta] asalto=26 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[41.8138723,42.9808745],"current_a":[0.167288031,0.146714401],"torque_nm":[0.000836385856,-0.000158955573],"applied_pwm":[0.550000012,0.550000012],"over_1_2a_samples":383,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x8
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[36.8359824,54.7288563],"current_a":[0.00837890912,0.67960368],"torque_nm":[-0.00685155379,0.0256219471],"applied_pwm":[0.4,1],"over_1_2a_samples":2041,"over_3_2a_samples":1}
+[planta] gelatina ciclo=28 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=28 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 240568 ms
+[arranque] pulsador=235568 permiso=240568 ms
+[planta] rival ciclo=28 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=28 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 240568 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x4
+[arbitro] asalto 27/30  espalda  auto-salida     -1   0.43 s
+[planta] asalto=27 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[60.0216738,59.2009309],"current_a":[-0.0714836285,-0.0570143655],"torque_nm":[-0.0107152613,-0.010015246],"applied_pwm":[0.600000024,0.600000024],"over_1_2a_samples":385,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x8
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[37.6416622,30.8632935],"current_a":[-0.00582479919,1.10034092],"torque_nm":[-0.00753872172,0.0459769931],"applied_pwm":[0.4,1],"over_1_2a_samples":2046,"over_3_2a_samples":1}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+[planta] gelatina ciclo=29 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=29 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 246312 ms
+[arranque] pulsador=241312 permiso=246312 ms
+[planta] rival ciclo=29 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=29 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 246312 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  72 mm rumbo=+1456 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=+1456 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 102 contact points.
+[arbitro] asalto 28/30  frente   rival fuera     +1   0.82 s
+[planta] asalto=28 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[28.8082827,22.6778661],"current_a":[1.13656967,0.581653256],"torque_nm":[0.0477297211,0.0208831572],"applied_pwm":[1,0.596828938],"over_1_2a_samples":395,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=si d=  46 mm rumbo=-3000 cdeg  linea=0x3
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[-67.5970051,-67.0189128],"current_a":[-0.206078362,-0.216269824],"torque_nm":[-0.00271304161,-0.00320609918],"applied_pwm":[-0.85,-0.85],"over_1_2a_samples":2060,"over_3_2a_samples":1}
+[planta] gelatina ciclo=30 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=30 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 252448 ms
+[arranque] pulsador=247448 permiso=252448 ms
+[planta] rival ciclo=30 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=30 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 252448 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x3
+[gelatina] t=  488 ms  TRACK        rival=si d= 308 mm rumbo=+1482 cdeg  linea=0xC
+[arbitro] asalto 29/30  lado     auto-salida     -1   0.48 s
+[planta] asalto=29 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[42.022571,43.572699],"current_a":[0.163608783,0.136280847],"torque_nm":[0.00065838577,-0.000663725416],"applied_pwm":[0.550000012,0.550000012],"over_1_2a_samples":398,"over_3_2a_samples":2}
+[gelatina] t=    0 ms  WAIT         rival=si d= 308 mm rumbo=+1482 cdeg  linea=0x0
+[rival] fin de asalto motor={"battery_v":7.4,"resistance_ohm":[4,4],"bridge_ohm":[0.5,0.5],"omega_rad_s":[36.6869829,41.6614666],"current_a":[0.0110056907,0.909974844],"torque_nm":[-0.00672447148,0.0367671827],"applied_pwm":[0.4,1],"over_1_2a_samples":2065,"over_3_2a_samples":1}
+[planta] gelatina ciclo=31 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] gelatina ciclo=31 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 258240 ms
+[arranque] pulsador=253240 permiso=258240 ms
+[planta] rival ciclo=31 rueda=0 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[planta] rival ciclo=31 rueda=1 V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 258240 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[arbitro] asalto 30/30  espalda  auto-salida     -1   0.42 s
+
+[arbitro] RESULTADO  6W 23L 1D  win rate 20.0%  auto-salidas 20  t medio de victoria 4.39 s
+
+[arbitro]   frente   6W 3L 1D
+[arbitro]   lado     0W 10L 0D
+[arbitro]   espalda  0W 10L 0D
+[arbitro]   combate: gana 0.0%  jueces 0.0%  pierde 100.0%
+[arbitro] resultados -> ../../../../result.json
+INFO: 'arbitro' controller exited successfully.
+INFO: medido: Terminating.
+INFO: oponente: Terminating.

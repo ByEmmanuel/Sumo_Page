@@ -1,0 +1,19 @@
+{
+  "opponent": "static",
+  "command": [
+    "webots",
+    "--batch",
+    "--mode=fast",
+    "--no-rendering",
+    "--minimize",
+    "--stdout",
+    "--stderr",
+    "--port=1300",
+    "$LAB_ROOT/Mini-Sumo-real/webots/worlds/_lote__real_20260913t155505515517z_static.wbt"
+  ],
+  "world_sha256": "5893532cb85541851ba2a665e1c7cfdcdf6437cb4a7b04fd69465f456c2684ac",
+  "world": "webots/worlds/_lote__real_20260913t155505515517z_static.wbt",
+  "status": "completed",
+  "elapsed_s": 3.06,
+  "returncode": 0
+}

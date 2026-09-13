@@ -1,0 +1,336 @@
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+INFO: medido: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T170210360446Z_v21_v0.3.1_calibracion_charger_s202_r1/project/webots/controllers/medido/medido
+INFO: contrario: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T170210360446Z_v21_v0.3.1_calibracion_charger_s202_r1/project/webots/controllers/contrario/contrario
+INFO: calibracion: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T170210360446Z_v21_v0.3.1_calibracion_charger_s202_r1/project/webots/controllers/calibracion/calibracion ../../../../series.jsonl
+[planta] gelatina ciclo=1 rueda=0 V=7.32687614 R=3.976615 Rpuente=0.626828313 I0=0.187419838 Ke=0.0767294453 Kt=0.0483794733
+[planta] gelatina ciclo=1 rueda=1 V=7.32687614 R=4.39883866 Rpuente=0.696620655 I0=0.109574953 Ke=0.0734612309 Kt=0.0483794733
+[sensores] gelatina ToF alcance=924.258232 minimo=32.2744644 sigma_rel=0.097492733
+[gelatina] HAL Webots listo: paso 8 ms, umbral de linea 400
+[gelatina] estrategia v0.3.0 en linea
+[planta] rival ciclo=1 rueda=0 V=7.44063751 R=4.15314498 Rpuente=0.663062608 I0=0.102328375 Ke=0.0764962106 Kt=0.0483794733
+[planta] rival ciclo=1 rueda=1 V=7.44063751 R=3.92569079 Rpuente=0.668848693 I0=0.16786302 Ke=0.070640585 Kt=0.0483794733
+[sensores] rival ToF alcance=1891.65825 minimo=23.122803 sigma_rel=0.0685652113
+[rival] HAL Webots listo: paso 8 ms, umbral de linea 400
+[rival] estrategia v0.3.0 en linea
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=0 robot=GELATINA rueda=0 rotor=3.10134521e-05
+[inercia] asalto=0 robot=GELATINA rueda=1 rotor=1.39191075e-05
+[inercia] asalto=0 robot=RIVAL rueda=0 rotor=2.72716466e-05
+[inercia] asalto=0 robot=RIVAL rueda=1 rotor=1.99920643e-05
+[planta] asalto=0 mu=0.914741075 slip=0.00138286245 aleatorio=1
+[planta] gelatina ciclo=2 rueda=0 V=7.43882521 R=4.38629808 Rpuente=0.558322275 I0=0.182332537 Ke=0.0733530683 Kt=0.0483794733
+[planta] gelatina ciclo=2 rueda=1 V=7.43882521 R=4.11016316 Rpuente=0.586673701 I0=0.219231695 Ke=0.0791466219 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1743.4156 minimo=40.110057 sigma_rel=0.0451321507
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[planta] rival ciclo=2 rueda=0 V=7.88574432 R=4.25630202 Rpuente=0.532270145 I0=0.171804401 Ke=0.0754975681 Kt=0.0483794733
+[planta] rival ciclo=2 rueda=1 V=7.88574432 R=4.38954468 Rpuente=0.57127645 I0=0.137924561 Ke=0.0743151884 Kt=0.0483794733
+[sensores] rival ToF alcance=1633.7259 minimo=34.1975117 sigma_rel=0.074577651
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=1 robot=GELATINA rueda=0 rotor=2.99776549e-05
+[inercia] asalto=1 robot=GELATINA rueda=1 rotor=1.55837261e-05
+[inercia] asalto=1 robot=RIVAL rueda=0 rotor=3.33818657e-05
+[inercia] asalto=1 robot=RIVAL rueda=1 rotor=2.93697724e-05
+[planta] asalto=1 mu=1.44424347 slip=0.0012381736 aleatorio=1
+[planta] gelatina ciclo=3 rueda=0 V=7.53341199 R=4.07396479 Rpuente=0.507683301 I0=0.149566689 Ke=0.0837037215 Kt=0.0483794733
+[planta] gelatina ciclo=3 rueda=1 V=7.53341199 R=3.88008943 Rpuente=0.518089736 I0=0.131354222 Ke=0.0748338379 Kt=0.0483794733
+[sensores] gelatina ToF alcance=925.145525 minimo=34.2007321 sigma_rel=0.0482552624
+[planta] rival ciclo=3 rueda=0 V=7.71421536 R=3.70271697 Rpuente=0.507355595 I0=0.0993602514 Ke=0.0701931668 Kt=0.0483794733
+[planta] rival ciclo=3 rueda=1 V=7.71421536 R=4.07937489 Rpuente=0.634224653 I0=0.182917777 Ke=0.0681690434 Kt=0.0483794733
+[sensores] rival ToF alcance=841.217685 minimo=47.082842 sigma_rel=0.0553438044
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=2 robot=GELATINA rueda=0 rotor=1.86407588e-05
+[inercia] asalto=2 robot=GELATINA rueda=1 rotor=1.25661927e-05
+[inercia] asalto=2 robot=RIVAL rueda=0 rotor=3.05470245e-05
+[inercia] asalto=2 robot=RIVAL rueda=1 rotor=1.97281365e-05
+[planta] asalto=2 mu=1.51666019 slip=0.000208186865 aleatorio=1
+[planta] gelatina ciclo=4 rueda=0 V=7.37190412 R=3.91188974 Rpuente=0.620583415 I0=0.19604212 Ke=0.0752297983 Kt=0.0483794733
+[planta] gelatina ciclo=4 rueda=1 V=7.37190412 R=3.71439228 Rpuente=0.559609926 I0=0.129847053 Ke=0.0696513658 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1304.81991 minimo=20.5538708 sigma_rel=0.0697629642
+[planta] rival ciclo=4 rueda=0 V=7.04146031 R=3.93864036 Rpuente=0.586223471 I0=0.206112823 Ke=0.0795353022 Kt=0.0483794733
+[planta] rival ciclo=4 rueda=1 V=7.04146031 R=4.39094949 Rpuente=0.564503765 I0=0.212910327 Ke=0.0826196159 Kt=0.0483794733
+[sensores] rival ToF alcance=1841.48201 minimo=26.5124661 sigma_rel=0.119746108
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=3 robot=GELATINA rueda=0 rotor=3.10188466e-05
+[inercia] asalto=3 robot=GELATINA rueda=1 rotor=3.04909009e-05
+[inercia] asalto=3 robot=RIVAL rueda=0 rotor=2.13538191e-05
+[inercia] asalto=3 robot=RIVAL rueda=1 rotor=3.0712938e-05
+[planta] asalto=3 mu=1.59661368 slip=0.00132233226 aleatorio=1
+[planta] gelatina ciclo=5 rueda=0 V=7.4664909 R=4.3995564 Rpuente=0.569944429 I0=0.163276264 Ke=0.083742537 Kt=0.0483794733
+[planta] gelatina ciclo=5 rueda=1 V=7.4664909 R=4.28431854 Rpuente=0.691025972 I0=0.191969579 Ke=0.0849683966 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1786.54983 minimo=44.6445459 sigma_rel=0.0728860807
+[planta] rival ciclo=5 rueda=0 V=7.4475508 R=3.76695762 Rpuente=0.64829222 I0=0.190813458 Ke=0.0661142437 Kt=0.0483794733
+[planta] rival ciclo=5 rueda=1 V=7.4475508 R=4.38181047 Rpuente=0.521915126 I0=0.173523822 Ke=0.0707763351 Kt=0.0483794733
+[sensores] rival ToF alcance=758.254856 minimo=20.0483245 sigma_rel=0.0824259424
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=4 robot=GELATINA rueda=0 rotor=2.64673846e-05
+[inercia] asalto=4 robot=GELATINA rueda=1 rotor=1.78694526e-05
+[inercia] asalto=4 robot=RIVAL rueda=0 rotor=3.20380291e-05
+[inercia] asalto=4 robot=RIVAL rueda=1 rotor=2.10951587e-05
+[planta] asalto=4 mu=1.44415472 slip=0.00190617192 aleatorio=1
+[planta] gelatina ciclo=6 rueda=0 V=7.57844006 R=4.00923948 Rpuente=0.501438403 I0=0.158188972 Ke=0.0819455326 Kt=0.0483794733
+[planta] gelatina ciclo=6 rueda=1 V=7.57844006 R=3.995643 Rpuente=0.581079018 I0=0.151626322 Ke=0.0696277241 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1305.7072 minimo=22.4801403 sigma_rel=0.100525494
+[planta] rival ciclo=6 rueda=0 V=7.89265761 R=3.87011466 Rpuente=0.517499757 I0=0.110289484 Ke=0.0725791021 Kt=0.0483794733
+[planta] rival ciclo=6 rueda=1 V=7.89265761 R=4.04566436 Rpuente=0.624342883 I0=0.143585363 Ke=0.0763112052 Kt=0.0483794733
+[sensores] rival ToF alcance=1800.32243 minimo=31.123035 sigma_rel=0.0884383821
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=5 robot=GELATINA rueda=0 rotor=3.39280177e-05
+[inercia] asalto=5 robot=GELATINA rueda=1 rotor=2.18119587e-05
+[inercia] asalto=5 robot=RIVAL rueda=0 rotor=2.67694743e-05
+[inercia] asalto=5 robot=RIVAL rueda=1 rotor=3.44705728e-05
+[planta] asalto=5 mu=1.22666118 slip=0.00102396131 aleatorio=1
+[planta] gelatina ciclo=7 rueda=0 V=7.67302684 R=3.69690619 Rpuente=0.650799417 I0=0.125423115 Ke=0.0938543475 Kt=0.0483794733
+[planta] gelatina ciclo=7 rueda=1 V=7.67302684 R=3.76556931 Rpuente=0.512495053 I0=0.213748848 Ke=0.0877738607 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1787.43705 minimo=46.5708154 sigma_rel=0.10364861
+[planta] rival ciclo=7 rueda=0 V=7.72112865 R=4.11652966 Rpuente=0.692585206 I0=0.187845343 Ke=0.0870969531 Kt=0.0483794733
+[planta] rival ciclo=7 rueda=1 V=7.72112865 R=3.73549457 Rpuente=0.687291086 I0=0.18857857 Ke=0.0701464122 Kt=0.0483794733
+[sensores] rival ToF alcance=1007.81422 minimo=44.0083635 sigma_rel=0.0692045307
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=6 robot=GELATINA rueda=0 rotor=1.87550692e-05
+[inercia] asalto=6 robot=GELATINA rueda=1 rotor=1.73134516e-05
+[inercia] asalto=6 robot=RIVAL rueda=0 rotor=3.39213374e-05
+[inercia] asalto=6 robot=RIVAL rueda=1 rotor=2.73575814e-05
+[planta] asalto=6 mu=1.09406934 slip=7.72485733e-05 aleatorio=1
+[planta] gelatina ciclo=8 rueda=0 V=7.50283778 R=3.97382298 Rpuente=0.572633064 I0=0.0830592692 Ke=0.0773406044 Kt=0.0483794733
+[planta] gelatina ciclo=8 rueda=1 V=7.50283778 R=3.62917304 Rpuente=0.574696743 I0=0.113474581 Ke=0.0912465302 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1348.39774 minimo=26.0514945 sigma_rel=0.072898159
+[planta] rival ciclo=8 rueda=0 V=7.85723157 R=4.18386607 Rpuente=0.684995782 I0=0.191403633 Ke=0.0950103405 Kt=0.0483794733
+[planta] rival ciclo=8 rueda=1 V=7.85723157 R=4.03326435 Rpuente=0.601732862 I0=0.187808231 Ke=0.0791871106 Kt=0.0483794733
+[sensores] rival ToF alcance=1618.01599 minimo=35.8857763 sigma_rel=0.0683040094
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=7 robot=GELATINA rueda=0 rotor=2.73718529e-05
+[inercia] asalto=7 robot=GELATINA rueda=1 rotor=3.55545178e-05
+[inercia] asalto=7 robot=RIVAL rueda=0 rotor=2.74694713e-05
+[inercia] asalto=7 robot=RIVAL rueda=1 rotor=1.02739758e-05
+[planta] asalto=7 mu=0.791047013 slip=0.00159832668 aleatorio=1
+[planta] gelatina ciclo=9 rueda=0 V=7.61478693 R=4.38350606 Rpuente=0.504127026 I0=0.077971977 Ke=0.0747244947 Kt=0.0483794733
+[planta] gelatina ciclo=9 rueda=1 V=7.61478693 R=4.14049754 Rpuente=0.664749789 I0=0.223131323 Ke=0.0652633275 Kt=0.0483794733
+[sensores] gelatina ToF alcance=867.555112 minimo=33.8870871 sigma_rel=0.100537572
+[planta] rival ciclo=9 rueda=0 V=7.66834031 R=3.70826468 Rpuente=0.677948284 I0=0.0912809283 Ke=0.100610713 Kt=0.0483794733
+[planta] rival ciclo=9 rueda=1 V=7.66834031 R=3.78169641 Rpuente=0.506044066 I0=0.185267222 Ke=0.0839959605 Kt=0.0483794733
+[sensores] rival ToF alcance=1788.08033 minimo=35.0261873 sigma_rel=0.104553862
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=8 robot=GELATINA rueda=0 rotor=1.38418808e-05
+[inercia] asalto=8 robot=GELATINA rueda=1 rotor=2.80096913e-05
+[inercia] asalto=8 robot=RIVAL rueda=0 rotor=1.27757236e-05
+[inercia] asalto=8 robot=RIVAL rueda=1 rotor=1.22824928e-05
+[planta] asalto=8 mu=1.36116198 slip=0.000794938922 aleatorio=1
+[planta] gelatina ciclo=10 rueda=0 V=7.77882307 R=3.75923829 Rpuente=0.58201983 I0=0.155920342 Ke=0.0697601001 Kt=0.0483794733
+[planta] gelatina ciclo=10 rueda=1 V=7.77882307 R=3.67601657 Rpuente=0.630713856 I0=0.175390711 Ke=0.0854913154 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1398.99496 minimo=22.9574341 sigma_rel=0.0417258883
+[planta] rival ciclo=10 rueda=0 V=7.02405387 R=3.60284042 Rpuente=0.550647068 I0=0.205736545 Ke=0.0647883479 Kt=0.0483794733
+[planta] rival ciclo=10 rueda=1 V=7.02405387 R=3.77547922 Rpuente=0.54594698 I0=0.191139507 Ke=0.0929831868 Kt=0.0483794733
+[sensores] rival ToF alcance=1637.79399 minimo=28.7775952 sigma_rel=0.110746279
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=9 robot=GELATINA rueda=0 rotor=1.84078428e-05
+[inercia] asalto=9 robot=GELATINA rueda=1 rotor=1.12382948e-05
+[inercia] asalto=9 robot=RIVAL rueda=0 rotor=1.05630267e-05
+[inercia] asalto=9 robot=RIVAL rueda=1 rotor=2.1193276e-05
+[planta] asalto=9 mu=1.56548194 slip=0.000154583573 aleatorio=1
+[planta] gelatina ciclo=11 rueda=0 V=7.61297464 R=3.81665916 Rpuente=0.599386704 I0=0.157976139 Ke=0.0731958083 Kt=0.0483794733
+[planta] gelatina ciclo=11 rueda=1 V=7.61297464 R=4.32496986 Rpuente=0.582574797 I0=0.124499989 Ke=0.0820119159 Kt=0.0483794733
+[sensores] gelatina ToF alcance=719.312465 minimo=20.8743429 sigma_rel=0.0771045113
+[planta] rival ciclo=11 rueda=0 V=8.37406132 R=4.10337014 Rpuente=0.600663114 I0=0.1770423 Ke=0.0729953033 Kt=0.0483794733
+[planta] rival ciclo=11 rueda=1 V=8.37406132 R=3.85509682 Rpuente=0.519354236 I0=0.11887224 Ke=0.0924471522 Kt=0.0483794733
+[sensores] rival ToF alcance=1907.27819 minimo=47.8773499 sigma_rel=0.103126526
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=10 robot=GELATINA rueda=0 rotor=1.05892813e-05
+[inercia] asalto=10 robot=GELATINA rueda=1 rotor=3.57274269e-05
+[inercia] asalto=10 robot=RIVAL rueda=0 rotor=1.88264991e-05
+[inercia] asalto=10 robot=RIVAL rueda=1 rotor=3.3286164e-05
+[planta] asalto=10 mu=1.10386328 slip=0.00052809751 aleatorio=1
+[planta] gelatina ciclo=12 rueda=0 V=7.71190197 R=4.08482995 Rpuente=0.644280958 I0=0.169629925 Ke=0.0695782123 Kt=0.0483794733
+[planta] gelatina ciclo=12 rueda=1 V=7.71190197 R=4.08024569 Rpuente=0.603650081 I0=0.0860060692 Ke=0.0729514869 Kt=0.0483794733
+[sensores] gelatina ToF alcance=960.399193 minimo=33.4012479 sigma_rel=0.0663567019
+[planta] rival ciclo=12 rueda=0 V=7.57976986 R=4.08517876 Rpuente=0.604600394 I0=0.0900449663 Ke=0.0735145559 Kt=0.0483794733
+[planta] rival ciclo=12 rueda=1 V=7.57976986 R=3.77688403 Rpuente=0.539174294 I0=0.116125283 Ke=0.0764875478 Kt=0.0483794733
+[sensores] rival ToF alcance=1845.5501 minimo=21.0925496 sigma_rel=0.0759147358
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=11 robot=GELATINA rueda=0 rotor=1.54757999e-05
+[inercia] asalto=11 robot=GELATINA rueda=1 rotor=1.72535622e-05
+[inercia] asalto=11 robot=RIVAL rueda=0 rotor=2.9181668e-05
+[inercia] asalto=11 robot=RIVAL rueda=1 rotor=2.07545739e-05
+[planta] asalto=11 mu=1.40394292 slip=0.000707900405 aleatorio=1
+[planta] gelatina ciclo=13 rueda=0 V=7.82385113 R=3.69451303 Rpuente=0.575774932 I0=0.164542624 Ke=0.0685277287 Kt=0.0483794733
+[planta] gelatina ciclo=13 rueda=1 V=7.82385113 R=3.79157019 Rpuente=0.693703127 I0=0.19566282 Ke=0.0787789588 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1779.55664 minimo=41.2368405 sigma_rel=0.0939961147
+[planta] rival ciclo=13 rueda=0 V=7.25197982 R=4.23344626 Rpuente=0.540489352 I0=0.218493819 Ke=0.0826453378 Kt=0.0483794733
+[planta] rival ciclo=13 rueda=1 V=7.25197982 R=3.99413052 Rpuente=0.574389446 I0=0.183310542 Ke=0.0832133811 Kt=0.0483794733
+[sensores] rival ToF alcance=1916.19443 minimo=30.2736187 sigma_rel=0.076034193
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=12 robot=GELATINA rueda=0 rotor=1.6843873e-05
+[inercia] asalto=12 robot=GELATINA rueda=1 rotor=3.1614923e-05
+[inercia] asalto=12 robot=RIVAL rueda=0 rotor=1.96655547e-05
+[inercia] asalto=12 robot=RIVAL rueda=1 rotor=3.3263207e-05
+[planta] asalto=12 mu=1.44304357 slip=0.000721355319 aleatorio=1
+[planta] gelatina ciclo=14 rueda=0 V=7.91843791 R=4.18217969 Rpuente=0.525135946 I0=0.131776768 Ke=0.0754761813 Kt=0.0483794733
+[planta] gelatina ciclo=14 rueda=1 V=7.91843791 R=4.36149645 Rpuente=0.625119174 I0=0.107785347 Ke=0.0730611138 Kt=0.0483794733
+[sensores] gelatina ToF alcance=961.286485 minimo=35.3275156 sigma_rel=0.0971192312
+[planta] rival ciclo=14 rueda=0 V=7.03096708 R=4.01665311 Rpuente=0.535876679 I0=0.144221637 Ke=0.0889491126 Kt=0.0483794733
+[planta] rival ciclo=14 rueda=1 V=7.03096708 R=4.2315989 Rpuente=0.599013412 I0=0.196800309 Ke=0.0936268546 Kt=0.0483794733
+[sensores] rival ToF alcance=1804.39053 minimo=25.7031184 sigma_rel=0.0446070099
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=13 robot=GELATINA rueda=0 rotor=2.45993296e-05
+[inercia] asalto=13 robot=GELATINA rueda=1 rotor=2.34491013e-05
+[inercia] asalto=13 robot=RIVAL rueda=0 rotor=3.47163441e-05
+[inercia] asalto=13 robot=RIVAL rueda=1 rotor=1.17412718e-05
+[planta] asalto=13 mu=1.10433469 slip=0.00199916172 aleatorio=1
+[planta] gelatina ciclo=15 rueda=0 V=7.7525894 R=4.23960056 Rpuente=0.542502832 I0=0.133832574 Ke=0.0795156512 Kt=0.0483794733
+[planta] gelatina ciclo=15 rueda=1 V=7.7525894 R=4.21044974 Rpuente=0.576980114 I0=0.206894624 Ke=0.0643991058 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1581.60399 minimo=33.2444245 sigma_rel=0.052497859
+[planta] rival ciclo=15 rueda=0 V=7.82537946 R=3.81265841 Rpuente=0.55763855 I0=0.129813579 Ke=0.0825577696 Kt=0.0483794733
+[planta] rival ciclo=15 rueda=1 V=7.82537946 R=3.78647418 Rpuente=0.696036458 I0=0.103438103 Ke=0.0928089407 Kt=0.0483794733
+[sensores] rival ToF alcance=1676.19507 minimo=24.9655038 sigma_rel=0.0524656773
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=14 robot=GELATINA rueda=0 rotor=2.42418968e-05
+[inercia] asalto=14 robot=GELATINA rueda=1 rotor=1.28767667e-05
+[inercia] asalto=14 robot=RIVAL rueda=0 rotor=1.79000942e-05
+[planta] gelatina ciclo=16 rueda=0 V=7.86019793 R=4.06877956 Rpuente=0.578463554 I0=0.0843256295 Ke=0.0916856846 Kt=0.0483794733
+[planta] gelatina ciclo=16 rueda=1 V=7.86019793 R=3.93642468 Rpuente=0.57737391 I0=0.117167813 Ke=0.0826028147 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1341.40447 minimo=22.6437891 sigma_rel=0.0940081978
+[planta] rival ciclo=16 rueda=0 V=7.84873538 R=3.77538033 Rpuente=0.588964367 I0=0.126722172 Ke=0.0786571345 Kt=0.0483794733
+[planta] rival ciclo=16 rueda=1 V=7.84873538 R=3.74166789 Rpuente=0.600334752 I0=0.192280465 Ke=0.0927183395 Kt=0.0483794733
+[sensores] rival ToF alcance=960.608792 minimo=43.2565868 sigma_rel=0.0898586798
+[inercia] asalto=14 robot=RIVAL rueda=1 rotor=3.09889839e-05
+[planta] asalto=14 mu=0.753162837 slip=0.0013775177 aleatorio=1
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=15 robot=GELATINA rueda=0 rotor=1.45004039e-05
+[inercia] asalto=15 robot=GELATINA rueda=1 rotor=1.20902653e-05
+[inercia] asalto=15 robot=RIVAL rueda=0 rotor=1.73660765e-05
+[inercia] asalto=15 robot=RIVAL rueda=1 rotor=1.45452188e-05
+[planta] asalto=15 mu=1.36497173 slip=0.00167599761 aleatorio=1
+[planta] gelatina ciclo=17 rueda=0 V=7.9547847 R=3.75644627 Rpuente=0.527824581 I0=0.201559773 Ke=0.0949664749 Kt=0.0483794733
+[planta] gelatina ciclo=17 rueda=1 V=7.9547847 R=3.70635095 Rpuente=0.508789945 I0=0.179290339 Ke=0.0702071192 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1823.1344 minimo=46.7344642 sigma_rel=0.0971313095
+[planta] rival ciclo=17 rueda=0 V=7.19719443 R=4.31167984 Rpuente=0.571537054 I0=0.124719688 Ke=0.0838668777 Kt=0.0483794733
+[planta] rival ciclo=17 rueda=1 V=7.19719443 R=4.17257819 Rpuente=0.629050183 I0=0.159416941 Ke=0.0656474858 Kt=0.0483794733
+[sensores] rival ToF alcance=716.776347 minimo=43.1112844 sigma_rel=0.0946897507
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=16 robot=GELATINA rueda=0 rotor=2.34346318e-05
+[inercia] asalto=16 robot=GELATINA rueda=1 rotor=9.42283899e-06
+[inercia] asalto=16 robot=RIVAL rueda=0 rotor=3.39332126e-05
+[inercia] asalto=16 robot=RIVAL rueda=1 rotor=2.97358779e-05
+[planta] asalto=16 mu=1.45517848 slip=0.000485664368 aleatorio=1
+[planta] gelatina ciclo=18 rueda=0 V=8.06673386 R=4.1661293 Rpuente=0.659318542 I0=0.196472481 Ke=0.089929414 Kt=0.0483794733
+[planta] gelatina ciclo=18 rueda=1 V=8.06673386 R=4.2176754 Rpuente=0.59884299 I0=0.138947082 Ke=0.0829018781 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1342.29177 minimo=24.5700568 sigma_rel=0.0447707272
+[planta] rival ciclo=18 rueda=0 V=7.77231332 R=3.92495236 Rpuente=0.583257365 I0=0.0862540483 Ke=0.0800220344 Kt=0.0483794733
+[planta] rival ciclo=18 rueda=1 V=7.77231332 R=3.69535203 Rpuente=0.515710711 I0=0.169835222 Ke=0.0681474997 Kt=0.0483794733
+[sensores] rival ToF alcance=885.168153 minimo=29.7166258 sigma_rel=0.0566372728
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=17 robot=GELATINA rueda=0 rotor=2.90801244e-05
+[inercia] asalto=17 robot=GELATINA rueda=1 rotor=2.00778011e-05
+[inercia] asalto=17 robot=RIVAL rueda=0 rotor=2.25762531e-05
+[inercia] asalto=17 robot=RIVAL rueda=1 rotor=2.85832645e-05
+[planta] asalto=17 mu=1.56625537 slip=0.000928892612 aleatorio=1
+[planta] gelatina ciclo=19 rueda=0 V=7.9529725 R=3.98959937 Rpuente=0.623084259 I0=0.131563944 Ke=0.0680576833 Kt=0.0483794733
+[planta] gelatina ciclo=19 rueda=1 V=7.9529725 R=3.89082332 Rpuente=0.626614952 I0=0.080659014 Ke=0.0877336558 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1674.89175 minimo=33.7217182 sigma_rel=0.0736982489
+[planta] rival ciclo=19 rueda=0 V=7.69181423 R=3.88291636 Rpuente=0.501315427 I0=0.0944095105 Ke=0.0882648608 Kt=0.0483794733
+[planta] rival ciclo=19 rueda=1 V=7.69181423 R=4.37716417 Rpuente=0.661456406 I0=0.135795683 Ke=0.0696567166 Kt=0.0483794733
+[sensores] rival ToF alcance=1910.39414 minimo=38.4217888 sigma_rel=0.109392815
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=18 robot=GELATINA rueda=0 rotor=2.55628279e-05
+[inercia] asalto=18 robot=GELATINA rueda=1 rotor=1.62546233e-05
+[inercia] asalto=18 robot=RIVAL rueda=0 rotor=1.08294457e-05
+[inercia] asalto=18 robot=RIVAL rueda=1 rotor=3.34940583e-05
+[planta] asalto=18 mu=0.97058562 slip=0.000638703942 aleatorio=1
+[planta] gelatina ciclo=20 rueda=0 V=8.06926221 R=4.17978654 Rpuente=0.650111461 I0=0.170896286 Ke=0.0817424523 Kt=0.0483794733
+[planta] gelatina ciclo=20 rueda=1 V=8.06926221 R=4.38749733 Rpuente=0.606327248 I0=0.0896993101 Ke=0.100080471 Kt=0.0483794733
+[sensores] gelatina ToF alcance=953.406 minimo=29.9935406 sigma_rel=0.0874667406
+[planta] rival ciclo=20 rueda=0 V=7.08237488 R=4.1005619 Rpuente=0.601505435 I0=0.216435054 Ke=0.0746055192 Kt=0.0483794733
+[planta] rival ciclo=20 rueda=1 V=7.08237488 R=3.75410199 Rpuente=0.618680131 I0=0.152823785 Ke=0.0699378392 Kt=0.0483794733
+[sensores] rival ToF alcance=763.722891 minimo=31.0040182 sigma_rel=0.041339016
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=19 robot=GELATINA rueda=0 rotor=1.14688404e-05
+[inercia] asalto=19 robot=GELATINA rueda=1 rotor=9.06801814e-06
+[inercia] asalto=19 robot=RIVAL rueda=0 rotor=2.26946898e-05
+[inercia] asalto=19 robot=RIVAL rueda=1 rotor=1.50448853e-05
+[planta] asalto=19 mu=0.861921465 slip=0.000176122069 aleatorio=1
+[planta] gelatina ciclo=21 rueda=0 V=8.16384898 R=3.86745324 Rpuente=0.599472475 I0=0.138130429 Ke=0.0939601808 Kt=0.0483794733
+[planta] gelatina ciclo=21 rueda=1 V=8.16384898 R=4.15742359 Rpuente=0.537743282 I0=0.151821837 Ke=0.0826446468 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1435.13592 minimo=24.0842158 sigma_rel=0.0905898523
+[planta] rival ciclo=21 rueda=0 V=7.12782294 R=4.30255547 Rpuente=0.649408877 I0=0.121544471 Ke=0.0811541359 Kt=0.0483794733
+[planta] rival ciclo=21 rueda=1 V=7.12782294 R=3.69970617 Rpuente=0.605081093 I0=0.200309515 Ke=0.090739337 Kt=0.0483794733
+[sensores] rival ToF alcance=1370.81337 minimo=30.4095799 sigma_rel=0.0516815853
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+Error: wb_supervisor_field_set_mf_vec3f() called on a read-only PROTO internal field.
+[inercia] asalto=20 robot=GELATINA rueda=0 rotor=3.55582724e-05
+[inercia] asalto=20 robot=GELATINA rueda=1 rotor=1.51044143e-05
+[inercia] asalto=20 robot=RIVAL rueda=0 rotor=2.89683841e-05
+[inercia] asalto=20 robot=RIVAL rueda=1 rotor=2.69373559e-05
+[planta] asalto=20 mu=1.44596568 slip=0.000684129953 aleatorio=1
+[planta] gelatina ciclo=22 rueda=0 V=7.99800048 R=3.92487407 Rpuente=0.616839361 I0=0.140186226 Ke=0.0668470739 Kt=0.0483794733
+[planta] gelatina ciclo=22 rueda=1 V=7.99800048 R=4.00637693 Rpuente=0.689604223 I0=0.100931114 Ke=0.0811948348 Kt=0.0483794733
+[sensores] gelatina ToF alcance=755.453426 minimo=22.0011264 sigma_rel=0.0459684801
+[planta] rival ciclo=22 rueda=0 V=7.92006495 R=3.8083087 Rpuente=0.523404133 I0=0.0849265963 Ke=0.103024031 Kt=0.0483794733
+[planta] rival ciclo=22 rueda=1 V=7.92006495 R=4.06190667 Rpuente=0.557274508 I0=0.157255536 Ke=0.0861293284 Kt=0.0483794733
+[sensores] rival ToF alcance=1362.93947 minimo=35.4538512 sigma_rel=0.0664757156
+INFO: medido: Terminating.
+INFO: contrario: Terminating.
+INFO: calibracion: Terminating.

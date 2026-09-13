@@ -1,0 +1,237 @@
+INFO: _real_20260913t155350632633z_yo_v030: Starting controller: $LAB_ROOT/Mini-Sumo-real/webots/controllers/_real_20260913t155350632633z_yo_v030/_real_20260913t155350632633z_yo_v030
+INFO: _real_20260913t155350632633z_rival_v030: Starting controller: $LAB_ROOT/Mini-Sumo-real/webots/controllers/_real_20260913t155350632633z_rival_v030/_real_20260913t155350632633z_rival_v030
+INFO: arbitro: Starting controller: $LAB_ROOT/Mini-Sumo-real/webots/controllers/arbitro/arbitro --rounds 30 --rival v0.3.0 --colocacion reglamento --version v0.3.0 --out ../../../runs/real_baseline/20260913T155350632633Z_v0.3.0_reglamento/v0.3.0.json
+[gelatina] HAL Webots listo: paso 8 ms, umbral de linea 400
+[gelatina] estrategia v0.3.0 en linea
+[rival] HAL Webots listo: paso 8 ms, umbral de linea 400
+[rival] estrategia v0.3.0 en linea
+
+[arbitro] 30 asaltos contra 'v0.3.0', colocacion reglamento, limite 60 s por asalto
+[gelatina] t=    0 ms  WAIT         rival=si d=  26 mm rumbo=+1495 cdeg  linea=0x3
+[rival] t=    0 ms  WAIT         rival=si d=  28 mm rumbo=+1497 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  73 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto  1/30  frente   rival fuera     +1   0.45 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1495 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1496 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1495 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1496 cdeg  linea=0x0
+[gelatina] t=  304 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1495 cdeg  linea=0x1
+[rival] t=  304 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1496 cdeg  linea=0x1
+[rival] t=  400 ms  ATTACK       rival=si d=  57 mm rumbo=  +97 cdeg  linea=0x4
+[rival] t=  408 ms  EDGE_ESCAPE  rival=si d=  66 mm rumbo=  +93 cdeg  linea=0xC
+[arbitro] asalto  2/30  lado     rival fuera     +1   0.42 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= +224 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  +98 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= +224 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  +98 cdeg  linea=0x0
+[gelatina] t=  256 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= +224 cdeg  linea=0x3
+[rival] t=  256 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  +98 cdeg  linea=0x3
+[arbitro] asalto  3/30  espalda  rival fuera     +1   0.34 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=17856 ms  EDGE_ESCAPE  rival=si d=   5 mm rumbo=   +0 cdeg  linea=0x8
+[arbitro] asalto  4/30  frente   expulsado       -1  17.92 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1643 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  -16 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1643 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  -16 cdeg  linea=0x0
+[gelatina] t=  288 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1643 cdeg  linea=0x1
+[rival] t=  288 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  -16 cdeg  linea=0x1
+[arbitro] asalto  5/30  lado     rival fuera     +1   0.42 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= -334 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  -67 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= -334 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  -67 cdeg  linea=0x0
+[gelatina] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= -334 cdeg  linea=0x3
+[rival] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  -67 cdeg  linea=0x3
+[arbitro] asalto  6/30  espalda  auto-salida     -1   0.34 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    7 ms  ATTACK       rival=si d=  73 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    7 ms  ATTACK       rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto  7/30  frente   rival fuera     +1   0.44 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   -8 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   -8 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=  288 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=   -8 cdeg  linea=0x1
+[rival] t=  288 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x1
+[arbitro] asalto  8/30  lado     rival fuera     +1   0.48 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+4631 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= -250 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+4631 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= -250 cdeg  linea=0x0
+[gelatina] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+4631 cdeg  linea=0x3
+[rival] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= -250 cdeg  linea=0x3
+[arbitro] asalto  9/30  espalda  auto-salida     -1   0.36 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  73 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  73 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 10/30  frente   rival fuera     +1   0.43 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-1497 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-1497 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-1497 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-1497 cdeg  linea=0x0
+[gelatina] t=  304 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-1497 cdeg  linea=0x1
+[rival] t=  304 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-1497 cdeg  linea=0x1
+[arbitro] asalto 11/30  lado     auto-salida     -1   0.44 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  +77 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= +344 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  +77 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= +344 cdeg  linea=0x0
+[gelatina] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  +77 cdeg  linea=0x3
+[rival] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= +344 cdeg  linea=0x3
+[arbitro] asalto 12/30  espalda  rival fuera     +1   0.37 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  77 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=   80 ms  EDGE_ESCAPE  rival=si d=   2 mm rumbo=+3000 cdeg  linea=0x1
+[rival] t=  400 ms  ATTACK       rival=si d=  18 mm rumbo=+1501 cdeg  linea=0x8
+[rival] t=  488 ms  EDGE_ESCAPE  rival=si d=  19 mm rumbo=   +0 cdeg  linea=0x8
+[arbitro] asalto 13/30  frente   rival fuera     +1   0.49 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  -12 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  -12 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  288 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  -12 cdeg  linea=0x1
+[rival] t=  288 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x1
+[arbitro] asalto 14/30  lado     rival fuera     +1   0.46 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3180 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= +603 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+3180 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= +603 cdeg  linea=0x0
+[gelatina] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+3180 cdeg  linea=0x3
+[rival] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= +603 cdeg  linea=0x3
+[arbitro] asalto 15/30  espalda  rival fuera     +1   0.34 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 16/30  frente   rival fuera     +1   0.42 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1489 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1489 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=  303 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1489 cdeg  linea=0x1
+[rival] t=  303 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x1
+[arbitro] asalto 17/30  lado     auto-salida     -1   0.42 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  +22 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  -55 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  +22 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  -55 cdeg  linea=0x0
+[gelatina] t=  256 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  +22 cdeg  linea=0x3
+[rival] t=  256 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  -55 cdeg  linea=0x3
+[arbitro] asalto 18/30  espalda  rival fuera     +1   0.36 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 19/30  frente   expulsado       -1   0.45 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   -1 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +1 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   -1 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +1 cdeg  linea=0x0
+[gelatina] t=  287 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=   -1 cdeg  linea=0x1
+[rival] t=  287 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=   +1 cdeg  linea=0x1
+[arbitro] asalto 20/30  lado     doble salida    +0   0.48 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-4626 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-4626 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-4626 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-4626 cdeg  linea=0x0
+[gelatina] t=  240 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-4626 cdeg  linea=0x1
+[rival] t=  240 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-4626 cdeg  linea=0x1
+[arbitro] asalto 21/30  espalda  rival fuera     +1   0.36 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  73 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 22/30  frente   expulsado       -1   0.50 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1498 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1497 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1498 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1497 cdeg  linea=0x0
+[gelatina] t=  296 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1498 cdeg  linea=0x1
+[rival] t=  296 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1497 cdeg  linea=0x1
+[arbitro] asalto 23/30  lado     rival fuera     +1   0.52 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-4620 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-4636 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-4620 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-4636 cdeg  linea=0x0
+[gelatina] t=  256 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-4620 cdeg  linea=0x3
+[rival] t=  256 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-4636 cdeg  linea=0x3
+[arbitro] asalto 24/30  espalda  auto-salida     -1   0.38 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  73 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=20024 ms  EDGE_ESCAPE  rival=si d=   5 mm rumbo=   +0 cdeg  linea=0x3
+[arbitro] asalto 25/30  frente   rival fuera     +1  20.10 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= -676 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-1255 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= -676 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-1255 cdeg  linea=0x0
+[gelatina] t=  303 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= -676 cdeg  linea=0x1
+[rival] t=  303 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-1255 cdeg  linea=0x1
+[arbitro] asalto 26/30  lado     rival fuera     +1   0.42 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  -30 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-1733 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  -30 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-1733 cdeg  linea=0x0
+[gelatina] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  -30 cdeg  linea=0x3
+[rival] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=-1733 cdeg  linea=0x3
+[arbitro] asalto 27/30  espalda  auto-salida     -1   0.38 s
+[gelatina] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[rival] t=    8 ms  ATTACK       rival=si d=  72 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 28/30  frente   rival fuera     +1   0.44 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=  +23 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=  +23 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=  280 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=  +23 cdeg  linea=0x1
+[rival] t=  280 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x1
+[arbitro] asalto 29/30  lado     auto-salida     -1   0.45 s
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo= +342 cdeg  linea=0x0
+[rival] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3294 cdeg  linea=0x0
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo= +342 cdeg  linea=0x0
+[rival] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+3294 cdeg  linea=0x0
+[gelatina] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo= +342 cdeg  linea=0x3
+[rival] t=  248 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+3294 cdeg  linea=0x3
+[arbitro] asalto 30/30  espalda  doble salida    +0   0.35 s
+
+[arbitro] RESULTADO  18W 10L 2D  win rate 60.0%  auto-salidas 7  t medio de victoria 1.51 s
+
+[arbitro]   frente   7W 3L 0D
+[arbitro]   lado     6W 3L 1D
+[arbitro]   espalda  5W 4L 1D
+[arbitro]   combate: gana 71.4%  jueces 0.0%  pierde 28.6%
+[arbitro] resultados -> ../../../runs/real_baseline/20260913T155350632633Z_v0.3.0_reglamento/v0.3.0.json
+INFO: 'arbitro' controller exited successfully.
+INFO: _real_20260913t155350632633z_yo_v030: Terminating.
+INFO: _real_20260913t155350632633z_rival_v030: Terminating.

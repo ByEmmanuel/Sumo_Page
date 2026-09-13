@@ -1,0 +1,17 @@
+--- v0.1.0/webots/controllers/gelatina_nuclear/Makefile
++++ v0.1.1/webots/controllers/gelatina_nuclear/Makefile
+@@ -21,8 +21,12 @@
+ ifeq ($(strip $(WEBOTS_HOME)),)
+   $(warning WEBOTS_HOME sin definir: solo esta disponible el objetivo 'links')
+ else
+-  space :=
+-  space +=
++  empty :=
++  space := $(empty) $(empty)
+   WEBOTS_HOME_PATH ?= $(subst $(space),\ ,$(strip $(subst \,/,$(WEBOTS_HOME))))
+   include $(WEBOTS_HOME_PATH)/resources/Makefile.include
++  # 'links' es el primer target del fichero, asi que sin esto GNU Make lo
++  # toma como .DEFAULT_GOAL y 'make' (sin argumentos, que es justo lo que
++  # invoca Webots para compilar) no compilaria nunca el controlador.
++  .DEFAULT_GOAL := release
+ endif

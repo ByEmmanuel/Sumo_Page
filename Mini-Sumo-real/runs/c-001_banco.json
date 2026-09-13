@@ -1,0 +1,50 @@
+{
+  "version": "c-001",
+  "engine": "harness-nativo",
+  "mode": "banco",
+  "round_max_s": 30,
+  "strategy_build": "v0.3.0",
+  "metrics": {
+    "rounds": 240,
+    "wins": 119,
+    "losses": 2,
+    "draws": 119,
+    "win_rate": 0.496,
+    "avg_win_time_s": 0.71,
+    "self_outs": 0,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 60,
+        "wins": 60,
+        "losses": 0,
+        "draws": 0,
+        "win_rate": 1.0
+      },
+      {
+        "name": "charger",
+        "rounds": 60,
+        "wins": 1,
+        "losses": 0,
+        "draws": 59,
+        "win_rate": 0.017
+      },
+      {
+        "name": "spinner",
+        "rounds": 60,
+        "wins": 58,
+        "losses": 2,
+        "draws": 0,
+        "win_rate": 0.967
+      },
+      {
+        "name": "mirror",
+        "rounds": 60,
+        "wins": 0,
+        "losses": 0,
+        "draws": 60,
+        "win_rate": 0.0
+      }
+    ]
+  }
+}

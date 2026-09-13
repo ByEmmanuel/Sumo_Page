@@ -1,0 +1,5568 @@
+{
+  "complete": true,
+  "revision_id": 22,
+  "revision_hash": "5650b9b0bd2afc9b6922658164da4c9c453c2bea3d4efe5ca71d95623af44519",
+  "created": "2026-09-13T17:21:54.182755+00:00",
+  "rounds": 3600,
+  "groups": [
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 47,
+      "losses": 73,
+      "draws": 30,
+      "self_outs": 16,
+      "descriptive_wilson_95_percent": [
+        24.454798684647926,
+        39.144123843458914
+      ]
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 60,
+      "losses": 71,
+      "draws": 19,
+      "self_outs": 25,
+      "descriptive_wilson_95_percent": [
+        32.50419076797755,
+        47.99523201493683
+      ]
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 70,
+      "losses": 43,
+      "draws": 37,
+      "self_outs": 11,
+      "descriptive_wilson_95_percent": [
+        38.865912474061716,
+        54.63389512024308
+      ]
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 80,
+      "losses": 43,
+      "draws": 27,
+      "self_outs": 11,
+      "descriptive_wilson_95_percent": [
+        45.366104879756925,
+        61.1340875259383
+      ]
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 87,
+      "losses": 63,
+      "draws": 0,
+      "self_outs": 12,
+      "descriptive_wilson_95_percent": [
+        49.998333511352705,
+        65.6021282623158
+      ]
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 58,
+      "losses": 91,
+      "draws": 1,
+      "self_outs": 31,
+      "descriptive_wilson_95_percent": [
+        31.24898876515768,
+        46.65035705547861
+      ]
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 48,
+      "losses": 98,
+      "draws": 4,
+      "self_outs": 82,
+      "descriptive_wilson_95_percent": [
+        25.064412359702402,
+        39.834548649543464
+      ]
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 40,
+      "losses": 108,
+      "draws": 2,
+      "self_outs": 92,
+      "descriptive_wilson_95_percent": [
+        20.23705573107324,
+        34.261597429060295
+      ]
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 87,
+      "losses": 63,
+      "draws": 0,
+      "self_outs": 12,
+      "descriptive_wilson_95_percent": [
+        49.998333511352705,
+        65.6021282623158
+      ]
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 58,
+      "losses": 91,
+      "draws": 1,
+      "self_outs": 31,
+      "descriptive_wilson_95_percent": [
+        31.24898876515768,
+        46.65035705547861
+      ]
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 48,
+      "losses": 98,
+      "draws": 4,
+      "self_outs": 82,
+      "descriptive_wilson_95_percent": [
+        25.064412359702402,
+        39.834548649543464
+      ]
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 40,
+      "losses": 108,
+      "draws": 2,
+      "self_outs": 92,
+      "descriptive_wilson_95_percent": [
+        20.23705573107324,
+        34.261597429060295
+      ]
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 86,
+      "losses": 63,
+      "draws": 1,
+      "self_outs": 13,
+      "descriptive_wilson_95_percent": [
+        49.332380166580926,
+        64.96804312594855
+      ]
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 58,
+      "losses": 92,
+      "draws": 0,
+      "self_outs": 31,
+      "descriptive_wilson_95_percent": [
+        31.24898876515768,
+        46.65035705547861
+      ]
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 47,
+      "losses": 101,
+      "draws": 2,
+      "self_outs": 83,
+      "descriptive_wilson_95_percent": [
+        24.454798684647926,
+        39.144123843458914
+      ]
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 40,
+      "losses": 108,
+      "draws": 2,
+      "self_outs": 95,
+      "descriptive_wilson_95_percent": [
+        20.23705573107324,
+        34.261597429060295
+      ]
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 115,
+      "losses": 34,
+      "draws": 1,
+      "self_outs": 4,
+      "descriptive_wilson_95_percent": [
+        69.28407309593592,
+        82.71746614962575
+      ]
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 89,
+      "losses": 59,
+      "draws": 2,
+      "self_outs": 13,
+      "descriptive_wilson_95_percent": [
+        51.334517440468,
+        66.8660212954786
+      ]
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 41,
+      "losses": 100,
+      "draws": 9,
+      "self_outs": 84,
+      "descriptive_wilson_95_percent": [
+        20.834036087778667,
+        34.96465555349391
+      ]
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 45,
+      "losses": 105,
+      "draws": 0,
+      "self_outs": 93,
+      "descriptive_wilson_95_percent": [
+        23.24071660880158,
+        37.75812895702717
+      ]
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 108,
+      "losses": 39,
+      "draws": 3,
+      "self_outs": 4,
+      "descriptive_wilson_95_percent": [
+        64.3342019497018,
+        78.5670679278866
+      ]
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 101,
+      "losses": 48,
+      "draws": 1,
+      "self_outs": 7,
+      "descriptive_wilson_95_percent": [
+        59.476703900489724,
+        74.32429660912535
+      ]
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rounds": 150,
+      "wins": 108,
+      "losses": 32,
+      "draws": 10,
+      "self_outs": 2,
+      "descriptive_wilson_95_percent": [
+        64.3342019497018,
+        78.5670679278866
+      ]
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rounds": 150,
+      "wins": 110,
+      "losses": 36,
+      "draws": 4,
+      "self_outs": 9,
+      "descriptive_wilson_95_percent": [
+        65.7384025709397,
+        79.76294426892674
+      ]
+    }
+  ],
+  "conclusion": "El resultado depende de la colocación y de los parámetros físicos. El diseño aún requiere medir motores, frenada, fricción y sensores. La aproximación óptica y los contactos de ODE siguen limitando la transferencia al robot real.",
+  "cells": [
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 21,
+        "draws": 0,
+        "win_rate": 0.3,
+        "avg_win_time_s": 0.79,
+        "self_outs": 21,
+        "match_win_rate": 0.08,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 21,
+            "draws": 0,
+            "win_rate": 0.3,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.08,
+              "judges": 0.0,
+              "loss": 0.92
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170405737318Z_v22_v0.1.0_reglamento_static_s0_r0",
+      "manifest_sha256": "0070dbfcc7d548252e09a9d99f445420bdfcc276a67621391f7fe981728e5f8f",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 4,
+        "losses": 26,
+        "draws": 0,
+        "win_rate": 0.133,
+        "avg_win_time_s": 1.33,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 4,
+            "losses": 26,
+            "draws": 0,
+            "win_rate": 0.133,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 6,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170405737529Z_v22_v0.1.0_reglamento_charger_s0_r0",
+      "manifest_sha256": "cdc90e59983cf07317410ca1627a9712b786214479f740d5147f68eaf17b6217",
+      "contact_warnings": 43
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 22,
+        "draws": 0,
+        "win_rate": 0.267,
+        "avg_win_time_s": 0.71,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 22,
+            "draws": 0,
+            "win_rate": 0.267,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170405737665Z_v22_v0.1.0_reglamento_spinner_s0_r0",
+      "manifest_sha256": "797c49a6ac593004c831acb82d44965ac0b4979c7e4725f55c5d71bb55a07819",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 19,
+        "losses": 7,
+        "draws": 4,
+        "win_rate": 0.633,
+        "avg_win_time_s": 5.45,
+        "self_outs": 2,
+        "match_win_rate": 0.8,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 19,
+            "losses": 7,
+            "draws": 4,
+            "win_rate": 0.633,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 0,
+                "draws": 4
+              }
+            ],
+            "match": {
+              "win": 0.8,
+              "judges": 0.0,
+              "loss": 0.2
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170405737836Z_v22_v0.1.0_reglamento_v0.3.0_s0_r0",
+      "manifest_sha256": "018b114ae5f60839ae94dca519181df120b59f764fc8f46099436ef32696ef03",
+      "contact_warnings": 96
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 22,
+        "draws": 0,
+        "win_rate": 0.267,
+        "avg_win_time_s": 0.78,
+        "self_outs": 19,
+        "match_win_rate": 0.07,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 22,
+            "draws": 0,
+            "win_rate": 0.267,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.07,
+              "judges": 0.0,
+              "loss": 0.93
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170424792955Z_v22_v0.1.0_reglamento_flanco_s0_r0",
+      "manifest_sha256": "a29a95821c2df024679241593e6d3afd107718c8e737a64b31af19a7c8e7af09",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.63,
+        "self_outs": 19,
+        "match_win_rate": 0.09,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.09,
+              "judges": 0.0,
+              "loss": 0.91
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170424793011Z_v22_v0.1.0_reglamento_static_s0_r1",
+      "manifest_sha256": "95d923d00ad75af38d81e345e073eff3ac19882879f64d672c94b28684b9e05b",
+      "contact_warnings": 44
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 21,
+        "draws": 0,
+        "win_rate": 0.3,
+        "avg_win_time_s": 0.99,
+        "self_outs": 19,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 21,
+            "draws": 0,
+            "win_rate": 0.3,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170424793055Z_v22_v0.1.0_reglamento_charger_s0_r1",
+      "manifest_sha256": "adc1a97625b9ee80b12a088dc274cd04bb6948c1aeaf0deca64faf6c30a38f1e",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 6,
+        "losses": 24,
+        "draws": 0,
+        "win_rate": 0.2,
+        "avg_win_time_s": 0.93,
+        "self_outs": 22,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 6,
+            "losses": 24,
+            "draws": 0,
+            "win_rate": 0.2,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170424793097Z_v22_v0.1.0_reglamento_spinner_s0_r1",
+      "manifest_sha256": "bfb1ee6de10ffb1dc49196b5d3b80795b3e02b74f04d43eaf691a34aeb77482a",
+      "contact_warnings": 37
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 16,
+        "draws": 2,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.36,
+        "self_outs": 11,
+        "match_win_rate": 0.322,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 16,
+            "draws": 2,
+            "win_rate": 0.4,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 8,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 6,
+                "draws": 1
+              }
+            ],
+            "match": {
+              "win": 0.322,
+              "judges": 0.012,
+              "loss": 0.666
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170435718860Z_v22_v0.1.0_reglamento_v0.3.0_s0_r1",
+      "manifest_sha256": "c88c6c3bb6fdded6978e1bb2af8e33c899df56c0a5196bce60dcaf4dd7bbd2a7",
+      "contact_warnings": 106
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 3,
+        "losses": 27,
+        "draws": 0,
+        "win_rate": 0.1,
+        "avg_win_time_s": 1.05,
+        "self_outs": 21,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 3,
+            "losses": 27,
+            "draws": 0,
+            "win_rate": 0.1,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 7,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170435718916Z_v22_v0.1.0_reglamento_flanco_s0_r1",
+      "manifest_sha256": "343d3746d03d9832ff7bfdac137328adc40569f94747afeccc9a18cac8dc204a",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 25,
+        "losses": 5,
+        "draws": 0,
+        "win_rate": 0.833,
+        "avg_win_time_s": 1.11,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 25,
+            "losses": 5,
+            "draws": 0,
+            "win_rate": 0.833
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170435718963Z_v22_v0.1.0_banco_static_s0_r0",
+      "manifest_sha256": "42c9e6f62504c79ccc3be17d5d55f10b2b935f965abea64b158d4022c29963f6",
+      "contact_warnings": 47
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 9,
+        "draws": 0,
+        "win_rate": 0.7,
+        "avg_win_time_s": 0.84,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 9,
+            "draws": 0,
+            "win_rate": 0.7
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170435719005Z_v22_v0.1.0_banco_charger_s0_r0",
+      "manifest_sha256": "30a601639b1db4fa2e0b89a43299a7e51f3ff782a21009708cd4e7afef21a079",
+      "contact_warnings": 46
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 12,
+        "draws": 0,
+        "win_rate": 0.6,
+        "avg_win_time_s": 0.69,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 12,
+            "draws": 0,
+            "win_rate": 0.6
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170453262874Z_v22_v0.1.0_banco_spinner_s0_r0",
+      "manifest_sha256": "a117f2d4171d6e4fe78f9042f23565665138b6f66157d88d9eb21d971a18bf47",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.07,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170453262929Z_v22_v0.1.0_banco_v0.3.0_s0_r0",
+      "manifest_sha256": "c777f4318435fb24810e3ef87a61b8f77c414e3f09e429481c96d4df981ea1e3",
+      "contact_warnings": 45
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 17,
+        "draws": 0,
+        "win_rate": 0.433,
+        "avg_win_time_s": 0.77,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 17,
+            "draws": 0,
+            "win_rate": 0.433
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170453262974Z_v22_v0.1.0_banco_flanco_s0_r0",
+      "manifest_sha256": "342d23895b12c4bb8e85eac41a02a90dbef5148e662bb806075c1b16e3d4bd85",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 16,
+        "draws": 1,
+        "win_rate": 0.433,
+        "avg_win_time_s": 0.92,
+        "self_outs": 5,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 16,
+            "draws": 1,
+            "win_rate": 0.433
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170453263017Z_v22_v0.1.0_banco_static_s0_r1",
+      "manifest_sha256": "0f46055f63f2a2ab3cde7e539abd473fe15ca98888ca0a328d0f192165d46bb6",
+      "contact_warnings": 41
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "avg_win_time_s": 0.99,
+        "self_outs": 6,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 18,
+            "draws": 0,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170504812286Z_v22_v0.1.0_banco_charger_s0_r1",
+      "manifest_sha256": "b802885ccf400ab710f6e9b088cc3fdfba0010374f251011bb4ab15c14bb9980",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 14,
+        "losses": 16,
+        "draws": 0,
+        "win_rate": 0.467,
+        "avg_win_time_s": 0.7,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 14,
+            "losses": 16,
+            "draws": 0,
+            "win_rate": 0.467
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170504812337Z_v22_v0.1.0_banco_spinner_s0_r1",
+      "manifest_sha256": "c426224cf584daa6fc78554b0b6c47593f380f52a4f030f2768b9df9b42f9438",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.5,
+        "self_outs": 6,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 18,
+            "draws": 0,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170504812385Z_v22_v0.1.0_banco_v0.3.0_s0_r1",
+      "manifest_sha256": "b6c250c1ea90d5852a638bd572784cb4a830ee990d0e709573b05a407e98efa1",
+      "contact_warnings": 50
+    },
+    {
+      "algorithm": "v0.1.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 7,
+        "losses": 23,
+        "draws": 0,
+        "win_rate": 0.233,
+        "avg_win_time_s": 0.6,
+        "self_outs": 11,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 7,
+            "losses": 23,
+            "draws": 0,
+            "win_rate": 0.233
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170504812430Z_v22_v0.1.0_banco_flanco_s0_r1",
+      "manifest_sha256": "9f80c5d256842f2f5c9ad7525c6c60e4735e268d8ed88ff54301d738f3d1a72f",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 21,
+        "draws": 0,
+        "win_rate": 0.3,
+        "avg_win_time_s": 0.79,
+        "self_outs": 21,
+        "match_win_rate": 0.08,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 21,
+            "draws": 0,
+            "win_rate": 0.3,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.08,
+              "judges": 0.0,
+              "loss": 0.92
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170516356268Z_v22_v0.1.1_reglamento_static_s0_r0",
+      "manifest_sha256": "e56b6c0863e80d907565042f539001aaff0e6d4af9843694870676849d4199ed",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 4,
+        "losses": 26,
+        "draws": 0,
+        "win_rate": 0.133,
+        "avg_win_time_s": 1.33,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 4,
+            "losses": 26,
+            "draws": 0,
+            "win_rate": 0.133,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 6,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170516356321Z_v22_v0.1.1_reglamento_charger_s0_r0",
+      "manifest_sha256": "de27e26554a5e02f377a840a7a3d7647f8e18bda3f24ebf90ba3de5e2e82a4c9",
+      "contact_warnings": 43
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 19,
+        "losses": 7,
+        "draws": 4,
+        "win_rate": 0.633,
+        "avg_win_time_s": 5.45,
+        "self_outs": 2,
+        "match_win_rate": 0.8,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 19,
+            "losses": 7,
+            "draws": 4,
+            "win_rate": 0.633,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 0,
+                "draws": 4
+              }
+            ],
+            "match": {
+              "win": 0.8,
+              "judges": 0.0,
+              "loss": 0.2
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170516356364Z_v22_v0.1.1_reglamento_v0.3.0_s0_r0",
+      "manifest_sha256": "b568344514361982788d55f7b27bde38d30b8b37520cc0de05e9a73727cf0652",
+      "contact_warnings": 96
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 22,
+        "draws": 0,
+        "win_rate": 0.267,
+        "avg_win_time_s": 0.71,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 22,
+            "draws": 0,
+            "win_rate": 0.267,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170516356406Z_v22_v0.1.1_reglamento_spinner_s0_r0",
+      "manifest_sha256": "392d8cc5a9ea8da827beb352c25bea0ac9282abb4165cbe138879caff7466667",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 22,
+        "draws": 0,
+        "win_rate": 0.267,
+        "avg_win_time_s": 0.78,
+        "self_outs": 19,
+        "match_win_rate": 0.07,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 22,
+            "draws": 0,
+            "win_rate": 0.267,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.07,
+              "judges": 0.0,
+              "loss": 0.93
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170533896529Z_v22_v0.1.1_reglamento_flanco_s0_r0",
+      "manifest_sha256": "20dd8faefe8dca883c7f6320c37fa067471326ecc10898f2ca4c835f6dd74383",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.63,
+        "self_outs": 19,
+        "match_win_rate": 0.09,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.09,
+              "judges": 0.0,
+              "loss": 0.91
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170533896587Z_v22_v0.1.1_reglamento_static_s0_r1",
+      "manifest_sha256": "b68007e752456f6eff23a3c13d1ba064554f5e06236b69131cfb9ed8c886aea4",
+      "contact_warnings": 44
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 21,
+        "draws": 0,
+        "win_rate": 0.3,
+        "avg_win_time_s": 0.99,
+        "self_outs": 19,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 21,
+            "draws": 0,
+            "win_rate": 0.3,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170533896630Z_v22_v0.1.1_reglamento_charger_s0_r1",
+      "manifest_sha256": "d7a4f2208f5ef8de997c4c0cdafdabf323d94d61a8bab2eb55aceb68a4b66e75",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 6,
+        "losses": 24,
+        "draws": 0,
+        "win_rate": 0.2,
+        "avg_win_time_s": 0.93,
+        "self_outs": 22,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 6,
+            "losses": 24,
+            "draws": 0,
+            "win_rate": 0.2,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170533896686Z_v22_v0.1.1_reglamento_spinner_s0_r1",
+      "manifest_sha256": "f0401ad8514bed4f1d414772abe8f519291d26b5ddcd6b9d73025eed641f70fd",
+      "contact_warnings": 37
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 16,
+        "draws": 2,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.36,
+        "self_outs": 11,
+        "match_win_rate": 0.322,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 16,
+            "draws": 2,
+            "win_rate": 0.4,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 8,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 6,
+                "draws": 1
+              }
+            ],
+            "match": {
+              "win": 0.322,
+              "judges": 0.012,
+              "loss": 0.666
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170544925028Z_v22_v0.1.1_reglamento_v0.3.0_s0_r1",
+      "manifest_sha256": "a89140c342b9141b6d50ef11b228eb9d54aab11592cdca3c6ac5201ca308f3af",
+      "contact_warnings": 106
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 3,
+        "losses": 27,
+        "draws": 0,
+        "win_rate": 0.1,
+        "avg_win_time_s": 1.05,
+        "self_outs": 21,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 3,
+            "losses": 27,
+            "draws": 0,
+            "win_rate": 0.1,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 7,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170544925087Z_v22_v0.1.1_reglamento_flanco_s0_r1",
+      "manifest_sha256": "943bf32d9951249533855f05e6c4fee5e6c84e9568fadc6e0036f5ff13e11cf7",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 25,
+        "losses": 5,
+        "draws": 0,
+        "win_rate": 0.833,
+        "avg_win_time_s": 1.11,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 25,
+            "losses": 5,
+            "draws": 0,
+            "win_rate": 0.833
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170544925142Z_v22_v0.1.1_banco_static_s0_r0",
+      "manifest_sha256": "7ba158c2cddcd6e5f1f0e5cb2906c270550e2ba4d6a49510c74827c3d835b944",
+      "contact_warnings": 47
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 9,
+        "draws": 0,
+        "win_rate": 0.7,
+        "avg_win_time_s": 0.84,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 9,
+            "draws": 0,
+            "win_rate": 0.7
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170544925180Z_v22_v0.1.1_banco_charger_s0_r0",
+      "manifest_sha256": "09c104b529585e0d53cda725086a8f9deedceee7d16c967da9cba227d748ce95",
+      "contact_warnings": 46
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 12,
+        "draws": 0,
+        "win_rate": 0.6,
+        "avg_win_time_s": 0.69,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 12,
+            "draws": 0,
+            "win_rate": 0.6
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170602503477Z_v22_v0.1.1_banco_spinner_s0_r0",
+      "manifest_sha256": "f296c6552ea0996a77e63daba699f35c5427b6776281ad86b037896b06625572",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.07,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170602503532Z_v22_v0.1.1_banco_v0.3.0_s0_r0",
+      "manifest_sha256": "e9a223ba6f72e4c1e073a0d1378b9923d66fe48e57db3357cc5c6a957de32bdd",
+      "contact_warnings": 45
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 17,
+        "draws": 0,
+        "win_rate": 0.433,
+        "avg_win_time_s": 0.77,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 17,
+            "draws": 0,
+            "win_rate": 0.433
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170602503579Z_v22_v0.1.1_banco_flanco_s0_r0",
+      "manifest_sha256": "ac4bba2630405400e0c0bb2e2743440280ed8aa8c9c392dc0db9ed43082ef2b2",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 16,
+        "draws": 1,
+        "win_rate": 0.433,
+        "avg_win_time_s": 0.92,
+        "self_outs": 5,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 16,
+            "draws": 1,
+            "win_rate": 0.433
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170602503621Z_v22_v0.1.1_banco_static_s0_r1",
+      "manifest_sha256": "46b93e12fd963cb3197f0fabce5cd5c23cbfa1e244da6dc1e921362bdbfabe53",
+      "contact_warnings": 41
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "avg_win_time_s": 0.99,
+        "self_outs": 6,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 18,
+            "draws": 0,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170614565322Z_v22_v0.1.1_banco_charger_s0_r1",
+      "manifest_sha256": "a89521d8db7c625d74b67300da1d41625fb41db37b521a2cac90c746e0f42e01",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 14,
+        "losses": 16,
+        "draws": 0,
+        "win_rate": 0.467,
+        "avg_win_time_s": 0.7,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 14,
+            "losses": 16,
+            "draws": 0,
+            "win_rate": 0.467
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170614565375Z_v22_v0.1.1_banco_spinner_s0_r1",
+      "manifest_sha256": "95df7bf211888970b8b7dbc7102082cc05c6ba11f07dc975ce37df7796e12da1",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 7,
+        "losses": 23,
+        "draws": 0,
+        "win_rate": 0.233,
+        "avg_win_time_s": 0.6,
+        "self_outs": 11,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 7,
+            "losses": 23,
+            "draws": 0,
+            "win_rate": 0.233
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170614565419Z_v22_v0.1.1_banco_flanco_s0_r1",
+      "manifest_sha256": "64254717706047bcc5ee4e637a7064c946a73b4887e7718f9c30a5047daf6399",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.1.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.5,
+        "self_outs": 6,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 18,
+            "draws": 0,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170614565462Z_v22_v0.1.1_banco_v0.3.0_s0_r1",
+      "manifest_sha256": "6b28f87eef9ff724de1da31f444914a58ff62a08753632b6b4f8a764beb46145",
+      "contact_warnings": 50
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 21,
+        "draws": 0,
+        "win_rate": 0.3,
+        "avg_win_time_s": 0.85,
+        "self_outs": 20,
+        "match_win_rate": 0.08,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 21,
+            "draws": 0,
+            "win_rate": 0.3,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.08,
+              "judges": 0.0,
+              "loss": 0.92
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170626115743Z_v22_v0.2.0_reglamento_static_s0_r0",
+      "manifest_sha256": "d9f6892afb9aa60dfe08f99d7dfbcd8bcdc3272498ea76a76c8036a4d4ad9787",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 4,
+        "losses": 26,
+        "draws": 0,
+        "win_rate": 0.133,
+        "avg_win_time_s": 1.33,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 4,
+            "losses": 26,
+            "draws": 0,
+            "win_rate": 0.133,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 6,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170626115796Z_v22_v0.2.0_reglamento_charger_s0_r0",
+      "manifest_sha256": "0dd799ae1a7c39eb62094d2318fcbb7fea67000eeb106f885a79c9d8ec22c5ad",
+      "contact_warnings": 43
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 22,
+        "draws": 0,
+        "win_rate": 0.267,
+        "avg_win_time_s": 0.71,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 22,
+            "draws": 0,
+            "win_rate": 0.267,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170626115841Z_v22_v0.2.0_reglamento_spinner_s0_r0",
+      "manifest_sha256": "395c201b3381346767447dd93f5fde2f9cf2876a5a83ba800d9bf3f3d3e6a1af",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 10,
+        "draws": 2,
+        "win_rate": 0.6,
+        "avg_win_time_s": 0.8,
+        "self_outs": 4,
+        "match_win_rate": 0.701,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 10,
+            "draws": 2,
+            "win_rate": 0.6,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 6,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 1,
+                "draws": 2
+              }
+            ],
+            "match": {
+              "win": 0.701,
+              "judges": 0.0,
+              "loss": 0.299
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170626115883Z_v22_v0.2.0_reglamento_v0.3.0_s0_r0",
+      "manifest_sha256": "c0e2453ac712e4089a93f603b630b5b90a14cbd4c2c165605553174a0cc86ca4",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 22,
+        "draws": 0,
+        "win_rate": 0.267,
+        "avg_win_time_s": 0.78,
+        "self_outs": 19,
+        "match_win_rate": 0.07,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 22,
+            "draws": 0,
+            "win_rate": 0.267,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.07,
+              "judges": 0.0,
+              "loss": 0.93
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170637170245Z_v22_v0.2.0_reglamento_flanco_s0_r0",
+      "manifest_sha256": "38076065803f22e992952f9bcd8cbeb4f3076b27c2780af09931ec36a82f3a9b",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.63,
+        "self_outs": 19,
+        "match_win_rate": 0.09,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.09,
+              "judges": 0.0,
+              "loss": 0.91
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170637170301Z_v22_v0.2.0_reglamento_static_s0_r1",
+      "manifest_sha256": "2c16ec527c225535a55c4d47da10c27a9128ed28cd658b51014b4d0d18c9da90",
+      "contact_warnings": 44
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 5,
+        "losses": 25,
+        "draws": 0,
+        "win_rate": 0.167,
+        "avg_win_time_s": 1.21,
+        "self_outs": 21,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 5,
+            "losses": 25,
+            "draws": 0,
+            "win_rate": 0.167,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170637170349Z_v22_v0.2.0_reglamento_charger_s0_r1",
+      "manifest_sha256": "4bc8638e77317415194816155a4db96239a894377de1d7d7cc316e3d8499cf83",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 7,
+        "losses": 23,
+        "draws": 0,
+        "win_rate": 0.233,
+        "avg_win_time_s": 0.83,
+        "self_outs": 22,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 7,
+            "losses": 23,
+            "draws": 0,
+            "win_rate": 0.233,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170637170393Z_v22_v0.2.0_reglamento_spinner_s0_r1",
+      "manifest_sha256": "6a17512db051e01dcffdedf9b439a5d7540052a2fa8908f4d160fc302af86412",
+      "contact_warnings": 36
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 16,
+        "draws": 2,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.36,
+        "self_outs": 11,
+        "match_win_rate": 0.322,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 16,
+            "draws": 2,
+            "win_rate": 0.4,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 8,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 6,
+                "draws": 1
+              }
+            ],
+            "match": {
+              "win": 0.322,
+              "judges": 0.012,
+              "loss": 0.666
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170648119686Z_v22_v0.2.0_reglamento_v0.3.0_s0_r1",
+      "manifest_sha256": "d10939fd8ef71aec594d082780f55f0428e7cd580711a84232bf4183d0d7ef6f",
+      "contact_warnings": 106
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 6,
+        "losses": 24,
+        "draws": 0,
+        "win_rate": 0.2,
+        "avg_win_time_s": 0.82,
+        "self_outs": 22,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 6,
+            "losses": 24,
+            "draws": 0,
+            "win_rate": 0.2,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170648119745Z_v22_v0.2.0_reglamento_flanco_s0_r1",
+      "manifest_sha256": "bc73da6d23c483502552dcf71aa506b56f35d5e6cefbbdb9f2f945ad5d40adae",
+      "contact_warnings": 36
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 9,
+        "draws": 0,
+        "win_rate": 0.7,
+        "avg_win_time_s": 1.19,
+        "self_outs": 4,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 9,
+            "draws": 0,
+            "win_rate": 0.7
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170648119793Z_v22_v0.2.0_banco_static_s0_r0",
+      "manifest_sha256": "ac0898d83ada4ee71399e7d385ee0134590caee3873092bed7754cc0c812d624",
+      "contact_warnings": 49
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 9,
+        "draws": 0,
+        "win_rate": 0.7,
+        "avg_win_time_s": 1.86,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 9,
+            "draws": 0,
+            "win_rate": 0.7
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170648119837Z_v22_v0.2.0_banco_charger_s0_r0",
+      "manifest_sha256": "1d6430faf1f4343536e0ac2119e0d89fe256a2401fd7d2c63a296b6cf977893f",
+      "contact_warnings": 69
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 22,
+        "losses": 7,
+        "draws": 1,
+        "win_rate": 0.733,
+        "avg_win_time_s": 0.73,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 22,
+            "losses": 7,
+            "draws": 1,
+            "win_rate": 0.733
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170706178768Z_v22_v0.2.0_banco_spinner_s0_r0",
+      "manifest_sha256": "644d4aded54d10d45952c0c37bdfffe1d9278e038dbb48166c4729360f59537c",
+      "contact_warnings": 32
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 21,
+        "draws": 0,
+        "win_rate": 0.3,
+        "avg_win_time_s": 1.28,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 21,
+            "draws": 0,
+            "win_rate": 0.3
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170706178825Z_v22_v0.2.0_banco_v0.3.0_s0_r0",
+      "manifest_sha256": "3e3b4de335cf172858243f0811e98c18c9adb046dbfb2a30667fcc61ec51a7fa",
+      "contact_warnings": 56
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 17,
+        "draws": 0,
+        "win_rate": 0.433,
+        "avg_win_time_s": 0.77,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 17,
+            "draws": 0,
+            "win_rate": 0.433
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170706178869Z_v22_v0.2.0_banco_flanco_s0_r0",
+      "manifest_sha256": "fae830c47c51e20758d1bce48656d6e13adccabadc6255a082b2075040e7eb45",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 14,
+        "losses": 16,
+        "draws": 0,
+        "win_rate": 0.467,
+        "avg_win_time_s": 1.05,
+        "self_outs": 4,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 14,
+            "losses": 16,
+            "draws": 0,
+            "win_rate": 0.467
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170706178914Z_v22_v0.2.0_banco_static_s0_r1",
+      "manifest_sha256": "a52d61a20968d0539569a8e249c0edf3dbbeb1ffe005b8cfcc648ca4d500dbe4",
+      "contact_warnings": 44
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "avg_win_time_s": 0.99,
+        "self_outs": 6,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 18,
+            "draws": 0,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170718722142Z_v22_v0.2.0_banco_charger_s0_r1",
+      "manifest_sha256": "9a12f9c54cd75a5da8e6a61713f3d34b6d6e8ce9ee0bb8281dbcf3af00c1ceb8",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 15,
+        "losses": 15,
+        "draws": 0,
+        "win_rate": 0.5,
+        "avg_win_time_s": 0.74,
+        "self_outs": 5,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 15,
+            "losses": 15,
+            "draws": 0,
+            "win_rate": 0.5
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170718722198Z_v22_v0.2.0_banco_spinner_s0_r1",
+      "manifest_sha256": "d1cad47b556aa73112c78537fee62a616bd467dd84546af8300f26dbf4f31212",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 7,
+        "losses": 23,
+        "draws": 0,
+        "win_rate": 0.233,
+        "avg_win_time_s": 0.6,
+        "self_outs": 11,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 7,
+            "losses": 23,
+            "draws": 0,
+            "win_rate": 0.233
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170718722257Z_v22_v0.2.0_banco_flanco_s0_r1",
+      "manifest_sha256": "0a6cafd7159614e16f2a029fcb4b4663b6f8408e9974698afcc752d9f7c03861",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.2.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 0.96,
+        "self_outs": 5,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170718722309Z_v22_v0.2.0_banco_v0.3.0_s0_r1",
+      "manifest_sha256": "35cf06f6b9429cb6b250c667c6c393db69668b244caf84916e5ae3e49a9b84cc",
+      "contact_warnings": 47
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 19,
+        "draws": 1,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.37,
+        "self_outs": 18,
+        "match_win_rate": 0.171,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 19,
+            "draws": 1,
+            "win_rate": 0.333,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 8,
+                "draws": 1
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.171,
+              "judges": 0.0,
+              "loss": 0.829
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170730769359Z_v22_v0.3.0_reglamento_static_s0_r0",
+      "manifest_sha256": "f1a1eeec83b8ef16905c3089e3419060c1b962abd07efb55897cd6745f613229",
+      "contact_warnings": 102
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 5,
+        "losses": 25,
+        "draws": 0,
+        "win_rate": 0.167,
+        "avg_win_time_s": 0.97,
+        "self_outs": 19,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 5,
+            "losses": 25,
+            "draws": 0,
+            "win_rate": 0.167,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170730769415Z_v22_v0.3.0_reglamento_charger_s0_r0",
+      "manifest_sha256": "c17191d01d59a3ad7ad524f9948c92fa90560e714e16a8bd58c628b1a57f299e",
+      "contact_warnings": 45
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 7,
+        "losses": 23,
+        "draws": 0,
+        "win_rate": 0.233,
+        "avg_win_time_s": 0.78,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 7,
+            "losses": 23,
+            "draws": 0,
+            "win_rate": 0.233,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170730769459Z_v22_v0.3.0_reglamento_spinner_s0_r0",
+      "manifest_sha256": "11f0f3ca7a96da9a3ef5677ba5c8792c5ea821a589a1c9cd726d9b1209fe141d",
+      "contact_warnings": 36
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 10,
+        "draws": 7,
+        "win_rate": 0.433,
+        "avg_win_time_s": 1.66,
+        "self_outs": 7,
+        "match_win_rate": 0.645,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 10,
+            "draws": 7,
+            "win_rate": 0.433,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 2,
+                "draws": 7
+              }
+            ],
+            "match": {
+              "win": 0.645,
+              "judges": 0.0,
+              "loss": 0.355
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170730769507Z_v22_v0.3.0_reglamento_v0.3.0_s0_r0",
+      "manifest_sha256": "2ac3ad7e32c929fa4c54f88e3cfaad90bed454933e3842b267f391ae1b2e523f",
+      "contact_warnings": 46
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 6,
+        "losses": 23,
+        "draws": 1,
+        "win_rate": 0.2,
+        "avg_win_time_s": 4.39,
+        "self_outs": 20,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 6,
+            "losses": 23,
+            "draws": 1,
+            "win_rate": 0.2,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 3,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170744702381Z_v22_v0.3.0_reglamento_flanco_s0_r0",
+      "manifest_sha256": "c9e33f63e9e98b1049bd3ee260877ee01ddb2efa32df0577084860d91c761f79",
+      "contact_warnings": 56
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 1.03,
+        "self_outs": 20,
+        "match_win_rate": 0.09,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.09,
+              "judges": 0.0,
+              "loss": 0.91
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170744702437Z_v22_v0.3.0_reglamento_static_s0_r1",
+      "manifest_sha256": "6f7305fd3485544a873b28e37dd4832d0c7abc91377b1136d70c1a20d325579f",
+      "contact_warnings": 36
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 5,
+        "losses": 25,
+        "draws": 0,
+        "win_rate": 0.167,
+        "avg_win_time_s": 1.16,
+        "self_outs": 18,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 5,
+            "losses": 25,
+            "draws": 0,
+            "win_rate": 0.167,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170744702483Z_v22_v0.3.0_reglamento_charger_s0_r1",
+      "manifest_sha256": "7a4df149f23af60b23bed848bbb6fb74f5436c53ee4c5ce403f788bbb1cd22c7",
+      "contact_warnings": 42
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "avg_win_time_s": 0.97,
+        "self_outs": 19,
+        "match_win_rate": 0.09,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 10,
+            "losses": 20,
+            "draws": 0,
+            "win_rate": 0.333,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.09,
+              "judges": 0.0,
+              "loss": 0.91
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170744702529Z_v22_v0.3.0_reglamento_spinner_s0_r1",
+      "manifest_sha256": "b5bcd3492aa77fa57dc5b2b9ae75a0d32a68c088fa597064cf943c7da0469477",
+      "contact_warnings": 36
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 15,
+        "losses": 15,
+        "draws": 0,
+        "win_rate": 0.5,
+        "avg_win_time_s": 1.81,
+        "self_outs": 12,
+        "match_win_rate": 0.504,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 15,
+            "losses": 15,
+            "draws": 0,
+            "win_rate": 0.5,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 7,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.504,
+              "judges": 0.0,
+              "loss": 0.496
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170801650074Z_v22_v0.3.0_reglamento_v0.3.0_s0_r1",
+      "manifest_sha256": "c898f75376ae34d5992d9b85bfbc26e11dfdb205e4c0e44db643e9773a29d061",
+      "contact_warnings": 52
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 5,
+        "losses": 25,
+        "draws": 0,
+        "win_rate": 0.167,
+        "avg_win_time_s": 0.79,
+        "self_outs": 24,
+        "match_win_rate": 0.0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 5,
+            "losses": 25,
+            "draws": 0,
+            "win_rate": 0.167,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 5,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 0,
+                "losses": 10,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.0,
+              "judges": 0.0,
+              "loss": 1.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170801650131Z_v22_v0.3.0_reglamento_flanco_s0_r1",
+      "manifest_sha256": "29ed7af76bf3b5492da0ea32c1e26424af3f43757b9c924f92de909588c98d63",
+      "contact_warnings": 46
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 27,
+        "losses": 3,
+        "draws": 0,
+        "win_rate": 0.9,
+        "avg_win_time_s": 1.19,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 27,
+            "losses": 3,
+            "draws": 0,
+            "win_rate": 0.9
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170801650181Z_v22_v0.3.0_banco_static_s0_r0",
+      "manifest_sha256": "cc3b539ca891198803f6009eb87dca951cb64268e7fbb7c2df9f896310c8c75b",
+      "contact_warnings": 45
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 26,
+        "losses": 4,
+        "draws": 0,
+        "win_rate": 0.867,
+        "avg_win_time_s": 1.09,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 26,
+            "losses": 4,
+            "draws": 0,
+            "win_rate": 0.867
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170801650221Z_v22_v0.3.0_banco_charger_s0_r0",
+      "manifest_sha256": "724b67fe0ea99d56836bd9b7a6c75f17f944682208dc8fdabcd8a2ad0a86c3bb",
+      "contact_warnings": 46
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 27,
+        "losses": 3,
+        "draws": 0,
+        "win_rate": 0.9,
+        "avg_win_time_s": 0.73,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 27,
+            "losses": 3,
+            "draws": 0,
+            "win_rate": 0.9
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170813739588Z_v22_v0.3.0_banco_spinner_s0_r0",
+      "manifest_sha256": "78944fdc09ed9523153ef84d9208bf1d8f14fc495e7402a8e901c3db8386588e",
+      "contact_warnings": 34
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 17,
+        "draws": 1,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.45,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 17,
+            "draws": 1,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170813739641Z_v22_v0.3.0_banco_v0.3.0_s0_r0",
+      "manifest_sha256": "204ce307b61b0d1191ca1410da4aa9b00279e87c4b64649283cf7c16326e3db0",
+      "contact_warnings": 66
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 23,
+        "losses": 7,
+        "draws": 0,
+        "win_rate": 0.767,
+        "avg_win_time_s": 0.86,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 23,
+            "losses": 7,
+            "draws": 0,
+            "win_rate": 0.767
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170813739687Z_v22_v0.3.0_banco_flanco_s0_r0",
+      "manifest_sha256": "7fdcb682143fb0732b7ce90492216cb9c95ce80a4c93ffcda4a31b5dd26c288e",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 24,
+        "losses": 6,
+        "draws": 0,
+        "win_rate": 0.8,
+        "avg_win_time_s": 1.22,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 24,
+            "losses": 6,
+            "draws": 0,
+            "win_rate": 0.8
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170813739734Z_v22_v0.3.0_banco_static_s0_r1",
+      "manifest_sha256": "b70c27933cfbeaa63b65e962704b68e0818889a5cb937473187d48ccc6273927",
+      "contact_warnings": 51
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 17,
+        "losses": 12,
+        "draws": 1,
+        "win_rate": 0.567,
+        "avg_win_time_s": 1.1,
+        "self_outs": 4,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 17,
+            "losses": 12,
+            "draws": 1,
+            "win_rate": 0.567
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170831300283Z_v22_v0.3.0_banco_charger_s0_r1",
+      "manifest_sha256": "54870e781646e4aa3a81642e647af7fa07f1b2f9ca96d9c2179af90b9feac6f0",
+      "contact_warnings": 60
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 17,
+        "losses": 12,
+        "draws": 1,
+        "win_rate": 0.567,
+        "avg_win_time_s": 0.99,
+        "self_outs": 5,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 17,
+            "losses": 12,
+            "draws": 1,
+            "win_rate": 0.567
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170831300335Z_v22_v0.3.0_banco_spinner_s0_r1",
+      "manifest_sha256": "1132c6d38cf360f0971cdf24d48d466eb3b4ad30bb6ff5b6c9c6d8d478baac11",
+      "contact_warnings": 41
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.59,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 18,
+            "draws": 0,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170831300380Z_v22_v0.3.0_banco_v0.3.0_s0_r1",
+      "manifest_sha256": "a4d7494541798b8f458798787f97b32dc359f7a9ea9ca3e9bfdf2cb1a9febe28",
+      "contact_warnings": 57
+    },
+    {
+      "algorithm": "v0.3.0",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 19,
+        "losses": 11,
+        "draws": 0,
+        "win_rate": 0.633,
+        "avg_win_time_s": 0.9,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 19,
+            "losses": 11,
+            "draws": 0,
+            "win_rate": 0.633
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170831300426Z_v22_v0.3.0_banco_flanco_s0_r1",
+      "manifest_sha256": "680a28dd36e6b97b042c57dc70b8ede20623f3f2874797b39c884aa479d4be03",
+      "contact_warnings": 39
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 23,
+        "losses": 7,
+        "draws": 0,
+        "win_rate": 0.767,
+        "avg_win_time_s": 2.78,
+        "self_outs": 1,
+        "match_win_rate": 0.876,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 23,
+            "losses": 7,
+            "draws": 0,
+            "win_rate": 0.767,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.876,
+              "judges": 0.0,
+              "loss": 0.124
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170843857817Z_v22_v0.3.1_reglamento_static_s0_r0",
+      "manifest_sha256": "fefc14615b5cd29510499b0bdaa3323e7a96ab2efada0b1823b804610d0969c0",
+      "contact_warnings": 79
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 22,
+        "losses": 8,
+        "draws": 0,
+        "win_rate": 0.733,
+        "avg_win_time_s": 4.52,
+        "self_outs": 0,
+        "match_win_rate": 0.826,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 22,
+            "losses": 8,
+            "draws": 0,
+            "win_rate": 0.733,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.826,
+              "judges": 0.0,
+              "loss": 0.174
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170843857879Z_v22_v0.3.1_reglamento_charger_s0_r0",
+      "manifest_sha256": "45e1e98507391139b53b3e4563830015751cbc3fee2f7625c3ae3c7b0b514619",
+      "contact_warnings": 137
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 20,
+        "losses": 6,
+        "draws": 4,
+        "win_rate": 0.667,
+        "avg_win_time_s": 3.04,
+        "self_outs": 1,
+        "match_win_rate": 0.887,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 20,
+            "losses": 6,
+            "draws": 4,
+            "win_rate": 0.667,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 2,
+                "draws": 2
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 3,
+                "draws": 2
+              }
+            ],
+            "match": {
+              "win": 0.887,
+              "judges": 0.0,
+              "loss": 0.113
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170843857930Z_v22_v0.3.1_reglamento_spinner_s0_r0",
+      "manifest_sha256": "2ed9f64243a107f33c60e4b3177afb1047b3066ed86f8c365a8dea844e68abcb",
+      "contact_warnings": 326
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 23,
+        "losses": 7,
+        "draws": 0,
+        "win_rate": 0.767,
+        "avg_win_time_s": 0.62,
+        "self_outs": 0,
+        "match_win_rate": 1.0,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 23,
+            "losses": 7,
+            "draws": 0,
+            "win_rate": 0.767,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 7,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 10,
+                "losses": 0,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 10,
+                "losses": 0,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 1.0,
+              "judges": 0.0,
+              "loss": 0.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170843857977Z_v22_v0.3.1_reglamento_v0.3.0_s0_r0",
+      "manifest_sha256": "b2153fee656c1d5f05ea50f8ca784503d7f7730d05b80138d41f23c1be783c1b",
+      "contact_warnings": 33
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 20,
+        "losses": 4,
+        "draws": 6,
+        "win_rate": 0.667,
+        "avg_win_time_s": 2.63,
+        "self_outs": 0,
+        "match_win_rate": 0.922,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 20,
+            "losses": 4,
+            "draws": 6,
+            "win_rate": 0.667,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 1,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 2,
+                "draws": 4
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 1,
+                "draws": 1
+              }
+            ],
+            "match": {
+              "win": 0.922,
+              "judges": 0.011,
+              "loss": 0.067
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170920847646Z_v22_v0.3.1_reglamento_flanco_s0_r0",
+      "manifest_sha256": "72a29a5f85a9f11a21ee642984f5b49b3b0319d3dbe812eee2ef7178ddcf5cd6",
+      "contact_warnings": 366
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 9,
+        "draws": 0,
+        "win_rate": 0.7,
+        "avg_win_time_s": 4.74,
+        "self_outs": 4,
+        "match_win_rate": 0.788,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 9,
+            "draws": 0,
+            "win_rate": 0.7,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.788,
+              "judges": 0.0,
+              "loss": 0.212
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170920847710Z_v22_v0.3.1_reglamento_static_s0_r1",
+      "manifest_sha256": "3397012b9edebaae8d3ffee970aa8770d7973f546b4c513d1236593956b935e3",
+      "contact_warnings": 209
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 24,
+        "losses": 6,
+        "draws": 0,
+        "win_rate": 0.8,
+        "avg_win_time_s": 2.3,
+        "self_outs": 0,
+        "match_win_rate": 0.902,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 24,
+            "losses": 6,
+            "draws": 0,
+            "win_rate": 0.8,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 9,
+                "losses": 1,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.902,
+              "judges": 0.0,
+              "loss": 0.098
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170920847757Z_v22_v0.3.1_reglamento_charger_s0_r1",
+      "manifest_sha256": "a70256000affbd3f8404c30d61906c9f1a13aed915df7b418d08473a40b5e7fc",
+      "contact_warnings": 89
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 20,
+        "losses": 7,
+        "draws": 3,
+        "win_rate": 0.667,
+        "avg_win_time_s": 9.39,
+        "self_outs": 3,
+        "match_win_rate": 0.84,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 20,
+            "losses": 7,
+            "draws": 3,
+            "win_rate": 0.667,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 2,
+                "draws": 2
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 3,
+                "draws": 1
+              }
+            ],
+            "match": {
+              "win": 0.84,
+              "judges": 0.0,
+              "loss": 0.16
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T170920847874Z_v22_v0.3.1_reglamento_spinner_s0_r1",
+      "manifest_sha256": "1e1ad9df08b83eba5774479b34ac438478228c2b58c3cff5ca5189d447db9673",
+      "contact_warnings": 363
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 26,
+        "losses": 4,
+        "draws": 0,
+        "win_rate": 0.867,
+        "avg_win_time_s": 0.86,
+        "self_outs": 0,
+        "match_win_rate": 1.0,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 26,
+            "losses": 4,
+            "draws": 0,
+            "win_rate": 0.867,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 10,
+                "losses": 0,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 10,
+                "losses": 0,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 1.0,
+              "judges": 0.0,
+              "loss": 0.0
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171009288091Z_v22_v0.3.1_reglamento_v0.3.0_s0_r1",
+      "manifest_sha256": "d3eb75ade047c578b8d1cdfb4c7e1706144d757282171b027df8680f63ec91ce",
+      "contact_warnings": 38
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 19,
+        "losses": 10,
+        "draws": 1,
+        "win_rate": 0.633,
+        "avg_win_time_s": 3.19,
+        "self_outs": 2,
+        "match_win_rate": 0.726,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 19,
+            "losses": 10,
+            "draws": 1,
+            "win_rate": 0.633,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 4,
+                "draws": 1
+              }
+            ],
+            "match": {
+              "win": 0.726,
+              "judges": 0.0,
+              "loss": 0.274
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171009288158Z_v22_v0.3.1_reglamento_flanco_s0_r1",
+      "manifest_sha256": "7c60b11b7d9cdb4f4fd9071e14f72ae86b1c57c857adb4bf7f1f84e7df108c71",
+      "contact_warnings": 118
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 27,
+        "losses": 3,
+        "draws": 0,
+        "win_rate": 0.9,
+        "avg_win_time_s": 1.64,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 27,
+            "losses": 3,
+            "draws": 0,
+            "win_rate": 0.9
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171009288206Z_v22_v0.3.1_banco_static_s0_r0",
+      "manifest_sha256": "6592b765108462b338a9c0cc1ff48213b215c57157342df5b2b4ae961b1247f1",
+      "contact_warnings": 59
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 23,
+        "losses": 5,
+        "draws": 2,
+        "win_rate": 0.767,
+        "avg_win_time_s": 2.08,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 23,
+            "losses": 5,
+            "draws": 2,
+            "win_rate": 0.767
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171009288251Z_v22_v0.3.1_banco_charger_s0_r0",
+      "manifest_sha256": "a256244397c43468fb10d00089c0cb6481dc419e3e0883649b6e81c9df4b153b",
+      "contact_warnings": 188
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 12,
+        "draws": 0,
+        "win_rate": 0.6,
+        "avg_win_time_s": 1.24,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 12,
+            "draws": 0,
+            "win_rate": 0.6
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171033746983Z_v22_v0.3.1_banco_spinner_s0_r0",
+      "manifest_sha256": "9e0652f2c7849d10ecf77c57cc4c7ebf490b6e1baf02fc635fe06ea782358fcc",
+      "contact_warnings": 53
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 17,
+        "draws": 0,
+        "win_rate": 0.433,
+        "avg_win_time_s": 5.21,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 17,
+            "draws": 0,
+            "win_rate": 0.433
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171033747038Z_v22_v0.3.1_banco_v0.3.0_s0_r0",
+      "manifest_sha256": "a57e894e9c73b74f24eb09123c6f10f9d4fe6b164dc5a1e5b8acb457558f7d73",
+      "contact_warnings": 98
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 27,
+        "losses": 2,
+        "draws": 1,
+        "win_rate": 0.9,
+        "avg_win_time_s": 1.69,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 27,
+            "losses": 2,
+            "draws": 1,
+            "win_rate": 0.9
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171033747084Z_v22_v0.3.1_banco_flanco_s0_r0",
+      "manifest_sha256": "c9ca14fc0111746d736048f1b95c73751cdd724fa377f27944e523bbb9d26148",
+      "contact_warnings": 110
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 25,
+        "losses": 5,
+        "draws": 0,
+        "win_rate": 0.833,
+        "avg_win_time_s": 2.16,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 25,
+            "losses": 5,
+            "draws": 0,
+            "win_rate": 0.833
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171033747136Z_v22_v0.3.1_banco_static_s0_r1",
+      "manifest_sha256": "8682f316e7fb122743d54505bd26cb8f0d86c570bf5fd97be614b533ed525000",
+      "contact_warnings": 105
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 9,
+        "draws": 0,
+        "win_rate": 0.7,
+        "avg_win_time_s": 2.69,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 9,
+            "draws": 0,
+            "win_rate": 0.7
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171057805183Z_v22_v0.3.1_banco_charger_s0_r1",
+      "manifest_sha256": "a79c34aed12e80e3148669a456dbfc851d529625fcd863f1696f516a0d373018",
+      "contact_warnings": 97
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 17,
+        "losses": 12,
+        "draws": 1,
+        "win_rate": 0.567,
+        "avg_win_time_s": 1.9,
+        "self_outs": 4,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 17,
+            "losses": 12,
+            "draws": 1,
+            "win_rate": 0.567
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171057805237Z_v22_v0.3.1_banco_spinner_s0_r1",
+      "manifest_sha256": "68afe67e32405d97d852aa5ee02a6f0d8e4faf1e1995c144604c325e36c3bc9a",
+      "contact_warnings": 161
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 14,
+        "losses": 16,
+        "draws": 0,
+        "win_rate": 0.467,
+        "avg_win_time_s": 2.87,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 14,
+            "losses": 16,
+            "draws": 0,
+            "win_rate": 0.467
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171057805283Z_v22_v0.3.1_banco_v0.3.0_s0_r1",
+      "manifest_sha256": "39fe873264436265c1098be81ee0d598184768e9c92317bffbe23e773f49612b",
+      "contact_warnings": 65
+    },
+    {
+      "algorithm": "v0.3.1",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 24,
+        "losses": 6,
+        "draws": 0,
+        "win_rate": 0.8,
+        "avg_win_time_s": 1.36,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 24,
+            "losses": 6,
+            "draws": 0,
+            "win_rate": 0.8
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171057805328Z_v22_v0.3.1_banco_flanco_s0_r1",
+      "manifest_sha256": "e3002717695030a73ebe2702451ea90777848556083cabe704670835fd5f1f2a",
+      "contact_warnings": 54
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 8,
+        "draws": 4,
+        "win_rate": 0.6,
+        "avg_win_time_s": 3.34,
+        "self_outs": 5,
+        "match_win_rate": 0.776,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 8,
+            "draws": 4,
+            "win_rate": 0.6,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 2,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 3,
+                "draws": 3
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.776,
+              "judges": 0.014,
+              "loss": 0.211
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171117736766Z_v22_nn_reglamento_static_s0_r0",
+      "manifest_sha256": "45b2ab3e56ddeca5d72013bb51fc4df60654f26c2a224919c367e7d5b73d77b2",
+      "contact_warnings": 315
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 5,
+        "draws": 12,
+        "win_rate": 0.433,
+        "avg_win_time_s": 3.21,
+        "self_outs": 1,
+        "match_win_rate": 0.73,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 5,
+            "draws": 12,
+            "win_rate": 0.433,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 1,
+                "draws": 4
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 2,
+                "draws": 5
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 2,
+                "draws": 3
+              }
+            ],
+            "match": {
+              "win": 0.73,
+              "judges": 0.095,
+              "loss": 0.175
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171117736821Z_v22_nn_reglamento_charger_s0_r0",
+      "manifest_sha256": "0f4e2c9b379cb083aa8a94bb88aa4e4deb5b95371d427c5f29b04955f6938943",
+      "contact_warnings": 712
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 6,
+        "draws": 12,
+        "win_rate": 0.4,
+        "avg_win_time_s": 17.07,
+        "self_outs": 2,
+        "match_win_rate": 0.621,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 6,
+            "draws": 12,
+            "win_rate": 0.4,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 2,
+                "draws": 5
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 1,
+                "draws": 5
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 3,
+                "draws": 2
+              }
+            ],
+            "match": {
+              "win": 0.621,
+              "judges": 0.126,
+              "loss": 0.253
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171117736867Z_v22_nn_reglamento_spinner_s0_r0",
+      "manifest_sha256": "a780c0902cfd3f3878aadf4411fc6e486928c1787377458bfafbed7fc5f456c0",
+      "contact_warnings": 812
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 12,
+        "draws": 0,
+        "win_rate": 0.6,
+        "avg_win_time_s": 0.67,
+        "self_outs": 0,
+        "match_win_rate": 0.73,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 12,
+            "draws": 0,
+            "win_rate": 0.6,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 1,
+                "losses": 9,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 3,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 10,
+                "losses": 0,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.73,
+              "judges": 0.0,
+              "loss": 0.27
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171117737006Z_v22_nn_reglamento_v0.3.0_s0_r0",
+      "manifest_sha256": "c639a6fde3493b2d6e170a3c896b722fb8bc6a1808039ee4683da456d186aeac",
+      "contact_warnings": 35
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 6,
+        "draws": 12,
+        "win_rate": 0.4,
+        "avg_win_time_s": 13.79,
+        "self_outs": 3,
+        "match_win_rate": 0.624,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 6,
+            "draws": 12,
+            "win_rate": 0.4,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 3,
+                "draws": 4
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 2,
+                "draws": 5
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 1,
+                "draws": 3
+              }
+            ],
+            "match": {
+              "win": 0.624,
+              "judges": 0.108,
+              "loss": 0.268
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171244189791Z_v22_nn_reglamento_spinner_s0_r1",
+      "manifest_sha256": "ff047c229460ea6f27525a7fa4377fea4bf1b4f8456bd7110cd3048339b9df5e",
+      "contact_warnings": 855
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 21,
+        "losses": 7,
+        "draws": 2,
+        "win_rate": 0.7,
+        "avg_win_time_s": 13.45,
+        "self_outs": 5,
+        "match_win_rate": 0.841,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 21,
+            "losses": 7,
+            "draws": 2,
+            "win_rate": 0.7,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 1,
+                "draws": 2
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 8,
+                "losses": 2,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.841,
+              "judges": 0.0,
+              "loss": 0.159
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171244189850Z_v22_nn_reglamento_static_s0_r1",
+      "manifest_sha256": "cd7f533a0ee0ca4dd71ae4e17eba29cd5fd29ec52fae459bd817021e7f36ad12",
+      "contact_warnings": 366
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 16,
+        "losses": 6,
+        "draws": 8,
+        "win_rate": 0.533,
+        "avg_win_time_s": 3.75,
+        "self_outs": 1,
+        "match_win_rate": 0.804,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 16,
+            "losses": 6,
+            "draws": 8,
+            "win_rate": 0.533,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 2,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 3,
+                "draws": 3
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 5,
+                "losses": 1,
+                "draws": 4
+              }
+            ],
+            "match": {
+              "win": 0.804,
+              "judges": 0.02,
+              "loss": 0.177
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171244189895Z_v22_nn_reglamento_charger_s0_r1",
+      "manifest_sha256": "2764abc13fb8a2bd3f411127a81dd91661e6a416a378a8f2cbf4db583406c873",
+      "contact_warnings": 483
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 12,
+        "draws": 9,
+        "win_rate": 0.3,
+        "avg_win_time_s": 7.67,
+        "self_outs": 3,
+        "match_win_rate": 0.369,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 12,
+            "draws": 9,
+            "win_rate": 0.3,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 3,
+                "losses": 3,
+                "draws": 4
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 2,
+                "losses": 5,
+                "draws": 3
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 4,
+                "draws": 2
+              }
+            ],
+            "match": {
+              "win": 0.369,
+              "judges": 0.1,
+              "loss": 0.531
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171244189942Z_v22_nn_reglamento_flanco_s0_r0",
+      "manifest_sha256": "cd6e78f4722e18e1df0952d1b697cd96437516c89f478d219b504ef48418b396",
+      "contact_warnings": 589
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 18,
+        "losses": 12,
+        "draws": 0,
+        "win_rate": 0.6,
+        "avg_win_time_s": 0.6,
+        "self_outs": 0,
+        "match_win_rate": 0.68,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 18,
+            "losses": 12,
+            "draws": 0,
+            "win_rate": 0.6,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 2,
+                "losses": 8,
+                "draws": 0
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 6,
+                "losses": 4,
+                "draws": 0
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 10,
+                "losses": 0,
+                "draws": 0
+              }
+            ],
+            "match": {
+              "win": 0.68,
+              "judges": 0.0,
+              "loss": 0.32
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171414650404Z_v22_nn_reglamento_v0.3.0_s0_r1",
+      "manifest_sha256": "f242d06a7682759632f0212032087c48028ae30db0fdbcaa869f361ff5698475",
+      "contact_warnings": 40
+    },
+    {
+      "algorithm": "nn",
+      "mode": "reglamento",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 13,
+        "losses": 12,
+        "draws": 5,
+        "win_rate": 0.433,
+        "avg_win_time_s": 4.5,
+        "self_outs": 2,
+        "match_win_rate": 0.564,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 13,
+            "losses": 12,
+            "draws": 5,
+            "win_rate": 0.433,
+            "placements": [
+              {
+                "name": "frente",
+                "rounds": 10,
+                "wins": 7,
+                "losses": 2,
+                "draws": 1
+              },
+              {
+                "name": "lado",
+                "rounds": 10,
+                "wins": 4,
+                "losses": 5,
+                "draws": 1
+              },
+              {
+                "name": "espalda",
+                "rounds": 10,
+                "wins": 2,
+                "losses": 5,
+                "draws": 3
+              }
+            ],
+            "match": {
+              "win": 0.564,
+              "judges": 0.02,
+              "loss": 0.416
+            }
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171414650458Z_v22_nn_reglamento_flanco_s0_r1",
+      "manifest_sha256": "5b54635c2c762c7a29b2eac11e1b0d292b9f387a4e2fd3fa0626b70e2b01349f",
+      "contact_warnings": 385
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 16,
+        "losses": 7,
+        "draws": 7,
+        "win_rate": 0.533,
+        "avg_win_time_s": 13.6,
+        "self_outs": 5,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 16,
+            "losses": 7,
+            "draws": 7,
+            "win_rate": 0.533
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171414650502Z_v22_nn_banco_static_s0_r0",
+      "manifest_sha256": "c4e3120e3a62ebe6cd7b9baafa3d765e2594a7c03b93aa5d10c8bffa0f499f97",
+      "contact_warnings": 530
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 16,
+        "draws": 6,
+        "win_rate": 0.267,
+        "avg_win_time_s": 5.19,
+        "self_outs": 3,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 16,
+            "draws": 6,
+            "win_rate": 0.267
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171414650546Z_v22_nn_banco_charger_s0_r0",
+      "manifest_sha256": "10baf79c0b64b0c7ee8fab5588b6c4cae18da1cbb86d15cf9f597d91c569effe",
+      "contact_warnings": 345
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 9,
+        "losses": 12,
+        "draws": 9,
+        "win_rate": 0.3,
+        "avg_win_time_s": 17.8,
+        "self_outs": 8,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 9,
+            "losses": 12,
+            "draws": 9,
+            "win_rate": 0.3
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171507051260Z_v22_nn_banco_spinner_s0_r0",
+      "manifest_sha256": "6910fe16b66f51c18a0ef6df0f8fe31e4df9d6fb961df53081582fcee0f16038",
+      "contact_warnings": 759
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 2,
+        "losses": 28,
+        "draws": 0,
+        "win_rate": 0.067,
+        "avg_win_time_s": 1.42,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 2,
+            "losses": 28,
+            "draws": 0,
+            "win_rate": 0.067
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171507051314Z_v22_nn_banco_v0.3.0_s0_r0",
+      "manifest_sha256": "f664bd342e16f4309150dcc8c734a66b1b0a66a004d9776081c8853088947526",
+      "contact_warnings": 37
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "static",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 14,
+        "draws": 8,
+        "win_rate": 0.267,
+        "avg_win_time_s": 14.07,
+        "self_outs": 9,
+        "opponents": [
+          {
+            "name": "static",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 14,
+            "draws": 8,
+            "win_rate": 0.267
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171507051366Z_v22_nn_banco_static_s0_r1",
+      "manifest_sha256": "185a4d548eecf72f464c4451084363650260399ce9090d41357efed5c58d9c70",
+      "contact_warnings": 516
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": false,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 10,
+        "draws": 8,
+        "win_rate": 0.4,
+        "avg_win_time_s": 5.54,
+        "self_outs": 0,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 10,
+            "draws": 8,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171507051417Z_v22_nn_banco_flanco_s0_r0",
+      "manifest_sha256": "c77531ca9e741563bfe235bb124b1d1ca88144407b554a36afa2c5ffe39ef11b",
+      "contact_warnings": 544
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "charger",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 15,
+        "losses": 14,
+        "draws": 1,
+        "win_rate": 0.5,
+        "avg_win_time_s": 8.54,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "charger",
+            "rounds": 30,
+            "wins": 15,
+            "losses": 14,
+            "draws": 1,
+            "win_rate": 0.5
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171916994552Z_v22_nn_banco_charger_s0_r1",
+      "manifest_sha256": "34b201b388ee1f3fd3f1049161daf80c6b2ab9e18a3b3079d499af2d1788bc94",
+      "contact_warnings": 221
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "spinner",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 8,
+        "losses": 18,
+        "draws": 4,
+        "win_rate": 0.267,
+        "avg_win_time_s": 32.25,
+        "self_outs": 11,
+        "opponents": [
+          {
+            "name": "spinner",
+            "rounds": 30,
+            "wins": 8,
+            "losses": 18,
+            "draws": 4,
+            "win_rate": 0.267
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171916994607Z_v22_nn_banco_spinner_s0_r1",
+      "manifest_sha256": "fbcf2c177850e474ec0873d347a0ce8143b9606a346277988f4a7055d6d6741c",
+      "contact_warnings": 551
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "v0.3.0",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 12,
+        "losses": 17,
+        "draws": 1,
+        "win_rate": 0.4,
+        "avg_win_time_s": 1.7,
+        "self_outs": 2,
+        "opponents": [
+          {
+            "name": "v0.3.0",
+            "rounds": 30,
+            "wins": 12,
+            "losses": 17,
+            "draws": 1,
+            "win_rate": 0.4
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171916994654Z_v22_nn_banco_v0.3.0_s0_r1",
+      "manifest_sha256": "cfef5331e0d313cb9b1d25fba3c8c9f40a29155350a49a8c35dd7d9fd6674111",
+      "contact_warnings": 65
+    },
+    {
+      "algorithm": "nn",
+      "mode": "banco",
+      "randomized": true,
+      "rival": "flanco",
+      "seed": 0,
+      "metrics": {
+        "rounds": 30,
+        "wins": 17,
+        "losses": 8,
+        "draws": 5,
+        "win_rate": 0.567,
+        "avg_win_time_s": 6.9,
+        "self_outs": 1,
+        "opponents": [
+          {
+            "name": "flanco",
+            "rounds": 30,
+            "wins": 17,
+            "losses": 8,
+            "draws": 5,
+            "win_rate": 0.567
+          }
+        ]
+      },
+      "run": "Mini-Sumo-real/runs/real/20260913T171916994718Z_v22_nn_banco_flanco_s0_r1",
+      "manifest_sha256": "4a0bc5c6bc4e46ebecea1084fb66eaeb0c67e2733d23487d720947739e2b1b22",
+      "contact_warnings": 439
+    }
+  ]
+}

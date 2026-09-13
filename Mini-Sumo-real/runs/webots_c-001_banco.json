@@ -1,0 +1,71 @@
+{
+  "version": "c-001",
+  "engine": "webots",
+  "mode": "banco",
+  "round_max_s": 30,
+  "metrics": {
+    "rounds": 120,
+    "wins": 89,
+    "losses": 31,
+    "draws": 0,
+    "self_outs": 0,
+    "win_rate": 0.742,
+    "avg_win_time_s": 0.95,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 30,
+        "wins": 30,
+        "losses": 0,
+        "draws": 0,
+        "win_rate": 1.0,
+        "reasons": {
+          "banco": {
+            "rival fuera": 30
+          }
+        }
+      },
+      {
+        "name": "charger",
+        "rounds": 30,
+        "wins": 25,
+        "losses": 5,
+        "draws": 0,
+        "win_rate": 0.833,
+        "reasons": {
+          "banco": {
+            "rival fuera": 25,
+            "expulsado": 5
+          }
+        }
+      },
+      {
+        "name": "spinner",
+        "rounds": 30,
+        "wins": 30,
+        "losses": 0,
+        "draws": 0,
+        "win_rate": 1.0,
+        "reasons": {
+          "banco": {
+            "rival fuera": 30
+          }
+        }
+      },
+      {
+        "name": "v0.3.0",
+        "rounds": 30,
+        "wins": 4,
+        "losses": 26,
+        "draws": 0,
+        "win_rate": 0.133,
+        "reasons": {
+          "banco": {
+            "expulsado": 26,
+            "rival fuera": 4
+          }
+        }
+      }
+    ]
+  }
+}

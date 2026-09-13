@@ -1,0 +1,195 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "../protos/GelatinaNuclear.proto"
+
+WorldInfo {
+  info [
+    "Gelatina Nuclear -- dohyo de mini-sumo reglamentario."
+    "Diametro 770 mm, banda blanca 25 mm, altura 25 mm."
+    "Sistema de coordenadas ENU: x adelante, y babor, z arriba."
+  ]
+  title "Gelatina Nuclear :: dohyo"
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material1 "rueda"
+      material2 "dohyo"
+      coulombFriction [
+        1.6
+      ]
+      bounce 0
+      bounceVelocity 0
+      softCFM 0.0001
+    }
+    ContactProperties {
+      material1 "patin"
+      material2 "dohyo"
+      coulombFriction [
+        0.08
+      ]
+      bounce 0
+      bounceVelocity 0
+    }
+    ContactProperties {
+      material1 "patin"
+      material2 "patin"
+      coulombFriction [
+        0.25
+      ]
+      bounce 0
+      bounceVelocity 0
+    }
+    ContactProperties {
+      material1 "rueda"
+      material2 "patin"
+      coulombFriction [
+        0.4
+      ]
+      bounce 0
+      bounceVelocity 0
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.11208810001855193 -0.03676207879218055 -0.993018029744228 3.7715018716157567
+  position 1.2225241638550457 -0.7696750568359442 0.22472928908692935
+  followSmoothness 0.2
+}
+Background {
+  skyColor [
+    0.09 0.1 0.13
+  ]
+}
+DirectionalLight {
+  direction 0.35 0.45 -1
+  intensity 2.4
+  castShadows TRUE
+}
+DirectionalLight {
+  direction -0.5 -0.35 -1
+  intensity 0.9
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 3
+  location 0 0 1.1
+}
+DEF DOHYO Solid {
+  translation 0 0 -0.0125
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.55
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.025
+        radius 0.385
+        subdivision 96
+      }
+    }
+    Pose {
+      translation 0 0 0.0125
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.018 0.018 0.02
+            roughness 0.95
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.0006
+            radius 0.36
+            subdivision 96
+          }
+        }
+      ]
+    }
+  ]
+  name "dohyo"
+  contactMaterial "dohyo"
+  boundingObject Cylinder {
+    height 0.025
+    radius 0.385
+    subdivision 48
+  }
+}
+DEF SUELO Solid {
+  translation 0 0 -0.0305
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.21 0.24
+        roughness 0.9
+        metalness 0
+      }
+      geometry Box {
+        size 3 3 0.01
+      }
+    }
+  ]
+  name "suelo"
+  contactMaterial "dohyo"
+  boundingObject Box {
+    size 3 3 0.01
+  }
+}
+DEF GELATINA GelatinaNuclear {
+  controller "_real_20260913t155350632633z_yo_v030"
+  hidden position_0_0 544.9266473148002
+  hidden position_0_1 537.8844197894509
+  hidden linearVelocity_0 0.26012938079982795 -1.5572236074748549 0.0015167886456041388
+  hidden angularVelocity_0 0.31903569902869133 0.0499850008889327 0.012461696749817106
+  hidden rotation_1 0 1 0 4.572710897355783
+  hidden linearVelocity_1 0.2603787731129013 -1.5585330744760792 0.0002625483331314739
+  hidden angularVelocity_1 74.26339180788993 12.407065221945157 0.004705207019033805
+  hidden rotation_2 0 -1 0 2.469516627993506
+  hidden linearVelocity_2 0.26056135546442943 -1.559576500331271 -1.9545719595897223e-05
+  hidden angularVelocity_2 74.2932028618585 12.412126098715687 0.0046097680303602544
+  translation 0.059017390810075156 -0.3245151233497035 -0.0005178208288796268
+  rotation 0.026400825422904936 0.031271936062391176 -0.9991621802449785 1.4059522165740082
+}
+DEF RIVAL GelatinaNuclear {
+  hidden position_0_0 -225.9341264967453
+  hidden position_0_1 -55.32943305087909
+  hidden linearVelocity_0 0.24721614318102414 -1.6594589307751588 -0.452316363852852
+  hidden angularVelocity_0 5.3285718282897445 0.5221500791955282 -0.3226231147866615
+  hidden rotation_1 0 1 0 0.26054456171980594
+  hidden linearVelocity_1 0.24985110070326025 -1.6843758246687286 -0.44949049092315174
+  hidden angularVelocity_1 49.82234924557681 7.226287526999961 -0.9218575623399325
+  hidden rotation_2 0 -1 0 5.063950593442398
+  hidden linearVelocity_2 0.2533181368314575 -1.7055941679455242 -0.4261651804618163
+  hidden angularVelocity_2 -39.17021727225069 -6.150753154398107 0.25233851931460505
+  translation 0.07606219394999836 -0.4147002340772877 -0.007340820179628968
+  rotation 0.12346703435535088 -0.09739004077170749 0.987558135699352 1.7291337335583217
+  name "rival"
+  controller "oponente"
+  controllerArgs [
+    "static"
+  ]
+  color 0.9 0.18 0.22
+  bladeColor 0.45 0.45 0.48
+}
+DEF ARBITRO Robot {
+  children [
+    Emitter {
+      name "emisor"
+      channel 1
+    }
+  ]
+  name "arbitro"
+  controller "arbitro"
+  controllerArgs [
+    "--rounds"
+    "30"
+    "--rival"
+    "static"
+    "--colocacion"
+    "reglamento"
+    "--version"
+    "v0.3.0"
+    "--out"
+    "../../../runs/real_baseline/20260913T155350632633Z_v0.3.0_reglamento/static.json"
+  ]
+  supervisor TRUE
+}

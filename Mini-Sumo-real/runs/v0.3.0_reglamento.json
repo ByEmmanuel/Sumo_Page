@@ -1,0 +1,18 @@
+{
+  "version": "v0.3.0",
+  "engine": "harness-nativo",
+  "mode": "reglamento",
+  "round_max_s": 60,
+  "strategy_build": "v0.3.0",
+  "metrics": {
+    "rounds": 240,
+    "wins": 110,
+    "losses": 66,
+    "draws": 64,
+    "win_rate": 0.458,
+    "avg_win_time_s": 3.19,
+    "self_outs": 22,
+    "match_win_rate": 0.619,
+    "opponents": [{"name":"static","rounds":60,"wins":40,"losses":20,"draws":0,"win_rate":0.667,"placements":[{"name":"frente","rounds":20,"wins":20,"losses":0,"draws":0},{"name":"lado","rounds":20,"wins":20,"losses":0,"draws":0},{"name":"espalda","rounds":20,"wins":0,"losses":20,"draws":0}],"match":{"win":1.000,"judges":0.000,"loss":0.000}},{"name":"charger","rounds":60,"wins":29,"losses":27,"draws":4,"win_rate":0.483,"placements":[{"name":"frente","rounds":20,"wins":7,"losses":9,"draws":4},{"name":"lado","rounds":20,"wins":2,"losses":18,"draws":0},{"name":"espalda","rounds":20,"wins":20,"losses":0,"draws":0}],"match":{"win":0.478,"judges":0.036,"loss":0.486}},{"name":"spinner","rounds":60,"wins":41,"losses":19,"draws":0,"win_rate":0.683,"placements":[{"name":"frente","rounds":20,"wins":1,"losses":19,"draws":0},{"name":"lado","rounds":20,"wins":20,"losses":0,"draws":0},{"name":"espalda","rounds":20,"wins":20,"losses":0,"draws":0}],"match":{"win":1.000,"judges":0.000,"loss":0.000}},{"name":"mirror","rounds":60,"wins":0,"losses":0,"draws":60,"win_rate":0.000,"placements":[{"name":"frente","rounds":20,"wins":0,"losses":0,"draws":20},{"name":"lado","rounds":20,"wins":0,"losses":0,"draws":20},{"name":"espalda","rounds":20,"wins":0,"losses":0,"draws":20}],"match":{"win":0.000,"judges":1.000,"loss":0.000}}]
+  }
+}

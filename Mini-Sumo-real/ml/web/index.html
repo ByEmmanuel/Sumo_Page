@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1012">
+  <title>Gelatina Nuclear — laboratorio de aprendizaje</title>
+  <link rel="stylesheet" href="/codex.css"><link rel="stylesheet" href="/lab.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#resumen"><span class="brand-mark">g<span> / </span>n</span><span>GELATINA<span class="brand-sub">NUCLEAR · RLHF</span></span></a>
+    <div class="workspace-label">LABORATORIO <span>ML</span></div>
+    <nav aria-label="Navegación principal">
+      <a href="#resumen" data-page="resumen"><span class="nav-icon">▦</span>Resumen</a>
+      <a href="#votar" data-page="votar"><span class="nav-icon">⇄</span>Votar<span id="nav-pendientes" class="nav-count">0</span></a>
+      <a href="#versiones" data-page="versiones"><span class="nav-icon">⑂</span>Versiones</a>
+      <a href="#entrenamiento" data-page="entrenamiento"><span class="nav-icon">◎</span>Entrenamiento</a>
+      <a href="#direccion" data-page="direccion"><span class="nav-icon">↗</span>Dirección</a>
+      <a href="#liga" data-page="liga"><span class="nav-icon">♜</span>Liga</a>
+      <a href="#tareas" data-page="tareas"><span class="nav-icon">☑</span>Tareas</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="project-mini"><span class="project-avatar">GN</span><div>Gelatina Nuclear<small>Mini-sumo · 10 × 10 cm</small></div><span class="status-dot"></span></div>
+      <div class="local-label"><span class="status-dot"></span>RTX 5070 · local <span>:8765</span></div>
+    </div>
+  </aside>
+  <div class="shell">
+    <header class="topbar">
+      <div><span class="muted">Gelatina Nuclear</span><span class="slash">/</span><span id="titulo-pagina">Resumen</span><span class="tag">APRENDIZAJE</span></div>
+      <div class="top-right"><span class="status-dot"></span><span id="connection">Conectando…</span></div>
+    </header>
+    <main id="content" tabindex="-1"><div class="loading">Cargando…</div></main>
+    <footer><span>GELATINA NUCLEAR <span class="muted">/ interfaz con el diseño de la web de codex/, copiado en solo lectura</span></span><span>Simular. Votar. Aprender. Repetir.</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+</body>
+</html>

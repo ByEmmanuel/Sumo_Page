@@ -7,3 +7,12 @@
 @media(max-width:480px){.brand-mark{font-size:16px;padding:9px 5px}.robot-stage{min-height:215px}.stat-label{gap:4px;line-height:1.5}.panel-head{flex-wrap:wrap}.stat-value small{white-space:nowrap}.callout code{overflow-wrap:anywhere}}
 
 .publication-note{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+
+.bundle-picker {display:block;padding:12px 18px;min-width:0;}
+.bundle-picker select {display:block;width:100%;max-width:100%;margin-top:8px;}
+.editor-tabs {flex-wrap:wrap;}
+.panel,.editor-layout>* {min-width:0;}
+
+.calibration-plot {width:100%;height:auto;display:block;}
+figure {margin:20px 0;}
+figcaption {color:var(--muted);font-size:13px;margin-top:10px;}

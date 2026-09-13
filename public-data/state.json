@@ -1,6 +1,158 @@
 {
   "versions": [
     {
+      "id": 22,
+      "created": "2026-09-13T17:03:26.708857+00:00",
+      "title": "Corregir aleatorización de inercia mediante campos expuestos del PROTO",
+      "notes": "Webots rechazó modificar campos internos de solo lectura en v20–v21. Se exponen las inercias de ambas ruedas con IS y se verifica su lectura tras aplicar cada sorteo. Mismos valores nominales y distribuciones, sin ajustar estrategias. Tandas aleatorias anteriores conservadas como inválidas para la aleatorización completa.",
+      "parent_hash": "7672d9520f5275b073b2ad42674f26a4e8adacb9e4091b229b8160fef7cb03b3",
+      "hash": "5650b9b0bd2afc9b6922658164da4c9c453c2bea3d4efe5ca71d95623af44519"
+    },
+    {
+      "id": 21,
+      "created": "2026-09-13T16:55:25.261247+00:00",
+      "title": "Webots real: registrar rumbo en la calibración",
+      "notes": "Añade únicamente el rumbo medido por el supervisor a cada muestra. Permite distinguir marcha hacia atrás de un giro causado por diferencias entre motores y medir frenada respecto a la orientación real. No cambia física, HAL de los combatientes, estrategias ni parámetros. La evaluación final usará esta instantánea exacta.",
+      "parent_hash": "549fc2db63a85bb73c3f16209730e658b8267d47f6e4fc32bbbdd5d27daa58b3",
+      "hash": "7672d9520f5275b073b2ad42674f26a4e8adacb9e4091b229b8160fef7cb03b3"
+    },
+    {
+      "id": 20,
+      "created": "2026-09-13T16:52:39.131661+00:00",
+      "title": "Webots real: incertidumbre reproducible por rueda y asalto",
+      "notes": "Completa el muestreo físico: tolerancias independientes por motor, batería compartida por robot, inercia de rotor dentro del rango documentado. Reinicia el ruido de sensores por asalto para comparar algoritmos con condiciones predefinidas, sin escoger semillas por victorias. Registra condiciones y excedencias de corriente. Corrige el BOM para distinguir techos numéricos de prestaciones físicas. Estrategias y actor intactos.",
+      "parent_hash": "ad894d6ed1adf48ee107fa537e8efe1e8b6daa3c3d4a2eee001ed936df69857a",
+      "hash": "549fc2db63a85bb73c3f16209730e658b8267d47f6e4fc32bbbdd5d27daa58b3"
+    },
+    {
+      "id": 19,
+      "created": "2026-09-13T16:50:40.109419+00:00",
+      "title": "Webots real: completar la pista de calibración",
+      "notes": "Amplía únicamente la pista de diagnóstico a8x2m y aparta al rival en los ensayos sin contacto. La aceleración se registra durante1s; la frenada comienza a1504ms para acercarse más a velocidad estable y se observa hasta4s. Evita confundir el final de una pista demasiado corta con una caída del dohyo. Añade marcador de finalización y recuento completo. Mundo de combate sin cambios.",
+      "parent_hash": "8c0bfb2c24469ad6d9e9911f505591f6a5679055e236fc31012111ae9ff81c6b",
+      "hash": "ad894d6ed1adf48ee107fa537e8efe1e8b6daa3c3d4a2eee001ed936df69857a"
+    },
+    {
+      "id": 18,
+      "created": "2026-09-13T16:48:00.513131+00:00",
+      "title": "Webots real: comparar la red con historial común",
+      "notes": "La prueba cerrada de v0017 conserva diferencias máximas de0.3024 en el actor tras1000 ciclos: pequeñas diferencias de coma flotante se realimentan. Se amplía solo el reproductor de diagnóstico para comparar cada ciclo con las mismas consignas previas registradas. Adaptador y pesos del controlador sin cambios. La prueba cerrada fallida permanece y no se oculta con la paridad por ciclo.",
+      "parent_hash": "814cc8556123717685072b7b0cfaebe3989027f22bc533ea4b8724b4d8fd4c1a",
+      "hash": "8c0bfb2c24469ad6d9e9911f505591f6a5679055e236fc31012111ae9ff81c6b"
+    },
+    {
+      "id": 17,
+      "created": "2026-09-13T16:42:59.204623+00:00",
+      "title": "Webots real: adaptar el actor neuronal congelado",
+      "notes": "Añade gelatina_nn con exactamente21 entradas, memoria de observación, rampa0.2/ciclo y zona muerta0.04 según ml/ppo.py. Pesos de p-20260913-084929-reglamento-1 copiados byte a byte, sin entrenamiento. Debe superar paridad C/Python en20 secuencias grabadas con error<1e-5 antes de cualquier combate neuronal.",
+      "parent_hash": "d26fad0584f4660d68460fbd53399b220bd537b2ec215f3f77e54d3682cab684",
+      "hash": "814cc8556123717685072b7b0cfaebe3989027f22bc533ea4b8724b4d8fd4c1a"
+    },
+    {
+      "id": 16,
+      "created": "2026-09-13T16:41:44.980425+00:00",
+      "title": "Webots real G: rival con apertura de flanco",
+      "notes": "Nuevo rival flanco: arco inicial350ms con consignas1/0.4 y después el charger de referencia; prioridad de línea conservada. Misma masa, ruedas, puente, motor, sensores y tiempos que el robot medido. Cambio del banco declarado expresamente: no es una nueva estrategia del usuario. Los cuatro rivales anteriores mantienen su lógica.",
+      "parent_hash": "d5a7c9e94896f80893206cfd582ee614ab9535814d582f84802a5c1aca0430e2",
+      "hash": "d26fad0584f4660d68460fbd53399b220bd537b2ec215f3f77e54d3682cab684"
+    },
+    {
+      "id": 15,
+      "created": "2026-09-13T16:40:27.737583+00:00",
+      "title": "Webots real F: pulsador, espera y error angular",
+      "notes": "ARM representa pulsación y fija permiso común5000ms después en ambos HAL; el árbitro empieza a cronometrar al terminar la espera. Añade ±3° de colocación, además del ±3mm existente. Límite60s en ambas colocaciones. No se atribuyen estos supuestos a reglas que no los especifican. Algoritmos intactos.",
+      "parent_hash": "2b1aa8bfa8be4e53bbd520f4e55370dd0c6cddb7f109d0bfa471b69bfe32c03b",
+      "hash": "d5a7c9e94896f80893206cfd582ee614ab9535814d582f84802a5c1aca0430e2"
+    },
+    {
+      "id": 14,
+      "created": "2026-09-13T16:38:32.900718+00:00",
+      "title": "Webots real E: lectura secuencial y retardo de actuación",
+      "notes": "Introduce un ciclo8ms de retardo entre consigna y aplicación del motor, con ambas consignas en telemetría. Lecturas ToF escalonadas por un presupuesto I2C de0.36ms/sensor a400kHz, redondeadas a la rejilla física8ms. Se registra el timestamp de cada sensor. Tiempos de bus asumidos explícitamente; no se cambia la lógica de ninguna estrategia.",
+      "parent_hash": "c1abc4914b4cc13e62b7eff1f0483d05693600299f2d966f784a5ce0360613de",
+      "hash": "2b1aa8bfa8be4e53bbd520f4e55370dd0c6cddb7f109d0bfa471b69bfe32c03b"
+    },
+    {
+      "id": 13,
+      "created": "2026-09-13T16:34:50.569006+00:00",
+      "title": "Webots real D: QTR analógico con altura, ruido y latencia",
+      "notes": "Transferencia óptica sensible a altura y reflectancia, ADC12bits con polaridad física (blanco bajo), normalización en HAL para conservar el contrato del algoritmo. Ruido, offset y ganancia documentados como supuestos. Una muestra de retardo. Añade ensayos explícitos sobre negro, blanco y una pala metálica. Algoritmos y umbral400 intactos.",
+      "parent_hash": "0275cc04aa52f4799b94b356e622ba1ac11f914cbae76bdc0d0404ef8beef135",
+      "hash": "c1abc4914b4cc13e62b7eff1f0483d05693600299f2d966f784a5ce0360613de"
+    },
+    {
+      "id": 12,
+      "created": "2026-09-13T16:32:33.133923+00:00",
+      "title": "Webots real C: alcance, campo y cadencia de los ToF",
+      "notes": "Cinco rayos horizontales por sensor cubren25° sin detectar el suelo: proyección del cono con máscara vertical ideal, limitación explícita a validar. Lectura cada33ms (32/40ms en Webots8ms), rango según superficie, mínimo fiable, ruido proporcional y pérdidas. Se eliminan falsos objetivos por ruido aplicado a ausencia de retorno. Mismo HAL sensorial para los rivales. Algoritmos C intactos.",
+      "parent_hash": "676d1a173c53b64a5535f76e0b7a2a60c9add8be3bbb396eb7da568e37f03f6c",
+      "hash": "0275cc04aa52f4799b94b356e622ba1ac11f914cbae76bdc0d0404ef8beef135"
+    },
+    {
+      "id": 11,
+      "created": "2026-09-13T16:14:19.695805+00:00",
+      "title": "Webots real B: malla cerrada de colisión del dohyo",
+      "notes": "Solo cambia la representación de colisión del dohyo: malla cerrada96lados de radio385mm y altura25mm, generada por hardware/genera_dohyo_colision.py. Ruedas cilíndricas originales. Comparar con la planta de v0008/v0010. No se afina por victorias.",
+      "parent_hash": "3b158a6af7b81681ee802e7a02bcf9192ea39da122cc3cbd6eeed645b6e8e3f2",
+      "hash": "676d1a173c53b64a5535f76e0b7a2a60c9add8be3bbb396eb7da568e37f03f6c"
+    },
+    {
+      "id": 10,
+      "created": "2026-09-13T16:14:19.319044+00:00",
+      "title": "Webots real B: revertir la malla de las ruedas",
+      "notes": "Reversión nueva que copia generador, PROTO y parámetros de v0008. Se conserva v0009 y sus ensayos no aprobados. La rueda triangulada introduce deriva y contactos excesivos sobre plano. La planta vuelve al contenido físico exacto de v0008; no se borra ninguna revisión.",
+      "parent_hash": "1c1d2d29ed1a9f2363a3f4f8568db9cc26432f90a3c1ed63b3bb4c17f3922c91",
+      "hash": "3b158a6af7b81681ee802e7a02bcf9192ea39da122cc3cbd6eeed645b6e8e3f2"
+    },
+    {
+      "id": 9,
+      "created": "2026-09-13T16:10:41.603002+00:00",
+      "title": "Webots real B: malla de colisión con la envolvente de la rueda",
+      "notes": "Sustituye solo el primitivo de colisión cilíndrico de las ruedas por una malla cerrada de48 segmentos, mismo diámetro y anchura. PROTO regenerado desde el generador, nunca editado a mano. Masa, inercia, motor y fricción se conservan. Ensayo A/B contra v0008 para comprobar el problema del canto sin ajustar por victorias.",
+      "parent_hash": "14cfed511020192c8e628db6c83bedae05ed91072b196c91313533bcd50b12f6",
+      "hash": "1c1d2d29ed1a9f2363a3f4f8568db9cc26432f90a3c1ed63b3bb4c17f3922c91"
+    },
+    {
+      "id": 8,
+      "created": "2026-09-13T16:08:30.714990+00:00",
+      "title": "Webots real B: contacto con fricción y deslizamiento",
+      "notes": "Coulomb nominal1.1, intervalo exploratorio0.6–1.6; deslizamiento nominal0.0005 m/s/N, rango0–0.002. Valores explícitamente supuestos porque aún no existe el robot. Sin adhesión. Se sortea el contacto por asalto solo en tandas aleatorizadas, igual para ambos robots. Geometría cilíndrica todavía conservada para aislar su posterior revisión. Comparar contra v0007.",
+      "parent_hash": "66dda3d1a1a903ca1e7fa8a95599f214731d21728ad74415a43ddc4537f31aff",
+      "hash": "14cfed511020192c8e628db6c83bedae05ed91072b196c91313533bcd50b12f6"
+    },
+    {
+      "id": 7,
+      "created": "2026-09-13T16:06:30.840005+00:00",
+      "title": "Webots real A: inicializar la referencia del encoder",
+      "notes": "Ensayo de v0006 conservado como no aprobado: posiciones acumuladas de las ruedas en el mundo guardado producían un pico ficticio al derivar respecto a cero. Se toma la primera lectura como referencia. No se cambia estrategia ni parámetro físico. Repetir la misma calibración antes de aceptar A.",
+      "parent_hash": "25884ed436279b181cb4b1a006ce7bf0c425fd2d0e5166ac6d488b729650bb80",
+      "hash": "66dda3d1a1a903ca1e7fa8a95599f214731d21728ad74415a43ddc4537f31aff"
+    },
+    {
+      "id": 6,
+      "created": "2026-09-13T16:05:18.088708+00:00",
+      "title": "Webots real A: motor eléctrico y alimentación",
+      "notes": "Modelo por par con R y constantes inferidas del motor Pololu; pérdidas del puente y de vacío; tensión y tolerancias por asalto cuando se activa aleatorización. Incluye inercia de rotor reflejada estimada. Misma planta en ambos robots y rivales de referencia. TB6612 no se modela como limitador inexistente: registra excedencias de corriente. Estrategias congeladas intactas. Comparación emparejada con v0005.",
+      "parent_hash": "46d38cc80bac86812bf3b53314456c480a0b9a991c6a85e0920d6c3b36b7dedb",
+      "hash": "25884ed436279b181cb4b1a006ce7bf0c425fd2d0e5166ac6d488b729650bb80"
+    },
+    {
+      "id": 5,
+      "created": "2026-09-13T16:01:21.439781+00:00",
+      "title": "Webots real: instrumentación de ensayos de planta",
+      "notes": "Añade telemetría cada 8 ms y órdenes DRIVE solo para diagnóstico, supervisor de calibración y pista de igual material para aceleración. Ninguna estrategia C ni parámetro de combate cambia. Se medirá la planta original antes del paso A. Fuentes de geometría y tiempos: diseño y protocolo del prompt.",
+      "parent_hash": "8e1b39cac36b7c9cfc0fdbf3ca67fc5ee7d3ec6b2a9b469e082a0079975a7a87",
+      "hash": "46d38cc80bac86812bf3b53314456c480a0b9a991c6a85e0920d6c3b36b7dedb"
+    },
+    {
+      "id": 4,
+      "created": "2026-09-13T15:59:22.818447+00:00",
+      "title": "Webots real: importar línea base C reproducida",
+      "notes": "Copia aislada de Claude. Cuatro tandas de 120 asaltos coinciden exactamente con el prompt. Algoritmos y HAL originales sin cambios; paquete de fuentes completo con hashes. Se conservan los archivos Python y sus parámetros de la última versión del laboratorio. El usuario confirma que todavía es un diseño, sin medidas físicas.",
+      "parent_hash": "a0bf4ae5f53f2f8028b48df8dcea71bb0f26c87f9981dddc5202b71670108816",
+      "hash": "8e1b39cac36b7c9cfc0fdbf3ca67fc5ee7d3ec6b2a9b469e082a0079975a7a87"
+    },
+    {
       "id": 3,
       "created": "2026-09-13T02:18:18.398698+00:00",
       "title": "Arbitraje: registrar contactos entre ambos robots",
@@ -26,6 +178,139 @@
     }
   ],
   "iterations": [
+    {
+      "id": 20,
+      "created": "2026-09-13T17:21:33.302699+00:00",
+      "version_id": 22,
+      "hypothesis": "Webots real: matriz final congelada, sin selección por victoria",
+      "observation": "120 tandas y3600 asaltos, seis algoritmos, cinco rivales, reglamento/diagonal, nominal/aleatorio, semilla0; todos terminados sin errores de Webots. Física v22 SHA-256 5650b9b0bd2afc9b6922658164da4c9c453c2bea3d4efe5ca71d95623af44519. v0.3.1 reglamento: nominal108V32D10E y aleatorio110V36D4E,150 por condición; NN:70V43D37E y80V43D27E. No compararlos como probabilidad real. Calibración22584 muestras; frenada cero nominal26.88cm/400ms. Las tres frenadas cero aleatorias cayeron antes de frenar y no son medidas válidas. Paridad neuronal local aprobada, realimentación cerrada fallida. Evidencia: INFORME_WEBOTS_REAL.md, calibracion_webots.json y Mini-Sumo-real/runs/evaluacion_final.json."
+    },
+    {
+      "id": 19,
+      "created": "2026-09-13T17:15:26.897984+00:00",
+      "version_id": 21,
+      "hypothesis": "Webots real: Webots real: registrar rumbo en la calibración",
+      "observation": "Añade únicamente el rumbo medido por el supervisor a cada muestra. Permite distinguir marcha hacia atrás de un giro causado por diferencias entre motores y medir frenada respecto a la orientación real. No cambia física, HAL de los combatientes, estrategias ni parámetros. La evaluación final usará esta instantánea exacta. SHA-256: 7672d9520f5275b073b2ad42674f26a4e8adacb9e4091b229b8160fef7cb03b3. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/. ALEATORIZACIÓN RECHAZADA: Webots no aplicó la inercia de ruedas por escritura a campo interno de solo lectura. Corregido en v22; se conservan las tandas anteriores."
+    },
+    {
+      "id": 18,
+      "created": "2026-09-13T17:15:26.893306+00:00",
+      "version_id": 20,
+      "hypothesis": "Webots real: Webots real: incertidumbre reproducible por rueda y asalto",
+      "observation": "Completa el muestreo físico: tolerancias independientes por motor, batería compartida por robot, inercia de rotor dentro del rango documentado. Reinicia el ruido de sensores por asalto para comparar algoritmos con condiciones predefinidas, sin escoger semillas por victorias. Registra condiciones y excedencias de corriente. Corrige el BOM para distinguir techos numéricos de prestaciones físicas. Estrategias y actor intactos. SHA-256: 549fc2db63a85bb73c3f16209730e658b8267d47f6e4fc32bbbdd5d27daa58b3. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/. ALEATORIZACIÓN RECHAZADA: Webots no aplicó la inercia de ruedas por escritura a campo interno de solo lectura. Corregido en v22; se conservan las tandas anteriores."
+    },
+    {
+      "id": 17,
+      "created": "2026-09-13T17:15:26.889201+00:00",
+      "version_id": 19,
+      "hypothesis": "Webots real: Webots real: completar la pista de calibración",
+      "observation": "Amplía únicamente la pista de diagnóstico a8x2m y aparta al rival en los ensayos sin contacto. La aceleración se registra durante1s; la frenada comienza a1504ms para acercarse más a velocidad estable y se observa hasta4s. Evita confundir el final de una pista demasiado corta con una caída del dohyo. Añade marcador de finalización y recuento completo. Mundo de combate sin cambios. SHA-256: ad894d6ed1adf48ee107fa537e8efe1e8b6daa3c3d4a2eee001ed936df69857a. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 16,
+      "created": "2026-09-13T17:15:26.885040+00:00",
+      "version_id": 18,
+      "hypothesis": "Webots real: Webots real: comparar la red con historial común",
+      "observation": "La prueba cerrada de v0017 conserva diferencias máximas de0.3024 en el actor tras1000 ciclos: pequeñas diferencias de coma flotante se realimentan. Se amplía solo el reproductor de diagnóstico para comparar cada ciclo con las mismas consignas previas registradas. Adaptador y pesos del controlador sin cambios. La prueba cerrada fallida permanece y no se oculta con la paridad por ciclo. SHA-256: 8c0bfb2c24469ad6d9e9911f505591f6a5679055e236fc31012111ae9ff81c6b. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/. La paridad con historia común pasó, pero la trayectoria C/Python con realimentación independiente falla: no es equivalencia cerrada."
+    },
+    {
+      "id": 15,
+      "created": "2026-09-13T17:15:26.880492+00:00",
+      "version_id": 17,
+      "hypothesis": "Webots real: Webots real: adaptar el actor neuronal congelado",
+      "observation": "Añade gelatina_nn con exactamente21 entradas, memoria de observación, rampa0.2/ciclo y zona muerta0.04 según ml/ppo.py. Pesos de p-20260913-084929-reglamento-1 copiados byte a byte, sin entrenamiento. Debe superar paridad C/Python en20 secuencias grabadas con error<1e-5 antes de cualquier combate neuronal. SHA-256: 814cc8556123717685072b7b0cfaebe3989027f22bc533ea4b8724b4d8fd4c1a. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/. La paridad con historia común pasó, pero la trayectoria C/Python con realimentación independiente falla: no es equivalencia cerrada."
+    },
+    {
+      "id": 14,
+      "created": "2026-09-13T17:15:26.875727+00:00",
+      "version_id": 16,
+      "hypothesis": "Webots real: Webots real G: rival con apertura de flanco",
+      "observation": "Nuevo rival flanco: arco inicial350ms con consignas1/0.4 y después el charger de referencia; prioridad de línea conservada. Misma masa, ruedas, puente, motor, sensores y tiempos que el robot medido. Cambio del banco declarado expresamente: no es una nueva estrategia del usuario. Los cuatro rivales anteriores mantienen su lógica. SHA-256: d26fad0584f4660d68460fbd53399b220bd537b2ec215f3f77e54d3682cab684. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 13,
+      "created": "2026-09-13T17:15:26.872240+00:00",
+      "version_id": 15,
+      "hypothesis": "Webots real: Webots real F: pulsador, espera y error angular",
+      "observation": "ARM representa pulsación y fija permiso común5000ms después en ambos HAL; el árbitro empieza a cronometrar al terminar la espera. Añade ±3° de colocación, además del ±3mm existente. Límite60s en ambas colocaciones. No se atribuyen estos supuestos a reglas que no los especifican. Algoritmos intactos. SHA-256: d5a7c9e94896f80893206cfd582ee614ab9535814d582f84802a5c1aca0430e2. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 12,
+      "created": "2026-09-13T17:15:26.868463+00:00",
+      "version_id": 14,
+      "hypothesis": "Webots real: Webots real E: lectura secuencial y retardo de actuación",
+      "observation": "Introduce un ciclo8ms de retardo entre consigna y aplicación del motor, con ambas consignas en telemetría. Lecturas ToF escalonadas por un presupuesto I2C de0.36ms/sensor a400kHz, redondeadas a la rejilla física8ms. Se registra el timestamp de cada sensor. Tiempos de bus asumidos explícitamente; no se cambia la lógica de ninguna estrategia. SHA-256: 2b1aa8bfa8be4e53bbd520f4e55370dd0c6cddb7f109d0bfa471b69bfe32c03b. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 11,
+      "created": "2026-09-13T17:15:26.864283+00:00",
+      "version_id": 13,
+      "hypothesis": "Webots real: Webots real D: QTR analógico con altura, ruido y latencia",
+      "observation": "Transferencia óptica sensible a altura y reflectancia, ADC12bits con polaridad física (blanco bajo), normalización en HAL para conservar el contrato del algoritmo. Ruido, offset y ganancia documentados como supuestos. Una muestra de retardo. Añade ensayos explícitos sobre negro, blanco y una pala metálica. Algoritmos y umbral400 intactos. SHA-256: c1abc4914b4cc13e62b7eff1f0483d05693600299f2d966f784a5ce0360613de. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 10,
+      "created": "2026-09-13T17:15:26.859824+00:00",
+      "version_id": 12,
+      "hypothesis": "Webots real: Webots real C: alcance, campo y cadencia de los ToF",
+      "observation": "Cinco rayos horizontales por sensor cubren25° sin detectar el suelo: proyección del cono con máscara vertical ideal, limitación explícita a validar. Lectura cada33ms (32/40ms en Webots8ms), rango según superficie, mínimo fiable, ruido proporcional y pérdidas. Se eliminan falsos objetivos por ruido aplicado a ausencia de retorno. Mismo HAL sensorial para los rivales. Algoritmos C intactos. SHA-256: 0275cc04aa52f4799b94b356e622ba1ac11f914cbae76bdc0d0404ef8beef135. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 9,
+      "created": "2026-09-13T17:15:26.855835+00:00",
+      "version_id": 11,
+      "hypothesis": "Webots real: Webots real B: malla cerrada de colisión del dohyo",
+      "observation": "Solo cambia la representación de colisión del dohyo: malla cerrada96lados de radio385mm y altura25mm, generada por hardware/genera_dohyo_colision.py. Ruedas cilíndricas originales. Comparar con la planta de v0008/v0010. No se afina por victorias. SHA-256: 676d1a173c53b64a5535f76e0b7a2a60c9add8be3bbb396eb7da568e37f03f6c. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 8,
+      "created": "2026-09-13T17:15:26.852226+00:00",
+      "version_id": 10,
+      "hypothesis": "Webots real: Webots real B: revertir la malla de las ruedas",
+      "observation": "Reversión nueva que copia generador, PROTO y parámetros de v0008. Se conserva v0009 y sus ensayos no aprobados. La rueda triangulada introduce deriva y contactos excesivos sobre plano. La planta vuelve al contenido físico exacto de v0008; no se borra ninguna revisión. SHA-256: 3b158a6af7b81681ee802e7a02bcf9192ea39da122cc3cbd6eeed645b6e8e3f2. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 7,
+      "created": "2026-09-13T17:15:26.848517+00:00",
+      "version_id": 9,
+      "hypothesis": "Webots real: Webots real B: malla de colisión con la envolvente de la rueda",
+      "observation": "Sustituye solo el primitivo de colisión cilíndrico de las ruedas por una malla cerrada de48 segmentos, mismo diámetro y anchura. PROTO regenerado desde el generador, nunca editado a mano. Masa, inercia, motor y fricción se conservan. Ensayo A/B contra v0008 para comprobar el problema del canto sin ajustar por victorias. SHA-256: 1c1d2d29ed1a9f2363a3f4f8568db9cc26432f90a3c1ed63b3bb4c17f3922c91. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/. ENSAYO RECHAZADO: no usar como física validada; ver assessment.json y el informe."
+    },
+    {
+      "id": 6,
+      "created": "2026-09-13T17:15:26.845021+00:00",
+      "version_id": 8,
+      "hypothesis": "Webots real: Webots real B: contacto con fricción y deslizamiento",
+      "observation": "Coulomb nominal1.1, intervalo exploratorio0.6–1.6; deslizamiento nominal0.0005 m/s/N, rango0–0.002. Valores explícitamente supuestos porque aún no existe el robot. Sin adhesión. Se sortea el contacto por asalto solo en tandas aleatorizadas, igual para ambos robots. Geometría cilíndrica todavía conservada para aislar su posterior revisión. Comparar contra v0007. SHA-256: 14cfed511020192c8e628db6c83bedae05ed91072b196c91313533bcd50b12f6. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 5,
+      "created": "2026-09-13T17:15:26.841619+00:00",
+      "version_id": 7,
+      "hypothesis": "Webots real: Webots real A: inicializar la referencia del encoder",
+      "observation": "Ensayo de v0006 conservado como no aprobado: posiciones acumuladas de las ruedas en el mundo guardado producían un pico ficticio al derivar respecto a cero. Se toma la primera lectura como referencia. No se cambia estrategia ni parámetro físico. Repetir la misma calibración antes de aceptar A. SHA-256: 66dda3d1a1a903ca1e7fa8a95599f214731d21728ad74415a43ddc4537f31aff. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 4,
+      "created": "2026-09-13T17:15:26.837244+00:00",
+      "version_id": 6,
+      "hypothesis": "Webots real: Webots real A: motor eléctrico y alimentación",
+      "observation": "Modelo por par con R y constantes inferidas del motor Pololu; pérdidas del puente y de vacío; tensión y tolerancias por asalto cuando se activa aleatorización. Incluye inercia de rotor reflejada estimada. Misma planta en ambos robots y rivales de referencia. TB6612 no se modela como limitador inexistente: registra excedencias de corriente. Estrategias congeladas intactas. Comparación emparejada con v0005. SHA-256: 25884ed436279b181cb4b1a006ce7bf0c425fd2d0e5166ac6d488b729650bb80. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/. ENSAYO RECHAZADO: no usar como física validada; ver assessment.json y el informe."
+    },
+    {
+      "id": 3,
+      "created": "2026-09-13T17:15:26.833846+00:00",
+      "version_id": 5,
+      "hypothesis": "Webots real: Webots real: instrumentación de ensayos de planta",
+      "observation": "Añade telemetría cada 8 ms y órdenes DRIVE solo para diagnóstico, supervisor de calibración y pista de igual material para aceleración. Ninguna estrategia C ni parámetro de combate cambia. Se medirá la planta original antes del paso A. Fuentes de geometría y tiempos: diseño y protocolo del prompt. SHA-256: 46d38cc80bac86812bf3b53314456c480a0b9a991c6a85e0920d6c3b36b7dedb. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
+    {
+      "id": 2,
+      "created": "2026-09-13T17:15:26.830027+00:00",
+      "version_id": 4,
+      "hypothesis": "Webots real: Webots real: importar línea base C reproducida",
+      "observation": "Copia aislada de Claude. Cuatro tandas de 120 asaltos coinciden exactamente con el prompt. Algoritmos y HAL originales sin cambios; paquete de fuentes completo con hashes. Se conservan los archivos Python y sus parámetros de la última versión del laboratorio. El usuario confirma que todavía es un diseño, sin medidas físicas. SHA-256: 8e1b39cac36b7c9cfc0fdbf3ca67fc5ee7d3ec6b2a9b469e082a0079975a7a87. Evidencias en Mini-Sumo-real/runs/real/ y runs/real_baseline/."
+    },
     {
       "id": 1,
       "created": "2026-09-13T02:20:36.739279+00:00",
@@ -273,6 +558,352 @@
       "stopped": true
     }
   ],
-  "combat_version": 3,
-  "published_at": "2026-09-13T02:43:39.200724+00:00"
+  "combat_version": 22,
+  "published_at": "2026-09-13T17:43:32.652111+00:00",
+  "webots_real": {
+    "complete": true,
+    "revision_id": 22,
+    "revision_hash": "5650b9b0bd2afc9b6922658164da4c9c453c2bea3d4efe5ca71d95623af44519",
+    "created": "2026-09-13T17:21:54.182755+00:00",
+    "rounds": 3600,
+    "groups": [
+      {
+        "algorithm": "nn",
+        "mode": "banco",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 47,
+        "losses": 73,
+        "draws": 30,
+        "self_outs": 16,
+        "descriptive_wilson_95_percent": [
+          24.454798684647926,
+          39.144123843458914
+        ]
+      },
+      {
+        "algorithm": "nn",
+        "mode": "banco",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 60,
+        "losses": 71,
+        "draws": 19,
+        "self_outs": 25,
+        "descriptive_wilson_95_percent": [
+          32.50419076797755,
+          47.99523201493683
+        ]
+      },
+      {
+        "algorithm": "nn",
+        "mode": "reglamento",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 70,
+        "losses": 43,
+        "draws": 37,
+        "self_outs": 11,
+        "descriptive_wilson_95_percent": [
+          38.865912474061716,
+          54.63389512024308
+        ]
+      },
+      {
+        "algorithm": "nn",
+        "mode": "reglamento",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 80,
+        "losses": 43,
+        "draws": 27,
+        "self_outs": 11,
+        "descriptive_wilson_95_percent": [
+          45.366104879756925,
+          61.1340875259383
+        ]
+      },
+      {
+        "algorithm": "v0.1.0",
+        "mode": "banco",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 87,
+        "losses": 63,
+        "draws": 0,
+        "self_outs": 12,
+        "descriptive_wilson_95_percent": [
+          49.998333511352705,
+          65.6021282623158
+        ]
+      },
+      {
+        "algorithm": "v0.1.0",
+        "mode": "banco",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 58,
+        "losses": 91,
+        "draws": 1,
+        "self_outs": 31,
+        "descriptive_wilson_95_percent": [
+          31.24898876515768,
+          46.65035705547861
+        ]
+      },
+      {
+        "algorithm": "v0.1.0",
+        "mode": "reglamento",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 48,
+        "losses": 98,
+        "draws": 4,
+        "self_outs": 82,
+        "descriptive_wilson_95_percent": [
+          25.064412359702402,
+          39.834548649543464
+        ]
+      },
+      {
+        "algorithm": "v0.1.0",
+        "mode": "reglamento",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 40,
+        "losses": 108,
+        "draws": 2,
+        "self_outs": 92,
+        "descriptive_wilson_95_percent": [
+          20.23705573107324,
+          34.261597429060295
+        ]
+      },
+      {
+        "algorithm": "v0.1.1",
+        "mode": "banco",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 87,
+        "losses": 63,
+        "draws": 0,
+        "self_outs": 12,
+        "descriptive_wilson_95_percent": [
+          49.998333511352705,
+          65.6021282623158
+        ]
+      },
+      {
+        "algorithm": "v0.1.1",
+        "mode": "banco",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 58,
+        "losses": 91,
+        "draws": 1,
+        "self_outs": 31,
+        "descriptive_wilson_95_percent": [
+          31.24898876515768,
+          46.65035705547861
+        ]
+      },
+      {
+        "algorithm": "v0.1.1",
+        "mode": "reglamento",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 48,
+        "losses": 98,
+        "draws": 4,
+        "self_outs": 82,
+        "descriptive_wilson_95_percent": [
+          25.064412359702402,
+          39.834548649543464
+        ]
+      },
+      {
+        "algorithm": "v0.1.1",
+        "mode": "reglamento",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 40,
+        "losses": 108,
+        "draws": 2,
+        "self_outs": 92,
+        "descriptive_wilson_95_percent": [
+          20.23705573107324,
+          34.261597429060295
+        ]
+      },
+      {
+        "algorithm": "v0.2.0",
+        "mode": "banco",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 86,
+        "losses": 63,
+        "draws": 1,
+        "self_outs": 13,
+        "descriptive_wilson_95_percent": [
+          49.332380166580926,
+          64.96804312594855
+        ]
+      },
+      {
+        "algorithm": "v0.2.0",
+        "mode": "banco",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 58,
+        "losses": 92,
+        "draws": 0,
+        "self_outs": 31,
+        "descriptive_wilson_95_percent": [
+          31.24898876515768,
+          46.65035705547861
+        ]
+      },
+      {
+        "algorithm": "v0.2.0",
+        "mode": "reglamento",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 47,
+        "losses": 101,
+        "draws": 2,
+        "self_outs": 83,
+        "descriptive_wilson_95_percent": [
+          24.454798684647926,
+          39.144123843458914
+        ]
+      },
+      {
+        "algorithm": "v0.2.0",
+        "mode": "reglamento",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 40,
+        "losses": 108,
+        "draws": 2,
+        "self_outs": 95,
+        "descriptive_wilson_95_percent": [
+          20.23705573107324,
+          34.261597429060295
+        ]
+      },
+      {
+        "algorithm": "v0.3.0",
+        "mode": "banco",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 115,
+        "losses": 34,
+        "draws": 1,
+        "self_outs": 4,
+        "descriptive_wilson_95_percent": [
+          69.28407309593592,
+          82.71746614962575
+        ]
+      },
+      {
+        "algorithm": "v0.3.0",
+        "mode": "banco",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 89,
+        "losses": 59,
+        "draws": 2,
+        "self_outs": 13,
+        "descriptive_wilson_95_percent": [
+          51.334517440468,
+          66.8660212954786
+        ]
+      },
+      {
+        "algorithm": "v0.3.0",
+        "mode": "reglamento",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 41,
+        "losses": 100,
+        "draws": 9,
+        "self_outs": 84,
+        "descriptive_wilson_95_percent": [
+          20.834036087778667,
+          34.96465555349391
+        ]
+      },
+      {
+        "algorithm": "v0.3.0",
+        "mode": "reglamento",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 45,
+        "losses": 105,
+        "draws": 0,
+        "self_outs": 93,
+        "descriptive_wilson_95_percent": [
+          23.24071660880158,
+          37.75812895702717
+        ]
+      },
+      {
+        "algorithm": "v0.3.1",
+        "mode": "banco",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 108,
+        "losses": 39,
+        "draws": 3,
+        "self_outs": 4,
+        "descriptive_wilson_95_percent": [
+          64.3342019497018,
+          78.5670679278866
+        ]
+      },
+      {
+        "algorithm": "v0.3.1",
+        "mode": "banco",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 101,
+        "losses": 48,
+        "draws": 1,
+        "self_outs": 7,
+        "descriptive_wilson_95_percent": [
+          59.476703900489724,
+          74.32429660912535
+        ]
+      },
+      {
+        "algorithm": "v0.3.1",
+        "mode": "reglamento",
+        "randomized": false,
+        "rounds": 150,
+        "wins": 108,
+        "losses": 32,
+        "draws": 10,
+        "self_outs": 2,
+        "descriptive_wilson_95_percent": [
+          64.3342019497018,
+          78.5670679278866
+        ]
+      },
+      {
+        "algorithm": "v0.3.1",
+        "mode": "reglamento",
+        "randomized": true,
+        "rounds": 150,
+        "wins": 110,
+        "losses": 36,
+        "draws": 4,
+        "self_outs": 9,
+        "descriptive_wilson_95_percent": [
+          65.7384025709397,
+          79.76294426892674
+        ]
+      }
+    ],
+    "conclusion": "El resultado depende de la colocación y de los parámetros físicos. El diseño aún requiere medir motores, frenada, fricción y sensores. La aproximación óptica y los contactos de ODE siguen limitando la transferencia al robot real."
+  }
 }

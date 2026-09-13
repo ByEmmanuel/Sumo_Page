@@ -1,0 +1,19 @@
+{
+  "opponent": "spinner",
+  "command": [
+    "webots",
+    "--batch",
+    "--mode=fast",
+    "--no-rendering",
+    "--minimize",
+    "--stdout",
+    "--stderr",
+    "--port=1302",
+    "$LAB_ROOT/Mini-Sumo-real/webots/worlds/_lote__real_20260913t155439545426z_spinner.wbt"
+  ],
+  "world_sha256": "1a444c19c2117151f0cb54dd94f8c307cfb7ee1c40125ca5a1e119a0f055ac1a",
+  "world": "webots/worlds/_lote__real_20260913t155439545426z_spinner.wbt",
+  "status": "completed",
+  "elapsed_s": 2.11,
+  "returncode": 0
+}

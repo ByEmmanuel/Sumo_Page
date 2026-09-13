@@ -1,0 +1,11 @@
+# Pista de diagnóstico: mismo material y altura superior que el dohyo.
+# Permite medir 1 s de aceleración sin salir del disco de 77 cm.
+DEF PISTA Solid {
+  translation 0 2 -0.0125
+  contactMaterial "dohyo"
+  children [ Shape {
+    appearance PBRAppearance { baseColor 0.018 0.018 0.02 roughness 0.95 metalness 0 }
+    geometry Box { size 8 2 0.025 }
+  } ]
+  boundingObject Box { size 8 2 0.025 }
+}

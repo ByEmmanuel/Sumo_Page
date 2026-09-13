@@ -1,0 +1,82 @@
+/* lab.css -- lo que el laboratorio de aprendizaje anade a codex.css.
+   codex.css es una copia sin tocar de codex/web/style.css: la base visual
+   (barra lateral, paneles, tablas, botones) sale de alli. Aqui solo van las
+   repeticiones del dohyo, los votos y las graficas. */
+
+:root{
+  /* datos: paleta de referencia validada sobre el fondo de los paneles (#11181b) */
+  --viz-1:#3987e5;      /* serie 1: mejor candidato / sube / gana */
+  --viz-2:#d95926;      /* serie 2: media de la poblacion         */
+  --pos:#3987e5;        /* polo divergente positivo               */
+  --neg:#e66767;        /* polo divergente negativo               */
+  --mid:#383835;        /* punto medio neutro                     */
+  --grid:#1f2a2e;
+  --axis:#3a484d;
+  --ink2:#c3c2b7;
+  --robot:#c7eb1f;      /* color del PROTO de Gelatina            */
+  --rival:#e62e38;
+}
+
+.page-heading .actions .button{white-space:nowrap}
+.sub-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin:28px 0 12px;flex-wrap:wrap}
+.sub-head p{font-size:11px}
+.pad{padding:18px 22px}
+.stack{display:grid;gap:22px}
+.muted-s{color:var(--muted);font-size:11px}
+.mono{font-family:var(--mono)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---- votar ---------------------------------------------------------------- */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.clip-cab{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);gap:10px}
+.clip-letra{font:600 22px var(--mono);color:var(--text)}
+.dohyo{display:block;width:100%;aspect-ratio:1/1;background:#0f171a}
+.clip-pie{padding:10px 16px;border-top:1px solid var(--line);font:11px var(--mono);color:var(--ink2);min-height:38px}
+.controles{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}
+.controles input[type=range]{flex:1;min-width:160px;padding:0}
+.controles select{padding:9px 10px}
+.votos{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px}
+.votos button{padding:14px 10px}
+.votos kbd,.controles kbd{font:10px var(--mono);border:1px solid var(--line);border-radius:3px;padding:1px 5px;color:var(--muted);margin-left:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 12px}
+.chips button{padding:7px 11px;font-size:11px;border-radius:14px}
+.chips button[aria-pressed="true"]{background:#263021;border-color:#405138;color:var(--mint)}
+.voto-panel{padding:18px 22px}
+.voto-panel textarea{min-height:64px}
+.progreso{font:11px var(--mono);color:var(--muted)}
+
+/* ---- graficas ---------------------------------------------------------------- */
+.chart{display:block;width:100%;height:auto;overflow:visible}
+.chart.mapa{width:auto;max-width:100%}      /* el mapa de calor mantiene su tamano natural */
+.chart text{font:11px var(--mono);fill:var(--muted)}
+.chart text.fuerte{fill:var(--text)}
+.chart text.suave{fill:var(--ink2)}
+.leyenda{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;color:var(--ink2);margin:4px 0 8px}
+.leyenda span{display:inline-flex;align-items:center;gap:7px}
+.leyenda i{display:inline-block;width:16px;height:2px;border-radius:1px}
+.leyenda i.punto{width:9px;height:9px;border-radius:50%}
+.sw-1{background:var(--viz-1)}.sw-2{background:var(--viz-2)}
+.sw-pos{background:var(--pos)}.sw-neg{background:var(--neg)}
+.tip{position:fixed;pointer-events:none;z-index:40;background:#0b1214;border:1px solid var(--line);border-radius:6px;padding:9px 11px;font-size:11px;color:var(--text);box-shadow:0 8px 26px #0009;max-width:280px;line-height:1.55}
+.tip b{font-weight:600}
+.tip .fila{display:flex;align-items:center;gap:7px}
+.tip i{display:inline-block;width:8px;height:8px;border-radius:50%}
+details.tabla{padding:0 22px 16px}
+details.tabla summary{cursor:pointer;font-size:11px;color:var(--muted);padding:6px 0}
+details.tabla table td,details.tabla table th{padding:8px 12px}
+
+/* ---- tareas ---------------------------------------------------------------- */
+.tarea{padding:14px 22px;border-top:1px solid var(--line);display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:start}
+.tarea:first-child{border-top:0}
+.tarea .sub{padding-left:18px}
+.tarea p{font-size:11px;margin-top:5px}
+.tarea h3{font-size:12px;font-weight:500;line-height:1.5}
+
+.diff{max-height:520px;overflow:auto}
+
+@media(max-width:850px){
+  .ab{grid-template-columns:1fr}
+  .votos{grid-template-columns:1fr 1fr}
+  .tarea{grid-template-columns:52px 1fr}
+  .tarea .pill{display:none}
+}

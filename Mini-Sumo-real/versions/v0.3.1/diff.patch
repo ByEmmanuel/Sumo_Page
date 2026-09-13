@@ -1,0 +1,62 @@
+--- v0.3.0/algorithms/params.h
++++ v0.3.1/algorithms/params.h
+@@ -77,36 +77,36 @@
+ 
+   p.dt_ms               = 8;
+ 
+-  p.dist_valid_max_mm   = 800;
+-  p.dist_attack_mm      = 260;
+-  p.dist_track_mm       = 700;
+-  p.target_hold_ms      = 260;
++  p.dist_valid_max_mm   = 752;
++  p.dist_attack_mm      = 132;
++  p.dist_track_mm       = 752;
++  p.target_hold_ms      = 107;
+ 
+   p.v_attack            = 1.00f;
+-  p.v_track             = 0.72f;
+-  p.v_search            = 0.55f;
+-  p.v_escape            = 0.85f;
+-  p.v_opening           = 0.80f;
++  p.v_track             = 0.46f;
++  p.v_search            = 0.94f;
++  p.v_escape            = 0.54f;
++  p.v_opening           = 0.28f;
+ 
+-  p.track_kp            = 1.10f;
+-  p.track_max_diff      = 0.85f;
+-  p.attack_kp_scale     = 0.70f;
+-  p.attack_max_diff     = 0.60f;
++  p.track_kp            = 1.35f;
++  p.track_max_diff      = 0.86f;
++  p.attack_kp_scale     = 0.79f;
++  p.attack_max_diff     = 0.84f;
+ 
+-  p.escape_back_ms      = 300;
+-  p.escape_turn_ms      = 360;
+-  p.escape_lockout_ms   = 140;
++  p.escape_back_ms      = 78;
++  p.escape_turn_ms      = 125;
++  p.escape_lockout_ms   = 582;
+ 
+-  p.dist_contact_mm     = 60;
+-  p.contact_cone_cdeg   = 2500;
+-  p.push_commit_ms      = 600;
++  p.dist_contact_mm     = 143;
++  p.contact_cone_cdeg   = 5952;
++  p.push_commit_ms      = 1982;
+ 
+-  p.search_spin_ms      = 520;
+-  p.search_probe_ms     = 300;
+-  p.search_turn_ratio   = -0.85f;
++  p.search_spin_ms      = 1044;
++  p.search_probe_ms     = 250;
++  p.search_turn_ratio   = -0.88f;
+ 
+-  p.opening             = OPENING_CHARGE;
+-  p.opening_ms          = 420;
++  p.opening             = OPENING_ARC_R;
++  p.opening_ms          = 110;
+ 
+   p.slew_per_s          = 25.0f;
+   p.deadband            = 0.04f;

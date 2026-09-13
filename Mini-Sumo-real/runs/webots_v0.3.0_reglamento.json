@@ -1,0 +1,214 @@
+{
+  "version": "v0.3.0",
+  "engine": "webots",
+  "mode": "reglamento",
+  "round_max_s": 60,
+  "metrics": {
+    "rounds": 120,
+    "wins": 49,
+    "losses": 68,
+    "draws": 3,
+    "self_outs": 63,
+    "win_rate": 0.408,
+    "avg_win_time_s": 0.89,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 30,
+        "wins": 9,
+        "losses": 20,
+        "draws": 1,
+        "win_rate": 0.3,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 10,
+            "wins": 9,
+            "losses": 0,
+            "draws": 1
+          },
+          {
+            "name": "lado",
+            "rounds": 10,
+            "wins": 0,
+            "losses": 10,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 10,
+            "wins": 0,
+            "losses": 10,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.0,
+          "judges": 0.0,
+          "loss": 1.0
+        },
+        "reasons": {
+          "frente": {
+            "rival fuera": 9,
+            "tiempo agotado": 1
+          },
+          "lado": {
+            "auto-salida": 10
+          },
+          "espalda": {
+            "auto-salida": 10
+          }
+        }
+      },
+      {
+        "name": "charger",
+        "rounds": 30,
+        "wins": 12,
+        "losses": 18,
+        "draws": 0,
+        "win_rate": 0.4,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 10,
+            "wins": 8,
+            "losses": 2,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 10,
+            "wins": 4,
+            "losses": 6,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 10,
+            "wins": 0,
+            "losses": 10,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.32,
+          "judges": 0.0,
+          "loss": 0.68
+        },
+        "reasons": {
+          "frente": {
+            "rival fuera": 8,
+            "expulsado": 2
+          },
+          "lado": {
+            "auto-salida": 6,
+            "rival fuera": 4
+          },
+          "espalda": {
+            "auto-salida": 10
+          }
+        }
+      },
+      {
+        "name": "spinner",
+        "rounds": 30,
+        "wins": 10,
+        "losses": 20,
+        "draws": 0,
+        "win_rate": 0.333,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 10,
+            "wins": 10,
+            "losses": 0,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 10,
+            "wins": 0,
+            "losses": 10,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 10,
+            "wins": 0,
+            "losses": 10,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.0,
+          "judges": 0.0,
+          "loss": 1.0
+        },
+        "reasons": {
+          "frente": {
+            "rival fuera": 10
+          },
+          "lado": {
+            "auto-salida": 10
+          },
+          "espalda": {
+            "auto-salida": 10
+          }
+        }
+      },
+      {
+        "name": "v0.3.0",
+        "rounds": 30,
+        "wins": 18,
+        "losses": 10,
+        "draws": 2,
+        "win_rate": 0.6,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 10,
+            "wins": 7,
+            "losses": 3,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 10,
+            "wins": 6,
+            "losses": 3,
+            "draws": 1
+          },
+          {
+            "name": "espalda",
+            "rounds": 10,
+            "wins": 5,
+            "losses": 4,
+            "draws": 1
+          }
+        ],
+        "match": {
+          "win": 0.714,
+          "judges": 0.0,
+          "loss": 0.286
+        },
+        "reasons": {
+          "frente": {
+            "rival fuera": 7,
+            "expulsado": 3
+          },
+          "lado": {
+            "rival fuera": 6,
+            "auto-salida": 3,
+            "doble salida": 1
+          },
+          "espalda": {
+            "rival fuera": 5,
+            "auto-salida": 4,
+            "doble salida": 1
+          }
+        }
+      }
+    ],
+    "match_win_rate": 0.259
+  }
+}

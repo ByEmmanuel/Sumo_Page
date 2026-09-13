@@ -1,0 +1,1408 @@
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+INFO: medido: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T171244189791Z_v22_nn_reglamento_spinner_s0_r1/project/webots/controllers/medido/medido
+INFO: oponente: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T171244189791Z_v22_nn_reglamento_spinner_s0_r1/project/webots/controllers/oponente/oponente spinner
+INFO: arbitro: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T171244189791Z_v22_nn_reglamento_spinner_s0_r1/project/webots/controllers/arbitro/arbitro --rounds 30 --rival spinner --version nn --colocacion reglamento --out ../../../../result.json
+[planta] gelatina ciclo=1 rueda=0 V=7.36485623 R=4.25602584 Rpuente=0.612744129 I0=0.126091683 Ke=0.092558592 Kt=0.0483794733
+[planta] gelatina ciclo=1 rueda=1 V=7.36485623 R=3.87064724 Rpuente=0.5311391 I0=0.129181051 Ke=0.0852744683 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1418.63086 minimo=21.0914713 sigma_rel=0.0961221409
+[gelatina] HAL Webots listo: paso 8 ms, umbral de linea 400
+[planta] rival ciclo=1 rueda=0 V=7.3310377 R=3.8954165 Rpuente=0.600848401 I0=0.180732483 Ke=0.0948581567 Kt=0.0483794733
+[planta] rival ciclo=1 rueda=1 V=7.3310377 R=3.89561467 Rpuente=0.654952586 I0=0.158428279 Ke=0.0980418484 Kt=0.0483794733
+[sensores] rival ToF alcance=1467.89725 minimo=45.1080084 sigma_rel=0.0588060713
+[rival] comportamiento: spinner
+
+[arbitro] 30 asaltos contra 'spinner', colocacion reglamento, limite 60 s por asalto
+[inercia] asalto=0 robot=GELATINA rueda=0 rotor=2.26145341e-05
+[inercia] asalto=0 robot=GELATINA rueda=1 rotor=2.80318469e-05
+[inercia] asalto=0 robot=RIVAL rueda=0 rotor=1.03646774e-05
+[inercia] asalto=0 robot=RIVAL rueda=1 rotor=1.89769952e-05
+[planta] asalto=0 mu=0.8364555 slip=0.000738541245 aleatorio=1
+[planta] gelatina ciclo=2 rueda=0 V=7.40084512 R=4.10688725 Rpuente=0.572406459 I0=0.0936607003 Ke=0.0698853006 Kt=0.0483794733
+[planta] gelatina ciclo=2 rueda=1 V=7.40084512 R=3.83835459 Rpuente=0.552155244 I0=0.199625596 Ke=0.0697456861 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1249.04298 minimo=21.2930501 sigma_rel=0.0465027428
+[gelatina] pulsador recibido: permiso previsto 5312 ms
+[planta] rival ciclo=2 rueda=0 V=7.99534413 R=3.71403046 Rpuente=0.594484353 I0=0.0934002846 Ke=0.0948363984 Kt=0.0483794733
+[planta] rival ciclo=2 rueda=1 V=7.99534413 R=3.6196208 Rpuente=0.585172546 I0=0.147359303 Ke=0.0827417612 Kt=0.0483794733
+[sensores] rival ToF alcance=757.486892 minimo=42.2123063 sigma_rel=0.084336791
+[arranque] pulsador=312 permiso=5312 ms
+[gelatina] permiso de arranque a los 5312 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto  1/30  frente   auto-salida     -1   4.24 s
+[inercia] asalto=1 robot=GELATINA rueda=0 rotor=9.44531643e-06
+[inercia] asalto=1 robot=GELATINA rueda=1 rotor=2.62596416e-05
+[inercia] asalto=1 robot=RIVAL rueda=0 rotor=1.57621794e-05
+[inercia] asalto=1 robot=RIVAL rueda=1 rotor=2.04041997e-05
+[planta] asalto=1 mu=1.37476293 slip=0.00111237705 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.40084512,"resistance_ohm":[4.10688725,3.83835459],"bridge_ohm":[0.572406459,0.552155244],"omega_rad_s":[144.044236,-27.7310949],"current_a":[-2.66791761,0.632171941],"torque_nm":[-0.133603704,0.0402419268],"applied_pwm":[-0.326637745,0.113694161],"over_1_2a_samples":26,"over_3_2a_samples":0}
+[rival] fin de asalto motor={"battery_v":7.99534413,"resistance_ohm":[3.71403046,3.6196208],"bridge_ohm":[0.594484353,0.585172546],"omega_rad_s":[-38.7077951,33.1161471],"current_a":[-0.0758414913,0.299083362],"torque_nm":[0.000849485175,0.0073403301],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":10,"over_3_2a_samples":0}
+[planta] gelatina ciclo=3 rueda=0 V=7.43466365 R=3.66749654 Rpuente=0.584302187 I0=0.189019892 Ke=0.0942266868 Kt=0.0483794733
+[planta] gelatina ciclo=3 rueda=1 V=7.43466365 R=3.81338716 Rpuente=0.628341758 I0=0.170378369 Ke=0.0931979847 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1199.77666 minimo=27.276513 sigma_rel=0.0838188124
+[gelatina] pulsador recibido: permiso previsto 14864 ms
+[planta] rival ciclo=3 rueda=0 V=7.74568462 R=3.91137171 Rpuente=0.649971557 I0=0.121402636 Ke=0.0779893475 Kt=0.0483794733
+[planta] rival ciclo=3 rueda=1 V=7.74568462 R=4.37315912 Rpuente=0.634254229 I0=0.20344854 Ke=0.0803429839 Kt=0.0483794733
+[arranque] pulsador=9864 permiso=14864 ms
+[sensores] rival ToF alcance=1696.55499 minimo=23.2455051 sigma_rel=0.0747795963
+[gelatina] permiso de arranque a los 14864 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 92 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 46 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto  2/30  lado     tiempo agotado  +0  60.00 s
+[inercia] asalto=2 robot=GELATINA rueda=0 rotor=1.53470491e-05
+[inercia] asalto=2 robot=GELATINA rueda=1 rotor=3.54828401e-05
+[inercia] asalto=2 robot=RIVAL rueda=0 rotor=3.22439504e-05
+[inercia] asalto=2 robot=RIVAL rueda=1 rotor=1.78256371e-05
+[planta] asalto=2 mu=1.1906902 slip=0.00167386723 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.43466365,"resistance_ohm":[3.66749654,3.81338716],"bridge_ohm":[0.584302187,0.628341758],"omega_rad_s":[-15.0399917,-0.136375987],"current_a":[-1.40285544,-0.192768416],"torque_nm":[-0.0587247247,-0.0082088298],"applied_pwm":[-0.992893279,-0.11687617],"over_1_2a_samples":6353,"over_3_2a_samples":0}
+[rival] fin de asalto motor={"battery_v":7.74568462,"resistance_ohm":[3.91137171,4.37315912],"bridge_ohm":[0.649971557,0.634254229],"omega_rad_s":[-0.192651228,-0.075281259],"current_a":[-0.845763483,0.774629606],"torque_nm":[-0.0397998688,0.0382157491],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":16,"over_3_2a_samples":0}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+[planta] gelatina ciclo=4 rueda=0 V=7.47065254 R=4.31835794 Rpuente=0.543964529 I0=0.156588909 Ke=0.0685665134 Kt=0.0483794733
+[planta] gelatina ciclo=4 rueda=1 V=7.47065254 R=3.78109455 Rpuente=0.649357903 I0=0.0908229142 Ke=0.0832451824 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1030.18878 minimo=27.4780917 sigma_rel=0.114199414
+[gelatina] pulsador recibido: permiso previsto 80176 ms
+[planta] rival ciclo=4 rueda=0 V=7.00999113 R=3.72998562 Rpuente=0.643607509 I0=0.184070438 Ke=0.0712029904 Kt=0.0483794733
+[planta] rival ciclo=4 rueda=1 V=7.00999113 R=4.0971653 Rpuente=0.564474189 I0=0.192379564 Ke=0.069703396 Kt=0.0483794733
+[arranque] pulsador=75176 permiso=80176 ms
+[sensores] rival ToF alcance=986.144626 minimo=20.3498012 sigma_rel=0.100310316
+[gelatina] permiso de arranque a los 80176 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 54 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 98 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 88 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 74 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[arbitro] asalto  3/30  espalda  rival fuera     +1  25.24 s
+[inercia] asalto=3 robot=GELATINA rueda=0 rotor=1.48304331e-05
+[inercia] asalto=3 robot=GELATINA rueda=1 rotor=1.18224236e-05
+[inercia] asalto=3 robot=RIVAL rueda=0 rotor=1.09047171e-05
+[inercia] asalto=3 robot=RIVAL rueda=1 rotor=1.76097783e-05
+[planta] asalto=3 mu=1.2826027 slip=0.00106291819 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.47065254,"resistance_ohm":[4.31835794,3.78109455],"bridge_ohm":[0.543964529,0.649357903],"omega_rad_s":[-60.3075874,-6.37234577],"current_a":[-0.573452799,0.119732034],"torque_nm":[-0.0201676555,0.0101865119],"applied_pwm":[-0.926745474,0],"over_1_2a_samples":7908,"over_3_2a_samples":0}
+[rival] fin de asalto motor={"battery_v":7.00999113,"resistance_ohm":[3.72998562,4.0971653],"bridge_ohm":[0.643607509,0.564474189],"omega_rad_s":[-36.3236528,-13.0815233],"current_a":[-0.370322967,-0.706654406],"torque_nm":[-0.00901079924,-0.024880346],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":22,"over_3_2a_samples":0}
+[planta] gelatina ciclo=5 rueda=0 V=7.50447108 R=3.87896729 Rpuente=0.555860245 I0=0.101948109 Ke=0.0693291847 Kt=0.0483794733
+[planta] gelatina ciclo=5 rueda=1 V=7.50447108 R=3.75612712 Rpuente=0.525544417 I0=0.211575678 Ke=0.0671260551 Kt=0.0483794733
+[sensores] gelatina ToF alcance=980.922455 minimo=33.4615546 sigma_rel=0.0715154839
+[gelatina] pulsador recibido: permiso previsto 110728 ms
+[planta] rival ciclo=5 rueda=0 V=7.33795099 R=4.30922918 Rpuente=0.586078012 I0=0.119217575 Ke=0.0873178988 Kt=0.0483794733
+[planta] rival ciclo=5 rueda=1 V=7.33795099 R=4.35173435 Rpuente=0.508019018 I0=0.164089081 Ke=0.0656203404 Kt=0.0483794733
+[sensores] rival ToF alcance=1634.49379 minimo=42.0335317 sigma_rel=0.0726668024
+[arranque] pulsador=105728 permiso=110728 ms
+[gelatina] permiso de arranque a los 110728 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 84 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 64 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 56 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 46 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 25 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+[arbitro] asalto  4/30  frente   tiempo agotado  +0  60.00 s
+[inercia] asalto=4 robot=GELATINA rueda=0 rotor=2.47379504e-05
+[inercia] asalto=4 robot=GELATINA rueda=1 rotor=1.92414347e-05
+[inercia] asalto=4 robot=RIVAL rueda=0 rotor=1.60995954e-05
+[inercia] asalto=4 robot=RIVAL rueda=1 rotor=2.92744263e-05
+[planta] asalto=4 mu=0.729815042 slip=0.00141449273 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.50447108,"resistance_ohm":[3.87896729,3.75612712],"bridge_ohm":[0.555860245,0.525544417],"omega_rad_s":[-29.1956214,-20.5204077],"current_a":[-1.1129032,-1.15053447],"torque_nm":[-0.0489094751,-0.0454263318],"applied_pwm":[-0.927399457,-0.839987874],"over_1_2a_samples":11002,"over_3_2a_samples":0}
+[rival] fin de asalto motor={"battery_v":7.33795099,"resistance_ohm":[4.30922918,4.35173435],"bridge_ohm":[0.586078012,0.508019018],"omega_rad_s":[-0.0641510465,-0.00371560664],"current_a":[-0.74834404,0.755021713],"torque_nm":[-0.0358349943,0.0365570492],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":23,"over_3_2a_samples":0}
+[planta] gelatina ciclo=6 rueda=0 V=7.54045988 R=3.72982864 Rpuente=0.515522587 I0=0.219517127 Ke=0.0691407664 Kt=0.0483794733
+[planta] gelatina ciclo=6 rueda=1 V=7.54045988 R=3.72383447 Rpuente=0.546560562 I0=0.132020223 Ke=0.0905072248 Kt=0.0483794733
+[sensores] gelatina ToF alcance=811.334574 minimo=33.6631316 sigma_rel=0.101896091
+[gelatina] pulsador recibido: permiso previsto 176040 ms
+[planta] rival ciclo=6 rueda=0 V=8.00225742 R=4.12784314 Rpuente=0.579713964 I0=0.181885377 Ke=0.0788056002 Kt=0.0483794733
+[planta] rival ciclo=6 rueda=1 V=8.00225742 R=4.07574048 Rpuente=0.63823899 I0=0.153020105 Ke=0.0833654349 Kt=0.0483794733
+[arranque] pulsador=171040 permiso=176040 ms
+[sensores] rival ToF alcance=924.083501 minimo=39.1378278 sigma_rel=0.0981975222
+[gelatina] permiso de arranque a los 176040 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[arbitro] asalto  5/30  lado     rival fuera     +1  15.49 s
+[inercia] asalto=5 robot=GELATINA rueda=0 rotor=1.80220778e-05
+[inercia] asalto=5 robot=GELATINA rueda=1 rotor=3.55475205e-05
+[inercia] asalto=5 robot=RIVAL rueda=0 rotor=1.94917926e-05
+[inercia] asalto=5 robot=RIVAL rueda=1 rotor=2.37972724e-05
+[planta] asalto=5 mu=1.5307009 slip=0.000354548097 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.54045988,"resistance_ohm":[3.72982864,3.72383447],"bridge_ohm":[0.515522587,0.546560562],"omega_rad_s":[-5.4853349,-29.6453083],"current_a":[-0.295620041,-0.184065956],"torque_nm":[-0.00368218421,-0.00251794513],"applied_pwm":[-0.21673362,-0.460071266],"over_1_2a_samples":11114,"over_3_2a_samples":0}
+[rival] fin de asalto motor={"battery_v":8.00225742,"resistance_ohm":[4.12784314,4.07574048],"bridge_ohm":[0.579713964,0.63823899],"omega_rad_s":[-35.8907331,-14.1690346],"current_a":[-0.249118156,1.0993549],"torque_nm":[-0.00325268646,0.0605892433],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":29,"over_3_2a_samples":0}
+[planta] gelatina ciclo=7 rueda=0 V=7.5742785 R=4.09043798 Rpuente=0.527418315 I0=0.164876327 Ke=0.0681605179 Kt=0.0483794733
+[planta] gelatina ciclo=7 rueda=1 V=7.5742785 R=3.69886703 Rpuente=0.622747076 I0=0.102772996 Ke=0.0797648297 Kt=0.0483794733
+[sensores] gelatina ToF alcance=762.068176 minimo=39.6465945 sigma_rel=0.0592121553
+[gelatina] pulsador recibido: permiso previsto 196840 ms
+[planta] rival ciclo=7 rueda=0 V=7.75259792 R=4.32518439 Rpuente=0.635201168 I0=0.209887719 Ke=0.0654142189 Kt=0.0483794733
+[planta] rival ciclo=7 rueda=1 V=7.75259792 R=4.0292788 Rpuente=0.687320662 I0=0.209109342 Ke=0.0831461469 Kt=0.0483794733
+[sensores] rival ToF alcance=1863.15152 minimo=20.1710284 sigma_rel=0.0886403275
+[arranque] pulsador=191840 permiso=196840 ms
+[gelatina] permiso de arranque a los 196840 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 25 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 33 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 33 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 37 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+[arbitro] asalto  6/30  espalda  tiempo agotado  +0  60.00 s
+[inercia] asalto=6 robot=GELATINA rueda=0 rotor=3.26262665e-05
+[inercia] asalto=6 robot=GELATINA rueda=1 rotor=2.82080197e-05
+[inercia] asalto=6 robot=RIVAL rueda=0 rotor=3.48587131e-05
+[inercia] asalto=6 robot=RIVAL rueda=1 rotor=3.53247898e-05
+[planta] asalto=6 mu=1.06612322 slip=0.00198867857 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.5742785,"resistance_ohm":[4.09043798,3.69886703],"bridge_ohm":[0.527418315,0.622747076],"omega_rad_s":[-0.0449806232,-3.240668],"current_a":[-1.57853618,-1.05415576],"torque_nm":[-0.076010197,-0.0460426059],"applied_pwm":[-0.962800503,-0.635591328],"over_1_2a_samples":18432,"over_3_2a_samples":0}
+[rival] fin de asalto motor={"battery_v":7.75259792,"resistance_ohm":[4.32518439,4.0292788],"bridge_ohm":[0.635201168,0.687320662],"omega_rad_s":[-0.0395074726,0.0122783995],"current_a":[-0.780930143,0.821625429],"torque_nm":[-0.0373800286,0.0396255961],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":30,"over_3_2a_samples":0}
+[planta] gelatina ciclo=8 rueda=0 V=7.61026731 R=3.94129934 Rpuente=0.687080646 I0=0.132445344 Ke=0.0758400655 Kt=0.0483794733
+[planta] gelatina ciclo=8 rueda=1 V=7.61026731 R=3.66657438 Rpuente=0.64376322 I0=0.173217541 Ke=0.0662343072 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1892.4803 minimo=39.8481733 sigma_rel=0.089592762
+[gelatina] pulsador recibido: permiso previsto 262152 ms
+[planta] rival ciclo=8 rueda=0 V=7.8170812 R=3.61420321 Rpuente=0.551313353 I0=0.080521971 Ke=0.0779089017 Kt=0.0483794733
+[planta] rival ciclo=8 rueda=1 V=7.8170812 R=3.76878104 Rpuente=0.622384787 I0=0.21851036 Ke=0.0682264983 Kt=0.0483794733
+[sensores] rival ToF alcance=1243.96493 minimo=22.8506535 sigma_rel=0.0766100645
+[arranque] pulsador=257152 permiso=262152 ms
+[gelatina] permiso de arranque a los 262152 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque -0.25227 exceeds 'maxTorque' = 0.25
+[arbitro] asalto  7/30  frente   auto-salida     -1  44.22 s
+[inercia] asalto=7 robot=GELATINA rueda=0 rotor=2.75264398e-05
+[inercia] asalto=7 robot=GELATINA rueda=1 rotor=1.34157057e-05
+[inercia] asalto=7 robot=RIVAL rueda=0 rotor=2.22894117e-05
+[inercia] asalto=7 robot=RIVAL rueda=1 rotor=1.36951441e-05
+[planta] asalto=7 mu=0.754957771 slip=0.000744550467 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.61026731,"resistance_ohm":[3.94129934,3.66657438],"bridge_ohm":[0.687080646,0.64376322],"omega_rad_s":[-118.328192,-19.4085416],"current_a":[2.89716573,0.54908035],"torque_nm":[0.146570988,0.0349443916],"applied_pwm":[0.582787156,0.142072588],"over_1_2a_samples":18541,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.8170812,"resistance_ohm":[3.61420321,3.76878104],"bridge_ohm":[0.551313353,0.622384787],"omega_rad_s":[-39.1000034,33.0540964],"current_a":[-0.207009687,0.376523094],"torque_nm":[-0.00611940908,0.00764457287],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":33,"over_3_2a_samples":0}
+[planta] gelatina ciclo=9 rueda=0 V=7.64408584 R=4.30190868 Rpuente=0.698976374 I0=0.0778045356 Ke=0.0751103081 Kt=0.0483794733
+[planta] gelatina ciclo=9 rueda=1 V=7.64408584 R=3.641607 Rpuente=0.519949734 I0=0.143970314 Ke=0.0864147125 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1843.21398 minimo=45.8316362 sigma_rel=0.0469088268
+[gelatina] pulsador recibido: permiso previsto 311688 ms
+[planta] rival ciclo=9 rueda=0 V=7.5674217 R=3.81154442 Rpuente=0.606800556 I0=0.108524323 Ke=0.097516376 Kt=0.0483794733
+[planta] rival ciclo=9 rueda=1 V=7.5674217 R=3.72231936 Rpuente=0.671466458 I0=0.124599597 Ke=0.075415294 Kt=0.0483794733
+[arranque] pulsador=306688 permiso=311688 ms
+[sensores] rival ToF alcance=883.033025 minimo=33.8838542 sigma_rel=0.0670528698
+[gelatina] permiso de arranque a los 311688 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[arbitro] asalto  8/30  lado     auto-salida     -1   6.92 s
+[inercia] asalto=8 robot=GELATINA rueda=0 rotor=1.79272499e-05
+[inercia] asalto=8 robot=GELATINA rueda=1 rotor=9.51810461e-06
+[inercia] asalto=8 robot=RIVAL rueda=0 rotor=3.46787792e-05
+[inercia] asalto=8 robot=RIVAL rueda=1 rotor=1.52327709e-05
+[planta] asalto=8 mu=1.19211463 slip=0.00174366271 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.64408584,"resistance_ohm":[4.30190868,3.641607],"bridge_ohm":[0.698976374,0.519949734],"omega_rad_s":[80.3627113,13.2672852],"current_a":[0.209343371,0.5010663],"torque_nm":[0.00636377957,0.0172761157],"applied_pwm":[0.926594794,0.422771871],"over_1_2a_samples":18587,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.5674217,"resistance_ohm":[3.81154442,3.72231936],"bridge_ohm":[0.606800556,0.671466458],"omega_rad_s":[-32.6742674,32.3868169],"current_a":[-0.135216853,0.305260563],"torque_nm":[-0.00129137057,0.00874028237],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":33,"over_3_2a_samples":0}
+[planta] gelatina ciclo=10 rueda=0 V=7.68007473 R=4.15277009 Rpuente=0.658638716 I0=0.195373553 Ke=0.074630988 Kt=0.0483794733
+[planta] gelatina ciclo=10 rueda=1 V=7.68007473 R=3.60931435 Rpuente=0.540965879 I0=0.214414859 Ke=0.0707102202 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1673.6261 minimo=46.0332131 sigma_rel=0.0772894335
+[gelatina] pulsador recibido: permiso previsto 323920 ms
+[planta] rival ciclo=10 rueda=0 V=7.05552305 R=3.81149516 Rpuente=0.69326303 I0=0.0777789295 Ke=0.0794629481 Kt=0.0483794733
+[planta] rival ciclo=10 rueda=1 V=7.05552305 R=4.06926346 Rpuente=0.545976555 I0=0.21167028 Ke=0.0728582793 Kt=0.0483794733
+[arranque] pulsador=318920 permiso=323920 ms
+[sensores] rival ToF alcance=1193.1313 minimo=34.9402601 sigma_rel=0.0501820707
+[gelatina] permiso de arranque a los 323920 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 92 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto  9/30  espalda  rival fuera     +1  34.58 s
+[inercia] asalto=9 robot=GELATINA rueda=0 rotor=1.93642069e-05
+[inercia] asalto=9 robot=GELATINA rueda=1 rotor=1.02621617e-05
+[inercia] asalto=9 robot=RIVAL rueda=0 rotor=1.83291403e-05
+[inercia] asalto=9 robot=RIVAL rueda=1 rotor=1.2540775e-05
+[planta] asalto=9 mu=1.43153319 slip=5.18010855e-05 aleatorio=1
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.68007473,"resistance_ohm":[4.15277009,3.60931435],"bridge_ohm":[0.658638716,0.540965879],"omega_rad_s":[-28.345089,-26.2880463],"current_a":[-1.05357349,0.21047613],"torque_nm":[-0.0415192608,0.0205560022],"applied_pwm":[-0.935485005,-0.128292844],"over_1_2a_samples":19609,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.05552305,"resistance_ohm":[3.81149516,4.06926346],"bridge_ohm":[0.69326303,0.545976555],"omega_rad_s":[-18.8555862,-32.2800008],"current_a":[-0.607134334,-0.407659951],"torque_nm":[-0.0256099357,-0.00948187707],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":36,"over_3_2a_samples":0}
+[planta] gelatina ciclo=11 rueda=0 V=7.71389326 R=3.71337938 Rpuente=0.670534432 I0=0.140732753 Ke=0.0753222627 Kt=0.0483794733
+[planta] gelatina ciclo=11 rueda=1 V=7.71389326 R=4.38434691 Rpuente=0.617152393 I0=0.185167623 Ke=0.0921916795 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1624.35977 minimo=22.0166779 sigma_rel=0.114605503
+[gelatina] pulsador recibido: permiso previsto 363816 ms
+[planta] rival ciclo=11 rueda=0 V=8.34476242 R=4.18496747 Rpuente=0.605813777 I0=0.177209732 Ke=0.0724899875 Kt=0.0483794733
+[planta] rival ciclo=11 rueda=1 V=8.34476242 R=4.35398736 Rpuente=0.664154279 I0=0.198033249 Ke=0.0690945462 Kt=0.0483794733
+[sensores] rival ToF alcance=931.619328 minimo=35.9328008 sigma_rel=0.076755271
+[arranque] pulsador=358816 permiso=363816 ms
+[gelatina] permiso de arranque a los 363816 ms
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[arbitro] asalto 10/30  frente   tiempo agotado  +0  60.00 s
+[inercia] asalto=10 robot=GELATINA rueda=0 rotor=1.29774204e-05
+[inercia] asalto=10 robot=GELATINA rueda=1 rotor=2.5496477e-05
+[inercia] asalto=10 robot=RIVAL rueda=0 rotor=3.04455067e-05
+[inercia] asalto=10 robot=RIVAL rueda=1 rotor=3.42000178e-05
+[planta] asalto=10 mu=1.40963463 slip=0.000815753222 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.71389326,"resistance_ohm":[3.71337938,4.38434691],"bridge_ohm":[0.670534432,0.617152393],"omega_rad_s":[0.00385446993,0.0631428552],"current_a":[-1.74770236,-0.49033052],"torque_nm":[-0.0845791628,-0.0242868352],"applied_pwm":[-0.993206143,-0.317163646],"over_1_2a_samples":24807,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":8.34476242,"resistance_ohm":[4.18496747,4.35398736],"bridge_ohm":[0.605813777,0.664154279],"omega_rad_s":[-0.0694231181,-0.0156595247],"current_a":[-0.869868298,0.83167505],"torque_nm":[-0.0414895383,0.0403860185],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":47,"over_3_2a_samples":0}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[planta] gelatina ciclo=12 rueda=0 V=7.74988215 R=4.36424079 Rpuente=0.630196774 I0=0.108301771 Ke=0.0827230054 Kt=0.0483794733
+[planta] gelatina ciclo=12 rueda=1 V=7.74988215 R=4.35205426 Rpuente=0.638168538 I0=0.105612168 Ke=0.0829160018 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1454.77189 minimo=22.2182548 sigma_rel=0.064986105
+[gelatina] pulsador recibido: permiso previsto 429128 ms
+[planta] rival ciclo=12 rueda=0 V=7.47017006 R=3.82745032 Rpuente=0.542386186 I0=0.168449083 Ke=0.0899085413 Kt=0.0483794733
+[planta] rival ciclo=12 rueda=1 V=7.47017006 R=3.74680791 Rpuente=0.525278199 I0=0.106690541 Ke=0.0706816333 Kt=0.0483794733
+[sensores] rival ToF alcance=1421.78903 minimo=43.077755 sigma_rel=0.0661555958
+[arranque] pulsador=424128 permiso=429128 ms
+[gelatina] permiso de arranque a los 429128 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 25 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+[arbitro] asalto 11/30  lado     tiempo agotado  +0  60.00 s
+[inercia] asalto=11 robot=GELATINA rueda=0 rotor=3.59326755e-05
+[inercia] asalto=11 robot=GELATINA rueda=1 rotor=3.07028105e-05
+[inercia] asalto=11 robot=RIVAL rueda=0 rotor=2.12941518e-05
+[inercia] asalto=11 robot=RIVAL rueda=1 rotor=1.95678381e-05
+[planta] asalto=11 mu=0.611160374 slip=6.14310503e-05 aleatorio=1
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.74988215,"resistance_ohm":[4.36424079,4.35205426],"bridge_ohm":[0.630196774,0.638168538],"omega_rad_s":[-3.47896887,-0.0192219598],"current_a":[-1.48579316,-0.249732685],"torque_nm":[-0.0666522647,-0.011983734],"applied_pwm":[-0.994659245,-0.161010906],"over_1_2a_samples":32175,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.47017006,"resistance_ohm":[3.82745032,3.74680791],"bridge_ohm":[0.542386186,0.525278199],"omega_rad_s":[0.0396760129,0.177833064],"current_a":[-0.855558837,0.871357787],"torque_nm":[-0.0417146552,0.0412474773],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":48,"over_3_2a_samples":0}
+[planta] gelatina ciclo=13 rueda=0 V=7.78370068 R=3.92485013 Rpuente=0.642092502 I0=0.203660962 Ke=0.0742814305 Kt=0.0483794733
+[planta] gelatina ciclo=13 rueda=1 V=7.78370068 R=4.32708683 Rpuente=0.514355052 I0=0.0763649404 Ke=0.0741961264 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1405.5055 minimo=28.2017177 sigma_rel=0.102302175
+[gelatina] pulsador recibido: permiso previsto 494440 ms
+[planta] rival ciclo=13 rueda=0 V=7.35940934 R=4.20092268 Rpuente=0.654936934 I0=0.117879885 Ke=0.0912495989 Kt=0.0483794733
+[planta] rival ciclo=13 rueda=1 V=7.35940934 R=4.03153186 Rpuente=0.643455923 I0=0.0930535108 Ke=0.100742583 Kt=0.0483794733
+[arranque] pulsador=489440 permiso=494440 ms
+[sensores] rival ToF alcance=1160.27706 minimo=44.0702975 sigma_rel=0.092728796
+[gelatina] permiso de arranque a los 494440 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 12/30  espalda  expulsado       -1   1.47 s
+[inercia] asalto=12 robot=GELATINA rueda=0 rotor=2.88082981e-05
+[inercia] asalto=12 robot=GELATINA rueda=1 rotor=2.21846125e-05
+[inercia] asalto=12 robot=RIVAL rueda=0 rotor=2.02228593e-05
+[inercia] asalto=12 robot=RIVAL rueda=1 rotor=1.29426815e-05
+[planta] asalto=12 mu=1.27170733 slip=0.00193049967 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.78370068,"resistance_ohm":[3.92485013,4.32708683],"bridge_ohm":[0.642092502,0.514355052],"omega_rad_s":[-51.8611766,19.1626901],"current_a":[-0.519269835,-0.568483115],"torque_nm":[-0.015268991,-0.0311974093],"applied_pwm":[-0.799593687,-0.170931622],"over_1_2a_samples":32185,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.35940934,"resistance_ohm":[4.20092268,4.03153186],"bridge_ohm":[0.654936934,0.643455923],"omega_rad_s":[-26.1646086,-19.5476079],"current_a":[-0.41766767,-0.523288874],"torque_nm":[-0.0145035751,-0.0208145603],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":50,"over_3_2a_samples":0}
+[planta] gelatina ciclo=14 rueda=0 V=7.81968949 R=3.77571149 Rpuente=0.601754832 I0=0.171229979 Ke=0.0835035964 Kt=0.0483794733
+[planta] gelatina ciclo=14 rueda=1 V=7.81968949 R=4.29479418 Rpuente=0.535371196 I0=0.146809486 Ke=0.0898969561 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1235.91762 minimo=28.4032965 sigma_rel=0.0526827812
+[gelatina] pulsador recibido: permiso previsto 501224 ms
+[planta] rival ciclo=14 rueda=0 V=7.06243634 R=4.2253078 Rpuente=0.678492641 I0=0.166264021 Ke=0.0672468628 Kt=0.0483794733
+[planta] rival ciclo=14 rueda=1 V=7.06243634 R=3.72538314 Rpuente=0.599042988 I0=0.217331082 Ke=0.0752747108 Kt=0.0483794733
+[sensores] rival ToF alcance=1359.72791 minimo=31.8657815 sigma_rel=0.0640428019
+[arranque] pulsador=496224 permiso=501224 ms
+[gelatina] permiso de arranque a los 501224 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 84 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 45 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 13/30  frente   rival fuera     +1   8.99 s
+[inercia] asalto=13 robot=GELATINA rueda=0 rotor=2.61794023e-05
+[inercia] asalto=13 robot=GELATINA rueda=1 rotor=2.46104581e-05
+[inercia] asalto=13 robot=RIVAL rueda=0 rotor=2.3552737e-05
+[inercia] asalto=13 robot=RIVAL rueda=1 rotor=1.04106477e-05
+[planta] asalto=13 mu=1.50209305 slip=0.0014939425 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.81968949,"resistance_ohm":[3.77571149,4.29479418],"bridge_ohm":[0.601754832,0.535371196],"omega_rad_s":[-1.74752595,0.848815999],"current_a":[-0.369680818,-0.0157977975],"torque_nm":[-0.0100889311,-0.00566825848],"applied_pwm":[-0.225608706,0],"over_1_2a_samples":32925,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.06243634,"resistance_ohm":[4.2253078,3.72538314],"bridge_ohm":[0.678492641,0.599042988],"omega_rad_s":[-41.6527858,26.3474215],"current_a":[-0.148904714,0.357948915],"torque_nm":[0.000839834147,0.00680301673],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":54,"over_3_2a_samples":0}
+[planta] gelatina ciclo=15 rueda=0 V=7.8535081 R=4.13632083 Rpuente=0.61365056 I0=0.11658918 Ke=0.0819797387 Kt=0.0483794733
+[planta] gelatina ciclo=15 rueda=1 V=7.8535081 R=4.26982679 Rpuente=0.61155771 I0=0.117562258 Ke=0.0793098335 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1186.6513 minimo=34.3867594 sigma_rel=0.0899988461
+[gelatina] pulsador recibido: permiso previsto 515528 ms
+[planta] rival ciclo=15 rueda=0 V=7.79608055 R=3.89425573 Rpuente=0.562789214 I0=0.12998102 Ke=0.0820266753 Kt=0.0483794733
+[planta] rival ciclo=15 rueda=1 V=7.79608055 R=4.28536472 Rpuente=0.640836501 I0=0.182599112 Ke=0.0697131144 Kt=0.0483794733
+[sensores] rival ToF alcance=700.536126 minimo=43.0209565 sigma_rel=0.106094422
+[arranque] pulsador=510528 permiso=515528 ms
+[gelatina] permiso de arranque a los 515528 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 51 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 68 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 29 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 14/30  lado     tiempo agotado  +0  60.00 s
+[inercia] asalto=14 robot=GELATINA rueda=0 rotor=3.45519821e-05
+[inercia] asalto=14 robot=GELATINA rueda=1 rotor=1.80819447e-05
+[inercia] asalto=14 robot=RIVAL rueda=0 rotor=2.99833326e-05
+[inercia] asalto=14 robot=RIVAL rueda=1 rotor=1.6403885e-05
+[planta] asalto=14 mu=1.02143929 slip=0.00112669098 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.8535081,"resistance_ohm":[4.13632083,4.26982679],"bridge_ohm":[0.61365056,0.61155771],"omega_rad_s":[52.3501436,-7.70952605],"current_a":[0.748264475,-0.0429508905],"torque_nm":[0.0305601181,0.00360965639],"applied_pwm":[0.999029458,-0.104552135],"over_1_2a_samples":34390,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.79608055,"resistance_ohm":[3.89425573,4.28536472],"bridge_ohm":[0.562789214,0.640836501],"omega_rad_s":[-0.000697942596,43.0127213],"current_a":[-0.874566686,0.182592931],"torque_nm":[-0.0423066867,-2.99069515e-07],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":75,"over_3_2a_samples":0}
+[planta] gelatina ciclo=16 rueda=0 V=7.88949691 R=3.98718219 Rpuente=0.573312902 I0=0.084158197 Ke=0.0922485782 Kt=0.0483794733
+[planta] gelatina ciclo=16 rueda=1 V=7.88949691 R=4.23753414 Rpuente=0.632573855 I0=0.188006803 Ke=0.0651499959 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1017.06342 minimo=34.5883363 sigma_rel=0.0403794527
+[gelatina] pulsador recibido: permiso previsto 580840 ms
+[planta] rival ciclo=16 rueda=0 V=7.74781677 R=3.87866006 Rpuente=0.517816639 I0=0.143965557 Ke=0.0764131643 Kt=0.0483794733
+[planta] rival ciclo=16 rueda=1 V=7.74781677 R=3.68229089 Rpuente=0.565757143 I0=0.131612831 Ke=0.0819868945 Kt=0.0483794733
+[sensores] rival ToF alcance=1355.56148 minimo=42.1142519 sigma_rel=0.0523576927
+[arranque] pulsador=575840 permiso=580840 ms
+[gelatina] permiso de arranque a los 580840 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+[arbitro] asalto 15/30  espalda  rival fuera     +1   4.65 s
+[inercia] asalto=15 robot=GELATINA rueda=0 rotor=2.06654978e-05
+[inercia] asalto=15 robot=GELATINA rueda=1 rotor=2.06563488e-05
+[inercia] asalto=15 robot=RIVAL rueda=0 rotor=1.85423936e-05
+[inercia] asalto=15 robot=RIVAL rueda=1 rotor=9.56614619e-06
+[planta] asalto=15 mu=1.51105968 slip=0.00188252878 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.88949691,"resistance_ohm":[3.98718219,4.23753414],"bridge_ohm":[0.573312902,0.632573855],"omega_rad_s":[33.8108523,-47.8308413],"current_a":[0.973341407,-0.669158107],"torque_nm":[0.0430182154,-0.0232778467],"applied_pwm":[0.957972586,-0.808042824],"over_1_2a_samples":34503,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.74781677,"resistance_ohm":[3.87866006,3.68229089],"bridge_ohm":[0.517816639,0.565757143],"omega_rad_s":[-43.24682,35.2419434],"current_a":[-0.305713823,-1.77447795],"torque_nm":[-0.00782529589,-0.092215668],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":83,"over_3_2a_samples":0}
+[planta] gelatina ciclo=17 rueda=0 V=7.92331553 R=4.34779153 Rpuente=0.585208619 I0=0.179517388 Ke=0.0807976665 Kt=0.0483794733
+[planta] gelatina ciclo=17 rueda=1 V=7.92331553 R=4.21256671 Rpuente=0.508760369 I0=0.158759567 Ke=0.085664474 Kt=0.0483794733
+[sensores] gelatina ToF alcance=967.797095 minimo=40.5717993 sigma_rel=0.0776955175
+[gelatina] pulsador recibido: permiso previsto 590800 ms
+[planta] rival ciclo=17 rueda=0 V=7.29594277 R=3.91814804 Rpuente=0.694918168 I0=0.0852664769 Ke=0.0773898613 Kt=0.0483794733
+[planta] rival ciclo=17 rueda=1 V=7.29594277 R=4.23928041 Rpuente=0.518798161 I0=0.120392793 Ke=0.0784267202 Kt=0.0483794733
+[sensores] rival ToF alcance=1742.14522 minimo=20.0355053 sigma_rel=0.0591262054
+[arranque] pulsador=585800 permiso=590800 ms
+[gelatina] permiso de arranque a los 590800 ms
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 56 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 54 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 46 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 46 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 46 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 45 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 61 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 100 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 53 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 102 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 98 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 102 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 98 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 92 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 78 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 64 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 60 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 29 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 67 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 70 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 74 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 82 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+[arbitro] asalto 16/30  frente   tiempo agotado  +0  60.00 s
+[inercia] asalto=16 robot=GELATINA rueda=0 rotor=2.09316995e-05
+[inercia] asalto=16 robot=GELATINA rueda=1 rotor=2.24916315e-05
+[inercia] asalto=16 robot=RIVAL rueda=0 rotor=3.16966429e-05
+[inercia] asalto=16 robot=RIVAL rueda=1 rotor=1.66253652e-05
+[planta] asalto=16 mu=1.26236883 slip=0.00149793386 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.92331553,"resistance_ohm":[4.34779153,4.21256671],"bridge_ohm":[0.585208619,0.508760369],"omega_rad_s":[-2.252875,0.767077205],"current_a":[-1.56126742,-0.612351033],"torque_nm":[-0.0670380986,-0.0345810158],"applied_pwm":[-0.995007634,-0.356592923],"over_1_2a_samples":41831,"over_3_2a_samples":4}
+[rival] fin de asalto motor={"battery_v":7.29594277,"resistance_ohm":[3.91814804,4.23928041],"bridge_ohm":[0.694918168,0.518798161],"omega_rad_s":[0.810708162,1.96906787],"current_a":[-0.804391658,0.734234165],"torque_nm":[-0.041679814,0.0299199608],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":83,"over_3_2a_samples":0}
+[planta] gelatina ciclo=18 rueda=0 V=7.95930433 R=4.19865294 Rpuente=0.544870961 I0=0.147086406 Ke=0.0916978946 Kt=0.0483794733
+[planta] gelatina ciclo=18 rueda=1 V=7.95930433 R=4.18027406 Rpuente=0.529776514 I0=0.0792041212 Ke=0.0778942518 Kt=0.0483794733
+[sensores] gelatina ToF alcance=798.209214 minimo=40.773378 sigma_rel=0.108076124
+[gelatina] pulsador recibido: permiso previsto 656112 ms
+[planta] rival ciclo=18 rueda=0 V=7.81246369 R=3.69461522 Rpuente=0.516939795 I0=0.197135711 Ke=0.0663764302 Kt=0.0483794733
+[planta] rival ciclo=18 rueda=1 V=7.81246369 R=3.95983534 Rpuente=0.695058787 I0=0.139133093 Ke=0.0787810917 Kt=0.0483794733
+[sensores] rival ToF alcance=1259.21922 minimo=42.7517486 sigma_rel=0.0483312178
+[arranque] pulsador=651112 permiso=656112 ms
+[gelatina] permiso de arranque a los 656112 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 33 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 62 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+[arbitro] asalto 17/30  lado     rival fuera     +1  42.69 s
+[inercia] asalto=17 robot=GELATINA rueda=0 rotor=2.68466882e-05
+[inercia] asalto=17 robot=GELATINA rueda=1 rotor=1.11827908e-05
+[inercia] asalto=17 robot=RIVAL rueda=0 rotor=1.69576362e-05
+[inercia] asalto=17 robot=RIVAL rueda=1 rotor=1.48041093e-05
+[planta] asalto=17 mu=0.6016011 slip=0.000702346206 aleatorio=1
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":7.95930433,"resistance_ohm":[4.19865294,4.18027406],"bridge_ohm":[0.544870961,0.529776514],"omega_rad_s":[-0.802910223,-61.800967],"current_a":[-0.198046315,-0.502120172],"torque_nm":[-0.00484456028,-0.0204604558],"applied_pwm":[-0.127280295,-0.901957154],"over_1_2a_samples":47046,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.81246369,"resistance_ohm":[3.69461522,3.95983534],"bridge_ohm":[0.516939795,0.695058787],"omega_rad_s":[-58.2042468,-11.6213968],"current_a":[-0.195673116,-0.810315291],"torque_nm":[7.0759566e-05,-0.0324714413],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":87,"over_3_2a_samples":0}
+[planta] gelatina ciclo=19 rueda=0 V=7.99312286 R=3.75926223 Rpuente=0.556766689 I0=0.092445606 Ke=0.0913266611 Kt=0.0483794733
+[planta] gelatina ciclo=19 rueda=1 V=7.99312286 R=4.15530663 Rpuente=0.605963027 I0=0.199956885 Ke=0.0937386803 Kt=0.0483794733
+[sensores] gelatina ToF alcance=748.942816 minimo=46.7568409 sigma_rel=0.0653921938
+[gelatina] pulsador recibido: permiso previsto 704112 ms
+[planta] rival ciclo=19 rueda=0 V=7.5843847 R=3.91543999 Rpuente=0.586867845 I0=0.195023435 Ke=0.0806786317 Kt=0.0483794733
+[planta] rival ciclo=19 rueda=1 V=7.5843847 R=4.33976283 Rpuente=0.592389929 I0=0.0760527223 Ke=0.0980154323 Kt=0.0483794733
+[sensores] rival ToF alcance=1366.31159 minimo=24.62511 sigma_rel=0.0926982117
+[arranque] pulsador=699112 permiso=704112 ms
+[gelatina] permiso de arranque a los 704112 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[arbitro] asalto 18/30  espalda  rival fuera     +1   1.26 s
+[inercia] asalto=18 robot=GELATINA rueda=0 rotor=2.25404198e-05
+[inercia] asalto=18 robot=GELATINA rueda=1 rotor=2.56114295e-05
+[inercia] asalto=18 robot=RIVAL rueda=0 rotor=2.46049333e-05
+[inercia] asalto=18 robot=RIVAL rueda=1 rotor=3.5543922e-05
+[planta] asalto=18 mu=0.844635224 slip=0.00154555714 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":7.99312286,"resistance_ohm":[3.75926223,4.15530663],"bridge_ohm":[0.556766689,0.605963027],"omega_rad_s":[-25.9439138,-66.0256461],"current_a":[0.365258363,-0.0696388667],"torque_nm":[0.022143477,0.00630471709],"applied_pwm":[-0.0991984457,-0.815792084],"over_1_2a_samples":47053,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.5843847,"resistance_ohm":[3.91543999,4.33976283],"bridge_ohm":[0.586867845,0.592389929],"omega_rad_s":[-28.018942,31.4813032],"current_a":[-0.340194964,0.143251606],"torque_nm":[-0.00702332209,0.00325104662],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":90,"over_3_2a_samples":0}
+[planta] gelatina ciclo=20 rueda=0 V=8.02911175 R=3.61012363 Rpuente=0.516429031 I0=0.210014623 Ke=0.0936193282 Kt=0.0483794733
+[planta] gelatina ciclo=20 rueda=1 V=8.02911175 R=4.12301402 Rpuente=0.626979172 I0=0.12040143 Ke=0.0837847377 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1879.35494 minimo=46.9584197 sigma_rel=0.0957727957
+[gelatina] pulsador recibido: permiso previsto 710680 ms
+[planta] rival ciclo=20 rueda=0 V=7.18980441 R=4.06803827 Rpuente=0.515953016 I0=0.11582112 Ke=0.0819734825 Kt=0.0483794733
+[planta] rival ciclo=20 rueda=1 V=7.18980441 R=3.79150333 Rpuente=0.687746608 I0=0.212566745 Ke=0.0740779743 Kt=0.0483794733
+[arranque] pulsador=705680 permiso=710680 ms
+[sensores] rival ToF alcance=1307.80552 minimo=44.8006952 sigma_rel=0.0580336189
+[gelatina] permiso de arranque a los 710680 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 19/30  frente   expulsado       -1  11.62 s
+[inercia] asalto=19 robot=GELATINA rueda=0 rotor=3.56502855e-05
+[inercia] asalto=19 robot=GELATINA rueda=1 rotor=2.84224543e-05
+[inercia] asalto=19 robot=RIVAL rueda=0 rotor=2.59446371e-05
+[inercia] asalto=19 robot=RIVAL rueda=1 rotor=2.11662378e-05
+[planta] asalto=19 mu=1.07916555 slip=0.000595489621 aleatorio=1
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":8.02911175,"resistance_ohm":[3.61012363,4.12301402],"bridge_ohm":[0.516429031,0.626979172],"omega_rad_s":[72.0269368,-2.36707458],"current_a":[-0.138217624,-0.271760465],"torque_nm":[-0.0168472927,-0.00742417999],"applied_pwm":[0.768796265,-0.185473204],"over_1_2a_samples":47180,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.18980441,"resistance_ohm":[4.06803827,3.79150333],"bridge_ohm":[0.515953016,0.687746608],"omega_rad_s":[-33.6998707,26.9032683],"current_a":[-0.181589884,0.357640813],"torque_nm":[-0.00318185814,0.00701860698],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":99,"over_3_2a_samples":0}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+[planta] gelatina ciclo=21 rueda=0 V=8.06293029 R=3.97073298 Rpuente=0.528324747 I0=0.155373824 Ke=0.0909510855 Kt=0.0483794733
+[planta] gelatina ciclo=21 rueda=1 V=8.06293029 R=4.09804659 Rpuente=0.503165686 I0=0.0911542028 Ke=0.0747389617 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1830.08862 minimo=22.9418826 sigma_rel=0.0530888653
+[gelatina] pulsador recibido: permiso previsto 727616 ms
+[planta] rival ciclo=21 rueda=0 V=7.15712184 R=4.22095814 Rpuente=0.644258213 I0=0.12137703 Ke=0.0816681165 Kt=0.0483794733
+[planta] rival ciclo=21 rueda=1 V=7.15712184 R=4.00081563 Rpuente=0.660281038 I0=0.121148506 Ke=0.0779330288 Kt=0.0483794733
+[arranque] pulsador=722616 permiso=727616 ms
+[sensores] rival ToF alcance=1046.47231 minimo=42.354129 sigma_rel=0.0780528402
+[gelatina] permiso de arranque a los 727616 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 44 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 50 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 88 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 80 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 60 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 51 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 83 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 33 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 90 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 91 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 60 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 45 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 92 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 92 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 58 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 33 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 72 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 87 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 98 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 55 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 58 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 29 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 80 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 85 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 100 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 70 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+[arbitro] asalto 20/30  lado     tiempo agotado  +0  60.00 s
+[inercia] asalto=20 robot=GELATINA rueda=0 rotor=3.43606977e-05
+[inercia] asalto=20 robot=GELATINA rueda=1 rotor=3.12603291e-05
+[inercia] asalto=20 robot=RIVAL rueda=0 rotor=9.26263064e-06
+[inercia] asalto=20 robot=RIVAL rueda=1 rotor=1.42282911e-05
+[planta] asalto=20 mu=1.20134381 slip=0.000236595631 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":8.06293029,"resistance_ohm":[3.97073298,4.09804659],"bridge_ohm":[0.528324747,0.503165686],"omega_rad_s":[-29.1048933,4.41635509],"current_a":[-1.15273475,-0.461214973],"torque_nm":[-0.0482517964,-0.0267220433],"applied_pwm":[-0.971525431,-0.222260907],"over_1_2a_samples":53357,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.15712184,"resistance_ohm":[4.22095814,4.00081563],"bridge_ohm":[0.644258213,0.660281038],"omega_rad_s":[1.82689946,6.94104264],"current_a":[-0.766206493,0.651697371],"torque_nm":[-0.0426444078,0.0256676856],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":99,"over_3_2a_samples":0}
+[planta] gelatina ciclo=22 rueda=0 V=8.09891918 R=3.82159433 Rpuente=0.687987089 I0=0.122942841 Ke=0.0686880602 Kt=0.0483794733
+[planta] gelatina ciclo=22 rueda=1 V=8.09891918 R=4.06575394 Rpuente=0.524181831 I0=0.161598748 Ke=0.0911811254 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1660.50074 minimo=23.1434596 sigma_rel=0.0834694672
+[gelatina] pulsador recibido: permiso previsto 792928 ms
+[planta] rival ciclo=22 rueda=0 V=7.89076605 R=3.88990607 Rpuente=0.528554785 I0=0.0850940287 Ke=0.102339163 Kt=0.0483794733
+[planta] rival ciclo=22 rueda=1 V=7.89076605 R=3.76079721 Rpuente=0.502074564 I0=0.0864165455 Ke=0.074028238 Kt=0.0483794733
+[sensores] rival ToF alcance=1687.28053 minimo=23.5093021 sigma_rel=0.0401044607
+[arranque] pulsador=787928 permiso=792928 ms
+[gelatina] permiso de arranque a los 792928 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 37 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 39 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 41 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 42 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 44 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 47 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 51 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 50 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 50 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 50 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 50 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 48 contact points.
+[arbitro] asalto 21/30  espalda  tiempo agotado  +0  60.00 s
+[inercia] asalto=21 robot=GELATINA rueda=0 rotor=2.41761752e-05
+[inercia] asalto=21 robot=GELATINA rueda=1 rotor=2.18299767e-05
+[inercia] asalto=21 robot=RIVAL rueda=0 rotor=2.12558225e-05
+[inercia] asalto=21 robot=RIVAL rueda=1 rotor=2.09447334e-05
+[planta] asalto=21 mu=1.16233686 slip=3.54218483e-05 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":8.09891918,"resistance_ohm":[3.82159433,4.06575394],"bridge_ohm":[0.687987089,0.524181831],"omega_rad_s":[-50.4402502,-0.0461562556],"current_a":[-0.960843171,-1.12058087],"torque_nm":[-0.0405371767,-0.0538525159],"applied_pwm":[-0.962800503,-0.635591328],"over_1_2a_samples":53489,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.89076605,"resistance_ohm":[3.88990607,3.76079721],"bridge_ohm":[0.528554785,0.502074564],"omega_rad_s":[-0.00471624014,0.00489173181],"current_a":[-0.892822296,0.925437382],"torque_nm":[-0.0431748568,0.044751722],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":100,"over_3_2a_samples":0}
+[planta] gelatina ciclo=23 rueda=0 V=8.13273771 R=4.18220367 Rpuente=0.699882805 I0=0.218302032 Ke=0.090068279 Kt=0.0483794733
+[planta] gelatina ciclo=23 rueda=1 V=8.13273771 R=4.0407865 Rpuente=0.600368345 I0=0.132351521 Ke=0.0801447784 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1611.23441 minimo=29.1269225 sigma_rel=0.0407855368
+[gelatina] pulsador recibido: permiso previsto 858240 ms
+[planta] rival ciclo=23 rueda=0 V=8.38062681 R=4.06832638 Rpuente=0.606924069 I0=0.108852911 Ke=0.0858912756 Kt=0.0483794733
+[planta] rival ciclo=23 rueda=1 V=8.38062681 R=3.66455526 Rpuente=0.623745346 I0=0.135405868 Ke=0.0937291894 Kt=0.0483794733
+[arranque] pulsador=853240 permiso=858240 ms
+[sensores] rival ToF alcance=885.067499 minimo=32.9394126 sigma_rel=0.108723536
+[gelatina] permiso de arranque a los 858240 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 40 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 36 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 66 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 62 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 58 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 54 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 54 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+[arbitro] asalto 22/30  frente   tiempo agotado  +0  60.00 s
+[inercia] asalto=22 robot=GELATINA rueda=0 rotor=3.47288454e-05
+[inercia] asalto=22 robot=GELATINA rueda=1 rotor=2.88815353e-05
+[inercia] asalto=22 robot=RIVAL rueda=0 rotor=2.26690709e-05
+[inercia] asalto=22 robot=RIVAL rueda=1 rotor=3.08220808e-05
+[planta] asalto=22 mu=0.619500673 slip=0.00136060154 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":8.13273771,"resistance_ohm":[4.18220367,4.0407865],"bridge_ohm":[0.699882805,0.600368345],"omega_rad_s":[-16.3664943,0.439744455],"current_a":[-1.35557465,-0.632718735],"torque_nm":[-0.0550206503,-0.0332578481],"applied_pwm":[-0.995007455,-0.356743634],"over_1_2a_samples":60843,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":8.38062681,"resistance_ohm":[4.06832638,3.66455526],"bridge_ohm":[0.606924069,0.623745346],"omega_rad_s":[0.0530139673,0.549964172],"current_a":[-0.897249653,0.965129567],"torque_nm":[-0.043687389,0.0434137959],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":100,"over_3_2a_samples":0}
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[planta] gelatina ciclo=24 rueda=0 V=8.16872652 R=4.03306503 Rpuente=0.659545147 I0=0.18587105 Ke=0.0674814979 Kt=0.0483794733
+[planta] gelatina ciclo=24 rueda=1 V=8.16872652 R=4.00849385 Rpuente=0.62138449 I0=0.202796066 Ke=0.0658805613 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1441.64653 minimo=29.3285012 sigma_rel=0.0711661434
+[gelatina] pulsador recibido: permiso previsto 923552 ms
+[planta] rival ciclo=24 rueda=0 V=7.43880427 R=3.66269288 Rpuente=0.615391648 I0=0.176589221 Ke=0.067912769 Kt=0.0483794733
+[planta] rival ciclo=24 rueda=1 V=7.43880427 R=4.27961082 Rpuente=0.657067728 I0=0.0886220098 Ke=0.0838948678 Kt=0.0483794733
+[arranque] pulsador=918552 permiso=923552 ms
+[sensores] rival ToF alcance=814.122832 minimo=37.7100253 sigma_rel=0.0649522638
+[gelatina] permiso de arranque a los 923552 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[arbitro] asalto 23/30  lado     rival fuera     +1   8.73 s
+[inercia] asalto=23 robot=GELATINA rueda=0 rotor=3.50999542e-05
+[inercia] asalto=23 robot=GELATINA rueda=1 rotor=1.70414917e-05
+[inercia] asalto=23 robot=RIVAL rueda=0 rotor=3.00675711e-05
+[inercia] asalto=23 robot=RIVAL rueda=1 rotor=2.47809886e-05
+[planta] asalto=23 mu=0.949570215 slip=0.00127460468 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_der" > Solid "rueda_der": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":8.16872652,"resistance_ohm":[4.03306503,4.00849385],"bridge_ohm":[0.659545147,0.62138449],"omega_rad_s":[-79.7314757,-74.1487352],"current_a":[-0.593143342,-0.581444776],"torque_nm":[-0.019703619,-0.0183188252],"applied_pwm":[-0.999395669,-0.927559376],"over_1_2a_samples":60921,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.43880427,"resistance_ohm":[3.66269288,4.27961082],"bridge_ohm":[0.615391648,0.657067728],"omega_rad_s":[-53.8216379,-18.5342529],"current_a":[-0.188894375,-0.589131707],"torque_nm":[-0.000595316889,-0.0242143956],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":103,"over_3_2a_samples":0}
+[arranque] pulsador=932592 permiso=937592 ms
+[planta] gelatina ciclo=25 rueda=0 V=8.20254513 R=4.39367437 Rpuente=0.671440876 I0=0.13123025 Ke=0.0669557527 Kt=0.0483794733
+[planta] gelatina ciclo=25 rueda=1 V=8.20254513 R=3.98352647 Rpuente=0.697571003 I0=0.17354883 Ke=0.0868823042 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1392.38014 minimo=35.3119642 sigma_rel=0.108482208
+[gelatina] pulsador recibido: permiso previsto 937592 ms
+[planta] rival ciclo=25 rueda=0 V=7.96421191 R=4.10517569 Rpuente=0.551964056 I0=0.167828563 Ke=0.0806549315 Kt=0.0483794733
+[planta] rival ciclo=25 rueda=1 V=7.96421191 R=3.67243137 Rpuente=0.518191636 I0=0.147279301 Ke=0.0759574003 Kt=0.0483794733
+[sensores] rival ToF alcance=1304.29261 minimo=44.8549813 sigma_rel=0.0543525887
+[gelatina] permiso de arranque a los 937592 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 24/30  espalda  rival fuera     +1   1.19 s
+[inercia] asalto=24 robot=GELATINA rueda=0 rotor=9.69655949e-06
+[inercia] asalto=24 robot=GELATINA rueda=1 rotor=2.4212451e-05
+[inercia] asalto=24 robot=RIVAL rueda=0 rotor=3.15720313e-05
+[inercia] asalto=24 robot=RIVAL rueda=1 rotor=1.12083823e-05
+[planta] asalto=24 mu=1.17989329 slip=0.000279034257 aleatorio=1
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":8.20254513,"resistance_ohm":[4.39367437,3.98352647],"bridge_ohm":[0.671440876,0.697571003],"omega_rad_s":[-37.5386662,-31.0970836],"current_a":[-0.443099494,-0.467560172],"torque_nm":[-0.0150880697,-0.0142241139],"applied_pwm":[-0.580036998,-0.596215069],"over_1_2a_samples":60999,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.96421191,"resistance_ohm":[4.10517569,3.67243137],"bridge_ohm":[0.551964056,0.518191636],"omega_rad_s":[-26.7253259,-16.9902664],"current_a":[-0.563220766,-0.83233225],"torque_nm":[-0.0191288666,-0.0331425008],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":107,"over_3_2a_samples":0}
+[planta] gelatina ciclo=26 rueda=0 V=8.23853394 R=4.24453578 Rpuente=0.631103218 I0=0.0987992674 Ke=0.0743115635 Kt=0.0483794733
+[planta] gelatina ciclo=26 rueda=1 V=8.23853394 R=3.95123382 Rpuente=0.518587148 I0=0.0939933747 Ke=0.0785624439 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1222.79226 minimo=35.5135429 sigma_rel=0.0588628149
+[gelatina] pulsador recibido: permiso previsto 944096 ms
+[planta] rival ciclo=26 rueda=0 V=7.85345128 R=3.67864804 Rpuente=0.664514804 I0=0.117259365 Ke=0.0835980642 Kt=0.0483794733
+[planta] rival ciclo=26 rueda=1 V=7.85345128 R=3.95715528 Rpuente=0.636369371 I0=0.133642271 Ke=0.0722743059 Kt=0.0483794733
+[sensores] rival ToF alcance=1042.78057 minimo=45.847522 sigma_rel=0.0809257889
+[arranque] pulsador=939096 permiso=944096 ms
+[gelatina] permiso de arranque a los 944096 ms
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 31 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[arbitro] asalto 25/30  frente   rival fuera     +1  12.14 s
+[inercia] asalto=25 robot=GELATINA rueda=0 rotor=1.51063374e-05
+[inercia] asalto=25 robot=GELATINA rueda=1 rotor=1.77277225e-05
+[inercia] asalto=25 robot=RIVAL rueda=0 rotor=1.69141039e-05
+[inercia] asalto=25 robot=RIVAL rueda=1 rotor=2.07750269e-05
+[planta] asalto=25 mu=0.640810823 slip=0.00191908431 aleatorio=1
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > Solid "rueda_izq": Webots has detected that this solid is light and oblong according to its inertia matrix. This belongs in the physics edge cases, and can imply weird physical results. Increasing the weight of the object or reducing its eccentricity are recommended.
+[gelatina] fin de asalto motor={"battery_v":8.23853394,"resistance_ohm":[4.24453578,3.95123382],"bridge_ohm":[0.631103218,0.518587148],"omega_rad_s":[-5.17995347,-30.7343737],"current_a":[0.961237268,-0.978863849],"torque_nm":[0.0512837065,-0.0428095675],"applied_pwm":[0.522145748,-0.824165285],"over_1_2a_samples":61173,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.85345128,"resistance_ohm":[3.67864804,3.95715528],"bridge_ohm":[0.664514804,0.636369371],"omega_rad_s":[-48.3723053,-44.7045691],"current_a":[-0.15386015,-0.322427585],"torque_nm":[-0.00177072667,-0.00913333406],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":129,"over_3_2a_samples":0}
+[planta] gelatina ciclo=27 rueda=0 V=8.27235247 R=3.80514512 Rpuente=0.642998934 I0=0.194158459 Ke=0.0671985495 Kt=0.0483794733
+[planta] gelatina ciclo=27 rueda=1 V=8.27235247 R=3.92626638 Rpuente=0.594773662 I0=0.214746147 Ke=0.0634773829 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1173.52594 minimo=41.4970058 sigma_rel=0.0961788797
+[gelatina] pulsador recibido: permiso previsto 961544 ms
+[planta] rival ciclo=27 rueda=0 V=8.37885891 R=4.1211309 Rpuente=0.601087213 I0=0.108498716 Ke=0.0686697177 Kt=0.0483794733
+[planta] rival ciclo=27 rueda=1 V=8.37885891 R=4.14997587 Rpuente=0.697493279 I0=0.192299563 Ke=0.0645617259 Kt=0.0483794733
+[sensores] rival ToF alcance=1532.95035 minimo=22.9924762 sigma_rel=0.0703261137
+[arranque] pulsador=956544 permiso=961544 ms
+[gelatina] permiso de arranque a los 961544 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 25 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 49 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 25 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[arbitro] asalto 26/30  lado     expulsado       -1  30.56 s
+[inercia] asalto=26 robot=GELATINA rueda=0 rotor=1.54931517e-05
+[inercia] asalto=26 robot=GELATINA rueda=1 rotor=1.17622864e-05
+[inercia] asalto=26 robot=RIVAL rueda=0 rotor=2.777028e-05
+[inercia] asalto=26 robot=RIVAL rueda=1 rotor=2.71616879e-05
+[planta] asalto=26 mu=1.35029093 slip=0.000660977721 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":8.27235247,"resistance_ohm":[3.80514512,3.92626638],"bridge_ohm":[0.642998934,0.594773662],"omega_rad_s":[66.5827839,24.0352155],"current_a":[0.0187236351,-0.545413062],"torque_nm":[-0.00848744437,-0.0367761022],"applied_pwm":[0.550937831,-0.113648653],"over_1_2a_samples":61776,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":8.37885891,"resistance_ohm":[4.1211309,4.14997587],"bridge_ohm":[0.601087213,0.697493279],"omega_rad_s":[-46.3320213,9.13157011],"current_a":[-0.21342145,0.742630725],"torque_nm":[-0.00507610659,0.026624732],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":139,"over_3_2a_samples":0}
+[planta] gelatina ciclo=28 rueda=0 V=8.30834136 R=3.65600648 Rpuente=0.602661276 I0=0.161727476 Ke=0.0747151705 Kt=0.0483794733
+[planta] gelatina ciclo=28 rueda=1 V=8.30834136 R=3.89397373 Rpuente=0.615789807 I0=0.135190693 Ke=0.0847888796 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1003.93806 minimo=41.6985828 sigma_rel=0.0465594864
+[gelatina] pulsador recibido: permiso previsto 997416 ms
+[planta] rival ciclo=28 rueda=0 V=7.09189321 R=3.87593999 Rpuente=0.606464481 I0=0.114516324 Ke=0.0853337899 Kt=0.0483794733
+[planta] rival ciclo=28 rueda=1 V=7.09189321 R=4.25763769 Rpuente=0.55996114 I0=0.126802191 Ke=0.0776055521 Kt=0.0483794733
+[sensores] rival ToF alcance=991.946936 minimo=27.9371268 sigma_rel=0.0544977999
+[arranque] pulsador=992416 permiso=997416 ms
+[gelatina] permiso de arranque a los 997416 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 82 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 46 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[arbitro] asalto 27/30  espalda  rival fuera     +1   7.33 s
+[inercia] asalto=27 robot=GELATINA rueda=0 rotor=1.94309714e-05
+[inercia] asalto=27 robot=GELATINA rueda=1 rotor=9.35624832e-06
+[inercia] asalto=27 robot=RIVAL rueda=0 rotor=2.79407188e-05
+[inercia] asalto=27 robot=RIVAL rueda=1 rotor=1.12463045e-05
+[planta] asalto=27 mu=1.12337044 slip=0.00097377944 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":8.30834136,"resistance_ohm":[3.65600648,3.89397373],"bridge_ohm":[0.602661276,0.615789807],"omega_rad_s":[-56.1179271,33.1169546],"current_a":[-0.132080795,0.668975896],"torque_nm":[0.00143429081,0.025824247],"applied_pwm":[-0.57235837,0.701087296],"over_1_2a_samples":62766,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.09189321,"resistance_ohm":[3.87593999,4.25763769],"bridge_ohm":[0.606464481,0.55996114],"omega_rad_s":[-41.2975804,-36.7958199],"current_a":[-0.163094803,-0.29051319],"torque_nm":[-0.00235020123,-0.00792025189],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":147,"over_3_2a_samples":0}
+[planta] gelatina ciclo=29 rueda=0 V=8.34215989 R=4.01661582 Rpuente=0.614556992 I0=0.107086676 Ke=0.0736885814 Kt=0.0483794733
+[planta] gelatina ciclo=29 rueda=1 V=8.34215989 R=3.8690063 Rpuente=0.691976321 I0=0.105943465 Ke=0.0753897349 Kt=0.0483794733
+[sensores] gelatina ToF alcance=954.671735 minimo=47.6820457 sigma_rel=0.083875556
+[gelatina] pulsador recibido: permiso previsto 1010056 ms
+[planta] rival ciclo=29 rueda=0 V=7.20060447 R=3.79002953 Rpuente=0.571846259 I0=0.191470322 Ke=0.0936401875 Kt=0.0483794733
+[planta] rival ciclo=29 rueda=1 V=7.20060447 R=4.25690155 Rpuente=0.61379689 I0=0.094638285 Ke=0.0993166171 Kt=0.0483794733
+[sensores] rival ToF alcance=1183.85692 minimo=35.2040571 sigma_rel=0.0955069351
+[arranque] pulsador=1005056 permiso=1010056 ms
+[gelatina] permiso de arranque a los 1010056 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[arbitro] asalto 28/30  frente   rival fuera     +1   3.21 s
+[inercia] asalto=28 robot=GELATINA rueda=0 rotor=2.55414689e-05
+[inercia] asalto=28 robot=GELATINA rueda=1 rotor=2.19878901e-05
+[inercia] asalto=28 robot=RIVAL rueda=0 rotor=2.79932778e-05
+[inercia] asalto=28 robot=RIVAL rueda=1 rotor=1.5502732e-05
+[planta] asalto=28 mu=1.46634105 slip=0.00129893672 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":8.34215989,"resistance_ohm":[4.01661582,3.8690063],"bridge_ohm":[0.614556992,0.691976321],"omega_rad_s":[-5.34657439,-95.1619876],"current_a":[-0.160800925,-0.178322914],"torque_nm":[-0.00259890227,-0.00350167961],"applied_pwm":[-0.136496827,-0.957493603],"over_1_2a_samples":62838,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":7.20060447,"resistance_ohm":[3.79002953,4.25690155],"bridge_ohm":[0.571846259,0.61379689],"omega_rad_s":[-21.3280171,-10.0747539],"current_a":[-0.532615617,-0.681580322],"torque_nm":[-0.0165044297,-0.0283959467],"applied_pwm":[-0.6,-0.6],"over_1_2a_samples":153,"over_3_2a_samples":0}
+[planta] gelatina ciclo=30 rueda=0 V=8.37814878 R=3.86747718 Rpuente=0.574219334 I0=0.224655694 Ke=0.0736339521 Kt=0.0483794733
+[planta] gelatina ciclo=30 rueda=1 V=8.37814878 R=3.83671365 Rpuente=0.512992465 I0=0.17638801 Ke=0.0926337765 Kt=0.0483794733
+[sensores] gelatina ToF alcance=785.083777 minimo=47.8836244 sigma_rel=0.114256158
+[gelatina] pulsador recibido: permiso previsto 1018576 ms
+[planta] rival ciclo=30 rueda=0 V=8.35094497 R=3.98737073 Rpuente=0.627333462 I0=0.219472674 Ke=0.0758553078 Kt=0.0483794733
+[planta] rival ciclo=30 rueda=1 V=8.35094497 R=4.21043987 Rpuente=0.662878561 I0=0.150727522 Ke=0.0661402564 Kt=0.0483794733
+[sensores] rival ToF alcance=822.924936 minimo=46.2372559 sigma_rel=0.0859497404
+[arranque] pulsador=1013576 permiso=1018576 ms
+[gelatina] permiso de arranque a los 1018576 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 29/30  lado     tiempo agotado  +0  60.00 s
+[inercia] asalto=29 robot=GELATINA rueda=0 rotor=1.93387651e-05
+[inercia] asalto=29 robot=GELATINA rueda=1 rotor=2.56285785e-05
+[inercia] asalto=29 robot=RIVAL rueda=0 rotor=2.94294961e-05
+[inercia] asalto=29 robot=RIVAL rueda=1 rotor=3.0536506e-05
+[planta] asalto=29 mu=1.28143648 slip=0.000702222109 aleatorio=1
+[gelatina] fin de asalto motor={"battery_v":8.37814878,"resistance_ohm":[3.86747718,3.83671365],"bridge_ohm":[0.574219334,0.512992465],"omega_rad_s":[-10.4374779,0.960077458],"current_a":[-1.64880731,-0.517337517],"torque_nm":[-0.0688997053,-0.031380142],"applied_pwm":[-0.96585232,-0.25797233],"over_1_2a_samples":70143,"over_3_2a_samples":5}
+[rival] fin de asalto motor={"battery_v":8.35094497,"resistance_ohm":[3.98737073,4.21043987],"bridge_ohm":[0.627333462,0.662878561],"omega_rad_s":[0.380737701,1.58482436],"current_a":[-0.911077566,0.83529362],"torque_nm":[-0.0479354713,0.0337070421],"applied_pwm":[-0.5,0.5],"over_1_2a_samples":154,"over_3_2a_samples":0}
+[planta] gelatina ciclo=31 rueda=0 V=7.01196731 R=4.22808652 Rpuente=0.586115062 I0=0.170014885 Ke=0.072463821 Kt=0.0483794733
+[planta] gelatina ciclo=31 rueda=1 V=7.01196731 R=3.81174626 Rpuente=0.589178979 I0=0.147140774 Ke=0.0811089341 Kt=0.0483794733
+[sensores] gelatina ToF alcance=735.817456 minimo=23.8670874 sigma_rel=0.0715722275
+[gelatina] pulsador recibido: permiso previsto 1083888 ms
+[planta] rival ciclo=31 rueda=0 V=7.05026116 R=3.70891438 Rpuente=0.630490899 I0=0.0937249482 Ke=0.0711979099 Kt=0.0483794733
+[planta] rival ciclo=31 rueda=1 V=7.05026116 R=3.90925069 Rpuente=0.636213768 I0=0.128782082 Ke=0.0974377837 Kt=0.0483794733
+[sensores] rival ToF alcance=1096.08399 minimo=42.1623528 sigma_rel=0.0406015539
+[arranque] pulsador=1078888 permiso=1083888 ms
+[gelatina] permiso de arranque a los 1083888 ms
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 35 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 33 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 37 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 64 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 64 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 66 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 68 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 72 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 74 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 68 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 92 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 86 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 66 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 52 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 38 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 34 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 25 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 32 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 29 contact points.
+[arbitro] asalto 30/30  espalda  tiempo agotado  +0  60.00 s
+
+[arbitro] RESULTADO  12W 6L 12D  win rate 40.0%  auto-salidas 3  t medio de victoria 13.79 s
+
+[arbitro]   frente   3W 3L 4D
+[arbitro]   lado     3W 2L 5D
+[arbitro]   espalda  6W 1L 3D
+[arbitro]   combate: gana 62.4%  jueces 10.8%  pierde 26.8%
+[arbitro] resultados -> ../../../../result.json
+INFO: 'arbitro' controller exited successfully.
+INFO: medido: Terminating.
+INFO: oponente: Terminating.

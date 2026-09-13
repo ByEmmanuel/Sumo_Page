@@ -1,0 +1,970 @@
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+INFO: medido: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T164027881178Z_v15_v0.3.1_reglamento_charger_s0_r0/project/webots/controllers/medido/medido
+INFO: oponente: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T164027881178Z_v15_v0.3.1_reglamento_charger_s0_r0/project/webots/controllers/oponente/oponente charger
+INFO: arbitro: Starting controller: $LAB_ROOT/Mini-Sumo-real/runs/real/20260913T164027881178Z_v15_v0.3.1_reglamento_charger_s0_r0/project/webots/controllers/arbitro/arbitro --rounds 30 --rival charger --version v0.3.1 --colocacion reglamento --out ../../../../result.json
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] HAL Webots listo: paso 8 ms, umbral de linea 400
+[gelatina] estrategia v0.3.0 en linea
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[rival] comportamiento: charger
+
+[arbitro] 30 asaltos contra 'charger', colocacion reglamento, limite 60 s por asalto
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[planta] asalto=0 mu=1.1 slip=0.0005 aleatorio=0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 5312 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=312 permiso=5312 ms
+[gelatina] permiso de arranque a los 5312 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  73 mm rumbo=+1487 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  68 mm rumbo=+1492 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 94 contact points.
+[gelatina] t=  240 ms  SEARCH       rival=no d=9999 mm rumbo=+1507 cdeg  linea=0x0
+[gelatina] t=  336 ms  TRACK        rival=si d=  45 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  344 ms  ATTACK       rival=si d=  45 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[gelatina] t= 1184 ms  EDGE_ESCAPE  rival=si d=  42 mm rumbo=   +0 cdeg  linea=0x2
+[gelatina] t= 1296 ms  ATTACK       rival=si d=  50 mm rumbo=-2813 cdeg  linea=0x8
+[gelatina] t= 1392 ms  EDGE_ESCAPE  rival=si d= 191 mm rumbo=-6000 cdeg  linea=0x8
+[gelatina] t= 1600 ms  SEARCH       rival=si d= 604 mm rumbo=-6000 cdeg  linea=0x2
+[gelatina] t= 1608 ms  TRACK        rival=si d= 604 mm rumbo=-6000 cdeg  linea=0x2
+[gelatina] t= 1728 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x2
+[arbitro] asalto  1/30  frente   expulsado       -1   1.75 s
+[planta] asalto=1 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x2
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 12376 ms
+[arranque] pulsador=7376 permiso=12376 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 12376 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   72 ms  TRACK        rival=si d=  64 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   80 ms  ATTACK       rival=si d=  64 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 58 contact points.
+[gelatina] t=  568 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  664 ms  TRACK        rival=si d=  33 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  672 ms  ATTACK       rival=si d=  33 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t= 1328 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1624 ms  TRACK        rival=si d=  49 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1632 ms  ATTACK       rival=si d=  49 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2192 ms  EDGE_ESCAPE  rival=si d= 669 mm rumbo=-6000 cdeg  linea=0x8
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t= 2400 ms  SEARCH       rival=si d=  44 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2408 ms  TRACK        rival=si d=  39 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2416 ms  ATTACK       rival=si d=  39 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3024 ms  EDGE_ESCAPE  rival=si d=  37 mm rumbo=+3000 cdeg  linea=0x8
+[gelatina] t= 3120 ms  ATTACK       rival=si d=  27 mm rumbo= +813 cdeg  linea=0x4
+[gelatina] t= 3184 ms  EDGE_ESCAPE  rival=si d= 172 mm rumbo=-6000 cdeg  linea=0x8
+[arbitro] asalto  2/30  lado     expulsado       -1   3.22 s
+[planta] asalto=2 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x8
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 20912 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=15912 permiso=20912 ms
+[gelatina] permiso de arranque a los 20912 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[gelatina] t=  216 ms  TRACK        rival=si d=  40 mm rumbo=-4538 cdeg  linea=0x0
+[gelatina] t=  224 ms  ATTACK       rival=si d=  40 mm rumbo=-4538 cdeg  linea=0x0
+[gelatina] t=  448 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x4
+[gelatina] t=  512 ms  TRACK        rival=si d=  57 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  520 ms  ATTACK       rival=si d=  57 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  880 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  936 ms  TRACK        rival=si d=  36 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  944 ms  ATTACK       rival=si d=  36 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1208 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+[gelatina] t= 1232 ms  TRACK        rival=si d= 113 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1240 ms  ATTACK       rival=si d= 113 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2232 ms  SEARCH       rival=no d=9999 mm rumbo= +921 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 2360 ms  TRACK        rival=si d=  33 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2368 ms  ATTACK       rival=si d=  33 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque 0.269323 exceeds 'maxTorque' = 0.25
+[gelatina] t= 2496 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: DEF RIVAL GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque -0.431758 exceeds 'maxTorque' = 0.25
+[gelatina] t= 2624 ms  TRACK        rival=si d= 140 mm rumbo=-6000 cdeg  linea=0x1
+[arbitro] asalto  3/30  espalda  rival fuera     +1   2.64 s
+[planta] asalto=3 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  75 mm rumbo=   +0 cdeg  linea=0x1
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 28864 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=23864 permiso=28864 ms
+[gelatina] permiso de arranque a los 28864 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  79 mm rumbo=+1477 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  79 mm rumbo=+1477 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[arbitro] asalto  4/30  frente   expulsado       -1   0.94 s
+[planta] asalto=4 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 35120 ms
+[arranque] pulsador=30120 permiso=35120 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 35120 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=   96 ms  TRACK        rival=si d=  60 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  104 ms  ATTACK       rival=si d=  60 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  592 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  720 ms  ATTACK       rival=si d=  37 mm rumbo=+3000 cdeg  linea=0x8
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t= 1160 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1288 ms  TRACK        rival=si d=  51 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1296 ms  ATTACK       rival=si d=  51 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1424 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1584 ms  TRACK        rival=si d= 186 mm rumbo=-4492 cdeg  linea=0x0
+[gelatina] t= 1912 ms  ATTACK       rival=si d= 104 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 27 contact points.
+[gelatina] t= 2216 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2304 ms  TRACK        rival=si d=  56 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2312 ms  ATTACK       rival=si d=  56 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2672 ms  SEARCH       rival=no d=9999 mm rumbo=  -16 cdeg  linea=0x0
+[gelatina] t= 2704 ms  TRACK        rival=si d=  63 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2712 ms  ATTACK       rival=si d=  63 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2872 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2936 ms  TRACK        rival=si d=  71 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2944 ms  ATTACK       rival=si d=  71 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+[gelatina] t= 3536 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3656 ms  TRACK        rival=si d= 723 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 3664 ms  ATTACK       rival=si d=  37 mm rumbo=-2758 cdeg  linea=0x0
+[gelatina] t= 3832 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3960 ms  TRACK        rival=si d=  47 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 3968 ms  ATTACK       rival=si d=  47 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 4688 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 4728 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x1
+[arbitro] asalto  5/30  lado     expulsado       -1   4.87 s
+[planta] asalto=5 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  55 mm rumbo=   -7 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 45304 ms
+[arranque] pulsador=40304 permiso=45304 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 45304 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   -7 cdeg  linea=0x0
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=   -7 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  208 ms  TRACK        rival=si d=  58 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  216 ms  ATTACK       rival=si d=  58 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  440 ms  SEARCH       rival=no d=9999 mm rumbo=+4526 cdeg  linea=0x0
+[gelatina] t=  504 ms  TRACK        rival=si d=  51 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  512 ms  ATTACK       rival=si d=  51 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1008 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1096 ms  TRACK        rival=si d=  47 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1104 ms  ATTACK       rival=si d=  47 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+[gelatina] t= 1240 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1360 ms  TRACK        rival=si d=  85 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1368 ms  ATTACK       rival=si d=  85 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1760 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1824 ms  TRACK        rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1832 ms  ATTACK       rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1992 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2056 ms  TRACK        rival=si d=  31 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2064 ms  ATTACK       rival=si d=  31 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+[gelatina] t= 2624 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2648 ms  TRACK        rival=si d=  45 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2656 ms  ATTACK       rival=si d=  45 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3312 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 3544 ms  TRACK        rival=si d=  32 mm rumbo=  -68 cdeg  linea=0x0
+[gelatina] t= 3552 ms  ATTACK       rival=si d=  32 mm rumbo=  -68 cdeg  linea=0x0
+[gelatina] t= 3672 ms  EDGE_ESCAPE  rival=si d=  24 mm rumbo=-3000 cdeg  linea=0x8
+[gelatina] t= 3880 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 4136 ms  TRACK        rival=si d=  51 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4144 ms  ATTACK       rival=si d=  51 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4400 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+[gelatina] t= 4512 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x2
+[gelatina] t= 4664 ms  ATTACK       rival=si d=  45 mm rumbo=+4510 cdeg  linea=0xC
+[gelatina] t= 4864 ms  EDGE_ESCAPE  rival=si d=  42 mm rumbo=-2997 cdeg  linea=0x4
+[gelatina] t= 4960 ms  ATTACK       rival=si d=  29 mm rumbo=-3000 cdeg  linea=0x4
+[gelatina] t= 5328 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 5360 ms  TRACK        rival=si d=  40 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 5368 ms  ATTACK       rival=si d=  40 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t= 6016 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 6048 ms  TRACK        rival=si d=  50 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 6056 ms  ATTACK       rival=si d=  50 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 6416 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t= 6544 ms  TRACK        rival=si d=  55 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 6552 ms  ATTACK       rival=si d=  55 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 6912 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 6976 ms  TRACK        rival=si d=  55 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 6984 ms  ATTACK       rival=si d=  55 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 7504 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_der" > RotationalMotor "motor_der": The requested motor torque -0.328996 exceeds 'maxTorque' = 0.25
+[gelatina] t= 7632 ms  ATTACK       rival=si d=  99 mm rumbo=+4610 cdeg  linea=0x4
+[gelatina] t= 7712 ms  EDGE_ESCAPE  rival=si d= 243 mm rumbo=+6000 cdeg  linea=0x1
+[arbitro] asalto  6/30  espalda  rival fuera     +1   7.87 s
+[planta] asalto=6 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[arranque] pulsador=53488 permiso=58488 ms
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 58488 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 58488 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  70 mm rumbo=+1467 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  70 mm rumbo=+1467 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 99 contact points.
+[arbitro] asalto  7/30  frente   rival fuera     +1   0.82 s
+[planta] asalto=7 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 64624 ms
+[arranque] pulsador=59624 permiso=64624 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 64632 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=   55 ms  TRACK        rival=si d=  70 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   63 ms  ATTACK       rival=si d=  70 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  783 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  807 ms  TRACK        rival=si d=  61 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  816 ms  ATTACK       rival=si d=  61 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  951 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1007 ms  TRACK        rival=si d=  34 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1015 ms  ATTACK       rival=si d=  34 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+[gelatina] t= 2271 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 2359 ms  TRACK        rival=si d=  33 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2367 ms  ATTACK       rival=si d=  33 mm rumbo=+3000 cdeg  linea=0x0
+[arbitro] asalto  8/30  lado     rival fuera     +1   2.81 s
+[planta] asalto=8 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 21 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 72752 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=67752 permiso=72752 ms
+[gelatina] permiso de arranque a los 72752 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+[gelatina] t=  216 ms  TRACK        rival=si d=  44 mm rumbo=-4582 cdeg  linea=0x0
+[gelatina] t=  224 ms  ATTACK       rival=si d=  44 mm rumbo=-4582 cdeg  linea=0x0
+[gelatina] t=  448 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x4
+[gelatina] t=  608 ms  TRACK        rival=si d=  34 mm rumbo=+4466 cdeg  linea=0x0
+[gelatina] t=  616 ms  ATTACK       rival=si d=  34 mm rumbo=+4466 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 26 contact points.
+[gelatina] t= 2560 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2688 ms  TRACK        rival=si d=  49 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2696 ms  ATTACK       rival=si d=  49 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3392 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+[gelatina] t= 3512 ms  TRACK        rival=si d=  48 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3520 ms  ATTACK       rival=si d=  48 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3688 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3784 ms  TRACK        rival=si d= 121 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3792 ms  ATTACK       rival=si d= 121 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4016 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4040 ms  TRACK        rival=si d=  88 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4048 ms  ATTACK       rival=si d=  88 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 4640 ms  SEARCH       rival=no d=9999 mm rumbo=+1493 cdeg  linea=0x0
+[gelatina] t= 4736 ms  TRACK        rival=si d=  36 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4744 ms  ATTACK       rival=si d=  36 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4872 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 5000 ms  TRACK        rival=si d=  55 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 5008 ms  ATTACK       rival=si d=  55 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 5200 ms  SEARCH       rival=no d=9999 mm rumbo=+4528 cdeg  linea=0x0
+[gelatina] t= 5328 ms  TRACK        rival=si d= 144 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 5400 ms  ATTACK       rival=si d= 124 mm rumbo=-4500 cdeg  linea=0x0
+[gelatina] t= 5536 ms  SEARCH       rival=no d=9999 mm rumbo=-4500 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+[gelatina] t= 5592 ms  TRACK        rival=si d= 133 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 5664 ms  ATTACK       rival=si d= 110 mm rumbo=+1510 cdeg  linea=0x0
+[gelatina] t= 5832 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 5856 ms  TRACK        rival=si d=  36 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 5864 ms  ATTACK       rival=si d=  36 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 5872 ms  EDGE_ESCAPE  rival=si d=  36 mm rumbo=+6000 cdeg  linea=0x1
+[gelatina] t= 6080 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x2
+[gelatina] t= 6224 ms  ATTACK       rival=si d=  57 mm rumbo=+3000 cdeg  linea=0xA
+[gelatina] t= 6456 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 6520 ms  TRACK        rival=si d=  32 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 6528 ms  ATTACK       rival=si d=  32 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t= 6656 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 6752 ms  TRACK        rival=si d=  40 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 6760 ms  ATTACK       rival=si d=  40 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 7152 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 7208 ms  TRACK        rival=si d=  60 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 7216 ms  ATTACK       rival=si d=  60 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 7480 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t=11192 ms  EDGE_ESCAPE  rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x1
+[gelatina] t=11272 ms  ATTACK       rival=si d=  35 mm rumbo=+3000 cdeg  linea=0x1
+[gelatina] t=11336 ms  EDGE_ESCAPE  rival=si d=  35 mm rumbo=+3000 cdeg  linea=0x1
+[gelatina] t=11368 ms  ATTACK       rival=si d=  34 mm rumbo=+2288 cdeg  linea=0x9
+[gelatina] t=11504 ms  SEARCH       rival=no d=9999 mm rumbo=+2288 cdeg  linea=0x0
+[gelatina] t=11568 ms  TRACK        rival=si d=  31 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=11576 ms  ATTACK       rival=si d=  31 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[gelatina] t=11768 ms  EDGE_ESCAPE  rival=si d=  79 mm rumbo=+3000 cdeg  linea=0x1
+[gelatina] t=11976 ms  SEARCH       rival=si d=  70 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=11984 ms  TRACK        rival=si d=  70 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=11992 ms  ATTACK       rival=si d=  70 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=12000 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=12192 ms  TRACK        rival=si d=  53 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=12200 ms  ATTACK       rival=si d=  53 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=12496 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=12560 ms  TRACK        rival=si d= 277 mm rumbo=  -91 cdeg  linea=0x0
+[gelatina] t=12592 ms  ATTACK       rival=si d=  48 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+[gelatina] t=13488 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=13584 ms  TRACK        rival=si d=  40 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=13592 ms  ATTACK       rival=si d=  40 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t=13752 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=13816 ms  TRACK        rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=13824 ms  ATTACK       rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=13952 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=14112 ms  TRACK        rival=si d=  54 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=14120 ms  ATTACK       rival=si d=  54 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=14344 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=14440 ms  TRACK        rival=si d=  98 mm rumbo=+4529 cdeg  linea=0x0
+[gelatina] t=14448 ms  ATTACK       rival=si d=  98 mm rumbo=+4529 cdeg  linea=0x0
+[gelatina] t=14640 ms  SEARCH       rival=no d=9999 mm rumbo=-4492 cdeg  linea=0x0
+[gelatina] t=14736 ms  TRACK        rival=si d=  59 mm rumbo=-4533 cdeg  linea=0x0
+[gelatina] t=14744 ms  ATTACK       rival=si d=  59 mm rumbo=-4533 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=14936 ms  SEARCH       rival=no d=9999 mm rumbo=+2974 cdeg  linea=0x0
+[gelatina] t=15032 ms  TRACK        rival=si d=  32 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=15040 ms  ATTACK       rival=si d=  32 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=15600 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=15824 ms  TRACK        rival=si d=  44 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=15832 ms  ATTACK       rival=si d=  44 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=15960 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=16224 ms  TRACK        rival=si d=  23 mm rumbo=+1490 cdeg  linea=0x0
+[gelatina] t=16232 ms  ATTACK       rival=si d=  23 mm rumbo=+1490 cdeg  linea=0x0
+[gelatina] t=16720 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=16752 ms  TRACK        rival=si d=  35 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=16760 ms  ATTACK       rival=si d=  35 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t=17184 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=17280 ms  TRACK        rival=si d=  37 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=17288 ms  ATTACK       rival=si d=  37 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=17416 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=17536 ms  TRACK        rival=si d=  33 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=17544 ms  ATTACK       rival=si d=  33 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=17568 ms  EDGE_ESCAPE  rival=si d=  33 mm rumbo=+6000 cdeg  linea=0x1
+[gelatina] t=17776 ms  SEARCH       rival=si d=  69 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=17784 ms  TRACK        rival=si d=  69 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=17792 ms  ATTACK       rival=si d=  69 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=17944 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=18000 ms  TRACK        rival=si d=  87 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=18008 ms  ATTACK       rival=si d=  87 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=18336 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=18368 ms  TRACK        rival=si d=  56 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=18376 ms  ATTACK       rival=si d=  56 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=18720 ms  EDGE_ESCAPE  rival=si d=  37 mm rumbo=+3000 cdeg  linea=0x2
+[gelatina] t=18792 ms  ATTACK       rival=si d=  27 mm rumbo=  +39 cdeg  linea=0x1
+[arbitro] asalto  9/30  espalda  expulsado       -1  18.82 s
+[planta] asalto=9 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  38 mm rumbo=+3672 cdeg  linea=0x4
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 96880 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=91880 permiso=96880 ms
+[gelatina] permiso de arranque a los 96880 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  76 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 100 contact points.
+[arbitro] asalto 10/30  frente   rival fuera     +1   0.77 s
+[planta] asalto=10 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  29 mm rumbo=+3016 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 102960 ms
+[arranque] pulsador=97960 permiso=102960 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 102960 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  81 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=    7 ms  ATTACK       rival=si d=  73 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t=  503 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  527 ms  TRACK        rival=si d=  39 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  535 ms  ATTACK       rival=si d=  39 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  703 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  727 ms  TRACK        rival=si d=  32 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  735 ms  ATTACK       rival=si d=  32 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  967 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1031 ms  TRACK        rival=si d=  82 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1039 ms  ATTACK       rival=si d=  82 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 23 contact points.
+[gelatina] t= 1663 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1687 ms  TRACK        rival=si d=  36 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1695 ms  ATTACK       rival=si d=  36 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1823 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1951 ms  TRACK        rival=si d=  29 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1959 ms  ATTACK       rival=si d=  29 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 11/30  lado     rival fuera     +1   2.62 s
+[planta] asalto=11 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 110896 ms
+[arranque] pulsador=105896 permiso=110896 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 110896 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  320 ms  TRACK        rival=si d=  69 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  328 ms  ATTACK       rival=si d=  69 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  520 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  616 ms  TRACK        rival=si d=  70 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  624 ms  ATTACK       rival=si d=  70 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  752 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  944 ms  TRACK        rival=si d=  47 mm rumbo=-3014 cdeg  linea=0x0
+[gelatina] t=  952 ms  ATTACK       rival=si d=  47 mm rumbo=-3014 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+[gelatina] t= 1376 ms  SEARCH       rival=no d=9999 mm rumbo=+2989 cdeg  linea=0x0
+[gelatina] t= 1504 ms  TRACK        rival=si d=  59 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1512 ms  ATTACK       rival=si d=  59 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1648 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1808 ms  TRACK        rival=si d= 164 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 2432 ms  ATTACK       rival=si d= 122 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3032 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 3056 ms  TRACK        rival=si d=  52 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3064 ms  ATTACK       rival=si d=  52 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t= 3688 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3720 ms  TRACK        rival=si d=  33 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3728 ms  ATTACK       rival=si d=  33 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3856 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3880 ms  TRACK        rival=si d=  30 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3888 ms  ATTACK       rival=si d=  30 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4152 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4176 ms  TRACK        rival=si d=  34 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4184 ms  ATTACK       rival=si d=  34 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4512 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 4576 ms  TRACK        rival=si d=  54 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 4584 ms  ATTACK       rival=si d=  54 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t= 4848 ms  SEARCH       rival=no d=9999 mm rumbo=+1503 cdeg  linea=0x0
+[gelatina] t= 4904 ms  TRACK        rival=si d=  33 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4912 ms  ATTACK       rival=si d=  33 mm rumbo=-6000 cdeg  linea=0x0
+[arbitro] asalto 12/30  espalda  rival fuera     +1   5.02 s
+[planta] asalto=12 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  84 mm rumbo=-1465 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 121232 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=116232 permiso=121232 ms
+[gelatina] permiso de arranque a los 121232 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  84 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  84 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 100 contact points.
+[gelatina] t= 1112 ms  SEARCH       rival=no d=9999 mm rumbo=   +7 cdeg  linea=0x0
+[arbitro] asalto 13/30  frente   rival fuera     +1   1.22 s
+[planta] asalto=13 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +7 cdeg  linea=0x2
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 127760 ms
+[arranque] pulsador=122760 permiso=127760 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 127760 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +7 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=   56 ms  TRACK        rival=si d=  77 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   64 ms  ATTACK       rival=si d=  77 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  584 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  616 ms  TRACK        rival=si d=  52 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  624 ms  ATTACK       rival=si d=  52 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  848 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  880 ms  TRACK        rival=si d=  60 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  888 ms  ATTACK       rival=si d=  60 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+[gelatina] t= 1216 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1312 ms  TRACK        rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1320 ms  ATTACK       rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1480 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1576 ms  TRACK        rival=si d= 122 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1584 ms  ATTACK       rival=si d= 122 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t= 2336 ms  SEARCH       rival=no d=9999 mm rumbo=-2168 cdeg  linea=0x0
+[gelatina] t= 2400 ms  TRACK        rival=si d=  43 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2408 ms  ATTACK       rival=si d=  43 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2800 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2856 ms  TRACK        rival=si d=  34 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2864 ms  ATTACK       rival=si d=  34 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[arbitro] asalto 14/30  lado     rival fuera     +1   7.96 s
+[planta] asalto=14 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+4385 cdeg  linea=0xC
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 141032 ms
+[arranque] pulsador=136032 permiso=141032 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 141032 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+4385 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=+4385 cdeg  linea=0x0
+[gelatina] t=  344 ms  TRACK        rival=si d=  43 mm rumbo=+4527 cdeg  linea=0x0
+[gelatina] t=  352 ms  ATTACK       rival=si d=  43 mm rumbo=+4527 cdeg  linea=0x0
+[gelatina] t=  648 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  776 ms  TRACK        rival=si d= 102 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  784 ms  ATTACK       rival=si d= 102 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  976 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1072 ms  TRACK        rival=si d=  76 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1080 ms  ATTACK       rival=si d=  76 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+[gelatina] t= 1368 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1432 ms  TRACK        rival=si d=  46 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1440 ms  ATTACK       rival=si d=  46 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2032 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2056 ms  TRACK        rival=si d=  56 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2064 ms  ATTACK       rival=si d=  56 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+WARNING: DEF GELATINA GelatinaNuclear > HingeJoint "rueda_izq" > RotationalMotor "motor_izq": The requested motor torque -0.780343 exceeds 'maxTorque' = 0.25
+[arbitro] asalto 15/30  espalda  auto-salida     -1   4.34 s
+[planta] asalto=15 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x4
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 150688 ms
+[arranque] pulsador=145688 permiso=150688 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 150688 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  73 mm rumbo=-1451 cdeg  linea=0x0
+[gelatina] t=    7 ms  ATTACK       rival=si d=  73 mm rumbo=-1451 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 94 contact points.
+[gelatina] t=  232 ms  SEARCH       rival=no d=9999 mm rumbo=+1500 cdeg  linea=0x0
+[gelatina] t=  287 ms  TRACK        rival=si d=  38 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  295 ms  ATTACK       rival=si d=  38 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  959 ms  SEARCH       rival=no d=9999 mm rumbo=-1498 cdeg  linea=0x0
+[gelatina] t= 1079 ms  TRACK        rival=si d=  38 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1087 ms  ATTACK       rival=si d=  38 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+[gelatina] t= 1615 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1679 ms  TRACK        rival=si d=  33 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1687 ms  ATTACK       rival=si d=  33 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1847 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1943 ms  TRACK        rival=si d=  87 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1952 ms  ATTACK       rival=si d=  87 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+[gelatina] t= 2839 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 2959 ms  TRACK        rival=si d=  26 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2967 ms  ATTACK       rival=si d=  26 mm rumbo=+4560 cdeg  linea=0x0
+[gelatina] t= 3103 ms  SEARCH       rival=no d=9999 mm rumbo=+4560 cdeg  linea=0x0
+[gelatina] t= 3223 ms  TRACK        rival=si d= 284 mm rumbo=+6000 cdeg  linea=0x0
+[arbitro] asalto 16/30  frente   rival fuera     +1   3.27 s
+[planta] asalto=16 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d= 350 mm rumbo=   +0 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 159272 ms
+[arranque] pulsador=154272 permiso=159272 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 159272 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=   56 ms  TRACK        rival=si d=  77 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 15 contact points.
+[gelatina] t=   64 ms  ATTACK       rival=si d=  77 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  888 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  984 ms  TRACK        rival=si d=  42 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  992 ms  ATTACK       rival=si d=  42 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t= 1152 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1208 ms  TRACK        rival=si d=  54 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1216 ms  ATTACK       rival=si d=  54 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1352 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1440 ms  TRACK        rival=si d=  43 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 1448 ms  ATTACK       rival=si d=  43 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 17/30  lado     rival fuera     +1   1.49 s
+[planta] asalto=17 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  52 mm rumbo=-3000 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 166072 ms
+[arranque] pulsador=161072 permiso=166072 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 166072 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  224 ms  TRACK        rival=si d=  51 mm rumbo=-4503 cdeg  linea=0x0
+[gelatina] t=  232 ms  ATTACK       rival=si d=  51 mm rumbo=-4503 cdeg  linea=0x0
+[gelatina] t=  424 ms  SEARCH       rival=no d=9999 mm rumbo=+4539 cdeg  linea=0x4
+[gelatina] t=  512 ms  TRACK        rival=si d=  32 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  520 ms  ATTACK       rival=si d=  32 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  816 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1008 ms  TRACK        rival=si d=  34 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1016 ms  ATTACK       rival=si d=  34 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 24 contact points.
+[gelatina] t= 1344 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1440 ms  TRACK        rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1448 ms  ATTACK       rival=si d=  31 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 2072 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t= 2168 ms  TRACK        rival=si d=  55 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2176 ms  ATTACK       rival=si d=  55 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2600 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2632 ms  TRACK        rival=si d=  32 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2640 ms  ATTACK       rival=si d=  32 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2800 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 2888 ms  TRACK        rival=si d=  77 mm rumbo=+6000 cdeg  linea=0x8
+[gelatina] t= 2896 ms  ATTACK       rival=si d=  77 mm rumbo=+6000 cdeg  linea=0x8
+[arbitro] asalto 18/30  espalda  expulsado       -1   3.08 s
+[planta] asalto=18 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d= 261 mm rumbo=-6000 cdeg  linea=0x8
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 174464 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=169464 permiso=174464 ms
+[gelatina] permiso de arranque a los 174464 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  74 mm rumbo=-1467 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  64 mm rumbo=-1456 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 94 contact points.
+[gelatina] t=  936 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  968 ms  TRACK        rival=si d=  39 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  976 ms  ATTACK       rival=si d=  39 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 28 contact points.
+[gelatina] t= 1304 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1336 ms  TRACK        rival=si d=  32 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1344 ms  ATTACK       rival=si d=  32 mm rumbo=-6000 cdeg  linea=0x0
+[arbitro] asalto 19/30  frente   rival fuera     +1   1.74 s
+[planta] asalto=19 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 181520 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=176520 permiso=181520 ms
+[gelatina] permiso de arranque a los 181520 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=   88 ms  TRACK        rival=si d=  47 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   96 ms  ATTACK       rival=si d=  47 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  720 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  840 ms  TRACK        rival=si d=  29 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  848 ms  ATTACK       rival=si d=  29 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  976 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1136 ms  TRACK        rival=si d=  80 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1144 ms  ATTACK       rival=si d=  80 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1344 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[arbitro] asalto 20/30  lado     rival fuera     +1   1.36 s
+[planta] asalto=20 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 188192 ms
+[arranque] pulsador=183192 permiso=188192 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 188192 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 18 contact points.
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  208 ms  TRACK        rival=si d=  62 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  216 ms  ATTACK       rival=si d=  62 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  448 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x4
+[gelatina] t=  608 ms  TRACK        rival=si d=  48 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  616 ms  ATTACK       rival=si d=  48 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  944 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+[gelatina] t= 1168 ms  TRACK        rival=si d=  48 mm rumbo=-4532 cdeg  linea=0x0
+[gelatina] t= 1176 ms  ATTACK       rival=si d=  48 mm rumbo=-4532 cdeg  linea=0x0
+[gelatina] t= 1368 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1432 ms  TRACK        rival=si d=  51 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1440 ms  ATTACK       rival=si d=  51 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1800 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1824 ms  TRACK        rival=si d=  49 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1832 ms  ATTACK       rival=si d=  49 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+[gelatina] t= 2328 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2488 ms  ATTACK       rival=si d=  56 mm rumbo=+3000 cdeg  linea=0x8
+[gelatina] t= 2888 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2952 ms  TRACK        rival=si d=  40 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 2960 ms  ATTACK       rival=si d=  40 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 3152 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t= 3184 ms  TRACK        rival=si d= 118 mm rumbo=-6000 cdeg  linea=0x1
+[gelatina] t= 3192 ms  ATTACK       rival=si d= 118 mm rumbo=-6000 cdeg  linea=0x1
+[arbitro] asalto 21/30  espalda  rival fuera     +1   3.34 s
+[planta] asalto=21 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 196848 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=191848 permiso=196848 ms
+[gelatina] permiso de arranque a los 196848 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  77 mm rumbo=+1498 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  77 mm rumbo=+1498 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 100 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 22/30  frente   rival fuera     +1   1.34 s
+[planta] asalto=22 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+1511 cdeg  linea=0x0
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 203496 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=198496 permiso=203496 ms
+[gelatina] permiso de arranque a los 203496 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+1511 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=   88 ms  TRACK        rival=si d=  47 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   96 ms  ATTACK       rival=si d=  47 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  584 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  848 ms  TRACK        rival=si d=  32 mm rumbo=  -92 cdeg  linea=0x0
+[gelatina] t=  856 ms  ATTACK       rival=si d=  32 mm rumbo=  -92 cdeg  linea=0x0
+[gelatina] t= 1016 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t= 1176 ms  TRACK        rival=si d= 496 mm rumbo=+4717 cdeg  linea=0xA
+[gelatina] t= 1208 ms  ATTACK       rival=si d= 100 mm rumbo=+3281 cdeg  linea=0x0
+[arbitro] asalto 23/30  lado     expulsado       -1   1.26 s
+[planta] asalto=23 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d= 267 mm rumbo=+6000 cdeg  linea=0x4
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 210072 ms
+[arranque] pulsador=205072 permiso=210072 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 210072 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 11 contact points.
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  336 ms  TRACK        rival=si d=  68 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  344 ms  ATTACK       rival=si d=  59 mm rumbo=+4490 cdeg  linea=0x0
+[gelatina] t=  544 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t=  640 ms  TRACK        rival=si d=  30 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  648 ms  ATTACK       rival=si d=  30 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1136 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[gelatina] t= 1296 ms  TRACK        rival=si d=  31 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1304 ms  ATTACK       rival=si d=  31 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1504 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1528 ms  TRACK        rival=si d=  30 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1536 ms  ATTACK       rival=si d=  30 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1760 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 1856 ms  TRACK        rival=si d=  45 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1864 ms  ATTACK       rival=si d=  45 mm rumbo=+3000 cdeg  linea=0x0
+[arbitro] asalto 24/30  espalda  rival fuera     +1   2.26 s
+[planta] asalto=24 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 30 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 217648 ms
+[arranque] pulsador=212648 permiso=217648 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 217648 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  81 mm rumbo=+1491 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  81 mm rumbo=+1491 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 100 contact points.
+[gelatina] t=  624 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  688 ms  TRACK        rival=si d=  60 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  696 ms  ATTACK       rival=si d=  60 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[arbitro] asalto 25/30  frente   rival fuera     +1   1.46 s
+[planta] asalto=25 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x3
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 224416 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=219416 permiso=224416 ms
+[gelatina] permiso de arranque a los 224416 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 14 contact points.
+[gelatina] t=   88 ms  TRACK        rival=si d=  72 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   96 ms  ATTACK       rival=si d=  72 mm rumbo=-6000 cdeg  linea=0x0
+[arbitro] asalto 26/30  lado     rival fuera     +1   0.67 s
+[planta] asalto=26 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  31 mm rumbo=   +0 cdeg  linea=0x2
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 230400 ms
+[arranque] pulsador=225400 permiso=230400 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 230400 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  112 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[gelatina] t=  336 ms  TRACK        rival=si d=  47 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  344 ms  ATTACK       rival=si d=  47 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  608 ms  SEARCH       rival=no d=9999 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  672 ms  TRACK        rival=si d=  29 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  680 ms  ATTACK       rival=si d=  29 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1072 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1168 ms  TRACK        rival=si d= 353 mm rumbo=+4857 cdeg  linea=0x0
+[gelatina] t= 1200 ms  ATTACK       rival=si d= 128 mm rumbo=+4634 cdeg  linea=0x0
+[arbitro] asalto 27/30  espalda  expulsado       -1   1.25 s
+[planta] asalto=27 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  70 mm rumbo=+1477 cdeg  linea=0x6
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 29 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 236960 ms
+[arranque] pulsador=231960 permiso=236960 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] permiso de arranque a los 236960 ms
+[gelatina] t=    0 ms  TRACK        rival=si d=  77 mm rumbo=+1468 cdeg  linea=0x0
+[gelatina] t=    8 ms  ATTACK       rival=si d=  77 mm rumbo=+1468 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 55 contact points.
+[gelatina] t=  584 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t=  608 ms  TRACK        rival=si d=  34 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t=  616 ms  ATTACK       rival=si d=  32 mm rumbo=-3004 cdeg  linea=0x0
+[gelatina] t=  880 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 1008 ms  TRACK        rival=si d=  48 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1016 ms  ATTACK       rival=si d=  48 mm rumbo=-3000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t= 1176 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1240 ms  TRACK        rival=si d=  80 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 1248 ms  ATTACK       rival=si d=  80 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2000 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x0
+[gelatina] t= 2032 ms  TRACK        rival=si d=  31 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2040 ms  ATTACK       rival=si d=  31 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 22 contact points.
+[gelatina] t= 2792 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 2888 ms  TRACK        rival=si d=  31 mm rumbo=+2987 cdeg  linea=0x0
+[gelatina] t= 2896 ms  ATTACK       rival=si d=  31 mm rumbo=+2987 cdeg  linea=0x0
+[gelatina] t= 3088 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3152 ms  TRACK        rival=si d= 129 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3160 ms  ATTACK       rival=si d= 129 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[gelatina] t= 3424 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3520 ms  TRACK        rival=si d=  67 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3528 ms  ATTACK       rival=si d=  67 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 3752 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3808 ms  TRACK        rival=si d=  64 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t= 3816 ms  ATTACK       rival=si d=  64 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 20 contact points.
+[gelatina] t= 4576 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4768 ms  TRACK        rival=si d=  31 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4776 ms  ATTACK       rival=si d=  31 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 4976 ms  SEARCH       rival=no d=9999 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 5032 ms  TRACK        rival=si d=  32 mm rumbo=   +0 cdeg  linea=0x0
+[gelatina] t= 5040 ms  ATTACK       rival=si d=  32 mm rumbo=   +0 cdeg  linea=0x0
+[arbitro] asalto 28/30  frente   rival fuera     +1   5.14 s
+[planta] asalto=28 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d=  38 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'rueda' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 17 contact points.
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 247408 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=242408 permiso=247408 ms
+[gelatina] permiso de arranque a los 247408 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 19 contact points.
+[gelatina] t=   63 ms  TRACK        rival=si d=  71 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=   72 ms  ATTACK       rival=si d=  71 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  663 ms  SEARCH       rival=no d=9999 mm rumbo=+3000 cdeg  linea=0x2
+[gelatina] t=  687 ms  TRACK        rival=si d=  31 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  695 ms  ATTACK       rival=si d=  31 mm rumbo=+6000 cdeg  linea=0x8
+[arbitro] asalto 29/30  lado     expulsado       -1   0.78 s
+[planta] asalto=29 mu=1.1 slip=0.0005 aleatorio=0
+[gelatina] t=    0 ms  WAIT         rival=si d= 124 mm rumbo=-4703 cdeg  linea=0x4
+[planta] gelatina V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] gelatina ToF alcance=1200 minimo=30 sigma_rel=0.07
+[gelatina] pulsador recibido: permiso previsto 253504 ms
+[planta] rival V=7.4 R=4 Rpuente=0.5 I0=0.15 Ke=0.0793326178 Kt=0.0483794733
+[sensores] rival ToF alcance=1200 minimo=30 sigma_rel=0.07
+[arranque] pulsador=248504 permiso=253504 ms
+[gelatina] permiso de arranque a los 253504 ms
+[gelatina] t=    0 ms  OPENING      rival=no d=9999 mm rumbo=-4703 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 16 contact points.
+[gelatina] t=  111 ms  SEARCH       rival=no d=9999 mm rumbo=-4703 cdeg  linea=0x0
+[gelatina] t=  208 ms  TRACK        rival=si d=  53 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  215 ms  ATTACK       rival=si d=  53 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t=  471 ms  SEARCH       rival=no d=9999 mm rumbo=+6000 cdeg  linea=0x0
+[gelatina] t=  631 ms  TRACK        rival=si d=  31 mm rumbo=+4511 cdeg  linea=0x0
+[gelatina] t=  639 ms  ATTACK       rival=si d=  31 mm rumbo=+4511 cdeg  linea=0x0
+[gelatina] t=  871 ms  SEARCH       rival=no d=9999 mm rumbo=-3103 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 43 contact points.
+[gelatina] t= 1160 ms  TRACK        rival=si d=  39 mm rumbo=-3000 cdeg  linea=0x0
+[gelatina] t= 1167 ms  ATTACK       rival=si d=  39 mm rumbo=-3000 cdeg  linea=0x2
+[gelatina] t= 1991 ms  SEARCH       rival=no d=9999 mm rumbo=+2918 cdeg  linea=0x8
+[gelatina] t= 2087 ms  TRACK        rival=si d=  58 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2095 ms  ATTACK       rival=si d=  58 mm rumbo=-6000 cdeg  linea=0x0
+[gelatina] t= 2223 ms  SEARCH       rival=no d=9999 mm rumbo=-6000 cdeg  linea=0x0
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 13 contact points.
+[gelatina] t= 2416 ms  ATTACK       rival=si d=  26 mm rumbo=-3000 cdeg  linea=0x2
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+WARNING: Contact joints between materials 'patin' and 'dohyo' will only be created for the 10 deepest contact points instead of all the 12 contact points.
+[arbitro] asalto 30/30  espalda  rival fuera     +1   4.42 s
+
+[arbitro] RESULTADO  20W 10L 0D  win rate 66.7%  auto-salidas 1  t medio de victoria 2.91 s
+
+[arbitro]   frente   8W 2L 0D
+[arbitro]   lado     6W 4L 0D
+[arbitro]   espalda  6W 4L 0D
+[arbitro]   combate: gana 74.4%  jueces 0.0%  pierde 25.6%
+[arbitro] resultados -> ../../../../result.json
+INFO: 'arbitro' controller exited successfully.
+INFO: medido: Terminating.
+INFO: oponente: Terminating.

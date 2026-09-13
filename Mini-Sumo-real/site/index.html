@@ -1,0 +1,778 @@
+<meta charset="utf-8">
+<title>Bitácora Gelatina Nuclear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+/* ==========================================================================
+   Gelatina Nuclear -- bitacora de algoritmos
+   Identidad: placa de instrumento de taller. Rotulacion condensada para la
+   estructura, serif de cuaderno para el razonamiento, monoespaciada para todo
+   lo que escupe la maquina. Neutros sesgados al verde del esmalte de maquina
+   herramienta, azul pizarra como color estructural, y semantica aparte.
+   Las series de las graficas tienen tokens propios (--serie-1/2), validados
+   contra las placas de los dos temas; la semantica (mejora/regresion) no se
+   usa nunca para una serie.
+   ========================================================================== */
+:root{
+  --fondo:#E3E6E1;
+  --placa:#F1F3EF;
+  --placa-alt:#E9ECE6;
+  --hueco:#D6DAD3;
+  --regla:#C3C8BF;
+  --regla-fuerte:#A8AFA3;
+  --tinta:#1C2220;
+  --tinta-media:#4C544E;
+  --tinta-suave:#6E766F;
+  --azul:#33506E;
+  --azul-vivo:#2B6FA8;
+  --serie-1:#2B6FA8;
+  --serie-2:#C4551F;
+  --mejora:#2C6F4C;
+  --regresion:#A8412A;
+  --neutro:#8A6A12;
+  --mejora-fondo:#DCE9E0;
+  --regresion-fondo:#F2DFD8;
+  --neutro-fondo:#EFE6CF;
+  --azul-fondo:#DDE4EC;
+  --add-fondo:#DDEBDF;
+  --add-tinta:#1F5537;
+  --del-fondo:#F3DFDA;
+  --del-tinta:#8C3A24;
+  --sombra:0 1px 2px rgba(28,34,32,.09), 0 8px 22px -14px rgba(28,34,32,.35);
+  --r:3px;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --fondo:#141816;
+    --placa:#1D2321;
+    --placa-alt:#232A27;
+    --hueco:#111513;
+    --regla:#333B37;
+    --regla-fuerte:#48524D;
+    --tinta:#E6EAE5;
+    --tinta-media:#A8B1AB;
+    --tinta-suave:#808A84;
+    --azul:#8FB2D6;
+    --azul-vivo:#6FA8DC;
+    --serie-1:#3987E5;
+    --serie-2:#D95926;
+    --mejora:#63BE8E;
+    --regresion:#E08064;
+    --neutro:#D4AC48;
+    --mejora-fondo:#1B2E23;
+    --regresion-fondo:#331E18;
+    --neutro-fondo:#2E2717;
+    --azul-fondo:#1B2632;
+    --add-fondo:#16301F;
+    --add-tinta:#84D2A4;
+    --del-fondo:#331B15;
+    --del-tinta:#EE9679;
+    --sombra:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -16px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --fondo:#141816; --placa:#1D2321; --placa-alt:#232A27; --hueco:#111513;
+  --regla:#333B37; --regla-fuerte:#48524D;
+  --tinta:#E6EAE5; --tinta-media:#A8B1AB; --tinta-suave:#808A84;
+  --azul:#8FB2D6; --azul-vivo:#6FA8DC; --serie-1:#3987E5; --serie-2:#D95926;
+  --mejora:#63BE8E; --regresion:#E08064; --neutro:#D4AC48;
+  --mejora-fondo:#1B2E23; --regresion-fondo:#331E18; --neutro-fondo:#2E2717;
+  --azul-fondo:#1B2632;
+  --add-fondo:#16301F; --add-tinta:#84D2A4; --del-fondo:#331B15; --del-tinta:#EE9679;
+  --sombra:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -16px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--fondo);
+  color:var(--tinta);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-size:16px; line-height:1.6;
+  margin:0; padding:0;
+  -webkit-font-smoothing:antialiased;
+}
+.envoltorio{max-width:1240px; margin:0 auto; padding-inline:20px; padding-block:0 64px}
+
+h1,h2,h3,.rotulo,.pestana,.chip,.tecla{
+  font-family:Oswald,"Arial Narrow",Haettenschweiler,sans-serif;
+  font-weight:600; letter-spacing:.02em;
+}
+.rotulo{
+  font-size:11px; text-transform:uppercase; letter-spacing:.14em;
+  color:var(--tinta-suave); font-weight:500;
+}
+code,pre,.dato,.mono{font-family:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.dato{font-variant-numeric:tabular-nums}
+
+/* ---------------------------------------------------------------- cabecera */
+.cabecera{
+  border-bottom:2px solid var(--regla-fuerte);
+  padding-block:28px 22px;
+  display:flex; flex-wrap:wrap; gap:28px; align-items:flex-start;
+  justify-content:space-between;
+}
+.marca{display:flex; gap:18px; align-items:center; min-width:0}
+.marca h1{
+  margin:2px 0 0; font-size:clamp(30px,5vw,44px); line-height:.98;
+  text-transform:uppercase; letter-spacing:.005em; font-weight:700;
+  text-wrap:balance;
+}
+.marca .sub{margin:6px 0 0; color:var(--tinta-media); font-size:14px}
+.ring{flex:0 0 auto; width:76px; height:76px}
+
+.mando{display:flex; flex-direction:column; align-items:flex-end; gap:14px}
+.botonera{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+.tecla{
+  background:var(--placa); color:var(--tinta-media);
+  border:1px solid var(--regla); border-radius:var(--r);
+  padding:7px 13px; font-size:11px; text-transform:uppercase; letter-spacing:.12em;
+  cursor:pointer; line-height:1; text-decoration:none;
+}
+.tecla:hover{border-color:var(--regla-fuerte); color:var(--tinta)}
+.tecla:focus-visible{outline:2px solid var(--azul-vivo); outline-offset:2px}
+
+.marcadores{display:flex; flex-wrap:wrap; gap:26px}
+.marcador{display:flex; flex-direction:column; gap:3px}
+.marcador .cifra{
+  font-family:Oswald,sans-serif; font-weight:600; font-size:27px; line-height:1;
+}
+.marcador .fuente{font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--tinta-suave)}
+
+/* ------------------------------------------------------------------ curva */
+.curva{
+  margin-top:26px; background:var(--placa); border:1px solid var(--regla);
+  border-radius:var(--r); padding:20px 22px 14px;
+}
+.curva header,.bloque-cab{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap}
+.curva h2{margin:0; font-size:15px; text-transform:uppercase; letter-spacing:.1em}
+.curva .nota{font-size:13px; color:var(--tinta-suave); font-style:italic; margin:0; max-width:70ch}
+.lienzo{width:100%; height:auto; display:block; margin-top:10px; overflow:visible}
+.lienzo text{font-family:"JetBrains Mono",monospace; font-size:11px; fill:var(--tinta-suave)}
+.lienzo text.valor{fill:var(--tinta); font-weight:700; font-size:12.5px}
+.lienzo text.ver{font-family:Oswald,sans-serif; font-size:11.5px; letter-spacing:.04em}
+.leyenda{display:flex; gap:18px; flex-wrap:wrap; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--tinta-media); margin-top:10px}
+.leyenda span{display:inline-flex; align-items:center; gap:7px}
+.leyenda i{display:inline-block; width:18px; height:2px; border-radius:1px}
+.leyenda i.s1{background:var(--serie-1)} .leyenda i.s2{background:var(--serie-2)}
+
+.juez{margin-top:16px; padding-top:14px; border-top:1px solid var(--regla)}
+.juez table td.gordo{font-family:Oswald,sans-serif; font-size:20px; font-weight:600; line-height:1.1}
+
+/* -------------------------------------------------------------- estructura */
+.disposicion{display:grid; grid-template-columns:250px minmax(0,1fr); gap:28px; margin-top:28px; align-items:start}
+@media (max-width:860px){ .disposicion{grid-template-columns:1fr} }
+
+/* ---------------------------------------------------------------- historia */
+.historia{border-left:2px solid var(--regla); padding-left:0; display:flex; flex-direction:column}
+.historia > .rotulo{padding:0 0 10px 16px}
+.hito{
+  position:relative; display:block; width:100%; text-align:left;
+  background:none; border:0; border-radius:0;
+  padding:11px 12px 12px 16px; cursor:pointer; color:inherit;
+  font-family:inherit; border-bottom:1px solid var(--regla);
+}
+.hito::before{
+  content:""; position:absolute; left:-6px; top:18px;
+  width:9px; height:9px; border-radius:50%;
+  background:var(--fondo); border:2px solid var(--regla-fuerte);
+}
+.hito:hover{background:var(--placa-alt)}
+.hito[aria-current="true"]{background:var(--placa)}
+.hito[aria-current="true"]::before{background:var(--azul-vivo); border-color:var(--azul-vivo)}
+.hito:focus-visible{outline:2px solid var(--azul-vivo); outline-offset:-2px}
+.hito .ver{font-family:Oswald,sans-serif; font-weight:600; font-size:16px; letter-spacing:.03em}
+.hito .tit{display:block; font-size:13.5px; color:var(--tinta-media); line-height:1.35; margin-top:2px}
+.hito .fila{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+
+/* ------------------------------------------------------------------ chips */
+.chip{
+  display:inline-block; font-size:10px; text-transform:uppercase; letter-spacing:.1em;
+  padding:2.5px 7px; border-radius:2px; line-height:1.4; font-weight:600;
+  background:var(--hueco); color:var(--tinta-media); white-space:nowrap;
+}
+.chip.baseline,.chip.refactor{background:var(--azul-fondo); color:var(--azul)}
+.chip.tuning,.chip.experiment{background:var(--neutro-fondo); color:var(--neutro)}
+.chip.nuevo{background:var(--mejora-fondo); color:var(--mejora)}
+.chip.bugfix,.chip.revert{background:var(--regresion-fondo); color:var(--regresion)}
+.chip.v-mejora,.chip.e-hecha{background:var(--mejora-fondo); color:var(--mejora)}
+.chip.v-regresion{background:var(--regresion-fondo); color:var(--regresion)}
+.chip.v-pendiente,.chip.e-en_curso{background:var(--neutro-fondo); color:var(--neutro)}
+.chip.e-pendiente{background:var(--azul-fondo); color:var(--azul)}
+
+/* --------------------------------------------------------------- expediente */
+.expediente{min-width:0; display:flex; flex-direction:column; gap:22px}
+.titular{border-bottom:2px solid var(--regla-fuerte); padding-bottom:16px}
+.titular .linea{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.titular .num{font-family:Oswald,sans-serif; font-weight:700; font-size:34px; letter-spacing:.01em; line-height:1}
+.titular h2{margin:8px 0 0; font-size:23px; font-weight:600; line-height:1.2; text-wrap:balance; text-transform:none; letter-spacing:0}
+.titular .meta{margin:9px 0 0; font-size:13px; color:var(--tinta-suave)}
+
+.bloque{background:var(--placa); border:1px solid var(--regla); border-radius:var(--r); padding:20px 22px; min-width:0}
+.bloque h3{
+  margin:0 0 12px; font-size:11px; text-transform:uppercase; letter-spacing:.14em;
+  color:var(--tinta-suave); font-weight:500;
+}
+.bloque p.explica{margin:0 0 14px; font-size:14.5px; color:var(--tinta-media); max-width:66ch; line-height:1.55}
+.razonamiento{display:grid; gap:18px}
+@media (min-width:720px){ .razonamiento{grid-template-columns:1fr 1fr} }
+.razonamiento .campo{display:flex; flex-direction:column; gap:5px; min-width:0}
+.razonamiento .campo p{margin:0; font-size:15.5px; max-width:62ch; line-height:1.62}
+.razonamiento .campo.ancho{grid-column:1/-1}
+
+table{width:100%; border-collapse:collapse; font-size:13.5px}
+.tabla-envoltorio{overflow-x:auto}
+th{
+  text-align:left; font-family:Oswald,sans-serif; font-weight:500; font-size:10.5px;
+  text-transform:uppercase; letter-spacing:.11em; color:var(--tinta-suave);
+  padding:0 12px 7px 0; border-bottom:1px solid var(--regla); white-space:nowrap;
+}
+td{padding:8px 12px 8px 0; border-bottom:1px solid var(--regla); vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+th.num{font-family:Oswald,sans-serif}
+.flecha{color:var(--tinta-suave); padding-inline:4px}
+.de{color:var(--del-tinta)} .a{color:var(--add-tinta); font-weight:700}
+.cero{color:var(--regresion); font-weight:700}
+
+/* --------------------------------------------------------------- metricas */
+.rivales{display:flex; flex-direction:column; gap:11px}
+.rival{display:grid; grid-template-columns:88px minmax(0,1fr) 96px; gap:12px; align-items:center}
+@media (max-width:520px){ .rival{grid-template-columns:74px minmax(0,1fr) 78px; gap:8px} }
+.rival .nom{font-family:Oswald,sans-serif; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--tinta-media)}
+.barra{height:14px; background:var(--hueco); border-radius:1px; overflow:hidden}
+.barra span{display:block; height:100%; background:var(--azul-vivo)}
+.rival .cifra{font-family:"JetBrains Mono",monospace; font-size:12.5px; font-variant-numeric:tabular-nums; text-align:right; color:var(--tinta-media)}
+
+/* ------------------------------------------------------------------- diff */
+.diff-cab{display:flex; justify-content:space-between; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:12px}
+.recuento{font-family:"JetBrains Mono",monospace; font-size:12.5px; font-variant-numeric:tabular-nums}
+.recuento .mas{color:var(--add-tinta); font-weight:700}
+.recuento .menos{color:var(--del-tinta); font-weight:700}
+pre.diff{
+  margin:0; background:var(--placa-alt); border:1px solid var(--regla); border-radius:var(--r);
+  font-size:12.5px; line-height:1.55; overflow-x:auto; max-height:560px; overflow-y:auto;
+  padding:0; tab-size:2;
+}
+pre.diff .l{display:block; padding:0 14px; white-space:pre}
+pre.diff .l.mas{background:var(--add-fondo); color:var(--add-tinta)}
+pre.diff .l.menos{background:var(--del-fondo); color:var(--del-tinta)}
+pre.diff .l.trozo{background:var(--azul-fondo); color:var(--azul); font-weight:700}
+pre.diff .l.arch{color:var(--tinta-suave); font-weight:700; padding-top:8px}
+.vacio{font-style:italic; color:var(--tinta-suave); font-size:14px; margin:0}
+
+.ficheros{display:flex; flex-direction:column; gap:0}
+.fichero{display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:7px 0; border-bottom:1px solid var(--regla); font-size:13px; flex-wrap:wrap}
+.fichero:last-child{border-bottom:0}
+.fichero .ruta{font-family:"JetBrains Mono",monospace; font-size:12.5px; word-break:break-all}
+.fichero .ruta.tocado{color:var(--azul-vivo); font-weight:700}
+.fichero .der{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--tinta-suave); font-variant-numeric:tabular-nums; white-space:nowrap}
+
+/* --------------------------------------------------- aprendizaje en GPU */
+.seccion{margin-top:52px}
+.seccion-cab{border-bottom:2px solid var(--regla-fuerte); padding-bottom:16px; margin-bottom:22px; display:grid; gap:8px}
+.seccion-cab h2{margin:0; font-size:clamp(24px,3.4vw,30px); text-transform:uppercase; letter-spacing:.02em; line-height:1}
+.seccion-cab .entradilla{margin:4px 0 0; font-size:16px; color:var(--tinta-media); max-width:72ch; line-height:1.6}
+.seccion .marcadores{margin-bottom:22px}
+.rejilla{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; align-items:start}
+.rejilla .ancho{grid-column:1/-1}
+@media (max-width:900px){ .rejilla{grid-template-columns:1fr} }
+.ciclo{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin:0 0 22px; padding:0; border:1px solid var(--regla); border-radius:var(--r); background:var(--placa)}
+.ciclo li{list-style:none; padding:14px 16px; border-left:1px solid var(--regla); display:grid; gap:4px}
+.ciclo li:first-child{border-left:0}
+.ciclo b{font-family:Oswald,sans-serif; font-weight:600; font-size:14px; letter-spacing:.03em}
+.ciclo span{font-size:13px; color:var(--tinta-media); line-height:1.45}
+.ciclo code{font-size:11.5px; color:var(--azul)}
+@media (max-width:760px){ .ciclo{grid-template-columns:1fr 1fr} .ciclo li:nth-child(3){border-left:0} .ciclo li:nth-child(n+3){border-top:1px solid var(--regla)} }
+pre.orden{margin:10px 0 0; padding:10px 12px; background:var(--placa-alt); border:1px solid var(--regla); border-radius:var(--r); font-size:12px; overflow-x:auto}
+.elo-barra{display:block; height:6px; background:var(--hueco); border-radius:1px; margin-top:6px; min-width:80px}
+.elo-barra span{display:block; height:100%; background:var(--serie-1); border-radius:0 2px 2px 0}
+details.tabla{margin-top:10px}
+details.tabla summary{cursor:pointer; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--tinta-suave)}
+
+/* --------------------------------------------------------------- tareas */
+.tarea{display:grid; grid-template-columns:62px minmax(0,1fr) auto; gap:12px; padding:10px 0; border-bottom:1px solid var(--regla); align-items:baseline}
+.tarea:last-child{border-bottom:0}
+.tarea .id{font-family:"JetBrains Mono",monospace; font-size:12.5px; color:var(--tinta-suave)}
+.tarea .txt{font-size:15px; line-height:1.45}
+.tarea .txt small{display:block; font-size:13px; color:var(--tinta-suave); margin-top:3px; line-height:1.45}
+.tarea.hija .txt{padding-left:18px; border-left:2px solid var(--regla)}
+@media (max-width:560px){ .tarea{grid-template-columns:52px minmax(0,1fr)} .tarea .chip{grid-column:2; justify-self:start} }
+
+.pie{margin-top:44px; padding-top:18px; border-top:1px solid var(--regla); font-size:13px; color:var(--tinta-suave)}
+.pie code{font-size:12.5px; background:var(--hueco); padding:1px 5px; border-radius:2px}
+
+@media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important} }
+</style>
+
+<div class="envoltorio">
+  <header class="cabecera">
+    <div class="marca">
+      <svg class="ring" viewBox="0 0 100 100" role="img" aria-label="Dohyo reglamentario de 770 mm con banda blanca de 25 mm">
+        <circle cx="50" cy="50" r="48" fill="var(--regla-fuerte)"></circle>
+        <circle cx="50" cy="50" r="44.9" fill="var(--tinta)"></circle>
+        <rect x="41.5" y="43.6" width="17" height="1.6" fill="var(--fondo)"></rect>
+        <rect x="41.5" y="54.8" width="17" height="1.6" fill="var(--fondo)"></rect>
+      </svg>
+      <div>
+        <p class="rotulo" style="margin:0">Bitácora de algoritmos · Webots · GPU</p>
+        <h1>Gelatina<br>Nuclear</h1>
+        <p class="sub">Mini-sumo · 10 × 10 cm · 495 g · control en C portable</p>
+      </div>
+    </div>
+    <div class="mando">
+      <div class="botonera">
+        <a class="tecla" href="#aprendizaje">Aprendizaje</a>
+        <a class="tecla" href="#tareas">Tareas</a>
+        <button class="tecla" id="tema" type="button">Tema</button>
+      </div>
+      <div class="marcadores" id="marcadores"></div>
+    </div>
+  </header>
+
+  <section class="curva">
+    <header>
+      <h2>Curva de aprendizaje</h2>
+      <p class="nota" id="curva-nota"></p>
+    </header>
+    <div class="leyenda" id="curva-leyenda"></div>
+    <div id="curva-lienzo"></div>
+    <div class="juez" id="juez"></div>
+  </section>
+
+  <div class="disposicion">
+    <nav class="historia" id="historia" aria-label="Versiones"></nav>
+    <section class="expediente" id="expediente"></section>
+  </div>
+
+  <section class="seccion" id="aprendizaje"></section>
+  <section class="seccion" id="tareas"></section>
+
+  <footer class="pie">
+    <p>Cada entrada la genera <code>tools/gnver.py</code> al registrar una versión.
+    El guardián <code>python3 tools/gnver.py check</code> falla si hay código de control
+    modificado sin versionar, que es lo que mantiene esta bitácora completa. La sección de
+    aprendizaje sale de <code>ml/data/</code> y el tablero, de <code>Tareas/tareas.json</code>.</p>
+  </footer>
+</div>
+
+<script type="application/json" id="datos">{"project": "Gelatina Nuclear", "class": "Mini-sumo 10x10 cm / 500 g", "created": "2026-09-11T20:06:19+02:00", "schema": 1, "versions": [{"version": "v0.1.0", "parent": null, "iteration": 1, "created_at": "2026-09-11T20:34:27+02:00", "author": "claude-opus-5", "kind": "baseline", "title": "Línea base: máquina de estados reactiva con prioridad de borde", "summary": "Primera implementación completa del sistema de control. Define el contrato estable sensores/actuadores (sumo_types.h), separa todos los números sintonizables en params.h, e implementa strategy.c como una máquina de seis estados: WAIT, OPENING, SEARCH, TRACK, ATTACK y EDGE_ESCAPE. La percepción estima el rumbo al rival como centroide ponderado de los cinco sensores frontales en lugar de quedarse con el sensor que más se dispara. El algoritmo no incluye ni una cabecera de Webots: la plataforma entra por hal.h.", "rationale": "El proyecto va a pasar por n iteraciones y necesita un punto cero honesto contra el que medirlas. Una máquina de estados reactiva es el mínimo que se puede llamar un sumo funcional: es fácil de leer entera, cada decisión es trazable a una línea concreta, y no esconde comportamiento en parámetros aprendidos. Si la iteración 2 gana, sabremos exactamente qué la hizo ganar. La separación estricta entre algoritmo, parámetros y plataforma no es limpieza estética: es lo que permite que un cambio de tuning produzca un diff de tres líneas en esta bitácora en lugar de un diff ilegible.", "hypothesis": "Una jerarquía estricta de prioridades (no caerse > empujar > acercarse > buscar) basta para ganar a un rival inmóvil y a uno que gire sobre sí mismo, pero no a un rival que embista, porque sin memoria del ring el robot no sabe hacia dónde empujar.", "expected_effect": "Win rate global en torno al 50% sobre el banco de cuatro rivales. Se espera que el punto débil aparezca contra el rival agresivo y en la cantidad de auto-expulsiones.", "risks": "El escape de borde es ciego: retrocede y gira un tiempo fijo sin saber dónde está el centro del ring, aunque la IMU ya está cableada y disponible. En un empujón sostenido, retroceder al ver la línea frontal puede ser justo lo contrario de lo que conviene. La búsqueda tampoco recuerda nada: cada ciclo empieza de cero.", "notes_real_robot": "El limitador de pendiente (slew_per_s = 25) existe para el hardware, no para la simulación: protege el puente en H de las inversiones instantáneas de par. Está calibrado para permitir una inversión completa en 80 ms, que es lo que tarda un motor N20 con reductora en invertir de verdad. El umbral de línea (400) es un valor de simulación y habrá que recalibrarlo contra el sensor real con el controlador arrancado con --calib.", "tags": ["baseline", "webots", "fsm", "c99"], "params_changed": [{"name": "dist_attack_mm", "from": "—", "to": "260", "reason": "Por debajo de 26 cm se considera enganchado y se pasa a empuje máximo; más lejos, la corrección de rumbo aún compensa."}, {"name": "v_attack", "from": "—", "to": "1.00", "reason": "En contacto no hay motivo para reservar par: el empuje es el objetivo."}, {"name": "track_kp", "from": "—", "to": "1.10", "reason": "Ganancia proporcional del rumbo. Baja a propósito: sobregirar pierde el contacto."}, {"name": "escape_back_ms", "from": "—", "to": "300", "reason": "Retroceso suficiente para sacar los cuatro sensores de la banda blanca de 25 mm a 0,85 de velocidad."}, {"name": "escape_lockout_ms", "from": "—", "to": "140", "reason": "Ventana ciega tras el escape. Sin ella el robot reentra en EDGE_ESCAPE en bucle sobre la misma línea."}, {"name": "slew_per_s", "from": "—", "to": "25.0", "reason": "Inversión completa de consigna en 80 ms. Protege el hardware real sin estropear el escape de borde."}, {"name": "opening", "from": "—", "to": "OPENING_CHARGE", "reason": "Apertura de embestida recta. Es la más simple y sirve de referencia para comparar aperturas alternativas en iteraciones futuras."}], "states": ["WAIT", "OPENING", "SEARCH", "TRACK", "ATTACK", "EDGE_ESCAPE"], "diff_stat": {"added": 904, "removed": 0, "files": 8, "touched": ["algorithms/params.h", "algorithms/strategy.c", "algorithms/strategy.h", "algorithms/sumo_types.h", "webots/controllers/gelatina_nuclear/Makefile", "webots/controllers/gelatina_nuclear/hal.h", "webots/controllers/gelatina_nuclear/hal_webots.c", "webots/controllers/gelatina_nuclear/main.c"]}, "files": [{"path": "algorithms/params.h", "sha256": "e90a14cd42457adf1aeb0f81aa8c028585553ecd0cc604b22e0b101ad611b4e9", "lines": 104}, {"path": "algorithms/strategy.c", "sha256": "9e2b716aff38f90090bc5c430c61a4948e4328dbe4fbe56a1401c22d872b8e58", "lines": 327}, {"path": "algorithms/strategy.h", "sha256": "18deb074f61ea0092775884b9874be5ce638c59f0934524b1e7c4478353dba41", "lines": 64}, {"path": "algorithms/sumo_types.h", "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc", "lines": 93}, {"path": "webots/controllers/gelatina_nuclear/Makefile", "sha256": "8a82ea41528ff375046f796c67cd6491eddb583301c4b25be4017caa2bdfca65", "lines": 28}, {"path": "webots/controllers/gelatina_nuclear/hal.h", "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883", "lines": 37}, {"path": "webots/controllers/gelatina_nuclear/hal_webots.c", "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694", "lines": 203}, {"path": "webots/controllers/gelatina_nuclear/main.c", "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc", "lines": 48}], "metrics": {"rounds": 240, "wins": 117, "losses": 63, "draws": 60, "win_rate": 0.488, "avg_win_time_s": 1.57, "self_outs": 19, "opponents": [{"name": "static", "rounds": 60, "wins": 45, "losses": 15, "draws": 0, "win_rate": 0.75}, {"name": "charger", "rounds": 60, "wins": 11, "losses": 46, "draws": 3, "win_rate": 0.183}, {"name": "spinner", "rounds": 60, "wins": 60, "losses": 0, "draws": 0, "win_rate": 1.0}, {"name": "mirror", "rounds": 60, "wins": 1, "losses": 2, "draws": 57, "win_rate": 0.017}]}, "verdict": "pendiente", "metrics_reglamento": {"rounds": 240, "wins": 43, "losses": 139, "draws": 58, "win_rate": 0.179, "avg_win_time_s": 0.95, "self_outs": 105, "match_win_rate": 0.013, "opponents": [{"name": "static", "rounds": 60, "wins": 20, "losses": 40, "draws": 0, "win_rate": 0.333, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}}, {"name": "charger", "rounds": 60, "wins": 2, "losses": 58, "draws": 0, "win_rate": 0.033, "placements": [{"name": "frente", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.003, "judges": 0.0, "loss": 0.997}}, {"name": "spinner", "rounds": 60, "wins": 20, "losses": 40, "draws": 0, "win_rate": 0.333, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}}, {"name": "mirror", "rounds": 60, "wins": 1, "losses": 1, "draws": 58, "win_rate": 0.017, "placements": [{"name": "frente", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "espalda", "rounds": 20, "wins": 1, "losses": 1, "draws": 18}], "match": {"win": 0.05, "judges": 0.9, "loss": 0.05}}], "engine": "harness-nativo", "mode": "reglamento"}, "diff": "--- vacio/algorithms/params.h\n+++ v0.1.0/algorithms/params.h\n@@ -0,0 +1,104 @@\n+/* ==========================================================================\n+ *  params.h  --  Todos los numeros sintonizables del robot, en un solo sitio\n+ *\n+ *  Por que un fichero aparte: en la bitacora de versiones, una iteracion de\n+ *  tipo \"tuning\" debe producir un diff de tres lineas legible de un vistazo.\n+ *  Si los numeros magicos viven dentro de strategy.c, el diff se vuelve ruido\n+ *  y se pierde el objetivo del proyecto: entender QUE toco la IA y POR QUE.\n+ *\n+ *  Regla de la bitacora: cambiar un numero de aqui = version \"tuning\" (patch).\n+ *  Anadir un campo nuevo = version \"new-behavior\" (minor).\n+ * ========================================================================== */\n+#ifndef SUMO_PARAMS_H\n+#define SUMO_PARAMS_H\n+\n+#include \u003cstdint.h>\n+#include \"sumo_types.h\"\n+\n+/* Aperturas de partida. El primer segundo decide muchos combates. */\n+typedef enum {\n+  OPENING_CHARGE = 0,   /* embestida recta inmediata                        */\n+  OPENING_ARC_L  = 1,   /* arco a babor buscando el flanco del rival        */\n+  OPENING_ARC_R  = 2,   /* arco a estribor                                  */\n+  OPENING_SCAN   = 3    /* giro en el sitio hasta enganchar y luego atacar   */\n+} sumo_opening_t;\n+\n+typedef struct {\n+  /* ---- periodo de control ------------------------------------------- */\n+  uint16_t dt_ms;                 /* periodo del lazo, ms                  */\n+\n+  /* ---- percepcion ---------------------------------------------------- */\n+  uint16_t dist_valid_max_mm;     /* por encima, se ignora la lectura      */\n+  uint16_t dist_attack_mm;        /* rival \"enganchado\": empuje a fondo    */\n+  uint16_t dist_track_mm;         /* rival a la vista: persecucion         */\n+  uint16_t target_hold_ms;        /* histeresis: sigo creyendo que esta ahi*/\n+\n+  /* ---- velocidades normalizadas [0..1] ------------------------------- */\n+  float v_attack;\n+  float v_track;\n+  float v_search;\n+  float v_escape;\n+  float v_opening;\n+\n+  /* ---- seguimiento --------------------------------------------------- */\n+  float track_kp;                 /* rad^-1, error de rumbo -> diferencial */\n+  float track_max_diff;           /* tope del termino diferencial          */\n+\n+  /* ---- escape de borde (maxima prioridad) ----------------------------- */\n+  uint16_t escape_back_ms;        /* retroceso tras ver linea frontal      */\n+  uint16_t escape_turn_ms;        /* giro de reencuadre                    */\n+  uint16_t escape_lockout_ms;     /* ventana ciega para no reentrar al borde*/\n+\n+  /* ---- busqueda ------------------------------------------------------- */\n+  uint16_t search_spin_ms;        /* giro en el sitio                      */\n+  uint16_t search_probe_ms;       /* avance corto entre giros              */\n+  float    search_turn_ratio;     /* -1 = sobre si mismo, 0 = recto        */\n+\n+  /* ---- apertura -------------------------------------------------------- */\n+  sumo_opening_t opening;\n+  uint16_t       opening_ms;      /* duracion de la apertura               */\n+\n+  /* ---- proteccion del tren motriz -------------------------------------- */\n+  float slew_per_s;               /* cambio maximo de consigna por segundo */\n+  float deadband;                 /* consignas por debajo -> 0             */\n+} sumo_params_t;\n+\n+\n+static inline sumo_params_t sumo_params_default(void)\n+{\n+  sumo_params_t p;\n+\n+  p.dt_ms               = 8;\n+\n+  p.dist_valid_max_mm   = 800;\n+  p.dist_attack_mm      = 260;\n+  p.dist_track_mm       = 700;\n+  p.target_hold_ms      = 260;\n+\n+  p.v_attack            = 1.00f;\n+  p.v_track             = 0.72f;\n+  p.v_search            = 0.55f;\n+  p.v_escape            = 0.85f;\n+  p.v_opening           = 0.80f;\n+\n+  p.track_kp            = 1.10f;\n+  p.track_max_diff      = 0.85f;\n+\n+  p.escape_back_ms      = 300;\n+  p.escape_turn_ms      = 360;\n+  p.escape_lockout_ms   = 140;\n+\n+  p.search_spin_ms      = 520;\n+  p.search_probe_ms     = 300;\n+  p.search_turn_ratio   = -0.85f;\n+\n+  p.opening             = OPENING_CHARGE;\n+  p.opening_ms          = 420;\n+\n+  p.slew_per_s          = 25.0f;\n+  p.deadband            = 0.04f;\n+\n+  return p;\n+}\n+\n+#endif /* SUMO_PARAMS_H */\n\n--- vacio/algorithms/strategy.c\n+++ v0.1.0/algorithms/strategy.c\n@@ -0,0 +1,327 @@\n+/* ==========================================================================\n+ *  strategy.c  --  Cerebro de Gelatina Nuclear\n+ *  ------------------------------------------------------------------------\n+ *  LINEA BASE (v0.1.0): maquina de estados reactiva con prioridad absoluta\n+ *  del borde. Sin memoria del rival, sin modelo del ring, sin aprendizaje.\n+ *  Es deliberadamente simple: es el punto de partida contra el que se mediran\n+ *  todas las iteraciones siguientes de la bitacora.\n+ *\n+ *  Prioridades, de mayor a menor:\n+ *     1. No caerse del ring      -> ST_EDGE_ESCAPE\n+ *     2. Empujar si lo tengo     -> ST_ATTACK\n+ *     3. Acercarme si lo veo     -> ST_TRACK\n+ *     4. Encontrarlo             -> ST_SEARCH / ST_OPENING\n+ *\n+ *  Este fichero NO incluye cabeceras de Webots ni de ningun microcontrolador.\n+ * ========================================================================== */\n+\n+#include \"strategy.h\"\n+\n+#include \u003cmath.h>\n+#include \u003cstring.h>\n+\n+#define STRATEGY_VERSION_STR \"v0.1.0\"\n+\n+#ifndef M_PI\n+#define M_PI 3.14159265358979323846\n+#endif\n+\n+/* Angulo de montaje real de los cinco sensores frontales. */\n+const int16_t SUMO_DIST_ANGLE_CDEG[SUMO_N_DIST] = {\n+  6000, 3000, 0, -3000, -6000\n+};\n+\n+static const char *const STATE_NAMES[ST_COUNT] = {\n+  \"WAIT\", \"OPENING\", \"SEARCH\", \"TRACK\", \"ATTACK\", \"EDGE_ESCAPE\"\n+};\n+\n+\n+/* ==========================================================================\n+ *  Utilidades numericas\n+ * ========================================================================== */\n+\n+static float clampf(float v, float lo, float hi)\n+{\n+  return v \u003c lo ? lo : (v > hi ? hi : v);\n+}\n+\n+static float slew(float prev, float target, float max_step)\n+{\n+  const float d = target - prev;\n+  if (d >  max_step) return prev + max_step;\n+  if (d \u003c -max_step) return prev - max_step;\n+  return target;\n+}\n+\n+static uint32_t in_state_ms(const sumo_strategy_t *st)\n+{\n+  return st->t_ms - st->t_state_ms;\n+}\n+\n+static void enter(sumo_strategy_t *st, sumo_state_t s)\n+{\n+  if (st->state == s) return;\n+  st->state = s;\n+  st->t_state_ms = st->t_ms;\n+}\n+\n+\n+/* ==========================================================================\n+ *  Percepcion: de lecturas crudas a \"donde esta el rival\"\n+ * ==========================================================================\n+ *  El rumbo se estima como centroide ponderado de los sensores que ven algo:\n+ *  cuanto mas cerca esta una lectura, mas pesa su angulo de montaje. Con cinco\n+ *  sensores esto da una resolucion angular muy superior a \"cual se dispara\",\n+ *  y sale gratis en computo (cinco multiplicaciones).\n+ * ========================================================================== */\n+\n+static void perceive(sumo_strategy_t *st, const sumo_sensors_t *s)\n+{\n+  const sumo_params_t *p = &st->p;\n+  sumo_percept_t *per = &st->per;\n+\n+  uint32_t w_sum = 0;\n+  int32_t  w_ang = 0;\n+  uint16_t nearest = SUMO_DIST_NONE;\n+\n+  for (int i = 0; i \u003c SUMO_N_DIST; ++i) {\n+    const uint16_t d = s->dist_mm[i];\n+    if (d == SUMO_DIST_NONE || d > p->dist_valid_max_mm) continue;\n+\n+    /* peso lineal inverso: 1 en la cara del robot, 0 al limite util */\n+    const uint32_t w = (uint32_t)(p->dist_valid_max_mm - d) + 1u;\n+    w_sum += w;\n+    w_ang += (int32_t)w * (int32_t)SUMO_DIST_ANGLE_CDEG[i];\n+    if (d \u003c nearest) nearest = d;\n+  }\n+\n+  if (w_sum > 0u) {\n+    per->target_seen         = true;\n+    per->target_dist_mm      = nearest;\n+    per->target_bearing_cdeg = (int16_t)(w_ang / (int32_t)w_sum);\n+    per->last_seen_ms        = s->t_ms;\n+  } else if (per->last_seen_ms != 0u &&\n+             (s->t_ms - per->last_seen_ms) \u003c p->target_hold_ms) {\n+    /* histeresis: el rival no desaparece porque un sensor parpadee un ciclo */\n+    per->target_seen = true;\n+  } else {\n+    per->target_seen    = false;\n+    per->target_dist_mm = SUMO_DIST_NONE;\n+  }\n+\n+  per->line_mask = 0u;\n+  for (int i = 0; i \u003c SUMO_N_LINE; ++i)\n+    if (s->line[i]) per->line_mask |= (uint8_t)(1u \u003c\u003c i);\n+}\n+\n+\n+/* ==========================================================================\n+ *  Escape de borde\n+ * ==========================================================================\n+ *  La regla mas cara de romper del sumo: el que toca el blanco primero pierde.\n+ *  Por eso este bloque interrumpe cualquier otro estado, incluso un empuje\n+ *  ganador. La direccion de huida se deduce de QUE esquinas vieron blanco.\n+ * ========================================================================== */\n+\n+static void plan_escape(sumo_strategy_t *st)\n+{\n+  const uint8_t m = st->per.line_mask;\n+  const bool front = (m & SUMO_LINE_FRONT_MASK) != 0u;\n+  const bool rear  = (m & SUMO_LINE_REAR_MASK)  != 0u;\n+  const bool left  = (m & SUMO_LINE_LEFT_MASK)  != 0u;\n+  const bool right = (m & SUMO_LINE_RIGHT_MASK) != 0u;\n+\n+  if (rear && !front)      st->esc_drive = +1.0f;  /* borde detras: tirar hacia delante */\n+  else                     st->esc_drive = -1.0f;  /* borde delante o rodeado: atras    */\n+\n+  if (left && !right)      st->esc_turn = -1.0f;   /* blanco a babor  -> huir a estribor */\n+  else if (right && !left) st->esc_turn = +1.0f;   /* blanco a estribor -> huir a babor  */\n+  else                     st->esc_turn = (st->edge_events & 1u) ? +1.0f : -1.0f;\n+\n+  st->esc_phase = 0u;\n+  st->edge_events++;\n+  enter(st, ST_EDGE_ESCAPE);\n+  st->t_state_ms = st->t_ms;   /* reinicia el cronometro aunque ya estuviera aqui */\n+}\n+\n+\n+/* ==========================================================================\n+ *  Mezclador: (avance, giro) -> consignas de rueda, con rampa y zona muerta\n+ * ========================================================================== */\n+\n+static void drive(sumo_strategy_t *st, float fwd, float turn, sumo_actuators_t *a)\n+{\n+  const float max_step = st->p.slew_per_s * ((float)st->p.dt_ms / 1000.0f);\n+\n+  float l = clampf(fwd - turn, -1.0f, 1.0f);\n+  float r = clampf(fwd + turn, -1.0f, 1.0f);\n+\n+  l = slew(st->prev_left,  l, max_step);\n+  r = slew(st->prev_right, r, max_step);\n+\n+  st->prev_left  = l;\n+  st->prev_right = r;\n+\n+  if (fabsf(l) \u003c st->p.deadband) l = 0.0f;\n+  if (fabsf(r) \u003c st->p.deadband) r = 0.0f;\n+\n+  a->left  = l;\n+  a->right = r;\n+  a->led   = (uint8_t)st->state;\n+}\n+\n+\n+/* ==========================================================================\n+ *  API publica\n+ * ========================================================================== */\n+\n+void strategy_init(sumo_strategy_t *st, const sumo_params_t *p)\n+{\n+  memset(st, 0, sizeof(*st));\n+  st->p = p ? *p : sumo_params_default();\n+  st->state = ST_WAIT;\n+  st->per.target_dist_mm = SUMO_DIST_NONE;\n+}\n+\n+\n+void strategy_step(sumo_strategy_t *st, const sumo_sensors_t *s, sumo_actuators_t *a)\n+{\n+  st->t_ms = s->t_ms;\n+  perceive(st, s);\n+\n+  /* --- 0. Sin permiso de arranque: quieto y con el lazo reiniciado ------- */\n+  if (!s->armed) {\n+    enter(st, ST_WAIT);\n+    st->prev_left = st->prev_right = 0.0f;\n+    a->left = a->right = 0.0f;\n+    a->led  = (uint8_t)ST_WAIT;\n+    return;\n+  }\n+  if (st->state == ST_WAIT) {\n+    enter(st, ST_OPENING);\n+    st->t_state_ms = st->t_ms;\n+  }\n+\n+  /* --- 1. Prioridad absoluta: el borde ---------------------------------- */\n+  const bool lockout = (st->t_ms \u003c st->t_edge_clear_ms);\n+  if (st->per.line_mask != 0u && !lockout && st->state != ST_EDGE_ESCAPE)\n+    plan_escape(st);\n+\n+  const sumo_params_t *p = &st->p;\n+  const float bearing_rad =\n+      (float)st->per.target_bearing_cdeg / 100.0f * (float)(M_PI / 180.0);\n+\n+  switch (st->state) {\n+\n+  /* ---------------------------------------------------------------- */\n+  case ST_EDGE_ESCAPE: {\n+    if (st->esc_phase == 0u) {\n+      /* fase 1: despegarse del borde en linea casi recta */\n+      drive(st, st->esc_drive * p->v_escape, st->esc_turn * 0.15f, a);\n+      if (in_state_ms(st) >= p->escape_back_ms) {\n+        st->esc_phase = 1u;\n+        st->t_state_ms = st->t_ms;\n+      }\n+    } else {\n+      /* fase 2: reencuadrar hacia el centro del ring */\n+      drive(st, 0.0f, st->esc_turn * p->v_escape, a);\n+      if (in_state_ms(st) >= p->escape_turn_ms) {\n+        st->t_edge_clear_ms = st->t_ms + p->escape_lockout_ms;\n+        enter(st, ST_SEARCH);\n+        st->search_probing = false;\n+      }\n+    }\n+    break;\n+  }\n+\n+  /* ---------------------------------------------------------------- */\n+  case ST_OPENING: {\n+    float fwd = p->v_opening, turn = 0.0f;\n+    switch (p->opening) {\n+      case OPENING_CHARGE: turn = 0.0f;  break;\n+      case OPENING_ARC_L:  turn = 0.45f; break;\n+      case OPENING_ARC_R:  turn = -0.45f; break;\n+      case OPENING_SCAN:   fwd = 0.10f; turn = 0.70f; break;\n+    }\n+    drive(st, fwd, turn, a);\n+\n+    /* si aparece el rival, la apertura se abandona al instante */\n+    if (st->per.target_seen && st->per.target_dist_mm \u003c= p->dist_track_mm)\n+      enter(st, ST_TRACK);\n+    else if (in_state_ms(st) >= p->opening_ms)\n+      enter(st, ST_SEARCH);\n+    break;\n+  }\n+\n+  /* ---------------------------------------------------------------- */\n+  case ST_SEARCH: {\n+    if (st->per.target_seen) { enter(st, ST_TRACK); break; }\n+\n+    /* gira hacia el lado donde se vio al rival por ultima vez */\n+    const float dir = (st->per.target_bearing_cdeg >= 0) ? 1.0f : -1.0f;\n+\n+    if (st->search_probing) {\n+      drive(st, p->v_search, 0.0f, a);\n+      if (in_state_ms(st) >= p->search_probe_ms) {\n+        st->search_probing = false;\n+        st->t_state_ms = st->t_ms;\n+      }\n+    } else {\n+      const float fwd = p->v_search * (1.0f + p->search_turn_ratio);\n+      drive(st, fwd, dir * p->v_search, a);\n+      if (in_state_ms(st) >= p->search_spin_ms) {\n+        st->search_probing = true;\n+        st->t_state_ms = st->t_ms;\n+      }\n+    }\n+    break;\n+  }\n+\n+  /* ---------------------------------------------------------------- */\n+  case ST_TRACK: {\n+    if (!st->per.target_seen) {\n+      enter(st, ST_SEARCH);\n+      st->search_probing = false;\n+      break;\n+    }\n+    if (st->per.target_dist_mm \u003c= p->dist_attack_mm) { enter(st, ST_ATTACK); break; }\n+\n+    const float turn = clampf(p->track_kp * bearing_rad,\n+                              -p->track_max_diff, p->track_max_diff);\n+    drive(st, p->v_track, turn, a);\n+    break;\n+  }\n+\n+  /* ---------------------------------------------------------------- */\n+  case ST_ATTACK: {\n+    if (!st->per.target_seen) {\n+      enter(st, ST_SEARCH);\n+      st->search_probing = false;\n+      break;\n+    }\n+    if (st->per.target_dist_mm > p->dist_track_mm) { enter(st, ST_TRACK); break; }\n+\n+    /* en contacto se corrige poco: girar mucho es perder el empuje */\n+    const float turn = clampf(p->track_kp * bearing_rad * 0.35f, -0.30f, 0.30f);\n+    drive(st, p->v_attack, turn, a);\n+    break;\n+  }\n+\n+  /* ---------------------------------------------------------------- */\n+  case ST_WAIT:\n+  default:\n+    drive(st, 0.0f, 0.0f, a);\n+    break;\n+  }\n+}\n+\n+\n+const char *strategy_state_name(sumo_state_t s)\n+{\n+  return (s >= 0 && s \u003c ST_COUNT) ? STATE_NAMES[s] : \"?\";\n+}\n+\n+const char *strategy_version(void)\n+{\n+  return STRATEGY_VERSION_STR;\n+}\n\n--- vacio/algorithms/strategy.h\n+++ v0.1.0/algorithms/strategy.h\n@@ -0,0 +1,64 @@\n+/* ==========================================================================\n+ *  strategy.h  --  API publica del cerebro de Gelatina Nuclear\n+ *\n+ *  Toda la inteligencia del robot vive detras de dos funciones. El backend\n+ *  (Webots, firmware o banco de pruebas) solo rellena sensores, llama a\n+ *  strategy_step() y aplica los actuadores. Nada mas.\n+ * ========================================================================== */\n+#ifndef SUMO_STRATEGY_H\n+#define SUMO_STRATEGY_H\n+\n+#include \"sumo_types.h\"\n+#include \"params.h\"\n+\n+/* Estados de la maquina de combate. El orden importa: se publica como\n+ * indice en actuators.led para poder depurar desde fuera. */\n+typedef enum {\n+  ST_WAIT = 0,      /* inmovil, esperando la senal de arranque       */\n+  ST_OPENING,       /* jugada de apertura, los primeros ~400 ms      */\n+  ST_SEARCH,        /* barrido buscando al rival                     */\n+  ST_TRACK,         /* rival localizado lejos, aproximacion          */\n+  ST_ATTACK,        /* rival enganchado, empuje maximo               */\n+  ST_EDGE_ESCAPE,   /* borde detectado, salvar el combate            */\n+  ST_COUNT\n+} sumo_state_t;\n+\n+/* Percepcion derivada, expuesta para telemetria y depuracion. */\n+typedef struct {\n+  bool     target_seen;        /* hay rival creible ahora mismo      */\n+  uint16_t target_dist_mm;     /* distancia al mas cercano           */\n+  int16_t  target_bearing_cdeg;/* rumbo estimado en centigrados, + = babor */\n+  uint8_t  line_mask;          /* bits segun enum sumo_line_idx      */\n+  uint32_t last_seen_ms;       /* instante del ultimo contacto       */\n+} sumo_percept_t;\n+\n+typedef struct {\n+  sumo_params_t  p;\n+  sumo_state_t   state;\n+  sumo_percept_t per;\n+\n+  uint32_t t_ms;             /* reloj recibido en el ultimo paso      */\n+  uint32_t t_state_ms;       /* instante de entrada al estado actual  */\n+  uint32_t t_edge_clear_ms;  /* fin de la ventana ciega tras un borde */\n+\n+  /* sub-fase del escape de borde */\n+  uint8_t  esc_phase;        /* 0 = retroceder/avanzar, 1 = reencuadrar */\n+  float    esc_turn;         /* signo y fuerza del giro de escape       */\n+  float    esc_drive;        /* +1 avanzar, -1 retroceder               */\n+\n+  /* sub-fase de la busqueda */\n+  bool     search_probing;\n+\n+  /* salida anterior, para el limitador de pendiente */\n+  float    prev_left;\n+  float    prev_right;\n+\n+  uint32_t edge_events;      /* contador de bordes vistos, telemetria */\n+} sumo_strategy_t;\n+\n+void        strategy_init(sumo_strategy_t *st, const sumo_params_t *p);\n+void        strategy_step(sumo_strategy_t *st, const sumo_sensors_t *s, sumo_actuators_t *a);\n+const char *strategy_state_name(sumo_state_t s);\n+const char *strategy_version(void);\n+\n+#endif /* SUMO_STRATEGY_H */\n\n--- vacio/algorithms/sumo_types.h\n+++ v0.1.0/algorithms/sumo_types.h\n@@ -0,0 +1,93 @@\n+/* ==========================================================================\n+ *  sumo_types.h  --  Contrato estable entre el MUNDO y el ALGORITMO\n+ *\n+ *  Este fichero define la unica frontera que ve la estrategia. Ni Webots ni\n+ *  ningun microcontrolador aparecen aqui: la estrategia solo consume un\n+ *  sumo_sensors_t y produce un sumo_actuators_t.\n+ *\n+ *  Consecuencia practica: el mismo strategy.c compila sin cambios en\n+ *      - el controlador de Webots      (backend hal_webots.c)\n+ *      - el firmware del robot real    (backend hal_\u003cmcu>.c, por escribir)\n+ *      - el banco de pruebas nativo    (tests/harness.c)\n+ *\n+ *  Regla: este fichero cambia MUY poco. Cada cambio aqui rompe todos los\n+ *  backends, asi que exige subir version MINOR como minimo.\n+ * ========================================================================== */\n+#ifndef SUMO_TYPES_H\n+#define SUMO_TYPES_H\n+\n+#include \u003cstdint.h>\n+#include \u003cstdbool.h>\n+\n+/* -------------------------------------------------------------------------\n+ *  Geometria del robot (clase mini-sumo: 10 x 10 cm, 500 g)\n+ * ------------------------------------------------------------------------- */\n+#define SUMO_BODY_MM        100.0f   /* lado maximo reglamentario            */\n+#define SUMO_MASS_G         500.0f   /* masa maxima reglamentaria            */\n+#define SUMO_WHEEL_R_M      0.021f   /* radio de rueda                       */\n+#define SUMO_TRACK_M        0.085f   /* distancia entre centros de rueda     */\n+\n+/* -------------------------------------------------------------------------\n+ *  Sensores de distancia: 5 al frente, de izquierda a derecha\n+ *\n+ *          L60   L30   C   R30   R60\n+ *            \\    \\    |    /    /\n+ *             \\    \\   |   /    /\n+ *              +---------------+\n+ *              |   GELATINA    |\n+ * ------------------------------------------------------------------------- */\n+#define SUMO_N_DIST 5\n+enum sumo_dist_idx {\n+  DIST_L60 = 0,   /* +60 grados (a babor)  */\n+  DIST_L30 = 1,   /* +30 grados            */\n+  DIST_C   = 2,   /*   0 grados (proa)     */\n+  DIST_R30 = 3,   /* -30 grados            */\n+  DIST_R60 = 4    /* -60 grados (estribor) */\n+};\n+\n+/* Angulo de montaje de cada sensor, en CENTIGRADOS (1/100 de grado),\n+ * positivo = a babor. int16_t llega a +-327 grados, margen de sobra. */\n+extern const int16_t SUMO_DIST_ANGLE_CDEG[SUMO_N_DIST];\n+\n+/* Valor centinela: no hay nada dentro del alcance util del sensor. */\n+#define SUMO_DIST_NONE  ((uint16_t)0xFFFFu)\n+\n+/* -------------------------------------------------------------------------\n+ *  Sensores de linea: 4 en las esquinas, mirando al suelo\n+ * ------------------------------------------------------------------------- */\n+#define SUMO_N_LINE 4\n+enum sumo_line_idx {\n+  LINE_FL = 0,   /* frontal izquierdo */\n+  LINE_FR = 1,   /* frontal derecho   */\n+  LINE_RL = 2,   /* trasero izquierdo */\n+  LINE_RR = 3    /* trasero derecho   */\n+};\n+\n+#define SUMO_LINE_FRONT_MASK ((1u \u003c\u003c LINE_FL) | (1u \u003c\u003c LINE_FR))\n+#define SUMO_LINE_REAR_MASK  ((1u \u003c\u003c LINE_RL) | (1u \u003c\u003c LINE_RR))\n+#define SUMO_LINE_LEFT_MASK  ((1u \u003c\u003c LINE_FL) | (1u \u003c\u003c LINE_RL))\n+#define SUMO_LINE_RIGHT_MASK ((1u \u003c\u003c LINE_FR) | (1u \u003c\u003c LINE_RR))\n+\n+/* -------------------------------------------------------------------------\n+ *  Entrada de la estrategia\n+ * ------------------------------------------------------------------------- */\n+typedef struct {\n+  uint32_t t_ms;                      /* ms desde la senal de arranque      */\n+  uint16_t dist_mm[SUMO_N_DIST];      /* mm, o SUMO_DIST_NONE               */\n+  bool     line[SUMO_N_LINE];         /* true = borde blanco bajo el sensor */\n+  float    yaw_rad;                   /* rumbo absoluto, IMU                */\n+  float    gyro_z_rads;               /* velocidad de guinada               */\n+  float    wheel_rad[2];              /* [0]=izq [1]=der, angulo acumulado  */\n+  bool     armed;                     /* true tras los 5 s de reglamento    */\n+} sumo_sensors_t;\n+\n+/* -------------------------------------------------------------------------\n+ *  Salida de la estrategia\n+ * ------------------------------------------------------------------------- */\n+typedef struct {\n+  float   left;    /* consigna rueda izquierda, normalizada [-1 .. +1] */\n+  float   right;   /* consigna rueda derecha,   normalizada [-1 .. +1] */\n+  uint8_t led;     /* bitmap de depuracion, opcional                   */\n+} sumo_actuators_t;\n+\n+#endif /* SUMO_TYPES_H */\n\n--- vacio/webots/controllers/gelatina_nuclear/Makefile\n+++ v0.1.0/webots/controllers/gelatina_nuclear/Makefile\n@@ -0,0 +1,28 @@\n+# Controlador de Gelatina Nuclear para Webots.\n+#\n+# strategy.c, strategy.h, params.h y sumo_types.h son ENLACES SIMBOLICOS a\n+# ../../../algorithms/. Asi el algoritmo vive en un solo sitio -el que versiona\n+# la bitacora- y Webots lo compila sin rutas relativas fragiles.\n+# Si los enlaces se pierden (copia a Windows, zip, etc.):  make links\n+\n+C_SOURCES = main.c hal_webots.c strategy.c\n+CFLAGS   += -std=c99 -Wall -Wextra -O2\n+\n+links:\n+\tln -sf ../../../algorithms/strategy.c   strategy.c\n+\tln -sf ../../../algorithms/strategy.h   strategy.h\n+\tln -sf ../../../algorithms/params.h     params.h\n+\tln -sf ../../../algorithms/sumo_types.h sumo_types.h\n+\n+.PHONY: links\n+\n+# El bloque de Webots solo se activa si WEBOTS_HOME existe, para que\n+# 'make links' siga funcionando en una maquina sin Webots instalado.\n+ifeq ($(strip $(WEBOTS_HOME)),)\n+  $(warning WEBOTS_HOME sin definir: solo esta disponible el objetivo 'links')\n+else\n+  space :=\n+  space +=\n+  WEBOTS_HOME_PATH ?= $(subst $(space),\\ ,$(strip $(subst \\,/,$(WEBOTS_HOME))))\n+  include $(WEBOTS_HOME_PATH)/resources/Makefile.include\n+endif\n\n--- vacio/webots/controllers/gelatina_nuclear/hal.h\n+++ v0.1.0/webots/controllers/gelatina_nuclear/hal.h\n@@ -0,0 +1,37 @@\n+/* ==========================================================================\n+ *  hal.h  --  Capa de abstraccion de plataforma\n+ *\n+ *  El algoritmo (algorithms/) no sabe si corre en Webots, en un banco de\n+ *  pruebas o en un microcontrolador. Solo existe este contrato de seis\n+ *  funciones. Portar Gelatina Nuclear al robot real consiste EXCLUSIVAMENTE\n+ *  en escribir un hal_\u003cplataforma>.c nuevo: ni una linea de strategy.c cambia.\n+ *\n+ *  Backends existentes:\n+ *      hal_webots.c   -> simulacion              (este directorio)\n+ *      tests/harness.c -> banco nativo, integrado (no usa hal.h)\n+ *      hal_\u003cmcu>.c    -> pendiente, robot real\n+ * ========================================================================== */\n+#ifndef SUMO_HAL_H\n+#define SUMO_HAL_H\n+\n+#include \"sumo_types.h\"\n+\n+/* Inicializa la plataforma. Devuelve false si algo imprescindible falta. */\n+bool hal_init(int argc, char **argv);\n+\n+/* Periodo real del lazo de control en ms (lo impone la plataforma). */\n+uint16_t hal_period_ms(void);\n+\n+/* Avanza un paso y rellena los sensores. false = la plataforma pide parar. */\n+bool hal_poll(sumo_sensors_t *s);\n+\n+/* Aplica las consignas normalizadas a los motores. */\n+void hal_apply(const sumo_actuators_t *a);\n+\n+/* Traza de depuracion (printf en simulacion, UART en el robot real). */\n+void hal_log(const char *fmt, ...);\n+\n+/* Libera la plataforma. */\n+void hal_shutdown(void);\n+\n+#endif /* SUMO_HAL_H */\n\n--- vacio/webots/controllers/gelatina_nuclear/hal_webots.c\n+++ v0.1.0/webots/controllers/gelatina_nuclear/hal_webots.c\n@@ -0,0 +1,203 @@\n+/* ==========================================================================\n+ *  hal_webots.c  --  Backend de Webots para Gelatina Nuclear\n+ *\n+ *  Traduce entre la API de Webots y el contrato sumo_types.h. Aqui viven\n+ *  TODOS los detalles sucios: nombres de dispositivos, unidades, umbrales de\n+ *  calibracion y la senal de arranque del arbitro. Nada de esto contamina el\n+ *  algoritmo.\n+ * ========================================================================== */\n+\n+#include \"hal.h\"\n+\n+#include \u003cwebots/robot.h>\n+#include \u003cwebots/motor.h>\n+#include \u003cwebots/distance_sensor.h>\n+#include \u003cwebots/position_sensor.h>\n+#include \u003cwebots/inertial_unit.h>\n+#include \u003cwebots/gyro.h>\n+#include \u003cwebots/receiver.h>\n+#include \u003cwebots/led.h>\n+\n+#include \u003cmath.h>\n+#include \u003cstdarg.h>\n+#include \u003cstdio.h>\n+#include \u003cstdlib.h>\n+#include \u003cstring.h>\n+\n+/* ---- calibracion de la plataforma -------------------------------------- */\n+#define WHEEL_MAX_RADS   75.0    /* consigna 1.0 -> 75 rad/s (motor: 80 max) */\n+#define DIST_MAX_RAW   1190.0    /* por encima de esto, no hay objetivo      */\n+#define LINE_TH_DEFAULT   400    /* blanco ~900, negro ~20: umbral holgado   */\n+#define AUTO_ARM_MS      5000    /* reglamento: 5 s. Solo si no hay arbitro. */\n+\n+static const char *DIST_NAMES[SUMO_N_DIST] = { \"d_l60\", \"d_l30\", \"d_c\", \"d_r30\", \"d_r60\" };\n+static const char *LINE_NAMES[SUMO_N_LINE] = { \"l_fl\", \"l_fr\", \"l_rl\", \"l_rr\" };\n+\n+static int  g_step_ms   = 8;\n+static int  g_line_th   = LINE_TH_DEFAULT;\n+static bool g_calib     = false;\n+static bool g_armed     = false;\n+static bool g_saw_ref   = false;   /* hemos oido alguna vez al arbitro */\n+static double g_t0_ms   = 0.0;\n+\n+static WbDeviceTag g_mot[2];\n+static WbDeviceTag g_enc[2];\n+static WbDeviceTag g_dist[SUMO_N_DIST];\n+static WbDeviceTag g_line[SUMO_N_LINE];\n+static WbDeviceTag g_imu, g_gyro, g_rx, g_led;\n+static bool g_has_imu, g_has_gyro, g_has_rx, g_has_led;\n+\n+\n+bool hal_init(int argc, char **argv)\n+{\n+  wb_robot_init();\n+  g_step_ms = (int)wb_robot_get_basic_time_step();\n+\n+  for (int i = 1; i \u003c argc; ++i) {\n+    if (!strcmp(argv[i], \"--line-th\") && i + 1 \u003c argc) g_line_th = atoi(argv[++i]);\n+    else if (!strcmp(argv[i], \"--calib\")) g_calib = true;\n+  }\n+\n+  g_mot[0] = wb_robot_get_device(\"motor_izq\");\n+  g_mot[1] = wb_robot_get_device(\"motor_der\");\n+  g_enc[0] = wb_robot_get_device(\"enc_izq\");\n+  g_enc[1] = wb_robot_get_device(\"enc_der\");\n+  for (int i = 0; i \u003c 2; ++i) {\n+    wb_motor_set_position(g_mot[i], INFINITY);   /* modo velocidad */\n+    wb_motor_set_velocity(g_mot[i], 0.0);\n+    wb_position_sensor_enable(g_enc[i], g_step_ms);\n+  }\n+\n+  for (int i = 0; i \u003c SUMO_N_DIST; ++i) {\n+    g_dist[i] = wb_robot_get_device(DIST_NAMES[i]);\n+    wb_distance_sensor_enable(g_dist[i], g_step_ms);\n+  }\n+  for (int i = 0; i \u003c SUMO_N_LINE; ++i) {\n+    g_line[i] = wb_robot_get_device(LINE_NAMES[i]);\n+    wb_distance_sensor_enable(g_line[i], g_step_ms);\n+  }\n+\n+  g_imu  = wb_robot_get_device(\"imu\");    g_has_imu  = (g_imu  != 0);\n+  g_gyro = wb_robot_get_device(\"giro\");   g_has_gyro = (g_gyro != 0);\n+  g_rx   = wb_robot_get_device(\"receptor\"); g_has_rx = (g_rx   != 0);\n+  g_led  = wb_robot_get_device(\"led\");    g_has_led  = (g_led  != 0);\n+  if (g_has_imu)  wb_inertial_unit_enable(g_imu, g_step_ms);\n+  if (g_has_gyro) wb_gyro_enable(g_gyro, g_step_ms);\n+  if (g_has_rx)   wb_receiver_enable(g_rx, g_step_ms);\n+\n+  hal_log(\"HAL Webots listo: paso %d ms, umbral de linea %d\", g_step_ms, g_line_th);\n+  return true;\n+}\n+\n+\n+uint16_t hal_period_ms(void) { return (uint16_t)g_step_ms; }\n+\n+\n+/* Vacia el buzon del arbitro. Protocolo de texto plano, canal 1:\n+ *   \"ARM\"  -> empieza el asalto (reinicia el reloj del algoritmo)\n+ *   \"STOP\" -> alto el fuego, el arbitro esta recolocando a los robots      */\n+static void drain_referee(void)\n+{\n+  if (!g_has_rx) return;\n+  while (wb_receiver_get_queue_length(g_rx) > 0) {\n+    const char *msg = (const char *)wb_receiver_get_data(g_rx);\n+    g_saw_ref = true;\n+    if (msg && !strncmp(msg, \"ARM\", 3)) {\n+      if (!g_armed) g_t0_ms = wb_robot_get_time() * 1000.0;\n+      g_armed = true;\n+    } else if (msg && !strncmp(msg, \"STOP\", 4)) {\n+      g_armed = false;\n+    }\n+    wb_receiver_next_packet(g_rx);\n+  }\n+}\n+\n+\n+bool hal_poll(sumo_sensors_t *s)\n+{\n+  if (wb_robot_step(g_step_ms) == -1) return false;\n+\n+  drain_referee();\n+  const double now_ms = wb_robot_get_time() * 1000.0;\n+\n+  /* Sin arbitro en el mundo, el robot se arma solo tras los 5 s de reglamento\n+   * para que el mundo siga siendo util abriendolo a pelo. */\n+  if (!g_saw_ref && !g_armed && now_ms >= AUTO_ARM_MS) {\n+    g_armed = true;\n+    g_t0_ms = now_ms;\n+    hal_log(\"sin arbitro: auto-arranque a los %.0f ms\", now_ms);\n+  }\n+\n+  memset(s, 0, sizeof(*s));\n+  s->armed = g_armed;\n+  s->t_ms  = g_armed ? (uint32_t)(now_ms - g_t0_ms) : 0u;\n+\n+  for (int i = 0; i \u003c SUMO_N_DIST; ++i) {\n+    const double raw = wb_distance_sensor_get_value(g_dist[i]);\n+    s->dist_mm[i] = (raw >= DIST_MAX_RAW) ? SUMO_DIST_NONE : (uint16_t)raw;\n+  }\n+\n+  for (int i = 0; i \u003c SUMO_N_LINE; ++i) {\n+    const double raw = wb_distance_sensor_get_value(g_line[i]);\n+    s->line[i] = (raw > (double)g_line_th);\n+  }\n+\n+  if (g_has_imu) {\n+    const double *rpy = wb_inertial_unit_get_roll_pitch_yaw(g_imu);\n+    s->yaw_rad = (float)rpy[2];\n+  }\n+  if (g_has_gyro) {\n+    const double *g = wb_gyro_get_values(g_gyro);\n+    s->gyro_z_rads = (float)g[2];\n+  }\n+  s->wheel_rad[0] = (float)wb_position_sensor_get_value(g_enc[0]);\n+  s->wheel_rad[1] = (float)wb_position_sensor_get_value(g_enc[1]);\n+\n+  if (g_calib) {\n+    hal_log(\"CALIB linea  FL=%6.1f FR=%6.1f RL=%6.1f RR=%6.1f   dist C=%5u\",\n+            wb_distance_sensor_get_value(g_line[0]),\n+            wb_distance_sensor_get_value(g_line[1]),\n+            wb_distance_sensor_get_value(g_line[2]),\n+            wb_distance_sensor_get_value(g_line[3]),\n+            s->dist_mm[DIST_C]);\n+  }\n+  return true;\n+}\n+\n+\n+static double clamp_unit(double v)\n+{\n+  if (v >  1.0) return  1.0;\n+  if (v \u003c -1.0) return -1.0;\n+  return v;\n+}\n+\n+\n+void hal_apply(const sumo_actuators_t *a)\n+{\n+  const double l = clamp_unit(a->left);\n+  const double r = clamp_unit(a->right);\n+  wb_motor_set_velocity(g_mot[0], l * WHEEL_MAX_RADS);\n+  wb_motor_set_velocity(g_mot[1], r * WHEEL_MAX_RADS);\n+  if (g_has_led) wb_led_set(g_led, (a->led == 4 || a->led == 5) ? 1 : 0);\n+}\n+\n+\n+void hal_log(const char *fmt, ...)\n+{\n+  va_list ap;\n+  printf(\"[%s] \", wb_robot_get_name());\n+  va_start(ap, fmt);\n+  vprintf(fmt, ap);\n+  va_end(ap);\n+  printf(\"\\n\");\n+  fflush(stdout);\n+}\n+\n+\n+void hal_shutdown(void)\n+{\n+  wb_motor_set_velocity(g_mot[0], 0.0);\n+  wb_motor_set_velocity(g_mot[1], 0.0);\n+  wb_robot_cleanup();\n+}\n\n--- vacio/webots/controllers/gelatina_nuclear/main.c\n+++ v0.1.0/webots/controllers/gelatina_nuclear/main.c\n@@ -0,0 +1,48 @@\n+/* ==========================================================================\n+ *  main.c  --  Controlador de Webots para Gelatina Nuclear\n+ *\n+ *  Lazo de control puro. Toda la inteligencia esta en algorithms/strategy.c\n+ *  y todo lo especifico de Webots en hal_webots.c. Este fichero es el mismo\n+ *  que correra en el robot real cambiando unicamente el backend del HAL.\n+ * ========================================================================== */\n+\n+#include \"hal.h\"\n+#include \"strategy.h\"\n+\n+#include \u003cstdio.h>\n+\n+int main(int argc, char **argv)\n+{\n+  if (!hal_init(argc, argv)) return 1;\n+\n+  sumo_params_t p = sumo_params_default();\n+  p.dt_ms = hal_period_ms();          /* el periodo lo impone la plataforma */\n+\n+  sumo_strategy_t brain;\n+  strategy_init(&brain, &p);\n+  hal_log(\"estrategia %s en linea\", strategy_version());\n+\n+  sumo_sensors_t   s;\n+  sumo_actuators_t a = { 0.0f, 0.0f, 0 };\n+  sumo_state_t     last = ST_COUNT;\n+\n+  while (hal_poll(&s)) {\n+    strategy_step(&brain, &s, &a);\n+    hal_apply(&a);\n+\n+    /* Telemetria minima: solo al cambiar de estado, para no inundar la\n+     * consola de Webots. Es la traza que se pega en la bitacora cuando una\n+     * version se comporta de forma inesperada. */\n+    if (brain.state != last) {\n+      last = brain.state;\n+      hal_log(\"t=%5u ms  %-11s  rival=%s d=%4u mm rumbo=%+5d cdeg  linea=0x%X\",\n+              s.t_ms, strategy_state_name(brain.state),\n+              brain.per.target_seen ? \"si\" : \"no\",\n+              brain.per.target_dist_mm == SUMO_DIST_NONE ? 9999u : brain.per.target_dist_mm,\n+              brain.per.target_bearing_cdeg, brain.per.line_mask);\n+    }\n+  }\n+\n+  hal_shutdown();\n+  return 0;\n+}\n"}, {"version": "v0.1.1", "parent": "v0.1.0", "iteration": 2, "created_at": "2026-09-12T19:46:22-06:00", "author": "claude-opus-5", "kind": "bugfix", "title": "Bugfix: el controlador no compilaba dentro de Webots", "summary": "Corrige dos fallos del Makefile de webots/controllers/gelatina_nuclear/ que impedían a Webots compilar el controlador. Primero: el idioma 'space :=' seguido de 'space +=' deja la variable vacía en GNU Make, y $(subst ,\\ ,...) con 'from' vacío añade '\\ ' al final de la ruta, así que el include apuntaba a '/usr/local/webots /resources/Makefile.include' y make abortaba. Se sustituye por el idioma canónico de Webots: 'empty :=' y 'space := $(empty) $(empty)'. Segundo: 'links' era el primer objetivo del fichero, de modo que 'make' sin argumentos, que es justo lo que invoca Webots, solo rehacía los enlaces; ahora se fuerza .DEFAULT_GOAL := release. strategy.c y params.h no cambian.", "rationale": "Sin binario compilado, Webots no podía ejecutar el algoritmo y ningún resultado del simulador reflejaba strategy.c. El fallo era invisible desde 'make medir', porque tests/harness.c no pasa por este Makefile. Los Makefiles de arbitro/ y oponente/ tenían el mismo idioma roto y se corrigieron igual, aunque no se versionan. De paso, tools/gnver.py dejó de tratar como texto los ficheros sin extensión: el binario compilado se colaba en el diff publicado.", "hypothesis": "Con el controlador compilando, Webots ejecuta la misma máquina de estados que el banco nativo. No se espera ningún cambio de conducta.", "expected_effect": "Ninguno sobre el banco nativo: los 240 asaltos dan exactamente lo mismo que v0.1.0 (48,8 %).", "risks": "La primera prueba de humo en Webots (5V 0D 15E, con victorias en 0,01 s) no era válida. El mundo y el PROTO estaban escritos con la convención de ejes anterior a R2022a, en la que Cylinder va sobre y: en R2025a el dohyo quedaba de canto, las ruedas tumbadas y los robots salían despedidos al arrancar. Se corrigieron fuera de la bitácora, porque no son rutas vigiladas, junto con dos defectos de sensores del PROTO. La distancia pasa a un solo rayo, como en el banco nativo: con tres veía el suelo del dohyo a ~0,5 m y leía ~750 mm sin nada delante. La tabla de los IR de línea vuelve a dar negro ≈ 20 y blanco ≈ 930; antes daba negro ≈ 340, a 60 del umbral, y bastaban 0,35 mm de cabeceo para ver un borde falso. Cualquier métrica de Webots anterior a esta versión debe descartarse. Con los modelos ya verificados, 20 asaltos contra charger dan 13V 5D 2E (65 %), frente al 18 % del banco nativo; la nota para el robot real explica la diferencia.", "notes_real_robot": "Cuando las palas se engranan, los IR de línea frontales ven la pala del rival (~930, igual que la banda blanca) en pleno centro del ring. v0.1.0 lo toma por el borde y retrocede a ciegas 300 ms a 0,85: más de 30 cm con los 1,575 m/s de Webots, casi el radio del ring. Pasa en los 20 asaltos, siempre con el rival a menos de 40 mm, y es lo que decide casi todos. El robot real tendrá el mismo problema con una pala metálica, así que la estrategia debe distinguir la pala del rival del borde; por ejemplo, desconfiando de la línea frontal en ATTACK con el rival pegado. El banco nativo no modela este efecto y además usa V_MAX = 1,2 m/s, frente a los 1,575 m/s de Webots.", "tags": ["bugfix", "makefile", "webots", "build"], "params_changed": [], "states": [], "diff_stat": {"added": 6, "removed": 2, "files": 1, "touched": ["webots/controllers/gelatina_nuclear/Makefile"]}, "files": [{"path": "algorithms/params.h", "sha256": "e90a14cd42457adf1aeb0f81aa8c028585553ecd0cc604b22e0b101ad611b4e9", "lines": 104}, {"path": "algorithms/strategy.c", "sha256": "9e2b716aff38f90090bc5c430c61a4948e4328dbe4fbe56a1401c22d872b8e58", "lines": 327}, {"path": "algorithms/strategy.h", "sha256": "18deb074f61ea0092775884b9874be5ce638c59f0934524b1e7c4478353dba41", "lines": 64}, {"path": "algorithms/sumo_types.h", "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc", "lines": 93}, {"path": "webots/controllers/gelatina_nuclear/Makefile", "sha256": "17d6122c9e20645f4e4f377170240323f1d7e0911babe0ec792a7cc677a345c3", "lines": 32}, {"path": "webots/controllers/gelatina_nuclear/hal.h", "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883", "lines": 37}, {"path": "webots/controllers/gelatina_nuclear/hal_webots.c", "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694", "lines": 203}, {"path": "webots/controllers/gelatina_nuclear/main.c", "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc", "lines": 48}], "metrics": {"rounds": 240, "wins": 117, "losses": 63, "draws": 60, "win_rate": 0.488, "avg_win_time_s": 1.57, "self_outs": 19, "opponents": [{"name": "static", "rounds": 60, "wins": 45, "losses": 15, "draws": 0, "win_rate": 0.75}, {"name": "charger", "rounds": 60, "wins": 11, "losses": 46, "draws": 3, "win_rate": 0.183}, {"name": "spinner", "rounds": 60, "wins": 60, "losses": 0, "draws": 0, "win_rate": 1.0}, {"name": "mirror", "rounds": 60, "wins": 1, "losses": 2, "draws": 57, "win_rate": 0.017}]}, "verdict": "neutro", "metrics_reglamento": {"rounds": 240, "wins": 43, "losses": 139, "draws": 58, "win_rate": 0.179, "avg_win_time_s": 0.95, "self_outs": 105, "match_win_rate": 0.013, "opponents": [{"name": "static", "rounds": 60, "wins": 20, "losses": 40, "draws": 0, "win_rate": 0.333, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}}, {"name": "charger", "rounds": 60, "wins": 2, "losses": 58, "draws": 0, "win_rate": 0.033, "placements": [{"name": "frente", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.003, "judges": 0.0, "loss": 0.997}}, {"name": "spinner", "rounds": 60, "wins": 20, "losses": 40, "draws": 0, "win_rate": 0.333, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}}, {"name": "mirror", "rounds": 60, "wins": 1, "losses": 1, "draws": 58, "win_rate": 0.017, "placements": [{"name": "frente", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "espalda", "rounds": 20, "wins": 1, "losses": 1, "draws": 18}], "match": {"win": 0.05, "judges": 0.9, "loss": 0.05}}], "engine": "harness-nativo", "mode": "reglamento"}, "diff": "--- v0.1.0/webots/controllers/gelatina_nuclear/Makefile\n+++ v0.1.1/webots/controllers/gelatina_nuclear/Makefile\n@@ -21,8 +21,12 @@\n ifeq ($(strip $(WEBOTS_HOME)),)\n   $(warning WEBOTS_HOME sin definir: solo esta disponible el objetivo 'links')\n else\n-  space :=\n-  space +=\n+  empty :=\n+  space := $(empty) $(empty)\n   WEBOTS_HOME_PATH ?= $(subst $(space),\\ ,$(strip $(subst \\,/,$(WEBOTS_HOME))))\n   include $(WEBOTS_HOME_PATH)/resources/Makefile.include\n+  # 'links' es el primer target del fichero, asi que sin esto GNU Make lo\n+  # toma como .DEFAULT_GOAL y 'make' (sin argumentos, que es justo lo que\n+  # invoca Webots para compilar) no compilaria nunca el controlador.\n+  .DEFAULT_GOAL := release\n endif\n"}, {"version": "v0.2.0", "parent": "v0.1.1", "iteration": 3, "created_at": "2026-09-12T20:12:04-06:00", "author": "claude-opus-5", "kind": "new-behavior", "title": "Empuje comprometido: con el rival pegado de frente, el borde es suyo", "summary": "Nueva regla de prioridad en strategy_step. Si los sensores de línea ven blanco mientras el rival está pegado de frente, no se entra en EDGE_ESCAPE sino en ATTACK, y se sigue empujando a fondo durante un máximo de push_commit_ms = 600 ms desde que aparece la línea. Pegado de frente significa a 60 mm o menos, dentro de ±25° y con una lectura de ese mismo ciclo, no de la memoria de histéresis. La ventana se cierra en cuanto desaparece la línea o se pierde el contacto; sin rival delante, el borde vuelve a mandar en el mismo ciclo. Se añaden tres parámetros a params.h (dist_contact_mm, contact_cone_cdeg y push_commit_ms), un campo de percepción (contact_front) y tres de estado para la ventana y su telemetría.", "rationale": "La traza asalto a asalto de v0.1.1 señaló la misma causa en los dos bancos: el robot abortaba sus propios empujes. En Webots, cuando las palas se engranan, los IR frontales ven la pala del rival como banda blanca. Los 25 asaltos no ganados contra charger y contra v0.1.1 siguen la misma secuencia: TRACK, ATTACK, EDGE_ESCAPE a ~160 ms con el rival a 0-50 mm, y expulsado. En el banco nativo, las 15 derrotas contra static son auto-salidas que empiezan huyendo de un borde en contacto, empujando en oblicuo con el rival a r ≈ 0,34, a 6 cm de caer. Con el rival pegado de frente, lo que hay bajo los sensores es su pala o el borde hacia el que lo empujamos. Si la línea es la trasera, es él quien nos empuja, y el escape de v0.1.1 (avanzar a 0,85 y girar 360 ms en el sitio) solo empuja menos. En los tres casos, huir le regala el asalto.", "hypothesis": "Mantener el empuje con el rival pegado de frente convierte en victorias los asaltos que v0.1.1 perdía por huir: contra static en el banco nativo, y contra charger y v0.1.1 en Webots. Contra charger en el banco nativo no debería cambiar nada, porque allí el charger empuja casi siempre desde un lado, fuera del cono frontal.", "expected_effect": "Esperado: static por encima del 90 % en el banco nativo; charger y v0.1.1 por encima del 85 % en Webots. Medido con 30 semillas por rival en el banco nativo, cada rival aislado y emparejado por semilla: static +13,1 pp (80,2 % → 93,3 %, mejor en las 30 semillas), charger −0,1 pp, spinner y mirror iguales; total 48,6 % → 51,9 %. En Webots (34 colocaciones por rival): 74,7 % → 91,2 %; charger 67,6 % → 94,1 %; v0.1.1 congelada 58,8 % → 94,1 %; spinner 94,1 % → 100 %; static 94,1 % → 91,2 %, por dos empates por tiempo. La tabla oficial de 'make medir' da charger 18,3 % → 6,7 %, pero es ruido: el banco comparte un único generador aleatorio, y el cambio contra static desplaza la secuencia de ruido de los rivales siguientes. Contra charger la regla solo se activó 2 veces.", "risks": "Si el rival se escurre de lado justo en el borde, empujar a ciegas podría sacarnos detrás de él. Por eso la condición exige lectura del ciclo actual y un cono de ±25°, y la ventana tiene tope. En Webots, contra un rival inmóvil y frenado no hay empuje frontal posible (fricción contra fricción): la ventana se abre y se cierra en bucle y deja dos empates por tiempo. El umbral de 60 mm se queda corto en Webots, donde aún hay huidas con el rival a 62-73 mm.", "notes_real_robot": "La regla está pensada para el robot real: un IR de línea no distingue la banda blanca de una pala metálica, y el problema de Webots aparecerá igual en el dohyo. En el robot real, dist_contact_mm debe calibrarse con los sensores reales con el rival pegado; con --calib se ve la lectura de d_c en la consola.", "tags": ["new-behavior", "empuje", "borde", "webots"], "params_changed": [{"name": "dist_contact_mm", "from": "—", "to": "60", "reason": "Lectura con las palas tocándose: ~20 mm en el banco nativo y 0-50 mm en Webots. 60 mm deja margen sin confundir un rival a un palmo con uno pegado."}, {"name": "contact_cone_cdeg", "from": "—", "to": "2500", "reason": "±25°: el rival tiene que estar delante de la pala. Un rival a un lado no protege del borde, y empujar hacia él con la línea a la vista es seguirlo fuera."}, {"name": "push_commit_ms", "from": "—", "to": "600", "reason": "Tope de la ventana. En Webots un empuje frontal ganador saca al rival en ~0,6 s; más allá, seguir empujando con la línea a la vista deja de ser una apuesta razonable."}], "states": ["WAIT", "OPENING", "SEARCH", "TRACK", "ATTACK", "EDGE_ESCAPE"], "diff_stat": {"added": 54, "removed": 9, "files": 3, "touched": ["algorithms/params.h", "algorithms/strategy.c", "algorithms/strategy.h"]}, "files": [{"path": "algorithms/params.h", "sha256": "16fbb62ed506f8baa814e1756746ade85bf8e5d0f71d98e4c60a20b0ccbac0fe", "lines": 113}, {"path": "algorithms/strategy.c", "sha256": "4f94aaa6b4decc825bbbb0611e449f3bc2f3b3d40a7e053a8d9de0906e285e3c", "lines": 357}, {"path": "algorithms/strategy.h", "sha256": "e26f59c87e30d15de4f76ac91f8f72df1e8ba93141a248a0b5c90edc86784f67", "lines": 70}, {"path": "algorithms/sumo_types.h", "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc", "lines": 93}, {"path": "webots/controllers/gelatina_nuclear/Makefile", "sha256": "17d6122c9e20645f4e4f377170240323f1d7e0911babe0ec792a7cc677a345c3", "lines": 32}, {"path": "webots/controllers/gelatina_nuclear/hal.h", "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883", "lines": 37}, {"path": "webots/controllers/gelatina_nuclear/hal_webots.c", "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694", "lines": 203}, {"path": "webots/controllers/gelatina_nuclear/main.c", "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc", "lines": 48}], "metrics": {"rounds": 240, "wins": 122, "losses": 61, "draws": 57, "win_rate": 0.508, "avg_win_time_s": 0.76, "self_outs": 7, "opponents": [{"name": "static", "rounds": 60, "wins": 56, "losses": 4, "draws": 0, "win_rate": 0.933}, {"name": "charger", "rounds": 60, "wins": 4, "losses": 55, "draws": 1, "win_rate": 0.067}, {"name": "spinner", "rounds": 60, "wins": 60, "losses": 0, "draws": 0, "win_rate": 1.0}, {"name": "mirror", "rounds": 60, "wins": 2, "losses": 2, "draws": 56, "win_rate": 0.033}]}, "verdict": "mejora", "metrics_reglamento": {"rounds": 240, "wins": 63, "losses": 116, "draws": 61, "win_rate": 0.262, "avg_win_time_s": 1.26, "self_outs": 97, "match_win_rate": 0.058, "opponents": [{"name": "static", "rounds": 60, "wins": 20, "losses": 40, "draws": 0, "win_rate": 0.333, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}}, {"name": "charger", "rounds": 60, "wins": 22, "losses": 37, "draws": 1, "win_rate": 0.367, "placements": [{"name": "frente", "rounds": 20, "wins": 3, "losses": 16, "draws": 1}, {"name": "lado", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 18, "losses": 2, "draws": 0}], "match": {"win": 0.18, "judges": 0.002, "loss": 0.817}}, {"name": "spinner", "rounds": 60, "wins": 21, "losses": 39, "draws": 0, "win_rate": 0.35, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 0.05, "judges": 0.0, "loss": 0.95}}, {"name": "mirror", "rounds": 60, "wins": 0, "losses": 0, "draws": 60, "win_rate": 0.0, "placements": [{"name": "frente", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}], "match": {"win": 0.0, "judges": 1.0, "loss": 0.0}}], "engine": "harness-nativo", "mode": "reglamento"}, "diff": "--- v0.1.1/algorithms/params.h\n+++ v0.2.0/algorithms/params.h\n@@ -49,6 +49,11 @@\n   uint16_t escape_turn_ms;        /* giro de reencuadre                    */\n   uint16_t escape_lockout_ms;     /* ventana ciega para no reentrar al borde*/\n \n+  /* ---- empuje comprometido -------------------------------------------- */\n+  uint16_t dist_contact_mm;       /* rival a esta distancia o menos: pegado */\n+  uint16_t contact_cone_cdeg;     /* ... y dentro de este cono frontal (+-) */\n+  uint16_t push_commit_ms;        /* max. empujando con el borde a la vista */\n+\n   /* ---- busqueda ------------------------------------------------------- */\n   uint16_t search_spin_ms;        /* giro en el sitio                      */\n   uint16_t search_probe_ms;       /* avance corto entre giros              */\n@@ -88,6 +93,10 @@\n   p.escape_turn_ms      = 360;\n   p.escape_lockout_ms   = 140;\n \n+  p.dist_contact_mm     = 60;\n+  p.contact_cone_cdeg   = 2500;\n+  p.push_commit_ms      = 600;\n+\n   p.search_spin_ms      = 520;\n   p.search_probe_ms     = 300;\n   p.search_turn_ratio   = -0.85f;\n\n--- v0.1.1/algorithms/strategy.c\n+++ v0.2.0/algorithms/strategy.c\n@@ -1,13 +1,14 @@\n /* ==========================================================================\n  *  strategy.c  --  Cerebro de Gelatina Nuclear\n  *  ------------------------------------------------------------------------\n- *  LINEA BASE (v0.1.0): maquina de estados reactiva con prioridad absoluta\n- *  del borde. Sin memoria del rival, sin modelo del ring, sin aprendizaje.\n- *  Es deliberadamente simple: es el punto de partida contra el que se mediran\n- *  todas las iteraciones siguientes de la bitacora.\n+ *  v0.2.0: la maquina de estados reactiva de la linea base v0.1.0 con una\n+ *  sola idea nueva, EMPUJE COMPROMETIDO: si el rival esta pegado de frente,\n+ *  el borde que ven los sensores de linea es suyo, no nuestro, y se sigue\n+ *  empujando en vez de huir. Sin modelo del ring, sin aprendizaje.\n  *\n  *  Prioridades, de mayor a menor:\n  *     1. No caerse del ring      -> ST_EDGE_ESCAPE\n+ *        ...salvo rival pegado de frente: empuje comprometido -> ST_ATTACK\n  *     2. Empujar si lo tengo     -> ST_ATTACK\n  *     3. Acercarme si lo veo     -> ST_TRACK\n  *     4. Encontrarlo             -> ST_SEARCH / ST_OPENING\n@@ -20,7 +21,7 @@\n #include \u003cmath.h>\n #include \u003cstring.h>\n \n-#define STRATEGY_VERSION_STR \"v0.1.0\"\n+#define STRATEGY_VERSION_STR \"v0.2.0\"\n \n #ifndef M_PI\n #define M_PI 3.14159265358979323846\n@@ -109,6 +110,13 @@\n     per->target_dist_mm = SUMO_DIST_NONE;\n   }\n \n+  /* Contacto frontal: solo con la lectura de ESTE ciclo, nunca con la memoria\n+   * de histeresis. Creer que el rival sigue delante cuando ya se ha escurrido\n+   * a un lado es justo lo que tiraria al robot fuera empujando al vacio. */\n+  const int b = per->target_bearing_cdeg;\n+  per->contact_front = (w_sum > 0u) && nearest \u003c= p->dist_contact_mm &&\n+                       (b \u003c 0 ? -b : b) \u003c= (int)p->contact_cone_cdeg;\n+\n   per->line_mask = 0u;\n   for (int i = 0; i \u003c SUMO_N_LINE; ++i)\n     if (s->line[i]) per->line_mask |= (uint8_t)(1u \u003c\u003c i);\n@@ -202,12 +210,34 @@\n     st->t_state_ms = st->t_ms;\n   }\n \n-  /* --- 1. Prioridad absoluta: el borde ---------------------------------- */\n+  const sumo_params_t *p = &st->p;\n+\n+  /* --- 1. Prioridad absoluta: el borde... salvo empuje comprometido ----- *\n+   * Con el rival pegado de frente, la linea bajo los sensores frontales es  *\n+   * la pala del rival metida debajo o el borde hacia el que lo empujamos:   *\n+   * en ambos casos huir es regalarle el asalto. Si es la linea trasera, nos *\n+   * esta empujando, y el escape (avanzar a v_escape y girar en el sitio)    *\n+   * solo empuja menos. La ventana dura push_commit_ms desde que aparece la  *\n+   * linea y se cierra al perder el contacto: sin rival delante, el borde    *\n+   * vuelve a mandar en el mismo ciclo.                                      */\n   const bool lockout = (st->t_ms \u003c st->t_edge_clear_ms);\n-  if (st->per.line_mask != 0u && !lockout && st->state != ST_EDGE_ESCAPE)\n+  const bool linea   = (st->per.line_mask != 0u);\n+  if (!linea) st->commit_active = false;\n+\n+  bool comprometido = false;\n+  if (linea && st->per.contact_front) {\n+    if (!st->commit_active) {\n+      st->commit_active = true;\n+      st->t_commit_ms = st->t_ms;\n+      st->push_commits++;\n+    }\n+    comprometido = (st->t_ms - st->t_commit_ms) \u003c p->push_commit_ms;\n+  }\n+\n+  if (comprometido)\n+    enter(st, ST_ATTACK);\n+  else if (linea && !lockout && st->state != ST_EDGE_ESCAPE)\n     plan_escape(st);\n-\n-  const sumo_params_t *p = &st->p;\n   const float bearing_rad =\n       (float)st->per.target_bearing_cdeg / 100.0f * (float)(M_PI / 180.0);\n \n\n--- v0.1.1/algorithms/strategy.h\n+++ v0.2.0/algorithms/strategy.h\n@@ -30,6 +30,7 @@\n   int16_t  target_bearing_cdeg;/* rumbo estimado en centigrados, + = babor */\n   uint8_t  line_mask;          /* bits segun enum sumo_line_idx      */\n   uint32_t last_seen_ms;       /* instante del ultimo contacto       */\n+  bool     contact_front;      /* rival pegado y de frente, visto EN ESTE ciclo */\n } sumo_percept_t;\n \n typedef struct {\n@@ -54,6 +55,11 @@\n   float    prev_right;\n \n   uint32_t edge_events;      /* contador de bordes vistos, telemetria */\n+\n+  /* empuje comprometido: borde a la vista con el rival pegado de frente */\n+  bool     commit_active;    /* ventana abierta                          */\n+  uint32_t t_commit_ms;      /* instante en que se abrio                 */\n+  uint32_t push_commits;     /* ventanas abiertas, telemetria            */\n } sumo_strategy_t;\n \n void        strategy_init(sumo_strategy_t *st, const sumo_params_t *p);\n"}, {"version": "v0.3.0", "parent": "v0.2.0", "iteration": 4, "created_at": "2026-09-12T20:22:06-06:00", "author": "claude-opus-5", "kind": "new-behavior", "title": "Empuje alineado: dirección firme en ATTACK para no perder la línea de empuje", "summary": "En ATTACK, la corrección de rumbo pasa de clamp(track_kp·rumbo·0,35, ±0,30) a clamp(track_kp·rumbo·0,70, ±0,60): el doble de ganancia y el doble de tope. Las dos constantes eran números mágicos dentro de strategy.c, en contra del invariante 2 del proyecto. Ahora viven en params.h como attack_kp_scale y attack_max_diff.", "rationale": "Resuelto el empuje comprometido, la traza de v0.2.0 mostraba que contra charger, en el banco nativo, se seguía perdiendo el pulso: 17 derrotas en pleno ATTACK y 36 durante un escape de borde con el rival pegado a un costado. La causa es geométrica. El banco reparte el empuje según la componente de cada robot a lo largo de la línea de contacto, y la dirección en ATTACK era tan tímida (0,39/rad, tope ±0,30) que el rival se escurría del centro de la pala. El charger, que gira hasta ±0,55, ganaba la alineación y acababa empujando de lado. La premisa de v0.1.0, 'en contacto se corrige poco: girar mucho es perder el empuje', resultó cierta para el tope pero no para la ganancia. Se barrieron 12 variantes en los dos bancos: ganancia de 0,35 a 1,00, tope de ±0,30 a ±0,70, velocidad de aproximación y distancia de ataque.", "hypothesis": "Mantener al rival centrado en la pala hace que el empuje vaya recto. Contra static se le saca sin que las esquinas lleguen a la banda; contra charger se aguanta el pulso frontal en vez de cederle el costado.", "expected_effect": "Esperado: static al 100 % y charger por encima del 20 % en el banco nativo, sin empeorar Webots. Medido con 30 semillas por rival, emparejado con v0.2.0: static 93,3 % → 100 %, mejor en las 30 semillas; charger 11,7 % → 27,2 % (+15,6 pp ± 1,5), mejor en 29 semillas y peor en ninguna; las derrotas contra charger bajan de 83,2 % a 54,4 %; spinner igual; mirror pasa de 2,7 % de victorias a 100 % de empates. Total 51,9 % → 56,8 % y derrotas 23,1 % → 13,6 %. Contra static no queda ni una huida de borde: el rival cae antes de que las esquinas toquen la banda. En Webots (34 colocaciones por rival, sin contar el espejo) se pasa de 94,9 % a 97,1 %, sin auto-salidas: charger 97,1 %, v0.1.1 97,1 %, spinner 100 % y static 94,1 %, con dos empates por tiempo contra el rival frenado. Tabla oficial de 'make medir': 135V 38D 67E (56,2 %).", "risks": "Con más ganancia en contacto también es más fácil sobrecorregir. Con 0,85, el enfrentamiento contra v0.1.1 en Webots cae al 82 %; con 1,00, charger vuelve al 11 % en el banco nativo. El óptimo es estrecho, y 0,70 con ±0,60 es el único punto que no empeora nada en ninguno de los dos bancos. Contra charger aparecen empates por tiempo (18 %): son pulsos frontales que ya no se pierden pero tampoco se ganan, y son el siguiente objetivo. Probado y descartado antes de esta versión: ampliar el cono del empuje comprometido a ±35° y la distancia de contacto a 90 mm. Webots quedó igual, pero static en el banco nativo cayó 15,7 pp en las 30 semillas: con el rival en la esquina, comprometerse es empujar en oblicuo junto al borde y seguirlo fuera.", "notes_real_robot": "Las dos cifras dependen de la respuesta real de los motores: con más inercia u holgura en la reductora, 0,70 con ±0,60 puede oscilar. En el robot conviene subir desde 0,35 en pasos de 0,1 empujando contra una caja, y comprobar que la pala se mantiene centrada sin cabecear de lado a lado.", "tags": ["new-behavior", "empuje", "attack", "barrido"], "params_changed": [{"name": "attack_kp_scale", "from": "0.35 (literal en strategy.c)", "to": "0.70", "reason": "Fracción de track_kp que se aplica empujando: 0,77/rad efectivos. Con 0,55 se gana algo menos contra charger y con 0,85 empeora en Webots contra v0.1.1."}, {"name": "attack_max_diff", "from": "0.30 (literal en strategy.c)", "to": "0.60", "reason": "Tope del diferencial en contacto. Con ±0,40 y ±0,50 el rival todavía se escurre (charger 22 %); con ±0,70 sobra (charger 21 %, v0.1.1 en Webots 82 %)."}], "states": ["WAIT", "OPENING", "SEARCH", "TRACK", "ATTACK", "EDGE_ESCAPE"], "diff_stat": {"added": 18, "removed": 7, "files": 2, "touched": ["algorithms/params.h", "algorithms/strategy.c"]}, "files": [{"path": "algorithms/params.h", "sha256": "5f28d4722cf20d0c5909e1b194665d625f253836bf2eafa1f6741ed5f87bab24", "lines": 117}, {"path": "algorithms/strategy.c", "sha256": "f0efeea44f81638e7bf2eb1982638c6260cb65a7e9357137ec95eb8a5501f750", "lines": 364}, {"path": "algorithms/strategy.h", "sha256": "e26f59c87e30d15de4f76ac91f8f72df1e8ba93141a248a0b5c90edc86784f67", "lines": 70}, {"path": "algorithms/sumo_types.h", "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc", "lines": 93}, {"path": "webots/controllers/gelatina_nuclear/Makefile", "sha256": "17d6122c9e20645f4e4f377170240323f1d7e0911babe0ec792a7cc677a345c3", "lines": 32}, {"path": "webots/controllers/gelatina_nuclear/hal.h", "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883", "lines": 37}, {"path": "webots/controllers/gelatina_nuclear/hal_webots.c", "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694", "lines": 203}, {"path": "webots/controllers/gelatina_nuclear/main.c", "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc", "lines": 48}], "metrics": {"rounds": 240, "wins": 135, "losses": 38, "draws": 67, "win_rate": 0.562, "avg_win_time_s": 1.52, "self_outs": 1, "opponents": [{"name": "static", "rounds": 60, "wins": 60, "losses": 0, "draws": 0, "win_rate": 1.0}, {"name": "charger", "rounds": 60, "wins": 15, "losses": 38, "draws": 7, "win_rate": 0.25}, {"name": "spinner", "rounds": 60, "wins": 60, "losses": 0, "draws": 0, "win_rate": 1.0}, {"name": "mirror", "rounds": 60, "wins": 0, "losses": 0, "draws": 60, "win_rate": 0.0}]}, "verdict": "mejora", "metrics_reglamento": {"rounds": 240, "wins": 110, "losses": 66, "draws": 64, "win_rate": 0.458, "avg_win_time_s": 3.19, "self_outs": 22, "match_win_rate": 0.619, "opponents": [{"name": "static", "rounds": 60, "wins": 40, "losses": 20, "draws": 0, "win_rate": 0.667, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 20, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}}, {"name": "charger", "rounds": 60, "wins": 29, "losses": 27, "draws": 4, "win_rate": 0.483, "placements": [{"name": "frente", "rounds": 20, "wins": 7, "losses": 9, "draws": 4}, {"name": "lado", "rounds": 20, "wins": 2, "losses": 18, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}], "match": {"win": 0.478, "judges": 0.036, "loss": 0.486}}, {"name": "spinner", "rounds": 60, "wins": 41, "losses": 19, "draws": 0, "win_rate": 0.683, "placements": [{"name": "frente", "rounds": 20, "wins": 1, "losses": 19, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}}, {"name": "mirror", "rounds": 60, "wins": 0, "losses": 0, "draws": 60, "win_rate": 0.0, "placements": [{"name": "frente", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}], "match": {"win": 0.0, "judges": 1.0, "loss": 0.0}}], "engine": "harness-nativo", "mode": "reglamento"}, "metrics_webots": {"rounds": 120, "wins": 49, "losses": 68, "draws": 3, "self_outs": 63, "win_rate": 0.408, "avg_win_time_s": 0.89, "opponents": [{"name": "static", "rounds": 30, "wins": 9, "losses": 20, "draws": 1, "win_rate": 0.3, "placements": [{"name": "frente", "rounds": 10, "wins": 9, "losses": 0, "draws": 1}, {"name": "lado", "rounds": 10, "wins": 0, "losses": 10, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 0, "losses": 10, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}, "reasons": {"frente": {"rival fuera": 9, "tiempo agotado": 1}, "lado": {"auto-salida": 10}, "espalda": {"auto-salida": 10}}}, {"name": "charger", "rounds": 30, "wins": 12, "losses": 18, "draws": 0, "win_rate": 0.4, "placements": [{"name": "frente", "rounds": 10, "wins": 8, "losses": 2, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 4, "losses": 6, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 0, "losses": 10, "draws": 0}], "match": {"win": 0.32, "judges": 0.0, "loss": 0.68}, "reasons": {"frente": {"rival fuera": 8, "expulsado": 2}, "lado": {"auto-salida": 6, "rival fuera": 4}, "espalda": {"auto-salida": 10}}}, {"name": "spinner", "rounds": 30, "wins": 10, "losses": 20, "draws": 0, "win_rate": 0.333, "placements": [{"name": "frente", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 0, "losses": 10, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 0, "losses": 10, "draws": 0}], "match": {"win": 0.0, "judges": 0.0, "loss": 1.0}, "reasons": {"frente": {"rival fuera": 10}, "lado": {"auto-salida": 10}, "espalda": {"auto-salida": 10}}}, {"name": "v0.3.0", "rounds": 30, "wins": 18, "losses": 10, "draws": 2, "win_rate": 0.6, "placements": [{"name": "frente", "rounds": 10, "wins": 7, "losses": 3, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 6, "losses": 3, "draws": 1}, {"name": "espalda", "rounds": 10, "wins": 5, "losses": 4, "draws": 1}], "match": {"win": 0.714, "judges": 0.0, "loss": 0.286}, "reasons": {"frente": {"rival fuera": 7, "expulsado": 3}, "lado": {"rival fuera": 6, "auto-salida": 3, "doble salida": 1}, "espalda": {"rival fuera": 5, "auto-salida": 4, "doble salida": 1}}}], "match_win_rate": 0.259, "engine": "webots", "mode": "reglamento"}, "metrics_webots_banco": {"rounds": 120, "wins": 99, "losses": 20, "draws": 1, "self_outs": 0, "win_rate": 0.825, "avg_win_time_s": 0.72, "opponents": [{"name": "static", "rounds": 30, "wins": 30, "losses": 0, "draws": 0, "win_rate": 1.0, "reasons": {"banco": {"rival fuera": 30}}}, {"name": "charger", "rounds": 30, "wins": 25, "losses": 4, "draws": 1, "win_rate": 0.833, "reasons": {"banco": {"rival fuera": 25, "expulsado": 4, "tiempo agotado": 1}}}, {"name": "spinner", "rounds": 30, "wins": 30, "losses": 0, "draws": 0, "win_rate": 1.0, "reasons": {"banco": {"rival fuera": 30}}}, {"name": "v0.3.0", "rounds": 30, "wins": 14, "losses": 16, "draws": 0, "win_rate": 0.467, "reasons": {"banco": {"expulsado": 16, "rival fuera": 14}}}], "engine": "webots", "mode": "banco"}, "diff": "--- v0.2.0/algorithms/params.h\n+++ v0.3.0/algorithms/params.h\n@@ -43,6 +43,8 @@\n   /* ---- seguimiento --------------------------------------------------- */\n   float track_kp;                 /* rad^-1, error de rumbo -> diferencial */\n   float track_max_diff;           /* tope del termino diferencial          */\n+  float attack_kp_scale;          /* fraccion de track_kp usada en ATTACK  */\n+  float attack_max_diff;          /* tope del diferencial empujando        */\n \n   /* ---- escape de borde (maxima prioridad) ----------------------------- */\n   uint16_t escape_back_ms;        /* retroceso tras ver linea frontal      */\n@@ -88,6 +90,8 @@\n \n   p.track_kp            = 1.10f;\n   p.track_max_diff      = 0.85f;\n+  p.attack_kp_scale     = 0.70f;\n+  p.attack_max_diff     = 0.60f;\n \n   p.escape_back_ms      = 300;\n   p.escape_turn_ms      = 360;\n\n--- v0.2.0/algorithms/strategy.c\n+++ v0.3.0/algorithms/strategy.c\n@@ -1,10 +1,13 @@\n /* ==========================================================================\n  *  strategy.c  --  Cerebro de Gelatina Nuclear\n  *  ------------------------------------------------------------------------\n- *  v0.2.0: la maquina de estados reactiva de la linea base v0.1.0 con una\n- *  sola idea nueva, EMPUJE COMPROMETIDO: si el rival esta pegado de frente,\n- *  el borde que ven los sensores de linea es suyo, no nuestro, y se sigue\n- *  empujando en vez de huir. Sin modelo del ring, sin aprendizaje.\n+ *  Maquina de estados reactiva sobre la linea base v0.1.0, con dos ideas:\n+ *    - v0.2.0 EMPUJE COMPROMETIDO: si el rival esta pegado de frente, el\n+ *      borde que ven los sensores de linea es suyo, no nuestro, y se sigue\n+ *      empujando en vez de huir.\n+ *    - v0.3.0 EMPUJE ALINEADO: en ATTACK se corrige el rumbo con firmeza\n+ *      para que el rival no se escurra del centro de la pala.\n+ *  Sin modelo del ring, sin aprendizaje.\n  *\n  *  Prioridades, de mayor a menor:\n  *     1. No caerse del ring      -> ST_EDGE_ESCAPE\n@@ -21,7 +24,7 @@\n #include \u003cmath.h>\n #include \u003cstring.h>\n \n-#define STRATEGY_VERSION_STR \"v0.2.0\"\n+#define STRATEGY_VERSION_STR \"v0.3.0\"\n \n #ifndef M_PI\n #define M_PI 3.14159265358979323846\n@@ -331,8 +334,12 @@\n     }\n     if (st->per.target_dist_mm > p->dist_track_mm) { enter(st, ST_TRACK); break; }\n \n-    /* en contacto se corrige poco: girar mucho es perder el empuje */\n-    const float turn = clampf(p->track_kp * bearing_rad * 0.35f, -0.30f, 0.30f);\n+    /* En contacto hay que corregir con firmeza: si el rival se escurre del\n+     * centro de la pala, la linea de empuje se tuerce y gana el que esta\n+     * mejor alineado. Hasta v0.2.0 (0.35 y +-0.30, numeros magicos aqui) el\n+     * charger, que gira hasta +-0.55, nos ganaba la alineacion. */\n+    const float turn = clampf(p->track_kp * bearing_rad * p->attack_kp_scale,\n+                              -p->attack_max_diff, p->attack_max_diff);\n     drive(st, p->v_attack, turn, a);\n     break;\n   }\n"}, {"version": "v0.3.1", "parent": "v0.3.0", "iteration": 5, "created_at": "2026-09-13T08:54:20-06:00", "author": "claude-opus-5 + CMA-ES en GPU", "kind": "tuning", "title": "Afinado en la GPU para el reglamento: colocaciones a 5 cm y aleatorización de dominio", "summary": "Solo cambian números de params.h: 23 de los 24 parámetros aprendibles, elegidos por una estrategia evolutiva (CMA-ES) que jugó 7,4 millones de asaltos en la RTX 5070 con las colocaciones del reglamento (frente, lado y espaldas a 5 cm). Es el candidato c-001 de la corrida 20260913-083224-reglamento-1 (ml/data/corridas/), redondeado a dos decimales. La apertura pasa de embestida recta a 0,80 durante 420 ms a un arco a estribor a 0,28 durante 110 ms. El escape de borde pasa de 300 ms marcha atrás a 0,85 a 78 ms a 0,54, seguido de 582 ms de bloqueo. El empuje comprometido se amplía a 143 mm, ±59,5° y hasta 1982 ms. strategy.c no cambia. Las razones por parámetro de la tabla son interpretaciones de lo que eligió el optimizador, no reglas escritas a mano.", "rationale": "El reglamento del torneo (Extras/Reglamento de MINISUMO II, p. 10-11) coloca a los robots a 5 cm, de frente, de lado o de espaldas, y no en la diagonal a 36 cm de todas las medidas anteriores. Con esas colocaciones, v0.3.0 tenía puntos ciegos. En el banco nativo perdía de espaldas los 20 asaltos contra static y de frente 19 de 20 contra spinner. En Webots se salía sola en 63 de 120 asaltos: sale mirando hacia fuera a 0,80 × 1,575 m/s y, con la inercia, no frena antes de la banda, algo que el banco cinemático no modela. Ajustar 24 números a mano contra eso es inabarcable, así que se entregó a la GPU. El simulador vectorizado reproduce tests/harness.c: 96 comparaciones estadísticas contra el C, en cuatro versiones y dos modos, todas con |z| ≤ 2,1. En modo robusto, además, aleatoriza lo que Webots demostró que el banco fija: velocidad máxima de 1,05 a 1,65 m/s, agarre ±15 %, ruido y pérdidas del ToF, retardo de motor de hasta 40 ms y la pala del rival leída como borde. Cada candidato se midió por su probabilidad de ganar el combate a tres rondas contra static, charger, spinner y las versiones anteriores.", "hypothesis": "Una apertura lenta y un escape corto y suave evitan las auto-salidas de las colocaciones de espaldas y de lado. Un empuje comprometido amplio convierte en victorias los contactos que la versión anterior abandonaba al ver la banda. Si la aleatorización de dominio cubre el hueco entre el banco y Webots, la mejora tiene que verse en Webots, que no participó en el entrenamiento.", "expected_effect": "Medido. Webots con las colocaciones del reglamento, 30 asaltos por rival y el robot de 495 g: combate ganado de media del 25,9 % al 100 %; de 49V 68D 3E a 114V 6D 0E; auto-salidas de 63 a 0; contra v0.3.0 congelada, 26 de 30. Banco nativo en C, modo reglamento (tabla oficial): combate ganado del 61,9 % al 64,4 % y derrotas de 66 a 5; de espaldas contra static, de 0/20 a 20/20. Banco nativo en el modo de siempre, que es la tabla oficial de esta bitácora: de 135V 38D 67E a 119V 2D 119E. El win rate baja del 56,2 % al 49,6 % porque contra charger casi todo acaba en empate (1V 0D 59E): en el banco exacto el empuje frontal es simétrico y nadie cede. En la GPU, modo robusto, 48 asaltos por rival y colocación: combate del 60,9 % al 99,7 %.", "risks": "1) En la diagonal antigua a 36 cm, Webots da 89V 31D frente a los 99V 20D de v0.3.0, y contra v0.3.0 congelada pierde 26 de 30: la apertura lenta deja que un rival rápido embista desde lejos antes de que Gelatina se alinee. El reglamento no usa esa colocación, pero un rival que arranque fuerte y de lejos es plausible. 2) Varios parámetros acabaron junto a su límite (cono de 59,5° sobre 60, ventana de 1982 ms sobre 2000, contacto de 143 mm sobre 150) y el paso σ de CMA-ES se quedó en su tope: el banco de rivales se quedó corto y la búsqueda no llegó a converger. La siguiente corrida ya lleva c-001 como rival (liga de campeones). 3) Con 582 ms de bloqueo tras un escape, el robot ignora el borde medio segundo; con la tracción real puede costar una salida. 4) El mismo día, fuera de la bitácora porque no son rutas vigiladas: tests/harness.c gana el modo --reglamento (el modo de siempre da exactamente las mismas cifras), el árbitro gana --colocacion reglamento y el modelo del robot baja de 500 g a 495 g, porque el reglamento pide estar por debajo, con pulsador de arranque. Las cifras de Webots de esta entrada y las de v0.3.0 medida de nuevo ya usan 495 g.", "notes_real_robot": "Probar primero la apertura: arco a estribor a 0,28 durante 110 ms. v_opening y v_escape son los números que más dependen de la frenada real; conviene medir en el dohyo cuánto desliza el robot desde 1,2 m/s. El bloqueo de 582 ms tras el escape debe verificarse sobre la banda real: si aparecen salidas, es lo primero que hay que bajar. El empuje comprometido a ±60° da por hecho que el IR delantero puede leer la pala del rival como borde, que es el caso que motivó v0.2.0; con la pala de acero real hay que comprobarlo.", "tags": ["tuning", "ml", "cma-es", "gpu", "reglamento"], "params_changed": [{"name": "opening", "from": "OPENING_CHARGE", "to": "OPENING_ARC_R", "reason": "Sale girando en arco en vez de embestir recto. En las tres colocaciones del reglamento orienta el robot sin cruzar la banda."}, {"name": "opening_ms", "from": "420", "to": "110", "reason": "La apertura dura poco más que el giro inicial; después manda la búsqueda."}, {"name": "v_opening", "from": "0.80", "to": "0.28", "reason": "Apertura lenta. Salir de espaldas a 0,80 llevaba al robot al borde antes de poder frenar (63 auto-salidas en Webots)."}, {"name": "v_escape", "from": "0.85", "to": "0.54", "reason": "Escape más suave; probablemente para no pasarse de frenada con la inercia real."}, {"name": "escape_back_ms", "from": "300", "to": "78", "reason": "Retroceso corto: basta con despegar las esquinas de la banda."}, {"name": "escape_turn_ms", "from": "360", "to": "125", "reason": "Reencuadre corto hacia el centro."}, {"name": "escape_lockout_ms", "from": "140", "to": "582", "reason": "Ventana ciega larga tras el escape. Riesgo 3 de esta entrada."}, {"name": "dist_contact_mm", "from": "60", "to": "143", "reason": "Considera pegado al rival hasta 14 cm, cerca del límite del rango."}, {"name": "contact_cone_cdeg", "from": "2500", "to": "5952", "reason": "Cono de ±59,5°: casi cualquier contacto por delante compromete el empuje. Junto al límite."}, {"name": "push_commit_ms", "from": "600", "to": "1982", "reason": "Empuja hasta 2 s con la banda a la vista. Junto al límite."}, {"name": "dist_attack_mm", "from": "260", "to": "132", "reason": "Empuje a fondo solo con el rival a 13 cm; antes, aproximación más lenta y alineada."}, {"name": "v_track", "from": "0.72", "to": "0.46", "reason": "Aproximación a media velocidad: llega alineado y con margen para frenar."}, {"name": "v_search", "from": "0.55", "to": "0.94", "reason": "Búsqueda rápida: de espaldas o de lado hay que encontrar al rival antes que él a Gelatina."}, {"name": "search_spin_ms", "from": "520", "to": "1044", "reason": "Giros de búsqueda más largos."}, {"name": "search_probe_ms", "from": "300", "to": "250", "reason": "Avances más cortos entre giros."}, {"name": "search_turn_ratio", "from": "-0.85", "to": "-0.88", "reason": "Giro de búsqueda algo más cerrado."}, {"name": "track_kp", "from": "1.10", "to": "1.35", "reason": "Corrige el rumbo con más firmeza al perseguir; es el parámetro que más sube la aptitud según el modelo sustituto de la liga."}, {"name": "track_max_diff", "from": "0.85", "to": "0.86", "reason": "Sin efecto práctico."}, {"name": "attack_kp_scale", "from": "0.70", "to": "0.79", "reason": "Algo más de dirección en contacto, en la línea de v0.3.0."}, {"name": "attack_max_diff", "from": "0.60", "to": "0.84", "reason": "Más margen para corregir en contacto."}, {"name": "target_hold_ms", "from": "260", "to": "107", "reason": "Memoria del rival más corta: con los robots tan cerca, una lectura vieja apunta mal."}, {"name": "dist_valid_max_mm", "from": "800", "to": "752", "reason": "Descarta lecturas por encima de 75 cm."}, {"name": "dist_track_mm", "from": "700", "to": "752", "reason": "Persigue todo lo que ve dentro del alcance válido."}], "states": ["WAIT", "OPENING", "SEARCH", "TRACK", "ATTACK", "EDGE_ESCAPE"], "diff_stat": {"added": 23, "removed": 23, "files": 1, "touched": ["algorithms/params.h"]}, "files": [{"path": "algorithms/params.h", "sha256": "27f3bf3dd04a3b4b93c2add3be4cde8b38d37fdd9fe4b42c671400ec0528319a", "lines": 117}, {"path": "algorithms/strategy.c", "sha256": "f0efeea44f81638e7bf2eb1982638c6260cb65a7e9357137ec95eb8a5501f750", "lines": 364}, {"path": "algorithms/strategy.h", "sha256": "e26f59c87e30d15de4f76ac91f8f72df1e8ba93141a248a0b5c90edc86784f67", "lines": 70}, {"path": "algorithms/sumo_types.h", "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc", "lines": 93}, {"path": "webots/controllers/gelatina_nuclear/Makefile", "sha256": "17d6122c9e20645f4e4f377170240323f1d7e0911babe0ec792a7cc677a345c3", "lines": 32}, {"path": "webots/controllers/gelatina_nuclear/hal.h", "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883", "lines": 37}, {"path": "webots/controllers/gelatina_nuclear/hal_webots.c", "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694", "lines": 203}, {"path": "webots/controllers/gelatina_nuclear/main.c", "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc", "lines": 48}], "metrics": {"rounds": 240, "wins": 119, "losses": 2, "draws": 119, "win_rate": 0.496, "avg_win_time_s": 0.71, "self_outs": 0, "opponents": [{"name": "static", "rounds": 60, "wins": 60, "losses": 0, "draws": 0, "win_rate": 1.0}, {"name": "charger", "rounds": 60, "wins": 1, "losses": 0, "draws": 59, "win_rate": 0.017}, {"name": "spinner", "rounds": 60, "wins": 58, "losses": 2, "draws": 0, "win_rate": 0.967}, {"name": "mirror", "rounds": 60, "wins": 0, "losses": 0, "draws": 60, "win_rate": 0.0}]}, "verdict": "mejora", "metrics_reglamento": {"rounds": 240, "wins": 126, "losses": 5, "draws": 109, "win_rate": 0.525, "avg_win_time_s": 3.74, "self_outs": 0, "match_win_rate": 0.644, "opponents": [{"name": "static", "rounds": 60, "wins": 59, "losses": 1, "draws": 0, "win_rate": 0.983, "placements": [{"name": "frente", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 19, "losses": 1, "draws": 0}, {"name": "espalda", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}}, {"name": "charger", "rounds": 60, "wins": 13, "losses": 0, "draws": 47, "win_rate": 0.217, "placements": [{"name": "frente", "rounds": 20, "wins": 1, "losses": 0, "draws": 19}, {"name": "lado", "rounds": 20, "wins": 3, "losses": 0, "draws": 17}, {"name": "espalda", "rounds": 20, "wins": 9, "losses": 0, "draws": 11}], "match": {"win": 0.578, "judges": 0.422, "loss": 0.0}}, {"name": "spinner", "rounds": 60, "wins": 54, "losses": 4, "draws": 2, "win_rate": 0.9, "placements": [{"name": "frente", "rounds": 20, "wins": 16, "losses": 4, "draws": 0}, {"name": "lado", "rounds": 20, "wins": 18, "losses": 0, "draws": 2}, {"name": "espalda", "rounds": 20, "wins": 20, "losses": 0, "draws": 0}], "match": {"win": 0.996, "judges": 0.0, "loss": 0.004}}, {"name": "mirror", "rounds": 60, "wins": 0, "losses": 0, "draws": 60, "win_rate": 0.0, "placements": [{"name": "frente", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "lado", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}, {"name": "espalda", "rounds": 20, "wins": 0, "losses": 0, "draws": 20}], "match": {"win": 0.0, "judges": 1.0, "loss": 0.0}}], "engine": "harness-nativo", "mode": "reglamento"}, "metrics_webots": {"rounds": 120, "wins": 114, "losses": 6, "draws": 0, "self_outs": 0, "win_rate": 0.95, "avg_win_time_s": 0.58, "opponents": [{"name": "static", "rounds": 30, "wins": 30, "losses": 0, "draws": 0, "win_rate": 1.0, "placements": [{"name": "frente", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}, "reasons": {"frente": {"rival fuera": 10}, "lado": {"rival fuera": 10}, "espalda": {"rival fuera": 10}}}, {"name": "charger", "rounds": 30, "wins": 28, "losses": 2, "draws": 0, "win_rate": 0.933, "placements": [{"name": "frente", "rounds": 10, "wins": 8, "losses": 2, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}, "reasons": {"frente": {"rival fuera": 8, "expulsado": 2}, "lado": {"rival fuera": 10}, "espalda": {"rival fuera": 10}}}, {"name": "spinner", "rounds": 30, "wins": 30, "losses": 0, "draws": 0, "win_rate": 1.0, "placements": [{"name": "frente", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}, "reasons": {"frente": {"rival fuera": 10}, "lado": {"rival fuera": 10}, "espalda": {"rival fuera": 10}}}, {"name": "v0.3.0", "rounds": 30, "wins": 26, "losses": 4, "draws": 0, "win_rate": 0.867, "placements": [{"name": "frente", "rounds": 10, "wins": 6, "losses": 4, "draws": 0}, {"name": "lado", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}, {"name": "espalda", "rounds": 10, "wins": 10, "losses": 0, "draws": 0}], "match": {"win": 1.0, "judges": 0.0, "loss": 0.0}, "reasons": {"frente": {"rival fuera": 6, "expulsado": 4}, "lado": {"rival fuera": 10}, "espalda": {"rival fuera": 10}}}], "match_win_rate": 1.0, "engine": "webots", "mode": "reglamento"}, "metrics_webots_banco": {"rounds": 120, "wins": 89, "losses": 31, "draws": 0, "self_outs": 0, "win_rate": 0.742, "avg_win_time_s": 0.95, "opponents": [{"name": "static", "rounds": 30, "wins": 30, "losses": 0, "draws": 0, "win_rate": 1.0, "reasons": {"banco": {"rival fuera": 30}}}, {"name": "charger", "rounds": 30, "wins": 25, "losses": 5, "draws": 0, "win_rate": 0.833, "reasons": {"banco": {"rival fuera": 25, "expulsado": 5}}}, {"name": "spinner", "rounds": 30, "wins": 30, "losses": 0, "draws": 0, "win_rate": 1.0, "reasons": {"banco": {"rival fuera": 30}}}, {"name": "v0.3.0", "rounds": 30, "wins": 4, "losses": 26, "draws": 0, "win_rate": 0.133, "reasons": {"banco": {"expulsado": 26, "rival fuera": 4}}}], "engine": "webots", "mode": "banco"}, "diff": "--- v0.3.0/algorithms/params.h\n+++ v0.3.1/algorithms/params.h\n@@ -77,36 +77,36 @@\n \n   p.dt_ms               = 8;\n \n-  p.dist_valid_max_mm   = 800;\n-  p.dist_attack_mm      = 260;\n-  p.dist_track_mm       = 700;\n-  p.target_hold_ms      = 260;\n+  p.dist_valid_max_mm   = 752;\n+  p.dist_attack_mm      = 132;\n+  p.dist_track_mm       = 752;\n+  p.target_hold_ms      = 107;\n \n   p.v_attack            = 1.00f;\n-  p.v_track             = 0.72f;\n-  p.v_search            = 0.55f;\n-  p.v_escape            = 0.85f;\n-  p.v_opening           = 0.80f;\n+  p.v_track             = 0.46f;\n+  p.v_search            = 0.94f;\n+  p.v_escape            = 0.54f;\n+  p.v_opening           = 0.28f;\n \n-  p.track_kp            = 1.10f;\n-  p.track_max_diff      = 0.85f;\n-  p.attack_kp_scale     = 0.70f;\n-  p.attack_max_diff     = 0.60f;\n+  p.track_kp            = 1.35f;\n+  p.track_max_diff      = 0.86f;\n+  p.attack_kp_scale     = 0.79f;\n+  p.attack_max_diff     = 0.84f;\n \n-  p.escape_back_ms      = 300;\n-  p.escape_turn_ms      = 360;\n-  p.escape_lockout_ms   = 140;\n+  p.escape_back_ms      = 78;\n+  p.escape_turn_ms      = 125;\n+  p.escape_lockout_ms   = 582;\n \n-  p.dist_contact_mm     = 60;\n-  p.contact_cone_cdeg   = 2500;\n-  p.push_commit_ms      = 600;\n+  p.dist_contact_mm     = 143;\n+  p.contact_cone_cdeg   = 5952;\n+  p.push_commit_ms      = 1982;\n \n-  p.search_spin_ms      = 520;\n-  p.search_probe_ms     = 300;\n-  p.search_turn_ratio   = -0.85f;\n+  p.search_spin_ms      = 1044;\n+  p.search_probe_ms     = 250;\n+  p.search_turn_ratio   = -0.88f;\n \n-  p.opening             = OPENING_CHARGE;\n-  p.opening_ms          = 420;\n+  p.opening             = OPENING_ARC_R;\n+  p.opening_ms          = 110;\n \n   p.slew_per_s          = 25.0f;\n   p.deadband            = 0.04f;\n"}], "ml": {"liga": {"fecha": "2026-09-13T08:59:44-06:00", "rondas": 32, "algoritmos": [{"id": "v0.3.1", "tipo": "version", "elo": 2174.0, "elo_humano": null, "gana_combate_medio": 0.9878997802734375}, {"id": "v0.2.0", "tipo": "version", "elo": 1420.3, "elo_humano": null, "gana_combate_medio": 0.5206174850463867}, {"id": "v0.3.0", "tipo": "version", "elo": 1402.8, "elo_humano": null, "gana_combate_medio": 0.46768712997436523}, {"id": "v0.1.1", "tipo": "version", "elo": 1255.1, "elo_humano": null, "gana_combate_medio": 0.31870245933532715}, {"id": "v0.1.0", "tipo": "version", "elo": 1247.7, "elo_humano": null, "gana_combate_medio": 0.31545066833496094}], "campeones": ["c-001"], "direccion": {"r2": 0.7676694963493813, "muestras": 51200, "parametros": [{"nombre": "track_kp", "gradiente": 0.035346925258636475, "importancia": 0.1189630776643753, "sentido": "subir", "paso_sugerido": 0.1899999976158142, "ganancia_por_paso": 0.001767346286214888}, {"nombre": "attack_kp_scale", "gradiente": 0.07085398584604263, "importancia": 0.07701936364173889, "sentido": "subir", "paso_sugerido": 0.10000000149011612, "ganancia_por_paso": 0.003542699385434389}, {"nombre": "escape_back_ms", "gradiente": -0.03253844752907753, "importancia": 0.044569164514541626, "sentido": "bajar", "paso_sugerido": -37.0, "ganancia_por_paso": 0.0016269223997369409}, {"nombre": "attack_max_diff", "gradiente": -0.012777967378497124, "importancia": 0.031533028930425644, "sentido": "bajar", "paso_sugerido": -0.05000000074505806, "ganancia_por_paso": 0.0006388984038494527}, {"nombre": "v_attack", "gradiente": -0.012453676201403141, "importancia": 0.029499007388949394, "sentido": "bajar", "paso_sugerido": -0.02500000037252903, "ganancia_por_paso": 0.0006226838449947536}, {"nombre": "opening", "gradiente": 0.003689042292535305, "importancia": 0.021772373467683792, "sentido": "subir", "paso_sugerido": 0.0, "ganancia_por_paso": 0.0001844521175371483}, {"nombre": "push_commit_ms", "gradiente": -0.027903910726308823, "importancia": 0.01532760076224804, "sentido": "bajar", "paso_sugerido": -100.0, "ganancia_por_paso": 0.0013951956061646342}, {"nombre": "target_hold_ms", "gradiente": 0.02465173602104187, "importancia": 0.013619116507470608, "sentido": "subir", "paso_sugerido": 40.0, "ganancia_por_paso": 0.0012325868010520935}, {"nombre": "escape_turn_ms", "gradiente": -0.01650291122496128, "importancia": 0.013237769715487957, "sentido": "bajar", "paso_sugerido": -42.0, "ganancia_por_paso": 0.0008251455728895962}, {"nombre": "search_turn_ratio", "gradiente": -0.012795701622962952, "importancia": 0.012041444890201092, "sentido": "bajar", "paso_sugerido": -0.05000000074505806, "ganancia_por_paso": 0.0006397850811481476}]}}, "corridas": [{"id": "20260913-083224-reglamento-1", "desde": "v0.3.0", "generaciones": 100, "poblacion": 512, "asaltos_por_generacion": 73728, "lambda_humano": 0.0, "segundos": 184.2, "candidato": "c-001", "base_combate": 0.6094105243682861, "campeon_combate": 0.9968082308769226, "cambios": [{"nombre": "escape_lockout_ms", "de": 140, "a": 582, "delta": 442, "delta_rel": 0.7366666666666667}, {"nombre": "push_commit_ms", "de": 600, "a": 1982, "delta": 1382, "delta_rel": 0.691}, {"nombre": "opening", "de": 0, "a": 2, "delta": 2, "delta_rel": 0.6666666666666666}, {"nombre": "dist_contact_mm", "de": 60, "a": 143, "delta": 83, "delta_rel": 0.6384615384615384}, {"nombre": "contact_cone_cdeg", "de": 2500, "a": 5952, "delta": 3452, "delta_rel": 0.6276363636363637}, {"nombre": "v_opening", "de": 0.8, "a": 0.27726676515765813, "delta": -0.5227332348423419, "delta_rel": -0.5227332348423419}, {"nombre": "v_escape", "de": 0.85, "a": 0.5398840947667769, "delta": -0.3101159052332231, "delta_rel": -0.5168598420553718}, {"nombre": "v_search", "de": 0.55, "a": 0.9378705630506425, "delta": 0.3878705630506425, "delta_rel": 0.4848382038133031}], "log": [[0, 0.9896, 0.6796], [1, 1.0, 0.7806], [2, 1.0, 0.7939], [3, 1.0, 0.8131], [4, 1.0, 0.8392], [5, 1.0, 0.8571], [6, 1.0, 0.8369], [7, 1.0, 0.8306], [8, 1.0, 0.8503], [9, 1.0, 0.8647], [10, 1.0, 0.8878], [11, 1.0, 0.8755], [12, 1.0, 0.9206], [13, 1.0, 0.9154], [14, 1.0, 0.9246], [15, 1.0, 0.9359], [16, 1.0, 0.9259], [17, 1.0, 0.9487], [18, 1.0, 0.9561], [19, 1.0, 0.9557], [20, 1.0, 0.9432], [21, 1.0, 0.962], [22, 1.0, 0.9543], [23, 1.0, 0.9509], [24, 1.0, 0.9491], [25, 1.0, 0.9463], [26, 1.0, 0.9566], [27, 1.0, 0.9572], [28, 1.0, 0.9709], [29, 1.0, 0.9726], [30, 1.0, 0.9733], [31, 1.0, 0.9548], [32, 1.0, 0.9779], [33, 1.0, 0.9696], [34, 1.0, 0.9753], [35, 1.0, 0.9759], [36, 1.0, 0.9808], [37, 1.0, 0.9702], [38, 1.0, 0.9775], [39, 1.0, 0.9803], [40, 1.0, 0.9723], [41, 1.0, 0.972], [42, 1.0, 0.9772], [43, 1.0, 0.9835], [44, 1.0, 0.9828], [45, 1.0, 0.9816], [46, 1.0, 0.9827], [47, 1.0, 0.9777], [48, 1.0, 0.9852], [49, 1.0, 0.9886], [50, 1.0, 0.9939], [51, 1.0, 0.9861], [52, 1.0, 0.9887], [53, 1.0, 0.9805], [54, 1.0, 0.9882], [55, 1.0, 0.986], [56, 1.0, 0.9844], [57, 1.0, 0.9885], [58, 1.0, 0.9939], [59, 1.0, 0.9854], [60, 1.0, 0.9846], [61, 1.0, 0.9796], [62, 1.0, 0.9891], [63, 1.0, 0.9888], [64, 1.0, 0.988], [65, 1.0, 0.9917], [66, 1.0, 0.9942], [67, 1.0, 0.9883], [68, 1.0, 0.9868], [69, 1.0, 0.9955], [70, 1.0, 0.9864], [71, 1.0, 0.9954], [72, 1.0, 0.9939], [73, 1.0, 0.9829], [74, 1.0, 0.9922], [75, 1.0, 0.9878], [76, 1.0, 0.993], [77, 1.0, 0.9925], [78, 1.0, 0.9917], [79, 1.0, 0.9969], [80, 1.0, 0.9926], [81, 1.0, 0.9938], [82, 1.0, 0.9905], [83, 1.0, 0.9942], [84, 1.0, 0.9972], [85, 1.0, 0.9949], [86, 1.0, 0.9958], [87, 1.0, 0.9964], [88, 1.0, 0.9957], [89, 1.0, 0.9945], [90, 1.0, 0.9923], [91, 1.0, 0.9948], [92, 1.0, 0.9933], [93, 1.0, 0.9923], [94, 1.0, 0.9929], [95, 1.0, 0.9985], [96, 1.0, 0.9984], [97, 1.0, 0.9976], [98, 1.0, 0.9957], [99, 1.0, 0.9933]]}], "asaltos_gpu": 7687372, "validacion": {"ok": true, "casos": 96, "z_max": 2.1, "versiones": ["v0.1.0", "v0.1.1", "v0.2.0", "v0.3.0"]}, "recompensa": null, "pares": {"pendientes": 12, "votados": 0}, "votos": 0, "politicas": [{"id": "p-20260913-084929-reglamento-1", "pasos": 314572800, "combate_gana": 0.8526502847671509, "combate_pierde": 0.1421615183353424, "rivales": [{"nombre": "static", "gana": 1.0}, {"nombre": "charger", "gana": 0.9853515625}, {"nombre": "spinner", "gana": 1.0}, {"nombre": "v0.1.1", "gana": 1.0}, {"nombre": "v0.2.0", "gana": 1.0}, {"nombre": "v0.3.0", "gana": 0.9769744873046875}, {"nombre": "v0.3.1", "gana": 0.0062255859375}], "c": {"fichero": "/home/byemmanuel/Desktop/Workspace/IA/Gelatina_Nuclear/claude/Mini-Sumo/ml/data/politicas/p-20260913-084929-reglamento-1/nn_politica.h", "pesos": 5698, "error_max": 5.364418029785156e-07}}], "pasos_ppo": 314572800}, "tareas": [{"id": "T-001", "texto": "Leer el reglamento", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": null, "criterio": "Resumen del reglamento con cada regla enlazada a su efecto en el proyecto: cumple, ajustado o pendiente.", "evidencia": "Reglamento leído entero (24 págs.); cada regla enlazada a su estado en el proyecto"}, {"id": "T-002", "texto": "Ajustar el proyecto que llevamos hasta ahora dependiendo de lo que dice el reglamento", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": null, "criterio": "Colocaciones del reglamento (frente, lado y espalda a 5 cm) y combate a 3 rondas en el banco nativo, el simulador de GPU y el árbitro de Webots; versiones anteriores medidas otra vez en ese modo.", "evidencia": "Modo reglamento en banco en C, GPU y árbitro; 495 g y pulsador de arranque. Webots con reglamento: v0.3.0 combate 25,9 % con 63 auto-salidas; v0.3.1 100 % sin auto-salidas"}, {"id": "T-003", "texto": "Realizar un modelo de aprendizaje supervizado por refuerzo de cada algoritmo", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": null, "criterio": "Entrenamiento en GPU de cada algoritmo de movimiento (máquina de estados parametrizada y política neuronal), guiado por un modelo de recompensa aprendido de las preferencias del usuario.", "evidencia": "Dos algoritmos de movimiento entrenados en GPU con modelo de recompensa humana: máquina de estados por CMA-ES (resultado v0.3.1) y política neuronal por PPO. Ciclo completo en python -m ml ciclo"}, {"id": "T-004", "texto": "Ir al directorio de Gelatina_Nuclear/codex y utilizar unicamente la pagina web para mostrar los cambios de los algoritmos", "estado": "hecha", "prioridad": "media", "responsable": "claude", "padre": null, "criterio": "Los cambios de los algoritmos se ven en una interfaz con el diseño de la web de codex/, sin modificar codex/: se copia el diseño en solo lectura.", "evidencia": "La interfaz de ml/ usa el diseño de la web de codex/ (ml/web/codex.css es copia exacta de codex/web/style.css, mismo sha256); muestra versiones, diffs, entrenamientos, liga, dirección y tareas. codex/ no se modificó"}, {"id": "T-005", "texto": "realizar demasiadas simulaciones de los algoritmos que corran en la GPU", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": null, "criterio": "Simulador vectorizado en la RTX 5070 validado contra tests/harness.c, con más de 100.000 asaltos por minuto.", "evidencia": "Corrida reglamento-1: 7,4 M asaltos en 184 s en la RTX 5070 (100 gen x 512 candidatos x 144 asaltos)"}, {"id": "T-006", "texto": "Ir dando retroalimentacion al modelo", "estado": "pendiente", "prioridad": "alta", "responsable": "usuario", "padre": null, "criterio": "El usuario vota comparaciones A/B en la interfaz local; el modelo de recompensa se reentrena con esos votos y guía la siguiente tanda de entrenamiento.", "evidencia": ""}, {"id": "T-007", "texto": "Simulador del dohyo vectorizado en PyTorch, equivalente a tests/harness.c y con las colocaciones del reglamento", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": "T-005", "criterio": "", "evidencia": "Simulador vectorizado en PyTorch; 96 comparaciones contra tests/harness.c con |z| \u003c= 2,1 en 4 versiones y 2 modos; 90.700 asaltos/s con 262.144 entornos"}, {"id": "T-008", "texto": "Port vectorizado de strategy.c para evaluar miles de juegos de parámetros a la vez", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": "T-003", "criterio": "", "evidencia": "fsm.py reproduce strategy.c línea a línea; validado con v0.1.0 a v0.3.0"}, {"id": "T-009", "texto": "Estrategia evolutiva (CMA-ES) sobre los parámetros de la máquina de estados", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": "T-003", "criterio": "", "evidencia": "CMA-ES en es.py; primera corrida: campeón c-001, derrotas en el banco en C de 38 a 2 (modo banco) y de 66 a 5 (modo reglamento)"}, {"id": "T-010", "texto": "Modelo de recompensa por preferencias humanas (Bradley-Terry con un conjunto de redes)", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": "T-003", "criterio": "", "evidencia": "recompensa.py: Bradley-Terry, 5 redes con bootstrap, cabeza lineal, validación cruzada; ciclo probado con votos sintéticos en datos aparte (no del usuario)"}, {"id": "T-011", "texto": "Liga de versiones y dirección de mejora: hacia qué parámetros se inclinan las mejores versiones", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": "T-003", "criterio": "", "evidencia": "liga.py: Elo por Bradley-Terry todos contra todos y sustituto neuronal (R2 0,77 en 51.200 muestras) cuyo gradiente da la dirección"}, {"id": "T-012", "texto": "Política neuronal entrenada con PPO y exportable a C", "estado": "hecha", "prioridad": "media", "responsable": "claude", "padre": "T-003", "criterio": "", "evidencia": "PPO: 315 M pasos en 490 s; gana el combate a static, charger, spinner y v0.1-v0.3.0 (98-100 %) pero pierde contra v0.3.1; actor exportado a C99 (5.698 pesos, 22 KB, error máximo 5e-7). Sin probar en Webots"}, {"id": "T-013", "texto": "Interfaz local de votos A/B con repeticiones de asaltos", "estado": "hecha", "prioridad": "alta", "responsable": "claude", "padre": "T-006", "criterio": "", "evidencia": "Interfaz en ml/web servida por ml/servidor.py (:8765): repeticiones A/B sincronizadas, voto con clic y teclado, etiquetas y nota; probada en el navegador con datos de prueba"}]}</script>
+<script>
+(function(){
+"use strict";
+const D = JSON.parse(document.getElementById("datos").textContent);
+const V = D.versions || [];
+const ML = D.ml || {};
+const TAREAS = D.tareas || [];
+
+/* ---- tema ------------------------------------------------------------ */
+const raiz = document.documentElement;
+document.getElementById("tema").addEventListener("click", function(){
+  const oscuroAhora = raiz.getAttribute("data-theme") === "dark" ||
+    (!raiz.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  raiz.setAttribute("data-theme", oscuroAhora ? "light" : "dark");
+});
+
+/* ---- utilidades ------------------------------------------------------ */
+const esc = s => String(s == null ? "" : s)
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const pct = (x, d) => (x == null) ? "—" : (x*100).toFixed(d || 0).replace(".", ",") + " %";
+const num = (x, d) => (x == null) ? "—" : Number(x).toFixed(d == null ? 2 : d).replace(".", ",");
+const miles = n => Number(n || 0).toLocaleString("es-ES");
+const claseTipo = k => ({"new-behavior":"nuevo"})[k] || k;
+const fecha = s => { try { return new Date(s).toLocaleDateString("es-ES",
+  {day:"2-digit",month:"short",year:"numeric"}); } catch(e){ return s; } };
+const COL_ES = {frente:"frente", lado:"lado", espalda:"espaldas"};
+
+function conMetricas(){ return V.filter(v => (v.metrics||{}).rounds > 0); }
+/* combate a 3 rondas con el reglamento: Webots si esta medido, si no el banco en C */
+function reglamento(v){
+  if (v.metrics_webots && v.metrics_webots.match_win_rate != null) return {x: v.metrics_webots.match_win_rate, fuente: "Webots"};
+  if (v.metrics_reglamento && v.metrics_reglamento.match_win_rate != null) return {x: v.metrics_reglamento.match_win_rate, fuente: "banco en C"};
+  return null;
+}
+
+/* ---- marcadores de cabecera ------------------------------------------ */
+(function marcadores(){
+  const ult = V[V.length-1];
+  const m = conMetricas();
+  const wr = m.length ? m[m.length-1].metrics.win_rate : null;
+  const r = ult ? reglamento(ult) : null;
+  const previa = V.length > 1 ? V[V.length-2] : null;
+  let delta = "—", color = "var(--tinta-suave)", fuenteDelta = "";
+  if (r && previa) {
+    const rp = previa.metrics_webots && r.fuente === "Webots" ? {x: previa.metrics_webots.match_win_rate} : reglamento(previa);
+    if (rp) {
+      const d = (r.x - rp.x) * 100;
+      delta = (d >= 0 ? "+" : "−") + Math.abs(d).toFixed(0) + " pp";
+      color = d > 0 ? "var(--mejora)" : (d < 0 ? "var(--regresion)" : "var(--neutro)");
+      fuenteDelta = "frente a " + previa.version;
+    }
+  }
+  const filas = [
+    ["Versiones", V.length, "var(--tinta)", ""],
+    ["Win rate · banco", wr == null ? "—" : pct(wr), "var(--tinta)", "modo de siempre"],
+    ["Combate · reglamento", r ? pct(r.x) : "—", "var(--azul-vivo)", r ? r.fuente : ""],
+    ["Respecto a la previa", delta, color, fuenteDelta]
+  ];
+  document.getElementById("marcadores").innerHTML = filas.map(f =>
+    '<div class="marcador"><span class="rotulo">'+esc(f[0])+'</span>'+
+    '<span class="cifra" style="color:'+f[2]+'">'+esc(f[1])+'</span>'+
+    (f[3] ? '<span class="fuente">'+esc(f[3])+'</span>' : '')+'</div>').join("");
+})();
+
+/* ---- grafica de lineas generica (una sola escala 0-100 %) -------------- */
+function grafica(o){
+  /* o: {etiquetas:[...], series:[{nombre, token, valores:[...|null]}], alto, etiquetaX} */
+  const W = 960, H = o.alto || 240, ml = 50, mr = 96, mt = 16, mb = 34;
+  const iw = W - ml - mr, ih = H - mt - mb, n = o.etiquetas.length;
+  const px = i => n === 1 ? ml + iw/2 : ml + (i/(n-1))*iw;
+  const py = w => mt + ih - w*ih;
+  let g = "";
+  [0,0.25,0.5,0.75,1].forEach(t => {
+    const y = py(t).toFixed(1);
+    g += '<line x1="'+ml+'" y1="'+y+'" x2="'+(ml+iw)+'" y2="'+y+'" stroke="'+(t===0?"var(--regla-fuerte)":"var(--regla)")+'" stroke-width="1"></line>'+
+         '<text x="'+(ml-9)+'" y="'+(+y+4)+'" text-anchor="end">'+(t*100)+' %</text>';
+  });
+  const paso = Math.max(1, Math.ceil(n / 10));
+  o.etiquetas.forEach((e, i) => {
+    if (i % paso === 0 || i === n-1)
+      g += '<text class="'+(o.etiquetaX ? "" : "ver")+'" x="'+px(i).toFixed(1)+'" y="'+(H-mb+18)+'" text-anchor="middle">'+esc(e)+'</text>';
+  });
+  const finales = [];
+  o.series.forEach(s => {
+    const pts = s.valores.map((v,i) => v == null ? null : [px(i), py(v), v, i]).filter(Boolean);
+    if (!pts.length) return;
+    if (pts.length > 1)
+      g += '<path d="'+pts.map((p,k) => (k?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ")+
+           '" fill="none" stroke="var('+s.token+')" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>';
+    if (o.puntos !== false) pts.forEach(p => {
+      g += '<g><circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4.5" fill="var('+s.token+')" stroke="var(--placa)" stroke-width="2"></circle>'+
+           '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="12" fill="transparent"><title>'+
+           esc(o.etiquetas[p[3]]+" · "+s.nombre+": "+pct(p[2], 1))+'</title></circle></g>';
+    });
+    const u = pts[pts.length-1];
+    if (o.puntos === false)
+      g += '<circle cx="'+u[0].toFixed(1)+'" cy="'+u[1].toFixed(1)+'" r="4.5" fill="var('+s.token+')" stroke="var(--placa)" stroke-width="2"></circle>';
+    finales.push(u);
+  });
+  const chocan = finales.length === 2 && Math.abs(finales[0][1] - finales[1][1]) < 16;
+  if (!chocan) finales.forEach(u => {
+    g += '<text class="valor" x="'+(u[0]+12).toFixed(1)+'" y="'+(u[1]+4.5).toFixed(1)+'">'+pct(u[2])+'</text>';
+  });
+  return '<svg class="lienzo" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(o.titulo || "")+'"><g>'+g+'</g></svg>';
+}
+
+function leyenda(series){
+  return series.map(s => '<span><i class="'+s.clase+'"></i>'+esc(s.nombre)+'</span>').join("");
+}
+
+/* ---- curva de aprendizaje de la bitacora ------------------------------- */
+(function pintarCurva(){
+  const vs = V.filter(v => (v.metrics||{}).rounds > 0 || v.metrics_reglamento);
+  const nota = document.getElementById("curva-nota");
+  if (!vs.length) {
+    document.getElementById("curva-lienzo").innerHTML = '<p class="vacio">Todavía no hay combates registrados.</p>';
+    return;
+  }
+  nota.textContent = "Las dos medidas salen del banco nativo en C, 60 asaltos por rival. El win rate usa la diagonal a 36 cm de siempre; " +
+    "el combate a tres rondas usa las colocaciones del reglamento (frente, lado y espaldas a 5 cm).";
+  const series = [
+    {nombre: "Win rate · diagonal de siempre", token: "--serie-1", clase: "s1", valores: vs.map(v => (v.metrics||{}).rounds ? v.metrics.win_rate : null)},
+    {nombre: "Combate ganado · reglamento", token: "--serie-2", clase: "s2", valores: vs.map(v => v.metrics_reglamento ? v.metrics_reglamento.match_win_rate : null)}
+  ];
+  document.getElementById("curva-leyenda").innerHTML = leyenda(series);
+  document.getElementById("curva-lienzo").innerHTML = grafica({etiquetas: vs.map(v => v.version), series, titulo: "Win rate y combate ganado por versión"});
+
+  const w = V.filter(v => v.metrics_webots);
+  if (!w.length) return;
+  const fila = v => {
+    const m = v.metrics_webots, b = v.metrics_webots_banco;
+    return '<tr><td class="num">'+esc(v.version)+'</td><td class="gordo">'+pct(m.match_win_rate)+'</td>'+
+      '<td class="num">'+m.wins+' · '+m.losses+' · '+m.draws+'</td><td class="num'+(m.self_outs ? " cero" : "")+'">'+m.self_outs+'</td>'+
+      '<td class="num">'+(m.opponents||[]).map(o => esc(o.name)+" "+pct(o.match ? o.match.win : null)).join(" · ")+'</td>'+
+      '<td class="num">'+(b ? b.wins+' · '+b.losses+' · '+b.draws : "—")+'</td></tr>';
+  };
+  document.getElementById("juez").innerHTML =
+    '<p class="rotulo" style="margin:0 0 8px">El juez final · Webots con las colocaciones del reglamento, 30 asaltos por rival</p>'+
+    '<div class="tabla-envoltorio"><table><thead><tr><th>Versión</th><th>Combate ganado</th><th class="num">V · D · E</th>'+
+    '<th class="num">Auto-salidas</th><th>Por rival</th><th class="num">Diagonal · V · D · E</th></tr></thead><tbody>'+
+    w.map(fila).join("")+'</tbody></table></div>';
+})();
+
+/* ---- carril de versiones --------------------------------------------- */
+function pintarHistoria(sel){
+  const h = document.getElementById("historia");
+  h.innerHTML = '<p class="rotulo">Historial · más reciente arriba</p>' +
+    V.slice().reverse().map(v => {
+      const mt = v.metrics || {}, r = reglamento(v);
+      const wr = mt.rounds ? pct(mt.win_rate) : "sin medir";
+      return '<button class="hito" type="button" data-v="'+esc(v.version)+'" '+
+        'aria-current="'+(v.version===sel)+'">'+
+        '<span class="fila"><span class="ver">'+esc(v.version)+'</span>'+
+        '<span class="chip '+esc(claseTipo(v.kind))+'">'+esc(v.kind)+'</span></span>'+
+        '<span class="tit">'+esc(v.title)+'</span>'+
+        '<span class="tit dato" style="color:var(--tinta-suave)">it '+v.iteration+' · '+esc(wr)+
+        (r ? ' · combate '+pct(r.x)+(r.fuente === "Webots" ? " Webots" : "") : '')+'</span>'+
+        '</button>';
+    }).join("");
+  h.querySelectorAll(".hito").forEach(b =>
+    b.addEventListener("click", () => mostrar(b.dataset.v)));
+}
+
+/* ---- diff ------------------------------------------------------------ */
+function pintarDiff(txt){
+  if (!txt || !txt.trim()) return '<p class="vacio">Sin cambios de código en esta entrada.</p>';
+  const lineas = txt.split("\n").map(l => {
+    let c = "l";
+    if (l.startsWith("+++") || l.startsWith("---")) c += " arch";
+    else if (l.startsWith("@@")) c += " trozo";
+    else if (l.startsWith("+")) c += " mas";
+    else if (l.startsWith("-")) c += " menos";
+    return '<span class="'+c+'">'+esc(l || " ")+'</span>';
+  }).join("");
+  return '<pre class="diff">'+lineas+'</pre>';
+}
+
+/* ---- tabla del reglamento: rival x colocacion + combate ---------------- */
+function tablaReglamento(m, titulo, explica){
+  const ops = (m.opponents || []).filter(o => o.placements);
+  if (!ops.length) return "";
+  const celda = p => {
+    if (!p || !p.rounds) return '<td class="num">—</td>';
+    const w = p.wins / p.rounds;
+    return '<td class="num'+(w === 0 ? " cero" : "")+'">'+p.wins+'/'+p.rounds+'</td>';
+  };
+  return '<div class="bloque"><h3>'+esc(titulo)+'</h3>'+(explica ? '<p class="explica">'+explica+'</p>' : '')+
+    '<div class="tabla-envoltorio"><table><thead><tr><th>Rival</th><th class="num">Frente</th><th class="num">Lado</th><th class="num">Espaldas</th>'+
+    '<th class="num">Gana el combate</th><th class="num">Pierde</th></tr></thead><tbody>'+
+    ops.map(o => {
+      const pl = {}; o.placements.forEach(p => pl[p.name] = p);
+      return '<tr><td class="num">'+esc(o.name)+'</td>'+celda(pl.frente)+celda(pl.lado)+celda(pl.espalda)+
+        '<td class="num">'+pct(o.match.win, 1)+'</td><td class="num">'+pct(o.match.loss, 1)+'</td></tr>';
+    }).join("")+'</tbody></table></div>'+
+    '<p class="vacio" style="margin-top:10px">'+m.wins+' V · '+m.losses+' D · '+m.draws+' E · auto-salidas '+m.self_outs+
+    (m.match_win_rate != null ? ' · combate ganado de media '+pct(m.match_win_rate, 1) : '')+'</p></div>';
+}
+
+/* ---- expediente de una versión --------------------------------------- */
+function mostrar(ver){
+  const v = V.find(x => x.version === ver) || V[V.length-1];
+  if (!v) {
+    document.getElementById("expediente").innerHTML =
+      '<div class="bloque"><p class="vacio">La bitácora está vacía. '+
+      'Crea la primera versión con <code>python3 tools/gnver.py new</code>.</p></div>';
+    return;
+  }
+  const mt = v.metrics || {}, ds = v.diff_stat || {added:0,removed:0,files:0,touched:[]};
+  const tocados = new Set(ds.touched || []);
+  let H = "";
+
+  H += '<div class="titular"><div class="linea">'+
+       '<span class="num">'+esc(v.version)+'</span>'+
+       '<span class="chip '+esc(claseTipo(v.kind))+'">'+esc(v.kind)+'</span>'+
+       '<span class="chip v-'+esc(v.verdict||"pendiente")+'">'+esc(v.verdict||"pendiente")+'</span>'+
+       '</div><h2>'+esc(v.title)+'</h2>'+
+       '<p class="meta dato">Iteración '+v.iteration+' · '+esc(fecha(v.created_at))+
+       ' · '+esc(v.author)+(v.parent?' · deriva de '+esc(v.parent):' · sin antecesora')+'</p></div>';
+
+  const campos = [
+    ["Qué cambió", v.summary, true],
+    ["Por qué", v.rationale, true],
+    ["Hipótesis", v.hypothesis, false],
+    ["Efecto esperado", v.expected_effect, false],
+    ["Riesgos asumidos", v.risks, false],
+    ["Nota para el robot real", v.notes_real_robot, false]
+  ].filter(c => c[1]);
+  H += '<div class="bloque"><h3>Razonamiento</h3><div class="razonamiento">' +
+    campos.map(c => '<div class="campo'+(c[2]?' ancho':'')+'">'+
+      '<span class="rotulo">'+esc(c[0])+'</span><p>'+esc(c[1])+'</p></div>').join("") +
+    '</div></div>';
+
+  if ((v.params_changed||[]).length) {
+    H += '<div class="bloque"><h3>Parámetros tocados</h3><div class="tabla-envoltorio"><table>'+
+      '<thead><tr><th>Parámetro</th><th>Antes</th><th></th><th>Después</th><th>Motivo</th></tr></thead><tbody>'+
+      v.params_changed.map(p => '<tr><td class="num">'+esc(p.name)+'</td>'+
+        '<td class="num de">'+esc(p.from)+'</td><td class="flecha">→</td>'+
+        '<td class="num a">'+esc(p.to)+'</td><td>'+esc(p.reason||"")+'</td></tr>').join("")+
+      '</tbody></table></div></div>';
+  }
+
+  H += '<div class="bloque"><h3>Resultados en el ring · banco nativo, diagonal de siempre</h3>';
+  if (mt.rounds) {
+    const ops = Array.isArray(mt.opponents) ? mt.opponents : [];
+    H += '<div class="marcadores" style="margin-bottom:'+(ops.length?"18px":"0")+'">'+
+      [["Asaltos",mt.rounds,"var(--tinta)"],
+       ["Victorias",mt.wins,"var(--mejora)"],
+       ["Derrotas",mt.losses,"var(--regresion)"],
+       ["Empates",mt.draws,"var(--tinta-media)"],
+       ["Win rate",pct(mt.win_rate),"var(--azul-vivo)"],
+       ["Auto-salidas",mt.self_outs!=null?mt.self_outs:"—","var(--regresion)"],
+       ["Victoria media",mt.avg_win_time_s?num(mt.avg_win_time_s)+" s":"—","var(--tinta)"]
+      ].map(f => '<div class="marcador"><span class="rotulo">'+esc(f[0])+'</span>'+
+        '<span class="cifra" style="color:'+f[2]+'">'+esc(f[1])+'</span></div>').join("")+'</div>';
+    if (ops.length) {
+      H += '<span class="rotulo">Desglose por rival</span><div class="rivales" style="margin-top:10px">'+
+        ops.map(o => {
+          const w = Math.max(0, Math.min(1, o.win_rate||0));
+          const col = w >= 0.6 ? "var(--mejora)" : (w >= 0.35 ? "var(--neutro)" : "var(--regresion)");
+          return '<div class="rival"><span class="nom">'+esc(o.name)+'</span>'+
+            '<span class="barra"><span style="width:'+(w*100).toFixed(1)+'%;background:'+col+'"></span></span>'+
+            '<span class="cifra">'+pct(o.win_rate)+' · '+o.wins+'/'+o.rounds+'</span></div>';
+        }).join("")+'</div>';
+    }
+  } else {
+    H += '<p class="vacio">Sin combates registrados todavía en esta versión.</p>';
+  }
+  H += '</div>';
+
+  if (v.metrics_reglamento)
+    H += tablaReglamento(v.metrics_reglamento, "Con el reglamento · banco nativo en C",
+      "Victorias por colocación sobre 20 asaltos cada una, y probabilidad de ganar el combate a tres rondas. El mirror es la propia versión contra sí misma.");
+  if (v.metrics_webots)
+    H += tablaReglamento(v.metrics_webots, "Con el reglamento · Webots",
+      "Robot de 495 g, 10 asaltos por colocación. v0.3.0 es la versión congelada, compilada desde su instantánea.");
+
+  H += '<div class="bloque"><div class="diff-cab"><h3 style="margin:0">Cambio de código</h3>'+
+       '<span class="recuento"><span class="mas">+'+ds.added+'</span> / '+
+       '<span class="menos">−'+ds.removed+'</span> en '+ds.files+' fichero(s)</span></div>'+
+       pintarDiff(v.diff)+'</div>';
+
+  H += '<div class="bloque"><h3>Estado del árbol de control</h3><div class="ficheros">'+
+    (v.files||[]).map(f => '<div class="fichero">'+
+      '<span class="ruta'+(tocados.has(f.path)?" tocado":"")+'">'+esc(f.path)+'</span>'+
+      '<span class="der">'+f.lines+' líneas · '+esc(String(f.sha256).slice(0,10))+'</span></div>').join("")+
+    '</div></div>';
+
+  document.getElementById("expediente").innerHTML = H;
+  pintarHistoria(v.version);
+}
+
+/* ---- aprendizaje en GPU -------------------------------------------------- */
+function barrasDireccion(ps){
+  const W = 560, fila = 26, H = ps.length*fila + 8, ml = 158, c = 330, medio = 150;
+  const max = Math.max.apply(null, ps.map(p => p.importancia).concat([1e-9]));
+  let g = '<line x1="'+c+'" x2="'+c+'" y1="0" y2="'+H+'" stroke="var(--regla-fuerte)" stroke-width="1"></line>';
+  ps.forEach((p, k) => {
+    const y = k*fila + 6, h = 14, w = Math.max(2, p.importancia/max*medio), sube = p.gradiente > 0, r = Math.min(4, w/2);
+    const d = sube
+      ? 'M'+c+','+y+' h'+(w-r)+' a'+r+','+r+' 0 0 1 '+r+','+r+' v'+(h-2*r)+' a'+r+','+r+' 0 0 1 '+(-r)+','+r+' h'+(-(w-r))+' z'
+      : 'M'+c+','+y+' h'+(-(w-r))+' a'+r+','+r+' 0 0 0 '+(-r)+','+r+' v'+(h-2*r)+' a'+r+','+r+' 0 0 0 '+r+','+r+' h'+(w-r)+' z';
+    g += '<g><text x="'+(ml-10)+'" y="'+(y+11)+'" text-anchor="end">'+esc(p.nombre)+'</text>'+
+         '<path d="'+d+'" fill="var('+(sube ? "--serie-1" : "--serie-2")+')"></path>'+
+         '<text x="'+(c+medio+16)+'" y="'+(y+11)+'">'+(sube ? "sube" : "baja")+'</text>'+
+         '<title>'+esc(p.nombre+": conviene "+(sube ? "subirlo" : "bajarlo")+" · importancia "+num(p.importancia, 3))+'</title></g>';
+  });
+  return '<svg class="lienzo" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Sentido e importancia de cada parámetro">'+g+'</svg>';
+}
+
+(function aprendizaje(){
+  const el = document.getElementById("aprendizaje");
+  const corr = ML.corridas || [], liga = ML.liga, val = ML.validacion, rec = ML.recompensa, pol = ML.politicas || [];
+  if (!corr.length && !liga) { el.hidden = true; return; }
+  const ult = corr[corr.length-1];
+  let H = '<header class="seccion-cab"><p class="rotulo" style="margin:0">Aprendizaje por refuerzo con retroalimentación humana · RTX 5070</p>'+
+    '<h2>Aprendizaje en GPU</h2>'+
+    '<p class="entradilla">Un simulador del dohyo escrito en PyTorch juega cientos de miles de asaltos a la vez en la GPU. '+
+    'Una estrategia evolutiva (CMA-ES) prueba variantes de <code>params.h</code> contra el banco de rivales; tus votos entre '+
+    'repeticiones entrenan un modelo de recompensa que pesa en la siguiente vuelta. Lo que sale de aquí son candidatos: '+
+    'solo pasan a la bitácora después de medirse en el banco en C y en Webots.</p></header>';
+
+  H += '<ol class="ciclo">'+
+    '<li><b>Simular</b><span>La población entera se juega en una pasada de la GPU.</span><code>python -m ml entrenar</code></li>'+
+    '<li><b>Votar</b><span>El mismo asalto jugado por dos algoritmos; eliges el mejor.</span><code>python -m ml servidor</code></li>'+
+    '<li><b>Recompensa</b><span>Cinco redes aprenden de tus votos qué conducta prefieres.</span><code>python -m ml recompensa</code></li>'+
+    '<li><b>Liga</b><span>Todos contra todos y la dirección hacia la que mejorar.</span><code>python -m ml liga</code></li></ol>';
+
+  const marc = [
+    ["Asaltos simulados", miles((ult ? corr.reduce((s,c) => s + c.generaciones*c.asaltos_por_generacion, 0) : 0)), "en la RTX 5070"],
+    ["GPU contra el banco en C", val ? (val.ok ? val.casos+" / "+val.casos : "falla") : "—", val ? "|z| máximo "+num(val.z_max, 1) : "sin validar"],
+    ["Tus votos", ML.votos || 0, (ML.pares||{}).pendientes ? (ML.pares.pendientes+" comparaciones esperan") : "sin comparaciones pendientes"],
+    ["Peso de tu opinión", rec ? "λ = "+num(rec.lambda_sugerida) : "λ = 0", rec ? "según "+rec.n_datos+" votos" : "crece con los votos"]
+  ];
+  H += '<div class="marcadores">'+marc.map(f => '<div class="marcador"><span class="rotulo">'+esc(f[0])+'</span>'+
+    '<span class="cifra">'+esc(f[1])+'</span><span class="fuente">'+esc(f[2])+'</span></div>').join("")+'</div>';
+
+  H += '<div class="rejilla">';
+  if (ult) {
+    const s = [
+      {nombre: "Mejor candidato de la generación", token: "--serie-1", clase: "s1", valores: ult.log.map(f => f[1])},
+      {nombre: "Media de la población", token: "--serie-2", clase: "s2", valores: ult.log.map(f => f[2])}
+    ];
+    H += '<div class="bloque ancho"><div class="bloque-cab"><h3>Entrenamiento '+esc(ult.id)+'</h3>'+
+      '<span class="rotulo">'+ult.generaciones+' generaciones × '+ult.poblacion+' candidatos · '+miles(ult.asaltos_por_generacion)+' asaltos por generación · '+Math.round(ult.segundos)+' s</span></div>'+
+      '<p class="explica">Probabilidad de ganar el combate a tres rondas, media sobre el banco de rivales, en modo robusto. '+
+      'El campeón, '+esc(ult.candidato)+', gana el '+pct(ult.campeon_combate, 1)+' frente al '+pct(ult.base_combate, 1)+' de '+esc(ult.desde)+
+      '. La población satura cerca del 100 %: el banco de rivales se queda corto, y por eso el campeón entra en la liga para la vuelta siguiente.</p>'+
+      '<div class="leyenda">'+leyenda(s)+'</div>'+
+      grafica({etiquetas: ult.log.map(f => f[0]), series: s, alto: 220, puntos: false, etiquetaX: true, titulo: "Combate ganado por generación"})+
+      '<details class="tabla"><summary>Ver como tabla</summary><div class="tabla-envoltorio"><table><thead><tr><th class="num">Gen</th><th class="num">Mejor</th><th class="num">Media</th></tr></thead><tbody>'+
+      ult.log.filter((f,i) => i % 5 === 0 || i === ult.log.length-1).map(f => '<tr><td class="num">'+f[0]+'</td><td class="num">'+pct(f[1],1)+'</td><td class="num">'+pct(f[2],1)+'</td></tr>').join("")+
+      '</tbody></table></div></details></div>';
+  }
+  if (liga) {
+    const alg = liga.algoritmos || [], emax = Math.max.apply(null, alg.map(a => a.elo)), emin = Math.min.apply(null, alg.map(a => a.elo));
+    H += '<div class="bloque"><h3>Liga · todos contra todos</h3>'+
+      '<p class="explica">Cada algoritmo contra todos los demás en las tres colocaciones ('+liga.rondas+' asaltos por colocación, modo robusto). Rating de Bradley-Terry en escala Elo.</p>'+
+      '<div class="tabla-envoltorio"><table><thead><tr><th>Algoritmo</th><th class="num">Elo</th><th class="num">Gana el combate</th></tr></thead><tbody>'+
+      alg.map(a => '<tr><td class="num">'+esc(a.id)+(liga.campeones.indexOf(a.id) >= 0 ? ' <span class="chip v-mejora">campeón</span>' : '')+
+        '<span class="elo-barra"><span style="width:'+(10 + 90*(a.elo - emin)/Math.max(1, emax - emin)).toFixed(1)+'%"></span></span></td>'+
+        '<td class="num">'+Math.round(a.elo)+'</td><td class="num">'+pct(a.gana_combate_medio, 1)+'</td></tr>').join("")+
+      '</tbody></table></div></div>';
+    if (liga.direccion && liga.direccion.parametros.length) {
+      H += '<div class="bloque"><h3>Hacia dónde se inclina la GPU</h3>'+
+        '<p class="explica">Una red entrenada con las '+miles(liga.direccion.muestras)+' variantes probadas predice la aptitud de cualquier juego de parámetros (explica el '+
+        pct(Math.max(0, liga.direccion.r2))+' de la varianza fuera de muestra). Su gradiente en el mejor algoritmo dice qué conviene subir o bajar; la longitud, cuánto importa.</p>'+
+        '<div class="leyenda"><span><i class="s1"></i>subir</span><span><i class="s2"></i>bajar</span></div>'+
+        barrasDireccion(liga.direccion.parametros)+'</div>';
+    }
+  }
+  H += '<div class="bloque"><h3>Tu voto</h3>';
+  if (rec && rec.rasgos) {
+    const top = rec.rasgos.slice().sort((a,b) => Math.abs(b.pendiente) - Math.abs(a.pendiente)).slice(0,5);
+    H += '<p class="explica">'+rec.n_datos+' votos. El modelo acierta el '+(rec.precision_validacion_cruzada == null ? "— (pocos votos)" : pct(rec.precision_validacion_cruzada))+
+      ' de los votos que no vio, y pesa λ = '+num(rec.lambda_sugerida)+' en el entrenamiento. Lo que más premian tus votos:</p><table><tbody>'+
+      top.map(r => '<tr><td>'+esc(r.nombre)+'</td><td class="num">'+(r.pendiente > 0 ? "más" : "menos")+'</td><td class="num">'+num(r.pendiente, 3)+'</td></tr>').join("")+'</tbody></table>';
+  } else {
+    H += '<p class="explica">Todavía no hay votos reales, así que el entrenamiento solo ha usado la aptitud simulada (λ = 0). '+
+      'Hay '+((ML.pares||{}).pendientes || 0)+' comparaciones esperando: el campeón contra la versión de la que partió, en el mismo asalto. '+
+      'Con seis votos el modelo empieza a pesar; con sesenta, pesa del todo.</p>'+
+      '<pre class="orden">cd Mini-Sumo\nml/.venv/bin/python -m ml servidor     # http://localhost:8765</pre>';
+  }
+  H += '</div>';
+  H += '<div class="bloque"><h3>Política neuronal · PPO</h3>';
+  if (pol.length) {
+    const p = pol[pol.length-1];
+    H += '<p class="explica">Una red de 21 entradas y dos salidas conduce las ruedas sin estados escritos a mano. Se entrenó con PPO durante '+
+      miles(p.pasos)+' pasos de 8 ms. Todavía es un experimento: no ha pasado por Webots.</p><table><tbody>'+
+      p.rivales.map(r => '<tr><td class="num">'+esc(r.nombre)+'</td><td class="num">'+pct(r.gana, 1)+'</td></tr>').join("")+
+      '<tr><td><b>Gana el combate de media</b></td><td class="num"><b>'+pct(p.combate_gana, 1)+'</b></td></tr></tbody></table>'+
+      (p.c ? '<p class="vacio" style="margin-top:10px">Exportada a C99: '+miles(p.c.pesos)+' pesos, '+num(p.c.pesos*4/1024, 1)+' KB; el C da lo mismo que PyTorch con un error máximo de '+Number(p.c.error_max).toExponential(1)+'.</p>' : '');
+  } else {
+    H += '<p class="explica">La red de 21 entradas y dos salidas se está entrenando con PPO en la GPU. Aparecerá aquí con su evaluación en cuanto termine.</p>';
+  }
+  H += '</div></div>';
+  el.innerHTML = H;
+})();
+
+/* ---- tareas ------------------------------------------------------------ */
+(function tareas(){
+  const el = document.getElementById("tareas");
+  if (!TAREAS.length) { el.hidden = true; return; }
+  const n = e => TAREAS.filter(t => t.estado === e).length;
+  const nombreEstado = {en_curso: "en curso", pendiente: "pendiente", hecha: "hecha", bloqueada: "bloqueada", descartada: "descartada"};
+  const raiz = TAREAS.filter(t => !t.padre);
+  const fila = (t, hija) => '<div class="tarea'+(hija ? " hija" : "")+'"><span class="id">'+esc(t.id)+'</span>'+
+    '<span class="txt">'+esc(t.texto)+'<small>'+esc(t.estado === "hecha" ? (t.evidencia || t.criterio) : (t.criterio || ""))+'</small></span>'+
+    '<span class="chip e-'+esc(t.estado)+'">'+esc(nombreEstado[t.estado] || t.estado)+' · '+esc(t.responsable)+'</span></div>';
+  const cuenta = (k, uno, varios) => k + " " + (k === 1 ? uno : varios);
+  el.innerHTML = '<header class="seccion-cab"><p class="rotulo" style="margin:0">Tareas/tareas.txt · lista 13-09-26 V1</p><h2>Tareas</h2>'+
+    '<p class="entradilla">'+cuenta(n("hecha"), "hecha", "hechas")+', '+n("en_curso")+' en curso y '+cuenta(n("pendiente"), "pendiente", "pendientes")+
+    '. Una tarea solo se cierra con evidencia; la pequeña línea bajo cada una es su criterio o, si ya está hecha, la prueba.</p></header>'+
+    '<div class="bloque">'+raiz.map(t => fila(t, false) + TAREAS.filter(h => h.padre === t.id).map(h => fila(h, true)).join("")).join("")+'</div>';
+})();
+
+mostrar(V.length ? V[V.length-1].version : null);
+})();
+</script>

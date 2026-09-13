@@ -1,0 +1,332 @@
+{
+  "version": "v0.1.0",
+  "parent": null,
+  "iteration": 1,
+  "created_at": "2026-09-11T20:34:27+02:00",
+  "author": "claude-opus-5",
+  "kind": "baseline",
+  "title": "Línea base: máquina de estados reactiva con prioridad de borde",
+  "summary": "Primera implementación completa del sistema de control. Define el contrato estable sensores/actuadores (sumo_types.h), separa todos los números sintonizables en params.h, e implementa strategy.c como una máquina de seis estados: WAIT, OPENING, SEARCH, TRACK, ATTACK y EDGE_ESCAPE. La percepción estima el rumbo al rival como centroide ponderado de los cinco sensores frontales en lugar de quedarse con el sensor que más se dispara. El algoritmo no incluye ni una cabecera de Webots: la plataforma entra por hal.h.",
+  "rationale": "El proyecto va a pasar por n iteraciones y necesita un punto cero honesto contra el que medirlas. Una máquina de estados reactiva es el mínimo que se puede llamar un sumo funcional: es fácil de leer entera, cada decisión es trazable a una línea concreta, y no esconde comportamiento en parámetros aprendidos. Si la iteración 2 gana, sabremos exactamente qué la hizo ganar. La separación estricta entre algoritmo, parámetros y plataforma no es limpieza estética: es lo que permite que un cambio de tuning produzca un diff de tres líneas en esta bitácora en lugar de un diff ilegible.",
+  "hypothesis": "Una jerarquía estricta de prioridades (no caerse > empujar > acercarse > buscar) basta para ganar a un rival inmóvil y a uno que gire sobre sí mismo, pero no a un rival que embista, porque sin memoria del ring el robot no sabe hacia dónde empujar.",
+  "expected_effect": "Win rate global en torno al 50% sobre el banco de cuatro rivales. Se espera que el punto débil aparezca contra el rival agresivo y en la cantidad de auto-expulsiones.",
+  "risks": "El escape de borde es ciego: retrocede y gira un tiempo fijo sin saber dónde está el centro del ring, aunque la IMU ya está cableada y disponible. En un empujón sostenido, retroceder al ver la línea frontal puede ser justo lo contrario de lo que conviene. La búsqueda tampoco recuerda nada: cada ciclo empieza de cero.",
+  "notes_real_robot": "El limitador de pendiente (slew_per_s = 25) existe para el hardware, no para la simulación: protege el puente en H de las inversiones instantáneas de par. Está calibrado para permitir una inversión completa en 80 ms, que es lo que tarda un motor N20 con reductora en invertir de verdad. El umbral de línea (400) es un valor de simulación y habrá que recalibrarlo contra el sensor real con el controlador arrancado con --calib.",
+  "tags": [
+    "baseline",
+    "webots",
+    "fsm",
+    "c99"
+  ],
+  "params_changed": [
+    {
+      "name": "dist_attack_mm",
+      "from": "—",
+      "to": "260",
+      "reason": "Por debajo de 26 cm se considera enganchado y se pasa a empuje máximo; más lejos, la corrección de rumbo aún compensa."
+    },
+    {
+      "name": "v_attack",
+      "from": "—",
+      "to": "1.00",
+      "reason": "En contacto no hay motivo para reservar par: el empuje es el objetivo."
+    },
+    {
+      "name": "track_kp",
+      "from": "—",
+      "to": "1.10",
+      "reason": "Ganancia proporcional del rumbo. Baja a propósito: sobregirar pierde el contacto."
+    },
+    {
+      "name": "escape_back_ms",
+      "from": "—",
+      "to": "300",
+      "reason": "Retroceso suficiente para sacar los cuatro sensores de la banda blanca de 25 mm a 0,85 de velocidad."
+    },
+    {
+      "name": "escape_lockout_ms",
+      "from": "—",
+      "to": "140",
+      "reason": "Ventana ciega tras el escape. Sin ella el robot reentra en EDGE_ESCAPE en bucle sobre la misma línea."
+    },
+    {
+      "name": "slew_per_s",
+      "from": "—",
+      "to": "25.0",
+      "reason": "Inversión completa de consigna en 80 ms. Protege el hardware real sin estropear el escape de borde."
+    },
+    {
+      "name": "opening",
+      "from": "—",
+      "to": "OPENING_CHARGE",
+      "reason": "Apertura de embestida recta. Es la más simple y sirve de referencia para comparar aperturas alternativas en iteraciones futuras."
+    }
+  ],
+  "states": [
+    "WAIT",
+    "OPENING",
+    "SEARCH",
+    "TRACK",
+    "ATTACK",
+    "EDGE_ESCAPE"
+  ],
+  "diff_stat": {
+    "added": 904,
+    "removed": 0,
+    "files": 8,
+    "touched": [
+      "algorithms/params.h",
+      "algorithms/strategy.c",
+      "algorithms/strategy.h",
+      "algorithms/sumo_types.h",
+      "webots/controllers/gelatina_nuclear/Makefile",
+      "webots/controllers/gelatina_nuclear/hal.h",
+      "webots/controllers/gelatina_nuclear/hal_webots.c",
+      "webots/controllers/gelatina_nuclear/main.c"
+    ]
+  },
+  "files": [
+    {
+      "path": "algorithms/params.h",
+      "sha256": "e90a14cd42457adf1aeb0f81aa8c028585553ecd0cc604b22e0b101ad611b4e9",
+      "lines": 104
+    },
+    {
+      "path": "algorithms/strategy.c",
+      "sha256": "9e2b716aff38f90090bc5c430c61a4948e4328dbe4fbe56a1401c22d872b8e58",
+      "lines": 327
+    },
+    {
+      "path": "algorithms/strategy.h",
+      "sha256": "18deb074f61ea0092775884b9874be5ce638c59f0934524b1e7c4478353dba41",
+      "lines": 64
+    },
+    {
+      "path": "algorithms/sumo_types.h",
+      "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc",
+      "lines": 93
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/Makefile",
+      "sha256": "8a82ea41528ff375046f796c67cd6491eddb583301c4b25be4017caa2bdfca65",
+      "lines": 28
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/hal.h",
+      "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883",
+      "lines": 37
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/hal_webots.c",
+      "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694",
+      "lines": 203
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/main.c",
+      "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc",
+      "lines": 48
+    }
+  ],
+  "metrics": {
+    "rounds": 240,
+    "wins": 117,
+    "losses": 63,
+    "draws": 60,
+    "win_rate": 0.488,
+    "avg_win_time_s": 1.57,
+    "self_outs": 19,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 60,
+        "wins": 45,
+        "losses": 15,
+        "draws": 0,
+        "win_rate": 0.75
+      },
+      {
+        "name": "charger",
+        "rounds": 60,
+        "wins": 11,
+        "losses": 46,
+        "draws": 3,
+        "win_rate": 0.183
+      },
+      {
+        "name": "spinner",
+        "rounds": 60,
+        "wins": 60,
+        "losses": 0,
+        "draws": 0,
+        "win_rate": 1.0
+      },
+      {
+        "name": "mirror",
+        "rounds": 60,
+        "wins": 1,
+        "losses": 2,
+        "draws": 57,
+        "win_rate": 0.017
+      }
+    ]
+  },
+  "verdict": "pendiente",
+  "metrics_reglamento": {
+    "rounds": 240,
+    "wins": 43,
+    "losses": 139,
+    "draws": 58,
+    "win_rate": 0.179,
+    "avg_win_time_s": 0.95,
+    "self_outs": 105,
+    "match_win_rate": 0.013,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 60,
+        "wins": 20,
+        "losses": 40,
+        "draws": 0,
+        "win_rate": 0.333,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 20,
+            "losses": 0,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.0,
+          "judges": 0.0,
+          "loss": 1.0
+        }
+      },
+      {
+        "name": "charger",
+        "rounds": 60,
+        "wins": 2,
+        "losses": 58,
+        "draws": 0,
+        "win_rate": 0.033,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 1,
+            "losses": 19,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 1,
+            "losses": 19,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.003,
+          "judges": 0.0,
+          "loss": 0.997
+        }
+      },
+      {
+        "name": "spinner",
+        "rounds": 60,
+        "wins": 20,
+        "losses": 40,
+        "draws": 0,
+        "win_rate": 0.333,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 20,
+            "losses": 0,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.0,
+          "judges": 0.0,
+          "loss": 1.0
+        }
+      },
+      {
+        "name": "mirror",
+        "rounds": 60,
+        "wins": 1,
+        "losses": 1,
+        "draws": 58,
+        "win_rate": 0.017,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 0,
+            "draws": 20
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 0,
+            "draws": 20
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 1,
+            "losses": 1,
+            "draws": 18
+          }
+        ],
+        "match": {
+          "win": 0.05,
+          "judges": 0.9,
+          "loss": 0.05
+        }
+      }
+    ],
+    "engine": "harness-nativo",
+    "mode": "reglamento"
+  }
+}

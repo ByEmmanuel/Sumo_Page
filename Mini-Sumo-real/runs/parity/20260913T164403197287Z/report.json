@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "revision_id": 17,
+  "revision_hash": "814cc8556123717685072b7b0cfaebe3989027f22bc533ea4b8724b4d8fd4c1a",
+  "sequences": 20,
+  "frames_per_sequence": 1000,
+  "max_absolute_error": {
+    "observation": 0.2193690985441208,
+    "actor": 0.30240368843078613,
+    "applied": 0.25599414110183716
+  },
+  "threshold": 1e-05,
+  "python_reference": "ml/ppo.py: observacion(), aplica(), Politica.pi",
+  "python_reference_sha256": "7c476f8d9cb3e54c656c9b00efc889750502c6848912dc50af469154a42c15c5",
+  "actor_checkpoint_sha256": "07e48837793ebcc484cc77fd2ce517d485bbf66be3c8374da228e9733b965ca3",
+  "actor_c_sha256": "49b3ab60f89f143ae9ebc8311c836ba96da0684fae72cb94f5d8e11385e77155",
+  "source_sensors_sha256": "e909b12d3cccf9015e8c95d18c4847b4995da0510e94c4ff37231a4e2beeb2ba",
+  "device": "cpu",
+  "training": false,
+  "arming_reference_ms": 200,
+  "note": "El adaptador recibe tiempo armado separado: en Webots el permiso físico llega tras5s; no se cambia la red ni sus funciones Python."
+}

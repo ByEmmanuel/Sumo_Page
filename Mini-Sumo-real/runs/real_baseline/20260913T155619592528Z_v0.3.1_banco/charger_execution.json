@@ -1,0 +1,19 @@
+{
+  "opponent": "charger",
+  "command": [
+    "webots",
+    "--batch",
+    "--mode=fast",
+    "--no-rendering",
+    "--minimize",
+    "--stdout",
+    "--stderr",
+    "--port=1301",
+    "$LAB_ROOT/Mini-Sumo-real/webots/worlds/_lote__real_20260913t155619592528z_charger.wbt"
+  ],
+  "world_sha256": "bcaca0a4a0c5d914b30d09665928af49840034dd195a61e666df6e16ccb0b467",
+  "world": "webots/worlds/_lote__real_20260913t155619592528z_charger.wbt",
+  "status": "completed",
+  "elapsed_s": 4.12,
+  "returncode": 0
+}

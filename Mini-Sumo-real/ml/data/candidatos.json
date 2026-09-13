@@ -1,0 +1,536 @@
+[
+  {
+    "id": "c-001",
+    "creado": "2026-09-13T08:35:28-06:00",
+    "origen": "20260913-083224-reglamento-1",
+    "base": "v0.3.0",
+    "params": {
+      "dt_ms": 8,
+      "dist_valid_max_mm": 752,
+      "dist_attack_mm": 132,
+      "dist_track_mm": 752,
+      "target_hold_ms": 107,
+      "v_attack": 0.9997325789196865,
+      "v_track": 0.46342015034584344,
+      "v_search": 0.9378705630506425,
+      "v_escape": 0.5398840947667769,
+      "v_opening": 0.27726676515765813,
+      "track_kp": 1.3520817025313603,
+      "track_max_diff": 0.860897849478932,
+      "attack_kp_scale": 0.7931606039198624,
+      "attack_max_diff": 0.8387525317110451,
+      "escape_back_ms": 78,
+      "escape_turn_ms": 125,
+      "escape_lockout_ms": 582,
+      "dist_contact_mm": 143,
+      "contact_cone_cdeg": 5952,
+      "push_commit_ms": 1982,
+      "search_spin_ms": 1044,
+      "search_probe_ms": 250,
+      "search_turn_ratio": -0.8782349280537982,
+      "opening": 2,
+      "opening_ms": 110,
+      "slew_per_s": 25.0,
+      "deadband": 0.04
+    },
+    "evaluacion": {
+      "params": {
+        "dt_ms": 8,
+        "dist_valid_max_mm": 752,
+        "dist_attack_mm": 132,
+        "dist_track_mm": 752,
+        "target_hold_ms": 107,
+        "v_attack": 0.9997325789196865,
+        "v_track": 0.46342015034584344,
+        "v_search": 0.9378705630506425,
+        "v_escape": 0.5398840947667769,
+        "v_opening": 0.27726676515765813,
+        "track_kp": 1.3520817025313603,
+        "track_max_diff": 0.860897849478932,
+        "attack_kp_scale": 0.7931606039198624,
+        "attack_max_diff": 0.8387525317110451,
+        "escape_back_ms": 78,
+        "escape_turn_ms": 125,
+        "escape_lockout_ms": 582,
+        "dist_contact_mm": 143,
+        "contact_cone_cdeg": 5952,
+        "push_commit_ms": 1982,
+        "search_spin_ms": 1044,
+        "search_probe_ms": 250,
+        "search_turn_ratio": -0.8782349280537982,
+        "opening": 2,
+        "opening_ms": 110,
+        "slew_per_s": 25.0,
+        "deadband": 0.04
+      },
+      "aptitud": 1.2739784717559814,
+      "humano": 0.0,
+      "rivales": [
+        {
+          "nombre": "static",
+          "asaltos": 144,
+          "gana": 1.0,
+          "pierde": 0.0,
+          "empata": 0.0,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "lado": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "espalda": {
+              "gana": 1.0,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 1.0,
+            "jueces": 0.0,
+            "pierde": 0.0
+          }
+        },
+        {
+          "nombre": "charger",
+          "asaltos": 144,
+          "gana": 0.875,
+          "pierde": 0.0069444444961845875,
+          "empata": 0.118055559694767,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.8958333730697632,
+              "pierde": 0.0
+            },
+            "lado": {
+              "gana": 0.8333333730697632,
+              "pierde": 0.0
+            },
+            "espalda": {
+              "gana": 0.8958333730697632,
+              "pierde": 0.02083333395421505
+            }
+          },
+          "combate": {
+            "gana": 0.9989752769470215,
+            "jueces": 0.000663098122458905,
+            "pierde": 0.00036168983206152916
+          }
+        },
+        {
+          "nombre": "spinner",
+          "asaltos": 144,
+          "gana": 1.0,
+          "pierde": 0.0,
+          "empata": 0.0,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "lado": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "espalda": {
+              "gana": 1.0,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 1.0,
+            "jueces": 0.0,
+            "pierde": 0.0
+          }
+        },
+        {
+          "nombre": "v0.1.1",
+          "asaltos": 144,
+          "gana": 0.9583333134651184,
+          "pierde": 0.0416666679084301,
+          "empata": 0.0,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.875,
+              "pierde": 0.125
+            },
+            "lado": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "espalda": {
+              "gana": 1.0,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 1.0,
+            "jueces": 0.0,
+            "pierde": 0.0
+          }
+        },
+        {
+          "nombre": "v0.2.0",
+          "asaltos": 144,
+          "gana": 0.9236111044883728,
+          "pierde": 0.0763888880610466,
+          "empata": 0.0,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.7916666865348816,
+              "pierde": 0.2083333432674408
+            },
+            "lado": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            },
+            "espalda": {
+              "gana": 1.0,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 0.9956597685813904,
+            "jueces": 0.0,
+            "pierde": 0.00434027798473835
+          }
+        },
+        {
+          "nombre": "v0.3.0",
+          "asaltos": 144,
+          "gana": 0.8680555820465088,
+          "pierde": 0.118055559694767,
+          "empata": 0.013888888992369175,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.6458333730697632,
+              "pierde": 0.3125
+            },
+            "lado": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            },
+            "espalda": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            }
+          },
+          "combate": {
+            "gana": 0.9862143397331238,
+            "jueces": 7.083092350512743e-05,
+            "pierde": 0.013714825734496117
+          }
+        }
+      ],
+      "gana": 0.9375,
+      "pierde": 0.040509261190891266,
+      "auto_salidas": 0.0,
+      "combate_gana": 0.9968082308769226,
+      "combate_pierde": 0.003069465747103095,
+      "rasgos": {
+        "resultado": 0.8969907760620117,
+        "auto_salida": 0.0,
+        "expulsado": 0.040509261190891266,
+        "t_fin": 0.06621420383453369,
+        "t_primer_contacto": 0.008525000885128975,
+        "frac_contacto": 0.6106783747673035,
+        "empuje": 0.5582453012466431,
+        "frac_riesgo_borde": 0.03078165277838707,
+        "velocidad": 0.7176448106765747,
+        "frac_giro_sitio": 0.05832941457629204,
+        "brusquedad": 0.1242494210600853,
+        "bordes_por_s": 1.2466368675231934,
+        "ventaja_final": 0.08864839375019073,
+        "agresividad": 0.6343855857849121
+      }
+    },
+    "version": "v0.3.1"
+  },
+  {
+    "id": "c-002",
+    "creado": "2026-09-13T09:25:16-06:00",
+    "origen": "20260913-092325",
+    "base": "v0.3.1",
+    "params": {
+      "dt_ms": 8,
+      "dist_valid_max_mm": 985,
+      "dist_attack_mm": 189,
+      "dist_track_mm": 827,
+      "target_hold_ms": 8,
+      "v_attack": 0.9840736103134253,
+      "v_track": 0.6262435709958487,
+      "v_search": 0.9898908498517267,
+      "v_escape": 0.5547181644308739,
+      "v_opening": 0.9292580318826462,
+      "track_kp": 1.7996539465444232,
+      "track_max_diff": 0.4928066200800505,
+      "attack_kp_scale": 0.48315871102437935,
+      "attack_max_diff": 0.931832652696704,
+      "escape_back_ms": 70,
+      "escape_turn_ms": 134,
+      "escape_lockout_ms": 591,
+      "dist_contact_mm": 147,
+      "contact_cone_cdeg": 5931,
+      "push_commit_ms": 1985,
+      "search_spin_ms": 566,
+      "search_probe_ms": 686,
+      "search_turn_ratio": -0.45127304716674177,
+      "opening": 1,
+      "opening_ms": 112,
+      "slew_per_s": 25.0,
+      "deadband": 0.04
+    },
+    "evaluacion": {
+      "params": {
+        "dt_ms": 8,
+        "dist_valid_max_mm": 985,
+        "dist_attack_mm": 189,
+        "dist_track_mm": 827,
+        "target_hold_ms": 8,
+        "v_attack": 0.9840736103134253,
+        "v_track": 0.6262435709958487,
+        "v_search": 0.9898908498517267,
+        "v_escape": 0.5547181644308739,
+        "v_opening": 0.9292580318826462,
+        "track_kp": 1.7996539465444232,
+        "track_max_diff": 0.4928066200800505,
+        "attack_kp_scale": 0.48315871102437935,
+        "attack_max_diff": 0.931832652696704,
+        "escape_back_ms": 70,
+        "escape_turn_ms": 134,
+        "escape_lockout_ms": 591,
+        "dist_contact_mm": 147,
+        "contact_cone_cdeg": 5931,
+        "push_commit_ms": 1985,
+        "search_spin_ms": 566,
+        "search_probe_ms": 686,
+        "search_turn_ratio": -0.45127304716674177,
+        "opening": 1,
+        "opening_ms": 112,
+        "slew_per_s": 25.0,
+        "deadband": 0.04
+      },
+      "aptitud": 1.146012306213379,
+      "humano": 1.6983537673950195,
+      "rivales": [
+        {
+          "nombre": "static",
+          "asaltos": 144,
+          "gana": 1.0,
+          "pierde": 0.0,
+          "empata": 0.0,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "lado": {
+              "gana": 1.0,
+              "pierde": 0.0
+            },
+            "espalda": {
+              "gana": 1.0,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 1.0,
+            "jueces": 0.0,
+            "pierde": 0.0
+          }
+        },
+        {
+          "nombre": "charger",
+          "asaltos": 144,
+          "gana": 0.8680555820465088,
+          "pierde": 0.0,
+          "empata": 0.1319444477558136,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.8958333730697632,
+              "pierde": 0.0
+            },
+            "lado": {
+              "gana": 0.7708333730697632,
+              "pierde": 0.0
+            },
+            "espalda": {
+              "gana": 0.9375,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 0.9998447299003601,
+            "jueces": 0.00015541361062787473,
+            "pierde": 0.0
+          }
+        },
+        {
+          "nombre": "spinner",
+          "asaltos": 144,
+          "gana": 0.9652777910232544,
+          "pierde": 0.02083333395421505,
+          "empata": 0.013888888992369175,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.9375,
+              "pierde": 0.0416666679084301
+            },
+            "lado": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            },
+            "espalda": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.0
+            }
+          },
+          "combate": {
+            "gana": 0.9990177750587463,
+            "jueces": 3.503870539134368e-05,
+            "pierde": 0.0009471753146499395
+          }
+        },
+        {
+          "nombre": "v0.1.1",
+          "asaltos": 144,
+          "gana": 0.881944477558136,
+          "pierde": 0.1111111119389534,
+          "empata": 0.0069444444961845875,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.7083333730697632,
+              "pierde": 0.2708333432674408
+            },
+            "lado": {
+              "gana": 0.9583333730697632,
+              "pierde": 0.0416666679084301
+            },
+            "espalda": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            }
+          },
+          "combate": {
+            "gana": 0.9823059439659119,
+            "jueces": 2.637321813381277e-05,
+            "pierde": 0.017667794600129128
+          }
+        },
+        {
+          "nombre": "v0.2.0",
+          "asaltos": 144,
+          "gana": 0.875,
+          "pierde": 0.118055559694767,
+          "empata": 0.0069444444961845875,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.6875,
+              "pierde": 0.2916666865348816
+            },
+            "lado": {
+              "gana": 0.9583333730697632,
+              "pierde": 0.0416666679084301
+            },
+            "espalda": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            }
+          },
+          "combate": {
+            "gana": 0.9810135960578918,
+            "jueces": 2.637321813381277e-05,
+            "pierde": 0.01896008290350437
+          }
+        },
+        {
+          "nombre": "v0.3.0",
+          "asaltos": 144,
+          "gana": 0.9097222089767456,
+          "pierde": 0.0694444477558136,
+          "empata": 0.02083333395421505,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.8125,
+              "pierde": 0.1666666716337204
+            },
+            "lado": {
+              "gana": 0.9791666865348816,
+              "pierde": 0.02083333395421505
+            },
+            "espalda": {
+              "gana": 0.9375,
+              "pierde": 0.02083333395421505
+            }
+          },
+          "combate": {
+            "gana": 0.9911849498748779,
+            "jueces": 0.00017368647968396544,
+            "pierde": 0.008641373366117477
+          }
+        },
+        {
+          "nombre": "v0.3.1",
+          "asaltos": 144,
+          "gana": 0.4375,
+          "pierde": 0.2291666716337204,
+          "empata": 0.3333333432674408,
+          "auto_salidas": 0,
+          "colocaciones": {
+            "frente": {
+              "gana": 0.6041666865348816,
+              "pierde": 0.3125
+            },
+            "lado": {
+              "gana": 0.2083333432674408,
+              "pierde": 0.2291666716337204
+            },
+            "espalda": {
+              "gana": 0.5,
+              "pierde": 0.1458333432674408
+            }
+          },
+          "combate": {
+            "gana": 0.7001263499259949,
+            "jueces": 0.019852250814437866,
+            "pierde": 0.28002139925956726
+          }
+        }
+      ],
+      "gana": 0.848214328289032,
+      "pierde": 0.078373022377491,
+      "auto_salidas": 0.0,
+      "combate_gana": 0.9504991173744202,
+      "combate_pierde": 0.04660540446639061,
+      "rasgos": {
+        "resultado": 0.7698413133621216,
+        "auto_salida": 0.0,
+        "expulsado": 0.078373022377491,
+        "t_fin": 0.1372116506099701,
+        "t_primer_contacto": 0.013054500333964825,
+        "frac_contacto": 0.5968084335327148,
+        "empuje": 0.8620661497116089,
+        "frac_riesgo_borde": 0.030125947669148445,
+        "velocidad": 0.7409553527832031,
+        "frac_giro_sitio": 0.009772157296538353,
+        "brusquedad": 0.21094326674938202,
+        "bordes_por_s": 1.0381145477294922,
+        "ventaja_final": 0.07780273258686066,
+        "agresividad": 0.6143781542778015
+      }
+    }
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "revision_id": 18,
+  "revision_hash": "8c0bfb2c24469ad6d9e9911f505591f6a5679055e236fc31012111ae9ff81c6b",
+  "sequences": 20,
+  "frames_per_sequence": 1000,
+  "max_absolute_error": {
+    "observation": 1.862645149230957e-08,
+    "actor": 3.650784492492676e-07,
+    "applied": 3.5390257835388184e-07
+  },
+  "threshold": 1e-05,
+  "python_reference": "ml/ppo.py: observacion(), aplica(), Politica.pi",
+  "python_reference_sha256": "7c476f8d9cb3e54c656c9b00efc889750502c6848912dc50af469154a42c15c5",
+  "actor_checkpoint_sha256": "07e48837793ebcc484cc77fd2ce517d485bbf66be3c8374da228e9733b965ca3",
+  "actor_c_sha256": "49b3ab60f89f143ae9ebc8311c836ba96da0684fae72cb94f5d8e11385e77155",
+  "source_sensors_sha256": "e909b12d3cccf9015e8c95d18c4847b4995da0510e94c4ff37231a4e2beeb2ba",
+  "device": "cpu",
+  "training": false,
+  "mode": "common_recorded_history",
+  "controller_sha256": {
+    "real/nn_adapter.h": "3f9e7e1bc61bd70c3180ab667454fc96e9eee2acdebfefca347acc40508505bb",
+    "real/nn_politica.h": "49b3ab60f89f143ae9ebc8311c836ba96da0684fae72cb94f5d8e11385e77155",
+    "webots/controllers/gelatina_nn/main.c": "22c8325302c51a19249eec439cdf786d104d67d5044979842042d75efe708fc7"
+  },
+  "arming_reference_ms": 200,
+  "note": "El adaptador recibe tiempo armado separado: en Webots el permiso físico llega tras5s; no se cambia la red ni sus funciones Python."
+}

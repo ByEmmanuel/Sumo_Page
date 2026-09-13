@@ -1,0 +1,275 @@
+{
+  "version": "v0.1.1",
+  "parent": "v0.1.0",
+  "iteration": 2,
+  "created_at": "2026-09-12T19:46:22-06:00",
+  "author": "claude-opus-5",
+  "kind": "bugfix",
+  "title": "Bugfix: el controlador no compilaba dentro de Webots",
+  "summary": "Corrige dos fallos del Makefile de webots/controllers/gelatina_nuclear/ que impedían a Webots compilar el controlador. Primero: el idioma 'space :=' seguido de 'space +=' deja la variable vacía en GNU Make, y $(subst ,\\ ,...) con 'from' vacío añade '\\ ' al final de la ruta, así que el include apuntaba a '$WEBOTS_HOME /resources/Makefile.include' y make abortaba. Se sustituye por el idioma canónico de Webots: 'empty :=' y 'space := $(empty) $(empty)'. Segundo: 'links' era el primer objetivo del fichero, de modo que 'make' sin argumentos, que es justo lo que invoca Webots, solo rehacía los enlaces; ahora se fuerza .DEFAULT_GOAL := release. strategy.c y params.h no cambian.",
+  "rationale": "Sin binario compilado, Webots no podía ejecutar el algoritmo y ningún resultado del simulador reflejaba strategy.c. El fallo era invisible desde 'make medir', porque tests/harness.c no pasa por este Makefile. Los Makefiles de arbitro/ y oponente/ tenían el mismo idioma roto y se corrigieron igual, aunque no se versionan. De paso, tools/gnver.py dejó de tratar como texto los ficheros sin extensión: el binario compilado se colaba en el diff publicado.",
+  "hypothesis": "Con el controlador compilando, Webots ejecuta la misma máquina de estados que el banco nativo. No se espera ningún cambio de conducta.",
+  "expected_effect": "Ninguno sobre el banco nativo: los 240 asaltos dan exactamente lo mismo que v0.1.0 (48,8 %).",
+  "risks": "La primera prueba de humo en Webots (5V 0D 15E, con victorias en 0,01 s) no era válida. El mundo y el PROTO estaban escritos con la convención de ejes anterior a R2022a, en la que Cylinder va sobre y: en R2025a el dohyo quedaba de canto, las ruedas tumbadas y los robots salían despedidos al arrancar. Se corrigieron fuera de la bitácora, porque no son rutas vigiladas, junto con dos defectos de sensores del PROTO. La distancia pasa a un solo rayo, como en el banco nativo: con tres veía el suelo del dohyo a ~0,5 m y leía ~750 mm sin nada delante. La tabla de los IR de línea vuelve a dar negro ≈ 20 y blanco ≈ 930; antes daba negro ≈ 340, a 60 del umbral, y bastaban 0,35 mm de cabeceo para ver un borde falso. Cualquier métrica de Webots anterior a esta versión debe descartarse. Con los modelos ya verificados, 20 asaltos contra charger dan 13V 5D 2E (65 %), frente al 18 % del banco nativo; la nota para el robot real explica la diferencia.",
+  "notes_real_robot": "Cuando las palas se engranan, los IR de línea frontales ven la pala del rival (~930, igual que la banda blanca) en pleno centro del ring. v0.1.0 lo toma por el borde y retrocede a ciegas 300 ms a 0,85: más de 30 cm con los 1,575 m/s de Webots, casi el radio del ring. Pasa en los 20 asaltos, siempre con el rival a menos de 40 mm, y es lo que decide casi todos. El robot real tendrá el mismo problema con una pala metálica, así que la estrategia debe distinguir la pala del rival del borde; por ejemplo, desconfiando de la línea frontal en ATTACK con el rival pegado. El banco nativo no modela este efecto y además usa V_MAX = 1,2 m/s, frente a los 1,575 m/s de Webots.",
+  "tags": [
+    "bugfix",
+    "makefile",
+    "webots",
+    "build"
+  ],
+  "params_changed": [],
+  "states": [],
+  "diff_stat": {
+    "added": 6,
+    "removed": 2,
+    "files": 1,
+    "touched": [
+      "webots/controllers/gelatina_nuclear/Makefile"
+    ]
+  },
+  "files": [
+    {
+      "path": "algorithms/params.h",
+      "sha256": "e90a14cd42457adf1aeb0f81aa8c028585553ecd0cc604b22e0b101ad611b4e9",
+      "lines": 104
+    },
+    {
+      "path": "algorithms/strategy.c",
+      "sha256": "9e2b716aff38f90090bc5c430c61a4948e4328dbe4fbe56a1401c22d872b8e58",
+      "lines": 327
+    },
+    {
+      "path": "algorithms/strategy.h",
+      "sha256": "18deb074f61ea0092775884b9874be5ce638c59f0934524b1e7c4478353dba41",
+      "lines": 64
+    },
+    {
+      "path": "algorithms/sumo_types.h",
+      "sha256": "e77803a426bddb91b7b48fea191caa67f244fbd953dcf9eb286f742a7bdd5edc",
+      "lines": 93
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/Makefile",
+      "sha256": "17d6122c9e20645f4e4f377170240323f1d7e0911babe0ec792a7cc677a345c3",
+      "lines": 32
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/hal.h",
+      "sha256": "000656c1102cccb97e3daaf5663b28ab2c34d52e4f4db99cc9e7fea7b67e5883",
+      "lines": 37
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/hal_webots.c",
+      "sha256": "5ce3e8c35065751aad0daab67b5799e133b4a79737ccb70523001001c2455694",
+      "lines": 203
+    },
+    {
+      "path": "webots/controllers/gelatina_nuclear/main.c",
+      "sha256": "987892f69313e5be92e69bc98ae45df8f266ce92b540c9de5d183cfef60b31fc",
+      "lines": 48
+    }
+  ],
+  "metrics": {
+    "rounds": 240,
+    "wins": 117,
+    "losses": 63,
+    "draws": 60,
+    "win_rate": 0.488,
+    "avg_win_time_s": 1.57,
+    "self_outs": 19,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 60,
+        "wins": 45,
+        "losses": 15,
+        "draws": 0,
+        "win_rate": 0.75
+      },
+      {
+        "name": "charger",
+        "rounds": 60,
+        "wins": 11,
+        "losses": 46,
+        "draws": 3,
+        "win_rate": 0.183
+      },
+      {
+        "name": "spinner",
+        "rounds": 60,
+        "wins": 60,
+        "losses": 0,
+        "draws": 0,
+        "win_rate": 1.0
+      },
+      {
+        "name": "mirror",
+        "rounds": 60,
+        "wins": 1,
+        "losses": 2,
+        "draws": 57,
+        "win_rate": 0.017
+      }
+    ]
+  },
+  "verdict": "neutro",
+  "metrics_reglamento": {
+    "rounds": 240,
+    "wins": 43,
+    "losses": 139,
+    "draws": 58,
+    "win_rate": 0.179,
+    "avg_win_time_s": 0.95,
+    "self_outs": 105,
+    "match_win_rate": 0.013,
+    "opponents": [
+      {
+        "name": "static",
+        "rounds": 60,
+        "wins": 20,
+        "losses": 40,
+        "draws": 0,
+        "win_rate": 0.333,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 20,
+            "losses": 0,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.0,
+          "judges": 0.0,
+          "loss": 1.0
+        }
+      },
+      {
+        "name": "charger",
+        "rounds": 60,
+        "wins": 2,
+        "losses": 58,
+        "draws": 0,
+        "win_rate": 0.033,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 1,
+            "losses": 19,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 1,
+            "losses": 19,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.003,
+          "judges": 0.0,
+          "loss": 0.997
+        }
+      },
+      {
+        "name": "spinner",
+        "rounds": 60,
+        "wins": 20,
+        "losses": 40,
+        "draws": 0,
+        "win_rate": 0.333,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 20,
+            "losses": 0,
+            "draws": 0
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 20,
+            "draws": 0
+          }
+        ],
+        "match": {
+          "win": 0.0,
+          "judges": 0.0,
+          "loss": 1.0
+        }
+      },
+      {
+        "name": "mirror",
+        "rounds": 60,
+        "wins": 1,
+        "losses": 1,
+        "draws": 58,
+        "win_rate": 0.017,
+        "placements": [
+          {
+            "name": "frente",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 0,
+            "draws": 20
+          },
+          {
+            "name": "lado",
+            "rounds": 20,
+            "wins": 0,
+            "losses": 0,
+            "draws": 20
+          },
+          {
+            "name": "espalda",
+            "rounds": 20,
+            "wins": 1,
+            "losses": 1,
+            "draws": 18
+          }
+        ],
+        "match": {
+          "win": 0.05,
+          "judges": 0.9,
+          "loss": 0.05
+        }
+      }
+    ],
+    "engine": "harness-nativo",
+    "mode": "reglamento"
+  }
+}

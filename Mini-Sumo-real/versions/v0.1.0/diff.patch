@@ -1,0 +1,935 @@
+--- vacio/algorithms/params.h
++++ v0.1.0/algorithms/params.h
+@@ -0,0 +1,104 @@
++/* ==========================================================================
++ *  params.h  --  Todos los numeros sintonizables del robot, en un solo sitio
++ *
++ *  Por que un fichero aparte: en la bitacora de versiones, una iteracion de
++ *  tipo "tuning" debe producir un diff de tres lineas legible de un vistazo.
++ *  Si los numeros magicos viven dentro de strategy.c, el diff se vuelve ruido
++ *  y se pierde el objetivo del proyecto: entender QUE toco la IA y POR QUE.
++ *
++ *  Regla de la bitacora: cambiar un numero de aqui = version "tuning" (patch).
++ *  Anadir un campo nuevo = version "new-behavior" (minor).
++ * ========================================================================== */
++#ifndef SUMO_PARAMS_H
++#define SUMO_PARAMS_H
++
++#include <stdint.h>
++#include "sumo_types.h"
++
++/* Aperturas de partida. El primer segundo decide muchos combates. */
++typedef enum {
++  OPENING_CHARGE = 0,   /* embestida recta inmediata                        */
++  OPENING_ARC_L  = 1,   /* arco a babor buscando el flanco del rival        */
++  OPENING_ARC_R  = 2,   /* arco a estribor                                  */
++  OPENING_SCAN   = 3    /* giro en el sitio hasta enganchar y luego atacar   */
++} sumo_opening_t;
++
++typedef struct {
++  /* ---- periodo de control ------------------------------------------- */
++  uint16_t dt_ms;                 /* periodo del lazo, ms                  */
++
++  /* ---- percepcion ---------------------------------------------------- */
++  uint16_t dist_valid_max_mm;     /* por encima, se ignora la lectura      */
++  uint16_t dist_attack_mm;        /* rival "enganchado": empuje a fondo    */
++  uint16_t dist_track_mm;         /* rival a la vista: persecucion         */
++  uint16_t target_hold_ms;        /* histeresis: sigo creyendo que esta ahi*/
++
++  /* ---- velocidades normalizadas [0..1] ------------------------------- */
++  float v_attack;
++  float v_track;
++  float v_search;
++  float v_escape;
++  float v_opening;
++
++  /* ---- seguimiento --------------------------------------------------- */
++  float track_kp;                 /* rad^-1, error de rumbo -> diferencial */
++  float track_max_diff;           /* tope del termino diferencial          */
++
++  /* ---- escape de borde (maxima prioridad) ----------------------------- */
++  uint16_t escape_back_ms;        /* retroceso tras ver linea frontal      */
++  uint16_t escape_turn_ms;        /* giro de reencuadre                    */
++  uint16_t escape_lockout_ms;     /* ventana ciega para no reentrar al borde*/
++
++  /* ---- busqueda ------------------------------------------------------- */
++  uint16_t search_spin_ms;        /* giro en el sitio                      */
++  uint16_t search_probe_ms;       /* avance corto entre giros              */
++  float    search_turn_ratio;     /* -1 = sobre si mismo, 0 = recto        */
++
++  /* ---- apertura -------------------------------------------------------- */
++  sumo_opening_t opening;
++  uint16_t       opening_ms;      /* duracion de la apertura               */
++
++  /* ---- proteccion del tren motriz -------------------------------------- */
++  float slew_per_s;               /* cambio maximo de consigna por segundo */
++  float deadband;                 /* consignas por debajo -> 0             */
++} sumo_params_t;
++
++
++static inline sumo_params_t sumo_params_default(void)
++{
++  sumo_params_t p;
++
++  p.dt_ms               = 8;
++
++  p.dist_valid_max_mm   = 800;
++  p.dist_attack_mm      = 260;
++  p.dist_track_mm       = 700;
++  p.target_hold_ms      = 260;
++
++  p.v_attack            = 1.00f;
++  p.v_track             = 0.72f;
++  p.v_search            = 0.55f;
++  p.v_escape            = 0.85f;
++  p.v_opening           = 0.80f;
++
++  p.track_kp            = 1.10f;
++  p.track_max_diff      = 0.85f;
++
++  p.escape_back_ms      = 300;
++  p.escape_turn_ms      = 360;
++  p.escape_lockout_ms   = 140;
++
++  p.search_spin_ms      = 520;
++  p.search_probe_ms     = 300;
++  p.search_turn_ratio   = -0.85f;
++
++  p.opening             = OPENING_CHARGE;
++  p.opening_ms          = 420;
++
++  p.slew_per_s          = 25.0f;
++  p.deadband            = 0.04f;
++
++  return p;
++}
++
++#endif /* SUMO_PARAMS_H */
+
+--- vacio/algorithms/strategy.c
++++ v0.1.0/algorithms/strategy.c
+@@ -0,0 +1,327 @@
++/* ==========================================================================
++ *  strategy.c  --  Cerebro de Gelatina Nuclear
++ *  ------------------------------------------------------------------------
++ *  LINEA BASE (v0.1.0): maquina de estados reactiva con prioridad absoluta
++ *  del borde. Sin memoria del rival, sin modelo del ring, sin aprendizaje.
++ *  Es deliberadamente simple: es el punto de partida contra el que se mediran
++ *  todas las iteraciones siguientes de la bitacora.
++ *
++ *  Prioridades, de mayor a menor:
++ *     1. No caerse del ring      -> ST_EDGE_ESCAPE
++ *     2. Empujar si lo tengo     -> ST_ATTACK
++ *     3. Acercarme si lo veo     -> ST_TRACK
++ *     4. Encontrarlo             -> ST_SEARCH / ST_OPENING
++ *
++ *  Este fichero NO incluye cabeceras de Webots ni de ningun microcontrolador.
++ * ========================================================================== */
++
++#include "strategy.h"
++
++#include <math.h>
++#include <string.h>
++
++#define STRATEGY_VERSION_STR "v0.1.0"
++
++#ifndef M_PI
++#define M_PI 3.14159265358979323846
++#endif
++
++/* Angulo de montaje real de los cinco sensores frontales. */
++const int16_t SUMO_DIST_ANGLE_CDEG[SUMO_N_DIST] = {
++  6000, 3000, 0, -3000, -6000
++};
++
++static const char *const STATE_NAMES[ST_COUNT] = {
++  "WAIT", "OPENING", "SEARCH", "TRACK", "ATTACK", "EDGE_ESCAPE"
++};
++
++
++/* ==========================================================================
++ *  Utilidades numericas
++ * ========================================================================== */
++
++static float clampf(float v, float lo, float hi)
++{
++  return v < lo ? lo : (v > hi ? hi : v);
++}
++
++static float slew(float prev, float target, float max_step)
++{
++  const float d = target - prev;
++  if (d >  max_step) return prev + max_step;
++  if (d < -max_step) return prev - max_step;
++  return target;
++}
++
++static uint32_t in_state_ms(const sumo_strategy_t *st)
++{
++  return st->t_ms - st->t_state_ms;
++}
++
++static void enter(sumo_strategy_t *st, sumo_state_t s)
++{
++  if (st->state == s) return;
++  st->state = s;
++  st->t_state_ms = st->t_ms;
++}
++
++
++/* ==========================================================================
++ *  Percepcion: de lecturas crudas a "donde esta el rival"
++ * ==========================================================================
++ *  El rumbo se estima como centroide ponderado de los sensores que ven algo:
++ *  cuanto mas cerca esta una lectura, mas pesa su angulo de montaje. Con cinco
++ *  sensores esto da una resolucion angular muy superior a "cual se dispara",
++ *  y sale gratis en computo (cinco multiplicaciones).
++ * ========================================================================== */
++
++static void perceive(sumo_strategy_t *st, const sumo_sensors_t *s)
++{
++  const sumo_params_t *p = &st->p;
++  sumo_percept_t *per = &st->per;
++
++  uint32_t w_sum = 0;
++  int32_t  w_ang = 0;
++  uint16_t nearest = SUMO_DIST_NONE;
++
++  for (int i = 0; i < SUMO_N_DIST; ++i) {
++    const uint16_t d = s->dist_mm[i];
++    if (d == SUMO_DIST_NONE || d > p->dist_valid_max_mm) continue;
++
++    /* peso lineal inverso: 1 en la cara del robot, 0 al limite util */
++    const uint32_t w = (uint32_t)(p->dist_valid_max_mm - d) + 1u;
++    w_sum += w;
++    w_ang += (int32_t)w * (int32_t)SUMO_DIST_ANGLE_CDEG[i];
++    if (d < nearest) nearest = d;
++  }
++
++  if (w_sum > 0u) {
++    per->target_seen         = true;
++    per->target_dist_mm      = nearest;
++    per->target_bearing_cdeg = (int16_t)(w_ang / (int32_t)w_sum);
++    per->last_seen_ms        = s->t_ms;
++  } else if (per->last_seen_ms != 0u &&
++             (s->t_ms - per->last_seen_ms) < p->target_hold_ms) {
++    /* histeresis: el rival no desaparece porque un sensor parpadee un ciclo */
++    per->target_seen = true;
++  } else {
++    per->target_seen    = false;
++    per->target_dist_mm = SUMO_DIST_NONE;
++  }
++
++  per->line_mask = 0u;
++  for (int i = 0; i < SUMO_N_LINE; ++i)
++    if (s->line[i]) per->line_mask |= (uint8_t)(1u << i);
++}
++
++
++/* ==========================================================================
++ *  Escape de borde
++ * ==========================================================================
++ *  La regla mas cara de romper del sumo: el que toca el blanco primero pierde.
++ *  Por eso este bloque interrumpe cualquier otro estado, incluso un empuje
++ *  ganador. La direccion de huida se deduce de QUE esquinas vieron blanco.
++ * ========================================================================== */
++
++static void plan_escape(sumo_strategy_t *st)
++{
++  const uint8_t m = st->per.line_mask;
++  const bool front = (m & SUMO_LINE_FRONT_MASK) != 0u;
++  const bool rear  = (m & SUMO_LINE_REAR_MASK)  != 0u;
++  const bool left  = (m & SUMO_LINE_LEFT_MASK)  != 0u;
++  const bool right = (m & SUMO_LINE_RIGHT_MASK) != 0u;
++
++  if (rear && !front)      st->esc_drive = +1.0f;  /* borde detras: tirar hacia delante */
++  else                     st->esc_drive = -1.0f;  /* borde delante o rodeado: atras    */
++
++  if (left && !right)      st->esc_turn = -1.0f;   /* blanco a babor  -> huir a estribor */
++  else if (right && !left) st->esc_turn = +1.0f;   /* blanco a estribor -> huir a babor  */
++  else                     st->esc_turn = (st->edge_events & 1u) ? +1.0f : -1.0f;
++
++  st->esc_phase = 0u;
++  st->edge_events++;
++  enter(st, ST_EDGE_ESCAPE);
++  st->t_state_ms = st->t_ms;   /* reinicia el cronometro aunque ya estuviera aqui */
++}
++
++
++/* ==========================================================================
++ *  Mezclador: (avance, giro) -> consignas de rueda, con rampa y zona muerta
++ * ========================================================================== */
++
++static void drive(sumo_strategy_t *st, float fwd, float turn, sumo_actuators_t *a)
++{
++  const float max_step = st->p.slew_per_s * ((float)st->p.dt_ms / 1000.0f);
++
++  float l = clampf(fwd - turn, -1.0f, 1.0f);
++  float r = clampf(fwd + turn, -1.0f, 1.0f);
++
++  l = slew(st->prev_left,  l, max_step);
++  r = slew(st->prev_right, r, max_step);
++
++  st->prev_left  = l;
++  st->prev_right = r;
++
++  if (fabsf(l) < st->p.deadband) l = 0.0f;
++  if (fabsf(r) < st->p.deadband) r = 0.0f;
++
++  a->left  = l;
++  a->right = r;
++  a->led   = (uint8_t)st->state;
++}
++
++
++/* ==========================================================================
++ *  API publica
++ * ========================================================================== */
++
++void strategy_init(sumo_strategy_t *st, const sumo_params_t *p)
++{
++  memset(st, 0, sizeof(*st));
++  st->p = p ? *p : sumo_params_default();
++  st->state = ST_WAIT;
++  st->per.target_dist_mm = SUMO_DIST_NONE;
++}
++
++
++void strategy_step(sumo_strategy_t *st, const sumo_sensors_t *s, sumo_actuators_t *a)
++{
++  st->t_ms = s->t_ms;
++  perceive(st, s);
++
++  /* --- 0. Sin permiso de arranque: quieto y con el lazo reiniciado ------- */
++  if (!s->armed) {
++    enter(st, ST_WAIT);
++    st->prev_left = st->prev_right = 0.0f;
++    a->left = a->right = 0.0f;
++    a->led  = (uint8_t)ST_WAIT;
++    return;
++  }
++  if (st->state == ST_WAIT) {
++    enter(st, ST_OPENING);
++    st->t_state_ms = st->t_ms;
++  }
++
++  /* --- 1. Prioridad absoluta: el borde ---------------------------------- */
++  const bool lockout = (st->t_ms < st->t_edge_clear_ms);
++  if (st->per.line_mask != 0u && !lockout && st->state != ST_EDGE_ESCAPE)
++    plan_escape(st);
++
++  const sumo_params_t *p = &st->p;
++  const float bearing_rad =
++      (float)st->per.target_bearing_cdeg / 100.0f * (float)(M_PI / 180.0);
++
++  switch (st->state) {
++
++  /* ---------------------------------------------------------------- */
++  case ST_EDGE_ESCAPE: {
++    if (st->esc_phase == 0u) {
++      /* fase 1: despegarse del borde en linea casi recta */
++      drive(st, st->esc_drive * p->v_escape, st->esc_turn * 0.15f, a);
++      if (in_state_ms(st) >= p->escape_back_ms) {
++        st->esc_phase = 1u;
++        st->t_state_ms = st->t_ms;
++      }
++    } else {
++      /* fase 2: reencuadrar hacia el centro del ring */
++      drive(st, 0.0f, st->esc_turn * p->v_escape, a);
++      if (in_state_ms(st) >= p->escape_turn_ms) {
++        st->t_edge_clear_ms = st->t_ms + p->escape_lockout_ms;
++        enter(st, ST_SEARCH);
++        st->search_probing = false;
++      }
++    }
++    break;
++  }
++
++  /* ---------------------------------------------------------------- */
++  case ST_OPENING: {
++    float fwd = p->v_opening, turn = 0.0f;
++    switch (p->opening) {
++      case OPENING_CHARGE: turn = 0.0f;  break;
++      case OPENING_ARC_L:  turn = 0.45f; break;
++      case OPENING_ARC_R:  turn = -0.45f; break;
++      case OPENING_SCAN:   fwd = 0.10f; turn = 0.70f; break;
++    }
++    drive(st, fwd, turn, a);
++
++    /* si aparece el rival, la apertura se abandona al instante */
++    if (st->per.target_seen && st->per.target_dist_mm <= p->dist_track_mm)
++      enter(st, ST_TRACK);
++    else if (in_state_ms(st) >= p->opening_ms)
++      enter(st, ST_SEARCH);
++    break;
++  }
++
++  /* ---------------------------------------------------------------- */
++  case ST_SEARCH: {
++    if (st->per.target_seen) { enter(st, ST_TRACK); break; }
++
++    /* gira hacia el lado donde se vio al rival por ultima vez */
++    const float dir = (st->per.target_bearing_cdeg >= 0) ? 1.0f : -1.0f;
++
++    if (st->search_probing) {
++      drive(st, p->v_search, 0.0f, a);
++      if (in_state_ms(st) >= p->search_probe_ms) {
++        st->search_probing = false;
++        st->t_state_ms = st->t_ms;
++      }
++    } else {
++      const float fwd = p->v_search * (1.0f + p->search_turn_ratio);
++      drive(st, fwd, dir * p->v_search, a);
++      if (in_state_ms(st) >= p->search_spin_ms) {
++        st->search_probing = true;
++        st->t_state_ms = st->t_ms;
++      }
++    }
++    break;
++  }
++
++  /* ---------------------------------------------------------------- */
++  case ST_TRACK: {
++    if (!st->per.target_seen) {
++      enter(st, ST_SEARCH);
++      st->search_probing = false;
++      break;
++    }
++    if (st->per.target_dist_mm <= p->dist_attack_mm) { enter(st, ST_ATTACK); break; }
++
++    const float turn = clampf(p->track_kp * bearing_rad,
++                              -p->track_max_diff, p->track_max_diff);
++    drive(st, p->v_track, turn, a);
++    break;
++  }
++
++  /* ---------------------------------------------------------------- */
++  case ST_ATTACK: {
++    if (!st->per.target_seen) {
++      enter(st, ST_SEARCH);
++      st->search_probing = false;
++      break;
++    }
++    if (st->per.target_dist_mm > p->dist_track_mm) { enter(st, ST_TRACK); break; }
++
++    /* en contacto se corrige poco: girar mucho es perder el empuje */
++    const float turn = clampf(p->track_kp * bearing_rad * 0.35f, -0.30f, 0.30f);
++    drive(st, p->v_attack, turn, a);
++    break;
++  }
++
++  /* ---------------------------------------------------------------- */
++  case ST_WAIT:
++  default:
++    drive(st, 0.0f, 0.0f, a);
++    break;
++  }
++}
++
++
++const char *strategy_state_name(sumo_state_t s)
++{
++  return (s >= 0 && s < ST_COUNT) ? STATE_NAMES[s] : "?";
++}
++
++const char *strategy_version(void)
++{
++  return STRATEGY_VERSION_STR;
++}
+
+--- vacio/algorithms/strategy.h
++++ v0.1.0/algorithms/strategy.h
+@@ -0,0 +1,64 @@
++/* ==========================================================================
++ *  strategy.h  --  API publica del cerebro de Gelatina Nuclear
++ *
++ *  Toda la inteligencia del robot vive detras de dos funciones. El backend
++ *  (Webots, firmware o banco de pruebas) solo rellena sensores, llama a
++ *  strategy_step() y aplica los actuadores. Nada mas.
++ * ========================================================================== */
++#ifndef SUMO_STRATEGY_H
++#define SUMO_STRATEGY_H
++
++#include "sumo_types.h"
++#include "params.h"
++
++/* Estados de la maquina de combate. El orden importa: se publica como
++ * indice en actuators.led para poder depurar desde fuera. */
++typedef enum {
++  ST_WAIT = 0,      /* inmovil, esperando la senal de arranque       */
++  ST_OPENING,       /* jugada de apertura, los primeros ~400 ms      */
++  ST_SEARCH,        /* barrido buscando al rival                     */
++  ST_TRACK,         /* rival localizado lejos, aproximacion          */
++  ST_ATTACK,        /* rival enganchado, empuje maximo               */
++  ST_EDGE_ESCAPE,   /* borde detectado, salvar el combate            */
++  ST_COUNT
++} sumo_state_t;
++
++/* Percepcion derivada, expuesta para telemetria y depuracion. */
++typedef struct {
++  bool     target_seen;        /* hay rival creible ahora mismo      */
++  uint16_t target_dist_mm;     /* distancia al mas cercano           */
++  int16_t  target_bearing_cdeg;/* rumbo estimado en centigrados, + = babor */
++  uint8_t  line_mask;          /* bits segun enum sumo_line_idx      */
++  uint32_t last_seen_ms;       /* instante del ultimo contacto       */
++} sumo_percept_t;
++
++typedef struct {
++  sumo_params_t  p;
++  sumo_state_t   state;
++  sumo_percept_t per;
++
++  uint32_t t_ms;             /* reloj recibido en el ultimo paso      */
++  uint32_t t_state_ms;       /* instante de entrada al estado actual  */
++  uint32_t t_edge_clear_ms;  /* fin de la ventana ciega tras un borde */
++
++  /* sub-fase del escape de borde */
++  uint8_t  esc_phase;        /* 0 = retroceder/avanzar, 1 = reencuadrar */
++  float    esc_turn;         /* signo y fuerza del giro de escape       */
++  float    esc_drive;        /* +1 avanzar, -1 retroceder               */
++
++  /* sub-fase de la busqueda */
++  bool     search_probing;
++
++  /* salida anterior, para el limitador de pendiente */
++  float    prev_left;
++  float    prev_right;
++
++  uint32_t edge_events;      /* contador de bordes vistos, telemetria */
++} sumo_strategy_t;
++
++void        strategy_init(sumo_strategy_t *st, const sumo_params_t *p);
++void        strategy_step(sumo_strategy_t *st, const sumo_sensors_t *s, sumo_actuators_t *a);
++const char *strategy_state_name(sumo_state_t s);
++const char *strategy_version(void);
++
++#endif /* SUMO_STRATEGY_H */
+
+--- vacio/algorithms/sumo_types.h
++++ v0.1.0/algorithms/sumo_types.h
+@@ -0,0 +1,93 @@
++/* ==========================================================================
++ *  sumo_types.h  --  Contrato estable entre el MUNDO y el ALGORITMO
++ *
++ *  Este fichero define la unica frontera que ve la estrategia. Ni Webots ni
++ *  ningun microcontrolador aparecen aqui: la estrategia solo consume un
++ *  sumo_sensors_t y produce un sumo_actuators_t.
++ *
++ *  Consecuencia practica: el mismo strategy.c compila sin cambios en
++ *      - el controlador de Webots      (backend hal_webots.c)
++ *      - el firmware del robot real    (backend hal_<mcu>.c, por escribir)
++ *      - el banco de pruebas nativo    (tests/harness.c)
++ *
++ *  Regla: este fichero cambia MUY poco. Cada cambio aqui rompe todos los
++ *  backends, asi que exige subir version MINOR como minimo.
++ * ========================================================================== */
++#ifndef SUMO_TYPES_H
++#define SUMO_TYPES_H
++
++#include <stdint.h>
++#include <stdbool.h>
++
++/* -------------------------------------------------------------------------
++ *  Geometria del robot (clase mini-sumo: 10 x 10 cm, 500 g)
++ * ------------------------------------------------------------------------- */
++#define SUMO_BODY_MM        100.0f   /* lado maximo reglamentario            */
++#define SUMO_MASS_G         500.0f   /* masa maxima reglamentaria            */
++#define SUMO_WHEEL_R_M      0.021f   /* radio de rueda                       */
++#define SUMO_TRACK_M        0.085f   /* distancia entre centros de rueda     */
++
++/* -------------------------------------------------------------------------
++ *  Sensores de distancia: 5 al frente, de izquierda a derecha
++ *
++ *          L60   L30   C   R30   R60
++ *            \    \    |    /    /
++ *             \    \   |   /    /
++ *              +---------------+
++ *              |   GELATINA    |
++ * ------------------------------------------------------------------------- */
++#define SUMO_N_DIST 5
++enum sumo_dist_idx {
++  DIST_L60 = 0,   /* +60 grados (a babor)  */
++  DIST_L30 = 1,   /* +30 grados            */
++  DIST_C   = 2,   /*   0 grados (proa)     */
++  DIST_R30 = 3,   /* -30 grados            */
++  DIST_R60 = 4    /* -60 grados (estribor) */
++};
++
++/* Angulo de montaje de cada sensor, en CENTIGRADOS (1/100 de grado),
++ * positivo = a babor. int16_t llega a +-327 grados, margen de sobra. */
++extern const int16_t SUMO_DIST_ANGLE_CDEG[SUMO_N_DIST];
++
++/* Valor centinela: no hay nada dentro del alcance util del sensor. */
++#define SUMO_DIST_NONE  ((uint16_t)0xFFFFu)
++
++/* -------------------------------------------------------------------------
++ *  Sensores de linea: 4 en las esquinas, mirando al suelo
++ * ------------------------------------------------------------------------- */
++#define SUMO_N_LINE 4
++enum sumo_line_idx {
++  LINE_FL = 0,   /* frontal izquierdo */
++  LINE_FR = 1,   /* frontal derecho   */
++  LINE_RL = 2,   /* trasero izquierdo */
++  LINE_RR = 3    /* trasero derecho   */
++};
++
++#define SUMO_LINE_FRONT_MASK ((1u << LINE_FL) | (1u << LINE_FR))
++#define SUMO_LINE_REAR_MASK  ((1u << LINE_RL) | (1u << LINE_RR))
++#define SUMO_LINE_LEFT_MASK  ((1u << LINE_FL) | (1u << LINE_RL))
++#define SUMO_LINE_RIGHT_MASK ((1u << LINE_FR) | (1u << LINE_RR))
++
++/* -------------------------------------------------------------------------
++ *  Entrada de la estrategia
++ * ------------------------------------------------------------------------- */
++typedef struct {
++  uint32_t t_ms;                      /* ms desde la senal de arranque      */
++  uint16_t dist_mm[SUMO_N_DIST];      /* mm, o SUMO_DIST_NONE               */
++  bool     line[SUMO_N_LINE];         /* true = borde blanco bajo el sensor */
++  float    yaw_rad;                   /* rumbo absoluto, IMU                */
++  float    gyro_z_rads;               /* velocidad de guinada               */
++  float    wheel_rad[2];              /* [0]=izq [1]=der, angulo acumulado  */
++  bool     armed;                     /* true tras los 5 s de reglamento    */
++} sumo_sensors_t;
++
++/* -------------------------------------------------------------------------
++ *  Salida de la estrategia
++ * ------------------------------------------------------------------------- */
++typedef struct {
++  float   left;    /* consigna rueda izquierda, normalizada [-1 .. +1] */
++  float   right;   /* consigna rueda derecha,   normalizada [-1 .. +1] */
++  uint8_t led;     /* bitmap de depuracion, opcional                   */
++} sumo_actuators_t;
++
++#endif /* SUMO_TYPES_H */
+
+--- vacio/webots/controllers/gelatina_nuclear/Makefile
++++ v0.1.0/webots/controllers/gelatina_nuclear/Makefile
+@@ -0,0 +1,28 @@
++# Controlador de Gelatina Nuclear para Webots.
++#
++# strategy.c, strategy.h, params.h y sumo_types.h son ENLACES SIMBOLICOS a
++# ../../../algorithms/. Asi el algoritmo vive en un solo sitio -el que versiona
++# la bitacora- y Webots lo compila sin rutas relativas fragiles.
++# Si los enlaces se pierden (copia a Windows, zip, etc.):  make links
++
++C_SOURCES = main.c hal_webots.c strategy.c
++CFLAGS   += -std=c99 -Wall -Wextra -O2
++
++links:
++	ln -sf ../../../algorithms/strategy.c   strategy.c
++	ln -sf ../../../algorithms/strategy.h   strategy.h
++	ln -sf ../../../algorithms/params.h     params.h
++	ln -sf ../../../algorithms/sumo_types.h sumo_types.h
++
++.PHONY: links
++
++# El bloque de Webots solo se activa si WEBOTS_HOME existe, para que
++# 'make links' siga funcionando en una maquina sin Webots instalado.
++ifeq ($(strip $(WEBOTS_HOME)),)
++  $(warning WEBOTS_HOME sin definir: solo esta disponible el objetivo 'links')
++else
++  space :=
++  space +=
++  WEBOTS_HOME_PATH ?= $(subst $(space),\ ,$(strip $(subst \,/,$(WEBOTS_HOME))))
++  include $(WEBOTS_HOME_PATH)/resources/Makefile.include
++endif
+
+--- vacio/webots/controllers/gelatina_nuclear/hal.h
++++ v0.1.0/webots/controllers/gelatina_nuclear/hal.h
+@@ -0,0 +1,37 @@
++/* ==========================================================================
++ *  hal.h  --  Capa de abstraccion de plataforma
++ *
++ *  El algoritmo (algorithms/) no sabe si corre en Webots, en un banco de
++ *  pruebas o en un microcontrolador. Solo existe este contrato de seis
++ *  funciones. Portar Gelatina Nuclear al robot real consiste EXCLUSIVAMENTE
++ *  en escribir un hal_<plataforma>.c nuevo: ni una linea de strategy.c cambia.
++ *
++ *  Backends existentes:
++ *      hal_webots.c   -> simulacion              (este directorio)
++ *      tests/harness.c -> banco nativo, integrado (no usa hal.h)
++ *      hal_<mcu>.c    -> pendiente, robot real
++ * ========================================================================== */
++#ifndef SUMO_HAL_H
++#define SUMO_HAL_H
++
++#include "sumo_types.h"
++
++/* Inicializa la plataforma. Devuelve false si algo imprescindible falta. */
++bool hal_init(int argc, char **argv);
++
++/* Periodo real del lazo de control en ms (lo impone la plataforma). */
++uint16_t hal_period_ms(void);
++
++/* Avanza un paso y rellena los sensores. false = la plataforma pide parar. */
++bool hal_poll(sumo_sensors_t *s);
++
++/* Aplica las consignas normalizadas a los motores. */
++void hal_apply(const sumo_actuators_t *a);
++
++/* Traza de depuracion (printf en simulacion, UART en el robot real). */
++void hal_log(const char *fmt, ...);
++
++/* Libera la plataforma. */
++void hal_shutdown(void);
++
++#endif /* SUMO_HAL_H */
+
+--- vacio/webots/controllers/gelatina_nuclear/hal_webots.c
++++ v0.1.0/webots/controllers/gelatina_nuclear/hal_webots.c
+@@ -0,0 +1,203 @@
++/* ==========================================================================
++ *  hal_webots.c  --  Backend de Webots para Gelatina Nuclear
++ *
++ *  Traduce entre la API de Webots y el contrato sumo_types.h. Aqui viven
++ *  TODOS los detalles sucios: nombres de dispositivos, unidades, umbrales de
++ *  calibracion y la senal de arranque del arbitro. Nada de esto contamina el
++ *  algoritmo.
++ * ========================================================================== */
++
++#include "hal.h"
++
++#include <webots/robot.h>
++#include <webots/motor.h>
++#include <webots/distance_sensor.h>
++#include <webots/position_sensor.h>
++#include <webots/inertial_unit.h>
++#include <webots/gyro.h>
++#include <webots/receiver.h>
++#include <webots/led.h>
++
++#include <math.h>
++#include <stdarg.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++
++/* ---- calibracion de la plataforma -------------------------------------- */
++#define WHEEL_MAX_RADS   75.0    /* consigna 1.0 -> 75 rad/s (motor: 80 max) */
++#define DIST_MAX_RAW   1190.0    /* por encima de esto, no hay objetivo      */
++#define LINE_TH_DEFAULT   400    /* blanco ~900, negro ~20: umbral holgado   */
++#define AUTO_ARM_MS      5000    /* reglamento: 5 s. Solo si no hay arbitro. */
++
++static const char *DIST_NAMES[SUMO_N_DIST] = { "d_l60", "d_l30", "d_c", "d_r30", "d_r60" };
++static const char *LINE_NAMES[SUMO_N_LINE] = { "l_fl", "l_fr", "l_rl", "l_rr" };
++
++static int  g_step_ms   = 8;
++static int  g_line_th   = LINE_TH_DEFAULT;
++static bool g_calib     = false;
++static bool g_armed     = false;
++static bool g_saw_ref   = false;   /* hemos oido alguna vez al arbitro */
++static double g_t0_ms   = 0.0;
++
++static WbDeviceTag g_mot[2];
++static WbDeviceTag g_enc[2];
++static WbDeviceTag g_dist[SUMO_N_DIST];
++static WbDeviceTag g_line[SUMO_N_LINE];
++static WbDeviceTag g_imu, g_gyro, g_rx, g_led;
++static bool g_has_imu, g_has_gyro, g_has_rx, g_has_led;
++
++
++bool hal_init(int argc, char **argv)
++{
++  wb_robot_init();
++  g_step_ms = (int)wb_robot_get_basic_time_step();
++
++  for (int i = 1; i < argc; ++i) {
++    if (!strcmp(argv[i], "--line-th") && i + 1 < argc) g_line_th = atoi(argv[++i]);
++    else if (!strcmp(argv[i], "--calib")) g_calib = true;
++  }
++
++  g_mot[0] = wb_robot_get_device("motor_izq");
++  g_mot[1] = wb_robot_get_device("motor_der");
++  g_enc[0] = wb_robot_get_device("enc_izq");
++  g_enc[1] = wb_robot_get_device("enc_der");
++  for (int i = 0; i < 2; ++i) {
++    wb_motor_set_position(g_mot[i], INFINITY);   /* modo velocidad */
++    wb_motor_set_velocity(g_mot[i], 0.0);
++    wb_position_sensor_enable(g_enc[i], g_step_ms);
++  }
++
++  for (int i = 0; i < SUMO_N_DIST; ++i) {
++    g_dist[i] = wb_robot_get_device(DIST_NAMES[i]);
++    wb_distance_sensor_enable(g_dist[i], g_step_ms);
++  }
++  for (int i = 0; i < SUMO_N_LINE; ++i) {
++    g_line[i] = wb_robot_get_device(LINE_NAMES[i]);
++    wb_distance_sensor_enable(g_line[i], g_step_ms);
++  }
++
++  g_imu  = wb_robot_get_device("imu");    g_has_imu  = (g_imu  != 0);
++  g_gyro = wb_robot_get_device("giro");   g_has_gyro = (g_gyro != 0);
++  g_rx   = wb_robot_get_device("receptor"); g_has_rx = (g_rx   != 0);
++  g_led  = wb_robot_get_device("led");    g_has_led  = (g_led  != 0);
++  if (g_has_imu)  wb_inertial_unit_enable(g_imu, g_step_ms);
++  if (g_has_gyro) wb_gyro_enable(g_gyro, g_step_ms);
++  if (g_has_rx)   wb_receiver_enable(g_rx, g_step_ms);
++
++  hal_log("HAL Webots listo: paso %d ms, umbral de linea %d", g_step_ms, g_line_th);
++  return true;
++}
++
++
++uint16_t hal_period_ms(void) { return (uint16_t)g_step_ms; }
++
++
++/* Vacia el buzon del arbitro. Protocolo de texto plano, canal 1:
++ *   "ARM"  -> empieza el asalto (reinicia el reloj del algoritmo)
++ *   "STOP" -> alto el fuego, el arbitro esta recolocando a los robots      */
++static void drain_referee(void)
++{
++  if (!g_has_rx) return;
++  while (wb_receiver_get_queue_length(g_rx) > 0) {
++    const char *msg = (const char *)wb_receiver_get_data(g_rx);
++    g_saw_ref = true;
++    if (msg && !strncmp(msg, "ARM", 3)) {
++      if (!g_armed) g_t0_ms = wb_robot_get_time() * 1000.0;
++      g_armed = true;
++    } else if (msg && !strncmp(msg, "STOP", 4)) {
++      g_armed = false;
++    }
++    wb_receiver_next_packet(g_rx);
++  }
++}
++
++
++bool hal_poll(sumo_sensors_t *s)
++{
++  if (wb_robot_step(g_step_ms) == -1) return false;
++
++  drain_referee();
++  const double now_ms = wb_robot_get_time() * 1000.0;
++
++  /* Sin arbitro en el mundo, el robot se arma solo tras los 5 s de reglamento
++   * para que el mundo siga siendo util abriendolo a pelo. */
++  if (!g_saw_ref && !g_armed && now_ms >= AUTO_ARM_MS) {
++    g_armed = true;
++    g_t0_ms = now_ms;
++    hal_log("sin arbitro: auto-arranque a los %.0f ms", now_ms);
++  }
++
++  memset(s, 0, sizeof(*s));
++  s->armed = g_armed;
++  s->t_ms  = g_armed ? (uint32_t)(now_ms - g_t0_ms) : 0u;
++
++  for (int i = 0; i < SUMO_N_DIST; ++i) {
++    const double raw = wb_distance_sensor_get_value(g_dist[i]);
++    s->dist_mm[i] = (raw >= DIST_MAX_RAW) ? SUMO_DIST_NONE : (uint16_t)raw;
++  }
++
++  for (int i = 0; i < SUMO_N_LINE; ++i) {
++    const double raw = wb_distance_sensor_get_value(g_line[i]);
++    s->line[i] = (raw > (double)g_line_th);
++  }
++
++  if (g_has_imu) {
++    const double *rpy = wb_inertial_unit_get_roll_pitch_yaw(g_imu);
++    s->yaw_rad = (float)rpy[2];
++  }
++  if (g_has_gyro) {
++    const double *g = wb_gyro_get_values(g_gyro);
++    s->gyro_z_rads = (float)g[2];
++  }
++  s->wheel_rad[0] = (float)wb_position_sensor_get_value(g_enc[0]);
++  s->wheel_rad[1] = (float)wb_position_sensor_get_value(g_enc[1]);
++
++  if (g_calib) {
++    hal_log("CALIB linea  FL=%6.1f FR=%6.1f RL=%6.1f RR=%6.1f   dist C=%5u",
++            wb_distance_sensor_get_value(g_line[0]),
++            wb_distance_sensor_get_value(g_line[1]),
++            wb_distance_sensor_get_value(g_line[2]),
++            wb_distance_sensor_get_value(g_line[3]),
++            s->dist_mm[DIST_C]);
++  }
++  return true;
++}
++
++
++static double clamp_unit(double v)
++{
++  if (v >  1.0) return  1.0;
++  if (v < -1.0) return -1.0;
++  return v;
++}
++
++
++void hal_apply(const sumo_actuators_t *a)
++{
++  const double l = clamp_unit(a->left);
++  const double r = clamp_unit(a->right);
++  wb_motor_set_velocity(g_mot[0], l * WHEEL_MAX_RADS);
++  wb_motor_set_velocity(g_mot[1], r * WHEEL_MAX_RADS);
++  if (g_has_led) wb_led_set(g_led, (a->led == 4 || a->led == 5) ? 1 : 0);
++}
++
++
++void hal_log(const char *fmt, ...)
++{
++  va_list ap;
++  printf("[%s] ", wb_robot_get_name());
++  va_start(ap, fmt);
++  vprintf(fmt, ap);
++  va_end(ap);
++  printf("\n");
++  fflush(stdout);
++}
++
++
++void hal_shutdown(void)
++{
++  wb_motor_set_velocity(g_mot[0], 0.0);
++  wb_motor_set_velocity(g_mot[1], 0.0);
++  wb_robot_cleanup();
++}
+
+--- vacio/webots/controllers/gelatina_nuclear/main.c
++++ v0.1.0/webots/controllers/gelatina_nuclear/main.c
+@@ -0,0 +1,48 @@
++/* ==========================================================================
++ *  main.c  --  Controlador de Webots para Gelatina Nuclear
++ *
++ *  Lazo de control puro. Toda la inteligencia esta en algorithms/strategy.c
++ *  y todo lo especifico de Webots en hal_webots.c. Este fichero es el mismo
++ *  que correra en el robot real cambiando unicamente el backend del HAL.
++ * ========================================================================== */
++
++#include "hal.h"
++#include "strategy.h"
++
++#include <stdio.h>
++
++int main(int argc, char **argv)
++{
++  if (!hal_init(argc, argv)) return 1;
++
++  sumo_params_t p = sumo_params_default();
++  p.dt_ms = hal_period_ms();          /* el periodo lo impone la plataforma */
++
++  sumo_strategy_t brain;
++  strategy_init(&brain, &p);
++  hal_log("estrategia %s en linea", strategy_version());
++
++  sumo_sensors_t   s;
++  sumo_actuators_t a = { 0.0f, 0.0f, 0 };
++  sumo_state_t     last = ST_COUNT;
++
++  while (hal_poll(&s)) {
++    strategy_step(&brain, &s, &a);
++    hal_apply(&a);
++
++    /* Telemetria minima: solo al cambiar de estado, para no inundar la
++     * consola de Webots. Es la traza que se pega en la bitacora cuando una
++     * version se comporta de forma inesperada. */
++    if (brain.state != last) {
++      last = brain.state;
++      hal_log("t=%5u ms  %-11s  rival=%s d=%4u mm rumbo=%+5d cdeg  linea=0x%X",
++              s.t_ms, strategy_state_name(brain.state),
++              brain.per.target_seen ? "si" : "no",
++              brain.per.target_dist_mm == SUMO_DIST_NONE ? 9999u : brain.per.target_dist_mm,
++              brain.per.target_bearing_cdeg, brain.per.line_mask);
++    }
++  }
++
++  hal_shutdown();
++  return 0;
++}
