@@ -14,6 +14,10 @@ descargar como ZIP. Los registros conservan sus hashes SHA-256 originales.
 GitHub Pages publica la raíz de la rama `gh-pages`. Los archivos funcionan en
 la subruta `/Sumo_Page/` y no necesitan servidor Python ni dependencias.
 
+Configuración inicial: en **Settings → Pages → Build and deployment**, seleccionar
+**Deploy from a branch**, rama **gh-pages**, carpeta **/ (root)** y guardar.
+Esta activación requiere permisos administrativos en el repositorio.
+
 La página pública es de consulta. Para editar algoritmos, registrar versiones o
 ejecutar combates se utiliza el laboratorio local. No se guardan cambios desde
 esta web ni se simula Webots dentro del navegador.
